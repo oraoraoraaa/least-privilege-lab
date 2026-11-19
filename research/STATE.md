@@ -29,3 +29,7 @@ The posting and editing samples both contain repeated requests. The next inexpen
 ## Next implementation slice
 
 The follow-on [registry pilot protocol](registry/PROTOCOL.md) fixes the policy fragment, two variants, four controlled schedules and scoring before running the pilot. Implement the refiner and independent candidate check first. Keep the ideal policy and held-out requests in scorer-only inputs. The classroom study remains reproducible at commit `511786e`.
+
+## Refiner implementation checkpoint
+
+The `propose` command writes a candidate, per-rule rationale and whole-policy checks. The `verify` command accepts a separately supplied candidate. Six regression tests exercise counterexample witnesses, overlapping rules, empty grants, multiple workflow constraints, time boundaries, unsupported input and inconsistent owner protections. Scoring uses a separate file that the proposal CLI never opens. Archive and rerun the eight registered proposals next.

@@ -1,0 +1,53 @@
+{
+  "snapshot": "registry-v1",
+  "start": "2026-02-01T00:00:00Z",
+  "cutoff": "2026-03-01T00:00:00Z",
+  "protected": [
+    [
+      "auditor",
+      "read",
+      "manifest"
+    ]
+  ],
+  "reviewed_allows": [
+    {
+      "at": "2026-02-03T12:01:00Z",
+      "request": [
+        "serve",
+        "read",
+        "stable"
+      ]
+    }
+  ],
+  "cycles": {
+    "serving-smoke-test": [
+      {
+        "due": "2026-02-03T12:05:00Z",
+        "complete": true
+      }
+    ],
+    "restore-drill": [
+      {
+        "due": "2026-02-14T12:00:00Z",
+        "complete": false
+      }
+    ],
+    "audit-export": [
+      {
+        "due": "2026-02-28T12:00:00Z",
+        "complete": true
+      }
+    ]
+  },
+  "rule_workflows": {
+    "serving": [
+      "serving-smoke-test"
+    ],
+    "recovery": [
+      "restore-drill"
+    ],
+    "audit": [
+      "audit-export"
+    ]
+  }
+}

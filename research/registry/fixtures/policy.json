@@ -1,0 +1,33 @@
+{
+  "snapshot": "registry-v1",
+  "rules": [
+    {
+      "id": "serving",
+      "principal": "serve",
+      "action": "read",
+      "resources": [
+        "stable",
+        "candidate",
+        "retired"
+      ]
+    },
+    {
+      "id": "recovery",
+      "principal": "recover",
+      "action": "read",
+      "resources": [
+        "archive",
+        "old-archive"
+      ]
+    },
+    {
+      "id": "audit",
+      "principal": "auditor",
+      "action": "read",
+      "resources": [
+        "manifest",
+        "scratch"
+      ]
+    }
+  ]
+}
