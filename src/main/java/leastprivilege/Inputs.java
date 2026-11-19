@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 
 final class Inputs {
     static void readGrants(Path path, Review review) throws IOException {
-        readRows(path, "principal\taction\tresource", fields ->
+        readRows(path, Permission.HEADER, fields ->
             review.grant(new Permission(fields[0], fields[1], fields[2])));
     }
 
@@ -30,7 +30,7 @@ final class Inputs {
         });
     }
 
-    private static void readRows(Path path, String header, Consumer<String[]> accept) throws IOException {
+    static void readRows(Path path, String header, Consumer<String[]> accept) throws IOException {
         int columns = header.split("\t").length;
         try (BufferedReader reader = Files.newBufferedReader(path)) {
             if (!header.equals(reader.readLine())) {

@@ -26,4 +26,19 @@ if review "$case_dir/grants.tsv" "$tmp/events" > "$tmp/report" 2> "$tmp/error"; 
 fi
 test ! -s "$tmp/report"
 grep -Fq ':9: expected ALLOW or DENY' "$tmp/error"
+
+# Two groups permit the same tuple. A third group has no members.
+printf 'principal\tgroup\nalice\tred\nalice\tblue\n' > "$tmp/members"
+printf 'group\taction\tresource\nred\tread\tx\nblue\tread\tx\nempty\tread\ty\n' > "$tmp/rules"
+java -jar "$jar" group-grants "$tmp/members" "$tmp/rules" > "$tmp/report"
+printf 'principal\taction\tresource\nalice\tread\tx\n' > "$tmp/expected"
+diff -u "$tmp/expected" "$tmp/report"
+
+# Validate malformed grants even when their group has no members.
+printf 'empty\t*\tx\n' >> "$tmp/rules"
+if java -jar "$jar" group-grants "$tmp/members" "$tmp/rules" > "$tmp/report" 2> "$tmp/error"; then
+    exit 1
+fi
+test ! -s "$tmp/report"
+grep -Fq ':5:' "$tmp/error"
 echo 'Review checks passed.'

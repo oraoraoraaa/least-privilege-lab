@@ -1,7 +1,6 @@
 package leastprivilege;
 
 import java.io.PrintStream;
-import java.util.Comparator;
 import java.util.Locale;
 import java.util.Map;
 import java.util.TreeMap;
@@ -23,10 +22,7 @@ final class Review {
         }
     }
 
-    private final Map<Permission, Evidence> evidence = new TreeMap<>(
-        Comparator.comparing(Permission::principal)
-                  .thenComparing(Permission::action)
-                  .thenComparing(Permission::resource));
+    private final Map<Permission, Evidence> evidence = new TreeMap<>(Permission.ORDER);
 
     void grant(Permission permission) {
         evidence.computeIfAbsent(permission, ignored -> new Evidence()).granted = true;
