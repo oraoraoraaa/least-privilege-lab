@@ -1,0 +1,248 @@
+{
+  "JOB": {
+    "distinct_footprints": {
+      "families": 5,
+      "folds": 33,
+      "means": {
+        "nearest": 0.4488888888888889,
+        "sibling": 0.8933333333333333,
+        "table_freq": 0.8933333333333333
+      }
+    },
+    "examples": {
+      "1": {
+        "donor": "10a",
+        "family": "10",
+        "four_added": {
+          "sibling": [
+            "cast_info.person_id",
+            "company_name.name",
+            "movie_companies.note",
+            "role_type.role"
+          ],
+          "table_freq": [
+            "cast_info.person_id",
+            "company_name.name",
+            "movie_companies.note",
+            "title.kind_id"
+          ]
+        },
+        "hidden": "10b",
+        "novel": [
+          "role_type.role"
+        ],
+        "observed": "10c",
+        "unused_added": {
+          "sibling": [
+            "cast_info.person_id",
+            "company_name.name",
+            "movie_companies.note"
+          ],
+          "table_freq": [
+            "cast_info.person_id",
+            "company_name.name",
+            "movie_companies.note",
+            "title.kind_id"
+          ]
+        }
+      }
+    },
+    "hidden_differs_from_donor": {
+      "families": 15,
+      "folds": 107,
+      "means": {
+        "nearest": 0.5653439153439153,
+        "sibling": 0.7849206349206349,
+        "table_freq": 0.7849206349206349
+      }
+    },
+    "original": {
+      "families": 19,
+      "folds": 191,
+      "means": {
+        "nearest": 0.6333333333333333,
+        "sibling": 0.9042397660818714,
+        "table_freq": 0.7997076023391813
+      }
+    },
+    "placebo_salts": {
+      "families": 19,
+      "folds": 191,
+      "means": {
+        "salt_00": 0.78609283625731,
+        "salt_01": 0.7754020467836258,
+        "salt_02": 0.7787828947368421,
+        "salt_03": 0.7758589181286549,
+        "salt_04": 0.7754020467836258,
+        "salt_05": 0.7914839181286549,
+        "salt_06": 0.8027229532163742,
+        "salt_07": 0.7865497076023392,
+        "salt_08": 0.8167945906432749,
+        "salt_09": 0.8036366959064327,
+        "salt_10": 0.7944078947368421,
+        "salt_11": 0.765625,
+        "salt_12": 0.7885599415204678,
+        "salt_13": 0.7763157894736842,
+        "salt_14": 0.8021747076023392,
+        "salt_15": 0.7622441520467836,
+        "salt_16": 0.7958698830409358,
+        "salt_17": 0.7841739766081871,
+        "salt_18": 0.793859649122807,
+        "salt_19": 0.7733918128654971,
+        "salt_20": 0.7821637426900585,
+        "salt_21": 0.7836257309941521,
+        "salt_22": 0.7894736842105263,
+        "salt_23": 0.7758589181286549,
+        "salt_24": 0.7865497076023392,
+        "salt_25": 0.7676352339181287,
+        "salt_26": 0.81734283625731,
+        "salt_27": 0.7773209064327485,
+        "salt_28": 0.7865497076023392,
+        "salt_29": 0.8084795321637427,
+        "salt_30": 0.7894736842105263,
+        "salt_31": 0.7631578947368421
+      }
+    }
+  },
+  "STATS": {
+    "distinct_footprints": {
+      "families": 24,
+      "folds": 1671,
+      "means": {
+        "nearest": 0.08183050012318305,
+        "sibling": 0.1383121463994378,
+        "table_freq": 0.07346109175377467
+      }
+    },
+    "examples": {
+      "-1": {
+        "donor": "q038",
+        "family": "badges+comments+posthistory+users",
+        "four_added": {
+          "sibling": [
+            "badges.date",
+            "comments.postid",
+            "posthistory.postid",
+            "users.upvotes"
+          ],
+          "table_freq": [
+            "comments.postid",
+            "posthistory.postid",
+            "users.upvotes",
+            "users.views"
+          ]
+        },
+        "hidden": "q116",
+        "novel": [
+          "users.views"
+        ],
+        "observed": "q039",
+        "unused_added": {
+          "sibling": [
+            "badges.date",
+            "comments.postid",
+            "posthistory.postid",
+            "users.upvotes"
+          ],
+          "table_freq": [
+            "comments.postid",
+            "posthistory.postid",
+            "users.upvotes"
+          ]
+        }
+      },
+      "1": {
+        "donor": "q072",
+        "family": "badges+comments+posthistory+postlinks+posts+votes",
+        "four_added": {
+          "sibling": [
+            "comments.score",
+            "posthistory.posthistorytypeid",
+            "posts.owneruserid",
+            "votes.userid"
+          ],
+          "table_freq": [
+            "comments.score",
+            "posthistory.userid",
+            "posts.owneruserid",
+            "votes.userid"
+          ]
+        },
+        "hidden": "q071",
+        "novel": [
+          "posthistory.posthistorytypeid"
+        ],
+        "observed": "q070",
+        "unused_added": {
+          "sibling": [
+            "comments.score",
+            "posts.owneruserid",
+            "votes.userid"
+          ],
+          "table_freq": [
+            "comments.score",
+            "posthistory.userid",
+            "posts.owneruserid",
+            "votes.userid"
+          ]
+        }
+      }
+    },
+    "hidden_differs_from_donor": {
+      "families": 24,
+      "folds": 1800,
+      "means": {
+        "nearest": 0.0809624445676275,
+        "sibling": 0.1339640483013397,
+        "table_freq": 0.06912081397599691
+      }
+    },
+    "original": {
+      "families": 24,
+      "folds": 1826,
+      "means": {
+        "nearest": 0.08298790753059045,
+        "sibling": 0.14998798447155245,
+        "table_freq": 0.0732296102722932
+      }
+    },
+    "placebo_salts": {
+      "families": 24,
+      "folds": 1826,
+      "means": {
+        "salt_00": 0.06278172545443562,
+        "salt_01": 0.06821142036151334,
+        "salt_02": 0.08143380217304894,
+        "salt_03": 0.09157427432946032,
+        "salt_04": 0.07375954816844153,
+        "salt_05": 0.08468449236345886,
+        "salt_06": 0.08460872317066098,
+        "salt_07": 0.07904420334902393,
+        "salt_08": 0.06600921631001168,
+        "salt_09": 0.10790089359292067,
+        "salt_10": 0.08426495340171265,
+        "salt_11": 0.08213988941260789,
+        "salt_12": 0.1095872313313722,
+        "salt_13": 0.0865625089539751,
+        "salt_14": 0.09761772637059135,
+        "salt_15": 0.08646453817943452,
+        "salt_16": 0.09845612098385191,
+        "salt_17": 0.07721561652596508,
+        "salt_18": 0.06722804623494781,
+        "salt_19": 0.08482220426785313,
+        "salt_20": 0.07817647124777903,
+        "salt_21": 0.09923834429244051,
+        "salt_22": 0.08147692846109392,
+        "salt_23": 0.09698351842172855,
+        "salt_24": 0.08886254326432678,
+        "salt_25": 0.09123356621649577,
+        "salt_26": 0.09922766731005665,
+        "salt_27": 0.08537694646089661,
+        "salt_28": 0.0924222602675981,
+        "salt_29": 0.06322735477102892,
+        "salt_30": 0.08386663629836306,
+        "salt_31": 0.08911826973743164
+      }
+    }
+  }
+}
