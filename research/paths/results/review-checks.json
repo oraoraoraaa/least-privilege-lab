@@ -1,0 +1,66 @@
+{
+  "JOB": {
+    "neighbors": {
+      "eligible_ids": 109,
+      "groups": 33,
+      "panels": {
+        "distinct": {
+          "blind": 0.5311111111111111,
+          "difference": 0.04444444444444451,
+          "families": 5,
+          "folds": 33,
+          "sibling": 0.5755555555555556
+        },
+        "original": {
+          "blind": 0.6637426900584795,
+          "difference": 0.13523391812865493,
+          "families": 19,
+          "folds": 191,
+          "sibling": 0.7989766081871345
+        }
+      }
+    }
+  },
+  "STATS": {
+    "join_families": {
+      "eligible_ids": 92,
+      "groups": 58,
+      "panels": {
+        "distinct": {
+          "blind": 0.035045948203842936,
+          "difference": 0.026038974723185254,
+          "families": 21,
+          "folds": 1005,
+          "sibling": 0.06108492292702819
+        },
+        "original": {
+          "blind": 0.03636869952659426,
+          "difference": 0.030123530403485616,
+          "families": 21,
+          "folds": 1132,
+          "sibling": 0.06649222993007987
+        }
+      }
+    },
+    "neighbors": {
+      "eligible_ids": 117,
+      "groups": 45,
+      "panels": {
+        "distinct": {
+          "blind": 0.10516487773387645,
+          "difference": 0.0367320295774243,
+          "families": 24,
+          "folds": 1671,
+          "sibling": 0.14189690731130075
+        },
+        "original": {
+          "blind": 0.10794265551165423,
+          "difference": 0.0478922589557388,
+          "families": 24,
+          "folds": 1826,
+          "sibling": 0.15583491446739303
+        }
+      }
+    }
+  }
+}
