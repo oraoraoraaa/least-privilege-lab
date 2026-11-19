@@ -1,0 +1,8 @@
+timestamp	principal	action	resource	decision
+2026-10-01T09:00:00Z	inference	read	model:stable	ALLOW
+2026-10-01T09:01:00Z	release	write	model:candidate	DENY
+2026-10-01T09:02:00Z	inference	read	model:stable	ALLOW
+2026-10-02T12:05:00Z	release	write	model:candidate	ALLOW
+2026-10-03T10:00:00Z	mirror	read	model:candidate	DENY
+2026-10-05T11:00:00Z	retired-runner	read	model:v0	ALLOW
+2026-10-05T11:05:00Z	release	delete	model:stable	DENY

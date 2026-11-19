@@ -1,0 +1,7 @@
+principal	action	resource	granted_now	allows	denies	finding
+inference	read	model:stable	true	2	0	observed-allow
+mirror	read	model:candidate	true	0	1	denied-history-only
+recovery	read	model:archive	true	0	0	unobserved
+release	delete	model:stable	false	0	1	denied-outside-snapshot
+release	write	model:candidate	true	1	1	mixed-history
+retired-runner	read	model:v0	false	1	0	historical-allow-outside-snapshot

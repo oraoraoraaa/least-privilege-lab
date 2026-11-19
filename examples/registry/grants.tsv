@@ -1,0 +1,5 @@
+principal	action	resource
+inference	read	model:stable
+mirror	read	model:candidate
+release	write	model:candidate
+recovery	read	model:archive
