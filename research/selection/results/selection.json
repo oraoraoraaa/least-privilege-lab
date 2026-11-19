@@ -1,0 +1,614 @@
+{
+  "JOB": {
+    "all_ids": {
+      "comparisons": 143,
+      "families": 9,
+      "family_means": {
+        "11": {
+          "baseline": 0.5,
+          "best": 1.0,
+          "both_fail": 0.0,
+          "far": 1.0,
+          "impossible": 0.0,
+          "near": 0.5,
+          "random": 0.75,
+          "selection_loss": 0.25
+        },
+        "13": {
+          "baseline": 1.0,
+          "best": 1.0,
+          "both_fail": 0.0,
+          "far": 1.0,
+          "impossible": 0.0,
+          "near": 1.0,
+          "random": 1.0,
+          "selection_loss": 0.0
+        },
+        "15": {
+          "baseline": 0.6666666666666666,
+          "best": 0.6666666666666666,
+          "both_fail": 0.3333333333333333,
+          "far": 0.6666666666666666,
+          "impossible": 0.0,
+          "near": 0.6666666666666666,
+          "random": 0.6666666666666666,
+          "selection_loss": 0.0
+        },
+        "16": {
+          "baseline": 0.0,
+          "best": 1.0,
+          "both_fail": 0.0,
+          "far": 1.0,
+          "impossible": 0.0,
+          "near": 1.0,
+          "random": 1.0,
+          "selection_loss": 0.0
+        },
+        "17": {
+          "baseline": 0.5,
+          "best": 1.0,
+          "both_fail": 0.0,
+          "far": 0.78125,
+          "impossible": 0.0,
+          "near": 0.96875,
+          "random": 0.875,
+          "selection_loss": 0.125
+        },
+        "19": {
+          "baseline": 1.0,
+          "best": 1.0,
+          "both_fail": 0.0,
+          "far": 1.0,
+          "impossible": 0.0,
+          "near": 1.0,
+          "random": 1.0,
+          "selection_loss": 0.0
+        },
+        "22": {
+          "baseline": 1.0,
+          "best": 1.0,
+          "both_fail": 0.0,
+          "far": 1.0,
+          "impossible": 0.0,
+          "near": 1.0,
+          "random": 1.0,
+          "selection_loss": 0.0
+        },
+        "8": {
+          "baseline": 0.1111111111111111,
+          "best": 1.0,
+          "both_fail": 0.0,
+          "far": 0.7777777777777778,
+          "impossible": 0.0,
+          "near": 0.3333333333333333,
+          "random": 0.5555555555555556,
+          "selection_loss": 0.4444444444444444
+        },
+        "9": {
+          "baseline": 1.0,
+          "best": 1.0,
+          "both_fail": 0.0,
+          "far": 1.0,
+          "impossible": 0.0,
+          "near": 1.0,
+          "random": 1.0,
+          "selection_loss": 0.0
+        }
+      },
+      "means": {
+        "baseline": 0.6419753086419753,
+        "best": 0.9629629629629629,
+        "both_fail": 0.037037037037037035,
+        "far": 0.9139660493827161,
+        "impossible": 0.0,
+        "near": 0.8298611111111112,
+        "random": 0.8719135802469136,
+        "selection_loss": 0.09104938271604938
+      },
+      "near_minus_random": {
+        "bootstrap95": [
+          -0.11921296296296297,
+          0.020833333333333332
+        ],
+        "difference": -0.042052469135802475,
+        "leave_one_out": [
+          -0.05902777777777778,
+          -0.016059027777777783
+        ],
+        "negative": 2,
+        "positive": 1,
+        "ties": 6
+      },
+      "random_minus_baseline": {
+        "bootstrap95": [
+          0.04938271604938272,
+          0.4660493827160494
+        ],
+        "difference": 0.2299382716049383,
+        "leave_one_out": [
+          0.13368055555555558,
+          0.2586805555555556
+        ],
+        "negative": 0,
+        "positive": 4,
+        "ties": 5
+      }
+    },
+    "distinct_footprints": {
+      "comparisons": 9,
+      "families": 1,
+      "family_means": {
+        "15": {
+          "baseline": 0.6666666666666666,
+          "best": 0.6666666666666666,
+          "both_fail": 0.3333333333333333,
+          "far": 0.6666666666666666,
+          "impossible": 0.0,
+          "near": 0.6666666666666666,
+          "random": 0.6666666666666666,
+          "selection_loss": 0.0
+        }
+      },
+      "means": {
+        "baseline": 0.6666666666666666,
+        "best": 0.6666666666666666,
+        "both_fail": 0.3333333333333333,
+        "far": 0.6666666666666666,
+        "impossible": 0.0,
+        "near": 0.6666666666666666,
+        "random": 0.6666666666666666,
+        "selection_loss": 0.0
+      }
+    }
+  },
+  "STATS": {
+    "all_ids": {
+      "comparisons": 3016,
+      "families": 19,
+      "family_means": {
+        "badges+comments+posthistory+postlinks+posts+users+votes": {
+          "baseline": 0.0,
+          "best": 0.0,
+          "both_fail": 0.6666666666666666,
+          "far": 0.0,
+          "impossible": 0.3333333333333333,
+          "near": 0.0,
+          "random": 0.0,
+          "selection_loss": 0.0
+        },
+        "badges+comments+posthistory+postlinks+posts+votes": {
+          "baseline": 0.0,
+          "best": 0.125,
+          "both_fail": 0.625,
+          "far": 0.08928571428571429,
+          "impossible": 0.25,
+          "near": 0.05357142857142857,
+          "random": 0.07142857142857142,
+          "selection_loss": 0.05357142857142857
+        },
+        "badges+comments+posthistory+posts+users": {
+          "baseline": 0.0,
+          "best": 0.0,
+          "both_fail": 0.65,
+          "far": 0.0,
+          "impossible": 0.35,
+          "near": 0.0,
+          "random": 0.0,
+          "selection_loss": 0.0
+        },
+        "badges+comments+posthistory+posts+users+votes": {
+          "baseline": 0.0,
+          "best": 0.06666666666666667,
+          "both_fail": 0.45714285714285713,
+          "far": 0.04523809523809524,
+          "impossible": 0.47619047619047616,
+          "near": 0.030952380952380953,
+          "random": 0.0380952380952381,
+          "selection_loss": 0.02857142857142857
+        },
+        "badges+comments+posthistory+users": {
+          "baseline": 0.16666666666666666,
+          "best": 0.3111111111111111,
+          "both_fail": 0.5555555555555556,
+          "far": 0.17777777777777778,
+          "impossible": 0.13333333333333333,
+          "near": 0.20555555555555555,
+          "random": 0.19166666666666668,
+          "selection_loss": 0.11944444444444445
+        },
+        "badges+comments+postlinks+posts+users+votes": {
+          "baseline": 0.0,
+          "best": 0.10526315789473684,
+          "both_fail": 0.21052631578947367,
+          "far": 0.08771929824561403,
+          "impossible": 0.6842105263157895,
+          "near": 0.017543859649122806,
+          "random": 0.05263157894736842,
+          "selection_loss": 0.05263157894736842
+        },
+        "badges+comments+users": {
+          "baseline": 0.5,
+          "best": 0.8,
+          "both_fail": 0.2,
+          "far": 0.8,
+          "impossible": 0.0,
+          "near": 0.8,
+          "random": 0.8,
+          "selection_loss": 0.0
+        },
+        "badges+comments+users+votes": {
+          "baseline": 0.3333333333333333,
+          "best": 0.35185185185185186,
+          "both_fail": 0.6481481481481481,
+          "far": 0.2777777777777778,
+          "impossible": 0.0,
+          "near": 0.3148148148148148,
+          "random": 0.2962962962962963,
+          "selection_loss": 0.05555555555555555
+        },
+        "badges+posthistory+posts+users": {
+          "baseline": 0.07317073170731707,
+          "best": 0.12682926829268293,
+          "both_fail": 0.6048780487804878,
+          "far": 0.07804878048780488,
+          "impossible": 0.2682926829268293,
+          "near": 0.08780487804878048,
+          "random": 0.08292682926829269,
+          "selection_loss": 0.04390243902439024
+        },
+        "badges+posthistory+users+votes": {
+          "baseline": 0.4,
+          "best": 0.6,
+          "both_fail": 0.2,
+          "far": 0.5,
+          "impossible": 0.2,
+          "near": 0.6,
+          "random": 0.55,
+          "selection_loss": 0.05
+        },
+        "badges+posts+users+votes": {
+          "baseline": 0.1,
+          "best": 0.1,
+          "both_fail": 0.6,
+          "far": 0.03888888888888889,
+          "impossible": 0.3,
+          "near": 0.06111111111111111,
+          "random": 0.05,
+          "selection_loss": 0.05
+        },
+        "comments+posthistory+postlinks+posts+users+votes": {
+          "baseline": 0.0,
+          "best": 0.0,
+          "both_fail": 0.13333333333333333,
+          "far": 0.0,
+          "impossible": 0.8666666666666667,
+          "near": 0.0,
+          "random": 0.0,
+          "selection_loss": 0.0
+        },
+        "comments+posthistory+postlinks+posts+votes": {
+          "baseline": 0.0,
+          "best": 0.2553191489361702,
+          "both_fail": 0.48936170212765956,
+          "far": 0.1148936170212766,
+          "impossible": 0.2553191489361702,
+          "near": 0.1829787234042553,
+          "random": 0.14893617021276595,
+          "selection_loss": 0.10638297872340426
+        },
+        "comments+posthistory+users+votes": {
+          "baseline": 0.05263157894736842,
+          "best": 0.10526315789473684,
+          "both_fail": 0.7894736842105263,
+          "far": 0.017543859649122806,
+          "impossible": 0.10526315789473684,
+          "near": 0.08771929824561403,
+          "random": 0.05263157894736842,
+          "selection_loss": 0.05263157894736842
+        },
+        "comments+posts+users": {
+          "baseline": 0.0,
+          "best": 0.0,
+          "both_fail": 0.75,
+          "far": 0.0,
+          "impossible": 0.25,
+          "near": 0.0,
+          "random": 0.0,
+          "selection_loss": 0.0
+        },
+        "comments+posts+users+votes": {
+          "baseline": 0.0,
+          "best": 0.02857142857142857,
+          "both_fail": 0.3523809523809524,
+          "far": 0.009523809523809525,
+          "impossible": 0.6190476190476191,
+          "near": 0.01904761904761905,
+          "random": 0.014285714285714285,
+          "selection_loss": 0.014285714285714285
+        },
+        "comments+users+votes": {
+          "baseline": 0.09090909090909091,
+          "best": 0.45454545454545453,
+          "both_fail": 0.5454545454545454,
+          "far": 0.09090909090909091,
+          "impossible": 0.0,
+          "near": 0.45454545454545453,
+          "random": 0.2727272727272727,
+          "selection_loss": 0.18181818181818182
+        },
+        "posthistory+posts+users": {
+          "baseline": 0.1,
+          "best": 0.11666666666666667,
+          "both_fail": 0.6833333333333333,
+          "far": 0.06666666666666667,
+          "impossible": 0.2,
+          "near": 0.06666666666666667,
+          "random": 0.06666666666666667,
+          "selection_loss": 0.05
+        },
+        "posts+users+votes": {
+          "baseline": 0.2,
+          "best": 0.4,
+          "both_fail": 0.3,
+          "far": 0.0,
+          "impossible": 0.3,
+          "near": 0.4,
+          "random": 0.2,
+          "selection_loss": 0.2
+        }
+      },
+      "means": {
+        "baseline": 0.10614270534546191,
+        "best": 0.20774146907534244,
+        "both_fail": 0.49796079699597573,
+        "far": 0.12601438823534944,
+        "impossible": 0.2942977339286818,
+        "near": 0.17801641003225283,
+        "random": 0.15201539913380113,
+        "selection_loss": 0.0557260699415413
+      },
+      "near_minus_random": {
+        "bootstrap95": [
+          0.0029464369521539314,
+          0.055667510083973276
+        ],
+        "difference": 0.026001010898451696,
+        "leave_one_out": [
+          0.016334400392810124,
+          0.029394829242712656
+        ],
+        "negative": 3,
+        "positive": 10,
+        "ties": 6
+      },
+      "random_minus_baseline": {
+        "bootstrap95": [
+          0.010366966079797984,
+          0.08909217896418926
+        ],
+        "difference": 0.045872693788339226,
+        "leave_one_out": [
+          0.03175451010991362,
+          0.05119895455435807
+        ],
+        "negative": 3,
+        "positive": 10,
+        "ties": 6
+      }
+    },
+    "distinct_footprints": {
+      "comparisons": 2619,
+      "families": 17,
+      "family_means": {
+        "badges+comments+posthistory+postlinks+posts+users+votes": {
+          "baseline": 0.0,
+          "best": 0.0,
+          "both_fail": 0.6666666666666666,
+          "far": 0.0,
+          "impossible": 0.3333333333333333,
+          "near": 0.0,
+          "random": 0.0,
+          "selection_loss": 0.0
+        },
+        "badges+comments+posthistory+postlinks+posts+votes": {
+          "baseline": 0.0,
+          "best": 0.125,
+          "both_fail": 0.625,
+          "far": 0.08928571428571429,
+          "impossible": 0.25,
+          "near": 0.05357142857142857,
+          "random": 0.07142857142857142,
+          "selection_loss": 0.05357142857142857
+        },
+        "badges+comments+posthistory+posts+users": {
+          "baseline": 0.0,
+          "best": 0.0,
+          "both_fail": 0.65,
+          "far": 0.0,
+          "impossible": 0.35,
+          "near": 0.0,
+          "random": 0.0,
+          "selection_loss": 0.0
+        },
+        "badges+comments+posthistory+posts+users+votes": {
+          "baseline": 0.0,
+          "best": 0.06666666666666667,
+          "both_fail": 0.45714285714285713,
+          "far": 0.04523809523809524,
+          "impossible": 0.47619047619047616,
+          "near": 0.030952380952380953,
+          "random": 0.0380952380952381,
+          "selection_loss": 0.02857142857142857
+        },
+        "badges+comments+posthistory+users": {
+          "baseline": 0.16666666666666666,
+          "best": 0.3111111111111111,
+          "both_fail": 0.5555555555555556,
+          "far": 0.17777777777777778,
+          "impossible": 0.13333333333333333,
+          "near": 0.20555555555555555,
+          "random": 0.19166666666666668,
+          "selection_loss": 0.11944444444444445
+        },
+        "badges+comments+postlinks+posts+users+votes": {
+          "baseline": 0.0,
+          "best": 0.10526315789473684,
+          "both_fail": 0.21052631578947367,
+          "far": 0.08771929824561403,
+          "impossible": 0.6842105263157895,
+          "near": 0.017543859649122806,
+          "random": 0.05263157894736842,
+          "selection_loss": 0.05263157894736842
+        },
+        "badges+comments+users+votes": {
+          "baseline": 0.3333333333333333,
+          "best": 0.25,
+          "both_fail": 0.75,
+          "far": 0.16666666666666666,
+          "impossible": 0.0,
+          "near": 0.25,
+          "random": 0.20833333333333334,
+          "selection_loss": 0.041666666666666664
+        },
+        "badges+posthistory+posts+users": {
+          "baseline": 0.07317073170731707,
+          "best": 0.12682926829268293,
+          "both_fail": 0.6048780487804878,
+          "far": 0.07804878048780488,
+          "impossible": 0.2682926829268293,
+          "near": 0.08780487804878048,
+          "random": 0.08292682926829269,
+          "selection_loss": 0.04390243902439024
+        },
+        "badges+posthistory+users+votes": {
+          "baseline": 0.4,
+          "best": 0.6,
+          "both_fail": 0.2,
+          "far": 0.5,
+          "impossible": 0.2,
+          "near": 0.6,
+          "random": 0.55,
+          "selection_loss": 0.05
+        },
+        "badges+posts+users+votes": {
+          "baseline": 0.1,
+          "best": 0.1,
+          "both_fail": 0.6,
+          "far": 0.03888888888888889,
+          "impossible": 0.3,
+          "near": 0.06111111111111111,
+          "random": 0.05,
+          "selection_loss": 0.05
+        },
+        "comments+posthistory+postlinks+posts+users+votes": {
+          "baseline": 0.0,
+          "best": 0.0,
+          "both_fail": 0.13333333333333333,
+          "far": 0.0,
+          "impossible": 0.8666666666666667,
+          "near": 0.0,
+          "random": 0.0,
+          "selection_loss": 0.0
+        },
+        "comments+posthistory+postlinks+posts+votes": {
+          "baseline": 0.0,
+          "best": 0.26756756756756755,
+          "both_fail": 0.5162162162162162,
+          "far": 0.12432432432432433,
+          "impossible": 0.21621621621621623,
+          "near": 0.1891891891891892,
+          "random": 0.15675675675675677,
+          "selection_loss": 0.11081081081081082
+        },
+        "comments+posthistory+users+votes": {
+          "baseline": 0.05263157894736842,
+          "best": 0.10526315789473684,
+          "both_fail": 0.7894736842105263,
+          "far": 0.017543859649122806,
+          "impossible": 0.10526315789473684,
+          "near": 0.08771929824561403,
+          "random": 0.05263157894736842,
+          "selection_loss": 0.05263157894736842
+        },
+        "comments+posts+users": {
+          "baseline": 0.0,
+          "best": 0.0,
+          "both_fail": 0.75,
+          "far": 0.0,
+          "impossible": 0.25,
+          "near": 0.0,
+          "random": 0.0,
+          "selection_loss": 0.0
+        },
+        "comments+posts+users+votes": {
+          "baseline": 0.0,
+          "best": 0.02857142857142857,
+          "both_fail": 0.3523809523809524,
+          "far": 0.009523809523809525,
+          "impossible": 0.6190476190476191,
+          "near": 0.01904761904761905,
+          "random": 0.014285714285714285,
+          "selection_loss": 0.014285714285714285
+        },
+        "comments+users+votes": {
+          "baseline": 0.09090909090909091,
+          "best": 0.45454545454545453,
+          "both_fail": 0.5454545454545454,
+          "far": 0.09090909090909091,
+          "impossible": 0.0,
+          "near": 0.45454545454545453,
+          "random": 0.2727272727272727,
+          "selection_loss": 0.18181818181818182
+        },
+        "posthistory+posts+users": {
+          "baseline": 0.1,
+          "best": 0.11666666666666667,
+          "both_fail": 0.6833333333333333,
+          "far": 0.06666666666666667,
+          "impossible": 0.2,
+          "near": 0.06666666666666667,
+          "random": 0.06666666666666667,
+          "selection_loss": 0.05
+        }
+      },
+      "means": {
+        "baseline": 0.07745361185669274,
+        "best": 0.15632261642417952,
+        "both_fail": 0.5347036181684675,
+        "far": 0.08779958662726918,
+        "impossible": 0.308973765407353,
+        "near": 0.12492396715193665,
+        "random": 0.10636177688960291,
+        "selection_loss": 0.0499608395345766
+      },
+      "near_minus_random": {
+        "bootstrap95": [
+          0.001848358475680452,
+          0.04332884277576754
+        ],
+        "difference": 0.018562190262333727,
+        "leave_one_out": [
+          0.008358690790093222,
+          0.021915309609869937
+        ],
+        "negative": 3,
+        "positive": 9,
+        "ties": 5
+      },
+      "random_minus_baseline": {
+        "bootstrap95": [
+          -0.005285624950872623,
+          0.06592179118211738
+        ],
+        "difference": 0.028908165032910185,
+        "leave_one_out": [
+          0.019351288983830706,
+          0.038527425347467066
+        ],
+        "negative": 3,
+        "positive": 9,
+        "ties": 5
+      }
+    }
+  }
+}

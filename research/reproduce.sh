@@ -8,3 +8,4 @@ uv run --python 3.12 --with 'z3-solver==5.4.1.0' python -B research/registry/tes
 uv run --python 3.12 python -B research/registry/run_pilot.py \
     --check research/registry/pilot-results.json
 sh research/paths/reproduce.sh
+sh research/selection/reproduce.sh

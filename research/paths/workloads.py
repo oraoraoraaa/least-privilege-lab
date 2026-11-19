@@ -54,10 +54,13 @@ def load_corpora(cache):
 
 
 class Instrument:
-    def __init__(self, schema):
+    def __init__(self, schema, *, include_views=False):
         self.db = apsw.Connection(":memory:", statementcachesize=0)
         self.db.execute(schema)
-        tables = [r[0] for r in self.db.execute("select name from sqlite_schema where type='table'")]
+        relations = "select name from sqlite_schema where type='table'"
+        if include_views:
+            relations = "select name from sqlite_schema where type in ('table','view') and name not glob 'sqlite_*'"
+        tables = [r[0] for r in self.db.execute(relations)]
         self.universe = {t.lower() + "." + c[1].lower() for t in tables
                          for c in self.db.execute("select * from pragma_table_info(?)", (t,))}
         self.universe.update(t.lower() + ".@row" for t in tables)
@@ -77,11 +80,11 @@ class Instrument:
             raise ValueError(f"Unexpected authorizer operation {operation}")
         return apsw.SQLITE_OK
 
-    def execute(self, sql, policy=None):
+    def execute(self, sql, policy=None, *, bindings=None):
         self.allowed = policy
         self.trace = set()
         try:
-            self.db.execute(sql, can_cache=False).fetchall()
+            self.db.execute(sql, bindings, can_cache=False).fetchall()
             return True, frozenset(self.trace)
         except apsw.AuthError:
             if policy is None:
