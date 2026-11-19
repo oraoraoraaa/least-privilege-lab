@@ -1,0 +1,32 @@
+{
+  "artifact_revision": "35331c1259d1c04f4f453aab60e9f3f338d9d544",
+  "cedarpy_version": "4.12.2",
+  "control": {
+    "changed_decisions": 4,
+    "first_difference": [
+      "Staff::\"TA0\"",
+      "Action::\"EditAssignment\"",
+      "Assignment::\"T0C0A0\""
+    ],
+    "mutant_allow": false,
+    "omitted_membership": [
+      "Staff::\"TA0\"",
+      "Course::\"T0C0\""
+    ],
+    "original_allow": true
+  },
+  "distinct_scoped_tuples": 16,
+  "domain": 312,
+  "input_sha256": {
+    "cedar-restrict-case-studies/assets/GClassroom/policies.ideal.cedar": "b7da785d3059f2bc93f49c9b65d43c198a898a87f6f2d6646366b7e53e249511",
+    "gclass_entities.60.json": "d317ea90d0a880ef7320e652bf931d9f27501e5918296938a411bf980f38f303",
+    "gclass_logs.60.json": "909fbf34c3709c0291b78b003553a341362d512b90c4b1c1fa1c7f02e3fd2e8d",
+    "gclassroom.schema.json": "517b907120b3818f6012a23406a88880582425a47dc6be495d8aac06d0e80ab5",
+    "gclassroom_policies.cedar": "5b2f208c5381328fe96adb25de3c8f58bf07b1f17ba73dc21b9de7a5a39fd249"
+  },
+  "intended_grants": 26,
+  "java_cedar_mismatches": 0,
+  "loose_grants": 60,
+  "scoped_rows": 26,
+  "source_rows": 1744
+}
