@@ -22,4 +22,7 @@ fi
 make -s test
 uv run --locked --script research/classroom/replay.py --artifact "$artifact" --output "$scratch/results"
 diff -ru research/classroom/results "$scratch/results"
+uv run --no-project --python 3.12 python -B research/classroom/test_exact_retention.py
+uv run --no-project --python 3.12 python -B research/classroom/exact_retention.py "$scratch/results" > "$scratch/exact.json"
+diff -u research/classroom/exact-retention.json "$scratch/exact.json"
 echo 'Verified all archived classroom results.'

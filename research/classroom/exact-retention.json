@@ -1,0 +1,260 @@
+{
+  "equally_likely_row_subsets": 10400600,
+  "expected_distinct_as_fractions": {
+    "ALL": "11813/1150",
+    "Action::\"EditAssignment\"": "2721/575",
+    "Action::\"PostAssignment\"": "277/50"
+  },
+  "joint_counts": [
+    {
+      "edit_distinct": 7,
+      "post_distinct": 0,
+      "row_subsets": 1
+    },
+    {
+      "edit_distinct": 5,
+      "post_distinct": 1,
+      "row_subsets": 12
+    },
+    {
+      "edit_distinct": 6,
+      "post_distinct": 1,
+      "row_subsets": 171
+    },
+    {
+      "edit_distinct": 7,
+      "post_distinct": 1,
+      "row_subsets": 298
+    },
+    {
+      "edit_distinct": 4,
+      "post_distinct": 2,
+      "row_subsets": 158
+    },
+    {
+      "edit_distinct": 5,
+      "post_distinct": 2,
+      "row_subsets": 3144
+    },
+    {
+      "edit_distinct": 6,
+      "post_distinct": 2,
+      "row_subsets": 11244
+    },
+    {
+      "edit_distinct": 7,
+      "post_distinct": 2,
+      "row_subsets": 8100
+    },
+    {
+      "edit_distinct": 3,
+      "post_distinct": 3,
+      "row_subsets": 294
+    },
+    {
+      "edit_distinct": 4,
+      "post_distinct": 3,
+      "row_subsets": 12388
+    },
+    {
+      "edit_distinct": 5,
+      "post_distinct": 3,
+      "row_subsets": 83940
+    },
+    {
+      "edit_distinct": 6,
+      "post_distinct": 3,
+      "row_subsets": 142504
+    },
+    {
+      "edit_distinct": 7,
+      "post_distinct": 3,
+      "row_subsets": 55168
+    },
+    {
+      "edit_distinct": 2,
+      "post_distinct": 4,
+      "row_subsets": 105
+    },
+    {
+      "edit_distinct": 3,
+      "post_distinct": 4,
+      "row_subsets": 12481
+    },
+    {
+      "edit_distinct": 4,
+      "post_distinct": 4,
+      "row_subsets": 176316
+    },
+    {
+      "edit_distinct": 5,
+      "post_distinct": 4,
+      "row_subsets": 593541
+    },
+    {
+      "edit_distinct": 6,
+      "post_distinct": 4,
+      "row_subsets": 561947
+    },
+    {
+      "edit_distinct": 7,
+      "post_distinct": 4,
+      "row_subsets": 123648
+    },
+    {
+      "edit_distinct": 1,
+      "post_distinct": 5,
+      "row_subsets": 5
+    },
+    {
+      "edit_distinct": 2,
+      "post_distinct": 5,
+      "row_subsets": 3225
+    },
+    {
+      "edit_distinct": 3,
+      "post_distinct": 5,
+      "row_subsets": 113358
+    },
+    {
+      "edit_distinct": 4,
+      "post_distinct": 5,
+      "row_subsets": 775053
+    },
+    {
+      "edit_distinct": 5,
+      "post_distinct": 5,
+      "row_subsets": 1464963
+    },
+    {
+      "edit_distinct": 6,
+      "post_distinct": 5,
+      "row_subsets": 797322
+    },
+    {
+      "edit_distinct": 7,
+      "post_distinct": 5,
+      "row_subsets": 94176
+    },
+    {
+      "edit_distinct": 1,
+      "post_distinct": 6,
+      "row_subsets": 160
+    },
+    {
+      "edit_distinct": 2,
+      "post_distinct": 6,
+      "row_subsets": 21192
+    },
+    {
+      "edit_distinct": 3,
+      "post_distinct": 6,
+      "row_subsets": 333708
+    },
+    {
+      "edit_distinct": 4,
+      "post_distinct": 6,
+      "row_subsets": 1250618
+    },
+    {
+      "edit_distinct": 5,
+      "post_distinct": 6,
+      "row_subsets": 1353000
+    },
+    {
+      "edit_distinct": 6,
+      "post_distinct": 6,
+      "row_subsets": 395808
+    },
+    {
+      "edit_distinct": 7,
+      "post_distinct": 6,
+      "row_subsets": 19456
+    },
+    {
+      "edit_distinct": 1,
+      "post_distinct": 7,
+      "row_subsets": 856
+    },
+    {
+      "edit_distinct": 2,
+      "post_distinct": 7,
+      "row_subsets": 43548
+    },
+    {
+      "edit_distinct": 3,
+      "post_distinct": 7,
+      "row_subsets": 356798
+    },
+    {
+      "edit_distinct": 4,
+      "post_distinct": 7,
+      "row_subsets": 748356
+    },
+    {
+      "edit_distinct": 5,
+      "post_distinct": 7,
+      "row_subsets": 431136
+    },
+    {
+      "edit_distinct": 6,
+      "post_distinct": 7,
+      "row_subsets": 52288
+    },
+    {
+      "edit_distinct": 1,
+      "post_distinct": 8,
+      "row_subsets": 1245
+    },
+    {
+      "edit_distinct": 2,
+      "post_distinct": 8,
+      "row_subsets": 29772
+    },
+    {
+      "edit_distinct": 3,
+      "post_distinct": 8,
+      "row_subsets": 130512
+    },
+    {
+      "edit_distinct": 4,
+      "post_distinct": 8,
+      "row_subsets": 142416
+    },
+    {
+      "edit_distinct": 5,
+      "post_distinct": 8,
+      "row_subsets": 33600
+    },
+    {
+      "edit_distinct": 0,
+      "post_distinct": 9,
+      "row_subsets": 1
+    },
+    {
+      "edit_distinct": 1,
+      "post_distinct": 9,
+      "row_subsets": 464
+    },
+    {
+      "edit_distinct": 2,
+      "post_distinct": 9,
+      "row_subsets": 5352
+    },
+    {
+      "edit_distinct": 3,
+      "post_distinct": 9,
+      "row_subsets": 11664
+    },
+    {
+      "edit_distinct": 4,
+      "post_distinct": 9,
+      "row_subsets": 5088
+    }
+  ],
+  "sample_rows": 13,
+  "structured_omission_distinct": 7,
+  "subsets_with_total_at_or_below_structured_omission": 32144,
+  "subsets_with_zero_posting": 1,
+  "total_rows": 26
+}

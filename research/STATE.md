@@ -2,6 +2,10 @@
 
 Work on `research/classroom-replay`. Keep this long-lived branch on origin. Its starting point is `1d653242eb5ab29507982c216dbe68b5d8c310ba` on main. This is assistant-produced reference work.
 
+## Current handoff
+
+The [classroom replay](classroom/README.md) and its exact deletion analysis are complete. Run `sh research/classroom/reproduce.sh` on this branch to recompute both. Commit `2e64283` specifies the sampling plan, `5181beb` adds the Java evaluator, and `780d693` archives the first verified experiment. The chronological notes below record what was known at each checkpoint.
+
 ## Checkpoint 0 · 2026-11-20
 
 **Question.** On Restricter's generated classroom snapshot, what does a log-only baseline lose when an entire assignment-posting action is absent from the log, compared with dropping the same number of events without regard to action?

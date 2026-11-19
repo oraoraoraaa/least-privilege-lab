@@ -40,6 +40,12 @@ The Java projection and the Cedar engine agreed on **312/312** decisions. The lo
 
 The full log contains 13 posting and 13 editing events. Repeated requests leave nine distinct posting tuples and seven distinct editing tuples. Even with the full log, an observed-only policy loses ten intended permissions. With an equal budget of 13 events, omitting the posting action loses all posting permissions. The 30 random samples retain three to eight posting permissions each. The seeds vary the sample from this one snapshot. They do not represent independent classrooms.
 
+## Exact follow-up on duplicated requests
+
+After inspecting the duplicate counts, we calculated the complete random-deletion distribution. Exactly 10,400,600 subsets retain 13 of the 26 event rows. Their mean retention is **10.2722 of 26** intended permissions, including **5.54 of 13** posting permissions. Only one subset retains zero posting permissions. A total of 32,144 subsets (0.3091%) retain seven or fewer intended permissions overall. These are probabilities under uniform row deletion from this fixed log. The structured deletion condition was chosen by design.
+
+The dynamic program groups repeated rows by request. Taking *j* of *m* identical requests contributes the binomial weight C(*m*, *j*). Each retained request counts once toward distinct permissions. Summing the joint distribution recovers C(26, 13). A separate inclusion-probability calculation checks both action means, and direct enumeration checks a small repeated-row fixture for every possible budget. The [exact joint counts](exact-retention.json) and [calculation](exact_retention.py) reproduce alongside the original study.
+
 ## Review the evidence
 
 | File | What a reviewer can check |
