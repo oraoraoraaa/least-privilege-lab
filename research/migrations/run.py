@@ -93,6 +93,7 @@ def development():
         cache, manifest, upstream = options
         snapshots = load_sources(ROOT / "build" / cache, manifest, upstream)
         previous = None
+        old_tag = None
         series = []
         for meta, files in snapshots:
             if previous:

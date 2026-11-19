@@ -6,6 +6,10 @@ Work on `research/classroom-replay`. Keep this long-lived branch on origin. Its 
 
 Start with [the revised paper](../paper/paper.pdf), the [migration evidence guide](migrations/README.md) and the [protocol](migrations/PROTOCOL.md) published at a5ebb6b. The method and development gates were pushed at b1b95c4 before held-out native scoring. The [compatibility record](migrations/CORRECTIONS.md) documents subsequent import changes. The root reproduction script now includes the complete extension. Rebuild all manuscript tables and figures with `make paper`.
 
+Independent macOS arm64 and Arch Linux x86-64 checkouts of 3dff09051c257983fcbb2a709d0590f0e24b561a each rediscovered the five upstream histories and matched the decompressed source manifest. Each ran the root reproduction command, regenerated all eight migration evidence files, reproduced the earlier studies, rebuilt the paper, and regenerated every figure and table byte-for-byte. The four CLI modes all named mangas.notes on the shipped lookup. The broad diff flagged 17 of 42 old names in that example, and each other mode flagged ten.
+
+The macOS PDF SHA-256 was d3fd198f2e883ed79097ecca160ca6410bb0b4b34e112583e7c44dfb7d8e57da and the Arch PDF SHA-256 was 2d7f6b38acfdedbf3a3e2c0909457ab5061b40fbc9d8cec2f1a7b6df5128b469. The same Poppler installation rendered all five pairs of pages pixel-identically at 105 dpi. Both TeX builds completed without warnings or overflowing boxes.
+
 The entries below describe previous revisions in chronological context.
 
 ## Start here after an interruption
