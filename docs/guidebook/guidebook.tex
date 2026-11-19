@@ -285,10 +285,10 @@ After a policy edit, a revision monitor identifies the effective permissions tha
 \sub{Work an example across two revisions}
 Continue with request IDs from section~\ref{sec:semantics}. Suppose the old policy permits \(\{0,3,4\}\). A new policy permits \(\{0,1,2,3,4\}\). The reviewed expectation for this release is \(B=\{0,2,4\}\). The owner approved read access to the preview model (2) for a new serving workflow. The archive read (1) still has no corresponding requirement.
 \[
-  \underbrace{G_{\mathrm{new}}\setminus G_{\mathrm{old}}}_{\text{newly granted}}
-   = \{1,2\}, \qquad
-  \underbrace{(G_{\mathrm{new}}\setminus G_{\mathrm{old}})\setminus B}_{\text{alerts}}
-   = \{1\}.
+  \begin{aligned}
+    \text{Newly granted}\quad & G_{\mathrm{new}}\setminus G_{\mathrm{old}} = \{1,2\},\\
+    \text{Alerts}\quad & (G_{\mathrm{new}}\setminus G_{\mathrm{old}})\setminus B = \{1\}.
+  \end{aligned}
 \]
 Grant 3 also lies outside the baseline. It already existed, so a report of \emph{all current discrepancies} would include it, while this revision's new-alert report contains only grant 1. A redundant second rule permitting request 0 adds no effective grant.
 
