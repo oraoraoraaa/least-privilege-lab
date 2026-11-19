@@ -1,0 +1,217 @@
+{
+  "mihon": [
+    {
+      "flagged_expanded": [
+        "chapters.getBookmarkedChaptersByMangaId",
+        "chapters.getChapterById",
+        "chapters.getChapterByUrl",
+        "chapters.getChapterByUrlAndMangaId",
+        "chapters.getChaptersByMangaId",
+        "libraryView.library",
+        "mangas.getAllManga",
+        "mangas.getDuplicateLibraryManga",
+        "mangas.getFavoriteBySourceId",
+        "mangas.getFavorites",
+        "mangas.getMangaById",
+        "mangas.getMangaByUrlAndSource",
+        "mangas.getMangasWithFavoriteTimestamp"
+      ],
+      "flagged_retired": [],
+      "flagged_stable": [],
+      "missed_expanded": [],
+      "new": "v0.17.0",
+      "old": "v0.16.0",
+      "old_names": 36,
+      "only_coverage": [],
+      "only_rehearsal": []
+    },
+    {
+      "flagged_expanded": [
+        "manga_sync.getTrackById",
+        "manga_sync.getTracks",
+        "manga_sync.getTracksByMangaId"
+      ],
+      "flagged_retired": [],
+      "flagged_stable": [],
+      "missed_expanded": [],
+      "new": "v0.18.0",
+      "old": "v0.17.0",
+      "old_names": 42,
+      "only_coverage": [],
+      "only_rehearsal": []
+    },
+    {
+      "flagged_expanded": [
+        "libraryView.library",
+        "mangas.getAllManga",
+        "mangas.getDuplicateLibraryManga",
+        "mangas.getFavoriteBySourceId",
+        "mangas.getFavorites",
+        "mangas.getMangaById",
+        "mangas.getMangaByUrlAndSource",
+        "mangas.getMangasWithFavoriteTimestamp",
+        "mangas.getReadMangaNotInLibrary",
+        "mangas.getUpcomingManga"
+      ],
+      "flagged_retired": [],
+      "flagged_stable": [],
+      "missed_expanded": [],
+      "new": "v0.19.0",
+      "old": "v0.18.0",
+      "old_names": 42,
+      "only_coverage": [],
+      "only_rehearsal": []
+    },
+    {
+      "flagged_expanded": [
+        "chapters.getBookmarkedChaptersByMangaId",
+        "chapters.getChapterById",
+        "chapters.getChapterByUrl",
+        "chapters.getChapterByUrlAndMangaId",
+        "chapters.getChaptersByMangaId",
+        "libraryView.library",
+        "mangas.getAllManga",
+        "mangas.getDuplicateLibraryManga",
+        "mangas.getFavoriteBySourceId",
+        "mangas.getFavorites",
+        "mangas.getMangaById",
+        "mangas.getMangaByUrlAndSource",
+        "mangas.getMangasWithFavoriteTimestamp",
+        "mangas.getReadMangaNotInLibrary",
+        "mangas.getUpcomingManga",
+        "updatesView.getRecentUpdates",
+        "updatesView.getUpdatesByReadStatus"
+      ],
+      "flagged_retired": [
+        "extension_repos.count",
+        "extension_repos.findAll",
+        "extension_repos.findOne",
+        "extension_repos.findOneBySigningKeyFingerprint"
+      ],
+      "flagged_stable": [],
+      "missed_expanded": [],
+      "new": "v0.20.0",
+      "old": "v0.19.0",
+      "old_names": 42,
+      "only_coverage": [],
+      "only_rehearsal": []
+    },
+    {
+      "flagged_expanded": [
+        "history.getHistoryByMangaId",
+        "history.getReadDuration",
+        "historyView.getLatestHistory",
+        "historyView.history",
+        "libraryView.library",
+        "updatesView.getRecentUpdatesWithFilters"
+      ],
+      "flagged_retired": [
+        "categories.getCategories",
+        "categories.getCategoriesByMangaId",
+        "categories.getCategory",
+        "chapters.getBookmarkedChaptersByMangaId",
+        "chapters.getChapterById",
+        "chapters.getChapterByUrl",
+        "chapters.getChapterByUrlAndMangaId",
+        "chapters.getChaptersByMangaId",
+        "chapters.getScanlatorsByMangaId",
+        "excluded_scanlators.getExcludedScanlatorsByMangaId",
+        "history.getHistoryByChapterUrl",
+        "manga_sync.getTrackById",
+        "manga_sync.getTracks",
+        "manga_sync.getTracksByMangaId",
+        "mangas.getAllManga",
+        "mangas.getAllMangaSourceAndUrl",
+        "mangas.getDuplicateLibraryManga",
+        "mangas.getFavoriteBySourceId",
+        "mangas.getFavorites",
+        "mangas.getMangaById",
+        "mangas.getMangaByUrlAndSource",
+        "mangas.getMangasWithFavoriteTimestamp",
+        "mangas.getReadMangaNotInLibrary",
+        "mangas.getSourceIdWithFavoriteCount",
+        "mangas.getSourceIdsWithNonLibraryManga",
+        "mangas.getUpcomingManga",
+        "sources.findAll",
+        "sources.findOne",
+        "updatesView.getRecentUpdates",
+        "updatesView.getUpdatesByReadStatus"
+      ],
+      "flagged_stable": [],
+      "missed_expanded": [],
+      "new": "v0.21.0",
+      "old": "v0.20.0",
+      "old_names": 39,
+      "only_coverage": [],
+      "only_rehearsal": []
+    }
+  ],
+  "tivi": [
+    {
+      "flagged_expanded": [],
+      "flagged_retired": [],
+      "flagged_stable": [],
+      "missed_expanded": [],
+      "new": "2023-09-30",
+      "old": "2023-06-30",
+      "old_names": 84,
+      "only_coverage": [],
+      "only_rehearsal": []
+    },
+    {
+      "flagged_expanded": [],
+      "flagged_retired": [],
+      "flagged_stable": [],
+      "missed_expanded": [],
+      "new": "2023-12-31",
+      "old": "2023-09-30",
+      "old_names": 85,
+      "only_coverage": [],
+      "only_rehearsal": []
+    },
+    {
+      "flagged_expanded": [],
+      "flagged_retired": [],
+      "flagged_stable": [],
+      "missed_expanded": [],
+      "new": "2024-03-31",
+      "old": "2023-12-31",
+      "old_names": 85,
+      "only_coverage": [],
+      "only_rehearsal": []
+    },
+    {
+      "flagged_expanded": [],
+      "flagged_retired": [],
+      "flagged_stable": [],
+      "missed_expanded": [],
+      "new": "2024-06-30",
+      "old": "2024-03-31",
+      "old_names": 85,
+      "only_coverage": [],
+      "only_rehearsal": []
+    },
+    {
+      "flagged_expanded": [],
+      "flagged_retired": [],
+      "flagged_stable": [],
+      "missed_expanded": [],
+      "new": "2024-09-30",
+      "old": "2024-06-30",
+      "old_names": 85,
+      "only_coverage": [],
+      "only_rehearsal": []
+    },
+    {
+      "flagged_expanded": [],
+      "flagged_retired": [],
+      "flagged_stable": [],
+      "missed_expanded": [],
+      "new": "2024-11-12",
+      "old": "2024-09-30",
+      "old_names": 92,
+      "only_coverage": [],
+      "only_rehearsal": []
+    }
+  ]
+}

@@ -13,6 +13,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0,str(HERE.parent/"paths"))
 
+from column_coverage import compare_series
 from review import migration_report
 from release_check import DIGESTS, verify
 from application import added_on_touched_relations, aggregate, introductions, load_snapshot, transition
@@ -38,9 +39,10 @@ def run(out,cache):
     write_json(out/"selection.json",panels)
     write_tsv(out/"choices.tsv.gz",["corpus","cohort","family","observed","hidden","near","far",
                                     "unseen_reads","baseline_success","near_success","far_success"],comparisons)
-    app_series(out,load_sources(cache/"tivi-sql"),"application","snapshots")
+    tivi_coverage = app_series(out,load_sources(cache/"tivi-sql"),"application","snapshots")
     mihon_sources = load_sources(cache/"mihon-sql","mihon-sources.json","mihonapp/mihon")
-    app_series(out,mihon_sources,"mihon","mihon-snapshots")
+    mihon_coverage = app_series(out,mihon_sources,"mihon","mihon-snapshots")
+    write_json(out/"column-coverage.json", {"tivi": tivi_coverage, "mihon": mihon_coverage})
     apk_apps = {m["cutoff"]:load_snapshot(files) for m,files in mihon_sources if m["cutoff"] in DIGESTS}
     write_json(out/"release-check.json",verify(cache/"mihon-releases",apk_apps))
     for app in apk_apps.values():
@@ -96,6 +98,7 @@ def app_series(out, sources, name, snapshot_name):
     previous.db.db.close()
     write_json(out/(name+".json"),{"summary":aggregate(transitions),"transitions":transitions})
     write_json(out/(snapshot_name+".json"),snapshots)
+    return compare_series(snapshots,transitions)
 
 
 if __name__=="__main__":

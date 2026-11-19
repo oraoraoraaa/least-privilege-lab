@@ -1,5 +1,6 @@
 import unittest
 
+from column_coverage import coverage_alerts
 from review import load_snapshot, migration_report, Instrument, schema_sql
 
 
@@ -25,6 +26,32 @@ deliberately invalid future query;
         self.assertFalse(allowed)
         next_db.db.close()
         previous.db.db.close()
+
+    def test_column_coverage_uses_all_prior_fields_and_detects_removals(self):
+        old = {"book.@row", "book.id", "book.title", "view.title", "tag.label"}
+        planned = (old - {"tag.label"}) | {"book.notes", "view.notes", "new.title"}
+        reads = {"all_columns": {"book.id", "book.title"}, "some_columns": {"book.title"},
+                 "count_only": {"book.@row"}, "read_view": {"view.title"},
+                 "removed": {"tag.label"}, "constant": set()}
+        alerts = coverage_alerts(old, planned, reads)
+        self.assertEqual(set(alerts), {"all_columns", "read_view", "removed"})
+        self.assertEqual(alerts["read_view"]["growing_full_relations"], ["view"])
+        self.assertEqual(alerts["removed"]["removed_reads"], ["tag.label"])
+
+    def test_identical_old_read_sets_diverge_after_a_column_addition(self):
+        previous = load_snapshot({"t.sq": "CREATE TABLE t(id INTEGER, title TEXT);\n"
+                                  "star:\nSELECT * FROM t;\nlist:\nSELECT id, title FROM t;"})
+        planned = Instrument("CREATE TABLE t(id INTEGER, title TEXT, notes TEXT);", include_views=True)
+        try:
+            self.assertEqual(previous.reads["t.star"], previous.reads["t.list"])
+            alerts = coverage_alerts(previous.db.universe, planned.universe, previous.reads)
+            self.assertEqual(set(alerts), {"t.star", "t.list"})
+            report = migration_report(previous, planned)
+            self.assertEqual(report["alerts"], {"t.star": {"reason": "expanded_reads",
+                                                          "added_reads": ["t.notes"]}})
+        finally:
+            planned.db.close()
+            previous.db.db.close()
 
     def test_removed_column_supplies_a_preparation_error(self):
         old = load_snapshot({"report.sq":"CREATE TABLE t(id INTEGER, detail TEXT);\nget:\nSELECT detail FROM t;"})
