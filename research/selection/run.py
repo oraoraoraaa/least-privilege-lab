@@ -13,7 +13,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0,str(HERE.parent/"paths"))
 
-from application import aggregate, load_snapshot, transition
+from application import aggregate, introductions, load_snapshot, transition
 from selection import benchmark
 from sources import load_sources
 from study import write_tsv
@@ -36,22 +36,46 @@ def run(out,cache):
     write_json(out/"selection.json",panels)
     write_tsv(out/"choices.tsv.gz",["corpus","cohort","family","observed","hidden","near","far",
                                     "unseen_reads","baseline_success","near_success","far_success"],comparisons)
-    applications, snapshots, transitions = [], [], []
-    for manifest, files in load_sources(cache/"tivi-sql"):
+    app_series(out,load_sources(cache/"tivi-sql"),"application","snapshots")
+    app_series(out,load_sources(cache/"mihon-sql","mihon-sources.json","mihonapp/mihon"),"mihon","mihon-snapshots")
+    events = load_sources(cache/"tivi-sql","event-sources.json")
+    previous = None
+    history = []
+    for manifest,files in events:
+        current = load_snapshot(files)
+        if previous is not None:
+            common = sorted(current.queries.keys() & previous.queries.keys())
+            history.append({"old":previous_rev,"new":manifest["revision"],"date":manifest["cutoff"],
+                            "surviving":len(common),"new_names":introductions(previous,current),
+                            "retired_names":sorted(previous.queries.keys()-current.queries.keys()),
+                            "text_changed":[q for q in common if previous.queries[q].digest != current.queries[q].digest],
+                            "expansions":{q:sorted(current.reads[q]-previous.reads[q]) for q in common
+                                          if current.reads[q]-previous.reads[q]}})
+            previous.db.db.close()
+        previous,previous_rev = current,manifest["revision"]
+    previous.db.db.close()
+    write_json(out/"tivi-history.json",history)
+
+
+def app_series(out, sources, name, snapshot_name):
+    snapshots, transitions = [], []
+    previous = None
+    for manifest, files in sources:
         current = load_snapshot(files)
         snapshots.append({"cutoff":manifest["cutoff"],"revision":manifest["revision"],
                           "universe":sorted(current.db.universe),"inventory":current.inventory,
                           "queries":{q:{"digest":query.digest,"reads":sorted(current.reads[q])}
                                      for q,query in current.queries.items()}})
-        if applications:
-            outcome=transition(applications[-1],current)
-            outcome.update(old=snapshots[-2]["cutoff"],new=manifest["cutoff"])
+        if previous is not None:
+            outcome = transition(previous,current)
+            outcome.update(old=snapshots[-2]["cutoff"],new=manifest["cutoff"],
+                           introductions=introductions(previous,current))
             transitions.append(outcome)
-        applications.append(current)
-    write_json(out/"application.json",{"summary":aggregate(transitions),"transitions":transitions})
-    write_json(out/"snapshots.json",snapshots)
-    for app in applications:
-        app.db.db.close()
+            previous.db.db.close()
+        previous = current
+    previous.db.db.close()
+    write_json(out/(name+".json"),{"summary":aggregate(transitions),"transitions":transitions})
+    write_json(out/(snapshot_name+".json"),snapshots)
 
 
 if __name__=="__main__":

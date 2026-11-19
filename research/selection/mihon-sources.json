@@ -1,0 +1,109 @@
+[
+  {
+    "cutoff": "v0.16.0",
+    "files": {
+      "data/src/main/sqldelight/tachiyomi/data/categories.sq": "30cdd25307cb1a673948343d0bd55a14d02ae883d3bbe7622bd45e8e9aeae199",
+      "data/src/main/sqldelight/tachiyomi/data/chapters.sq": "17831ba3e3c306f5107c83f02142c8478765600d7cf0af727d72ce3ed8af6d36",
+      "data/src/main/sqldelight/tachiyomi/data/excluded_scanlators.sq": "2edb94f6eeec4cffed6001f4d3b2cd7a69c47fdee7c13f0add30cd94c0f38def",
+      "data/src/main/sqldelight/tachiyomi/data/history.sq": "272bae4448b59673f9142a36a006861017b2a3ef2fc6a4d7bcdecee2d742d3c0",
+      "data/src/main/sqldelight/tachiyomi/data/manga_sync.sq": "971ed75055fa7eb41f1e0b7883c5cfd17615919fd33b457a523aae73f49b0349",
+      "data/src/main/sqldelight/tachiyomi/data/mangas.sq": "ac52f633e045377afce87d4ea1cfee4d870f43c980627c67d805865624859f47",
+      "data/src/main/sqldelight/tachiyomi/data/mangas_categories.sq": "e76c264a0cb5521808c1b37ef83cf26e5a34400a133c8e582c33e8432736a38c",
+      "data/src/main/sqldelight/tachiyomi/data/sources.sq": "6be5c1d7db074d022019045b7906155f86e6387b5ce6cd99075c6d9f5b0f7ad0",
+      "data/src/main/sqldelight/tachiyomi/view/historyView.sq": "c9d1bdbf1aa7162ccca0787e0d85fad7cd28ecf01797617249d206a4c5170327",
+      "data/src/main/sqldelight/tachiyomi/view/libraryView.sq": "975ef2cf03775bf3c404c2ef462279ac1d678f110d4480c23b87afaa5d437796",
+      "data/src/main/sqldelight/tachiyomi/view/updatesView.sq": "2fea7144befd4ac73b8ed2fd0ab554b024b8351968c0d472530db4c1fee16ebe"
+    },
+    "revision": "a605a4ec7572919f8c6ad599dce677dd648ca2ad"
+  },
+  {
+    "cutoff": "v0.17.0",
+    "files": {
+      "data/src/main/sqldelight/tachiyomi/data/categories.sq": "30cdd25307cb1a673948343d0bd55a14d02ae883d3bbe7622bd45e8e9aeae199",
+      "data/src/main/sqldelight/tachiyomi/data/chapters.sq": "913655d13f8931341c390b2f6253fff8aa609bc2b82b702646935a2b220b1e54",
+      "data/src/main/sqldelight/tachiyomi/data/excluded_scanlators.sq": "2edb94f6eeec4cffed6001f4d3b2cd7a69c47fdee7c13f0add30cd94c0f38def",
+      "data/src/main/sqldelight/tachiyomi/data/extension_repos.sq": "ad325a80cd340ff02b93b81c99519852644d2a67aec88107c16e2a0936f1398d",
+      "data/src/main/sqldelight/tachiyomi/data/history.sq": "272bae4448b59673f9142a36a006861017b2a3ef2fc6a4d7bcdecee2d742d3c0",
+      "data/src/main/sqldelight/tachiyomi/data/manga_sync.sq": "971ed75055fa7eb41f1e0b7883c5cfd17615919fd33b457a523aae73f49b0349",
+      "data/src/main/sqldelight/tachiyomi/data/mangas.sq": "6a434a041faf0a58180859bc6c45ad59f710fd4f302f7ce88a07fb58325310c0",
+      "data/src/main/sqldelight/tachiyomi/data/mangas_categories.sq": "b72b1db3c070a585641cb052eaa2aeedb87ebb6cb272b12e5e319d89cace2f06",
+      "data/src/main/sqldelight/tachiyomi/data/sources.sq": "6be5c1d7db074d022019045b7906155f86e6387b5ce6cd99075c6d9f5b0f7ad0",
+      "data/src/main/sqldelight/tachiyomi/view/historyView.sq": "c9d1bdbf1aa7162ccca0787e0d85fad7cd28ecf01797617249d206a4c5170327",
+      "data/src/main/sqldelight/tachiyomi/view/libraryView.sq": "975ef2cf03775bf3c404c2ef462279ac1d678f110d4480c23b87afaa5d437796",
+      "data/src/main/sqldelight/tachiyomi/view/updatesView.sq": "2fea7144befd4ac73b8ed2fd0ab554b024b8351968c0d472530db4c1fee16ebe"
+    },
+    "revision": "38d5fc91606f28287827bc53ee1410d8ab54bf9f"
+  },
+  {
+    "cutoff": "v0.18.0",
+    "files": {
+      "data/src/main/sqldelight/tachiyomi/data/categories.sq": "30cdd25307cb1a673948343d0bd55a14d02ae883d3bbe7622bd45e8e9aeae199",
+      "data/src/main/sqldelight/tachiyomi/data/chapters.sq": "913655d13f8931341c390b2f6253fff8aa609bc2b82b702646935a2b220b1e54",
+      "data/src/main/sqldelight/tachiyomi/data/excluded_scanlators.sq": "2edb94f6eeec4cffed6001f4d3b2cd7a69c47fdee7c13f0add30cd94c0f38def",
+      "data/src/main/sqldelight/tachiyomi/data/extension_repos.sq": "ad325a80cd340ff02b93b81c99519852644d2a67aec88107c16e2a0936f1398d",
+      "data/src/main/sqldelight/tachiyomi/data/history.sq": "272bae4448b59673f9142a36a006861017b2a3ef2fc6a4d7bcdecee2d742d3c0",
+      "data/src/main/sqldelight/tachiyomi/data/manga_sync.sq": "3140e217b4e6c69b88970f6593a2a6f1377f1c838ab069c0af66f251a7062fd6",
+      "data/src/main/sqldelight/tachiyomi/data/mangas.sq": "6a434a041faf0a58180859bc6c45ad59f710fd4f302f7ce88a07fb58325310c0",
+      "data/src/main/sqldelight/tachiyomi/data/mangas_categories.sq": "b72b1db3c070a585641cb052eaa2aeedb87ebb6cb272b12e5e319d89cace2f06",
+      "data/src/main/sqldelight/tachiyomi/data/sources.sq": "6be5c1d7db074d022019045b7906155f86e6387b5ce6cd99075c6d9f5b0f7ad0",
+      "data/src/main/sqldelight/tachiyomi/view/historyView.sq": "c9d1bdbf1aa7162ccca0787e0d85fad7cd28ecf01797617249d206a4c5170327",
+      "data/src/main/sqldelight/tachiyomi/view/libraryView.sq": "975ef2cf03775bf3c404c2ef462279ac1d678f110d4480c23b87afaa5d437796",
+      "data/src/main/sqldelight/tachiyomi/view/updatesView.sq": "2fea7144befd4ac73b8ed2fd0ab554b024b8351968c0d472530db4c1fee16ebe"
+    },
+    "revision": "6294521460a8eb8b755b7a8c3c07d4bfa2e9a9e0"
+  },
+  {
+    "cutoff": "v0.19.0",
+    "files": {
+      "data/src/main/sqldelight/tachiyomi/data/categories.sq": "30cdd25307cb1a673948343d0bd55a14d02ae883d3bbe7622bd45e8e9aeae199",
+      "data/src/main/sqldelight/tachiyomi/data/chapters.sq": "913655d13f8931341c390b2f6253fff8aa609bc2b82b702646935a2b220b1e54",
+      "data/src/main/sqldelight/tachiyomi/data/excluded_scanlators.sq": "2edb94f6eeec4cffed6001f4d3b2cd7a69c47fdee7c13f0add30cd94c0f38def",
+      "data/src/main/sqldelight/tachiyomi/data/extension_repos.sq": "ad325a80cd340ff02b93b81c99519852644d2a67aec88107c16e2a0936f1398d",
+      "data/src/main/sqldelight/tachiyomi/data/history.sq": "272bae4448b59673f9142a36a006861017b2a3ef2fc6a4d7bcdecee2d742d3c0",
+      "data/src/main/sqldelight/tachiyomi/data/manga_sync.sq": "3140e217b4e6c69b88970f6593a2a6f1377f1c838ab069c0af66f251a7062fd6",
+      "data/src/main/sqldelight/tachiyomi/data/mangas.sq": "167e66a7f470cec1a8173431f44880de314ab20c8c7ea770d80c57a1f907dae7",
+      "data/src/main/sqldelight/tachiyomi/data/mangas_categories.sq": "b72b1db3c070a585641cb052eaa2aeedb87ebb6cb272b12e5e319d89cace2f06",
+      "data/src/main/sqldelight/tachiyomi/data/sources.sq": "6be5c1d7db074d022019045b7906155f86e6387b5ce6cd99075c6d9f5b0f7ad0",
+      "data/src/main/sqldelight/tachiyomi/view/historyView.sq": "c9d1bdbf1aa7162ccca0787e0d85fad7cd28ecf01797617249d206a4c5170327",
+      "data/src/main/sqldelight/tachiyomi/view/libraryView.sq": "f0f4fe47725be260aef465d87c5742e3e289dd98c3f8f66060f879064b60643e",
+      "data/src/main/sqldelight/tachiyomi/view/updatesView.sq": "2fea7144befd4ac73b8ed2fd0ab554b024b8351968c0d472530db4c1fee16ebe"
+    },
+    "revision": "e4de208cf75e273b425bf4b1fe4bd7bc3d9cc459"
+  },
+  {
+    "cutoff": "v0.20.0",
+    "files": {
+      "data/src/main/sqldelight/tachiyomi/data/categories.sq": "33fc675352e005615b3b0ef8473b7d37abba3dddcb6f3243d0b41268e370a84a",
+      "data/src/main/sqldelight/tachiyomi/data/chapters.sq": "a6f12aab0a57f236a3eb050c1893cf2ceccb7f3a176dc35ad71f7d624fe62b3e",
+      "data/src/main/sqldelight/tachiyomi/data/excluded_scanlators.sq": "2de01ff9ee133b3fbcfc55e585ebda9d86f1a3918a90dc130a10bd65f79c1684",
+      "data/src/main/sqldelight/tachiyomi/data/extension_store.sq": "25bdafdff439a229163d3c4800637e8e29785606c68778f97d9fb6f194e10b11",
+      "data/src/main/sqldelight/tachiyomi/data/history.sq": "e235f5db3fce4610eb4a2be76be07208977a0fc5df260082b80c68f451f10b1e",
+      "data/src/main/sqldelight/tachiyomi/data/manga_sync.sq": "06785601b926689074deb7bceabf436194e0eb7f82467ba0683e34c23724838e",
+      "data/src/main/sqldelight/tachiyomi/data/mangas.sq": "2955ed08b7dfbbbcf4d92d1a0218505e8950fffe14a315c7216890e72d10ce8a",
+      "data/src/main/sqldelight/tachiyomi/data/mangas_categories.sq": "3f7913222308f8596e5a754c4a3505537ff086dabb8865cff69f2be741427fd6",
+      "data/src/main/sqldelight/tachiyomi/data/sources.sq": "6be5c1d7db074d022019045b7906155f86e6387b5ce6cd99075c6d9f5b0f7ad0",
+      "data/src/main/sqldelight/tachiyomi/view/historyView.sq": "c9d1bdbf1aa7162ccca0787e0d85fad7cd28ecf01797617249d206a4c5170327",
+      "data/src/main/sqldelight/tachiyomi/view/libraryView.sq": "f0f4fe47725be260aef465d87c5742e3e289dd98c3f8f66060f879064b60643e",
+      "data/src/main/sqldelight/tachiyomi/view/updatesView.sq": "75687f718bcc852b2fccd8577656de0d53a18bfa9cbd23bcf27b8d0fa787c634"
+    },
+    "revision": "19f1d00fcbef6ab7783066ff9ae8e377f696b231"
+  },
+  {
+    "cutoff": "v0.21.0",
+    "files": {
+      "data/src/main/sqldelight/tachiyomi/data/category.sq": "b26faae5baf8beee02a4095dc6aab5be3905279f73909f9a733fd92d6aa5e587",
+      "data/src/main/sqldelight/tachiyomi/data/chapter.sq": "d9633bde3c3c8a66533155d79cf0b27e551f2858f83c8a41ca14f8254519854a",
+      "data/src/main/sqldelight/tachiyomi/data/excluded_scanlator.sq": "e41fe5d486600cb1549991cdab74946c526092286d6c17f31e0d1f63b71bc5bc",
+      "data/src/main/sqldelight/tachiyomi/data/extension_store.sq": "491d19f04fc115001f0d76e0f2bed7babfe734264c5ff3f1803540a8038e09da",
+      "data/src/main/sqldelight/tachiyomi/data/history.sq": "32733155d8ec9a8943eca79b157ec3a3cbe2b7307201ba50ef8e02344e453ba5",
+      "data/src/main/sqldelight/tachiyomi/data/manga.sq": "b2f51cd261d55df7bbce9cb5fbd229346414373062d8101ccc83a5fa55f79756",
+      "data/src/main/sqldelight/tachiyomi/data/manga_category.sq": "4e460ac0cb19d754b69a4dbd92a32666aab28f72e4a4354c1164d795a51993f5",
+      "data/src/main/sqldelight/tachiyomi/data/manga_track.sq": "a2907a27933d1efb19cab7dba3c51ea9dd58f475a01f0524e6d6b06af5f33802",
+      "data/src/main/sqldelight/tachiyomi/data/source.sq": "bba9065bfa59e24712e34666b28e803327f6f5164193e44ec0e301e91afd4514",
+      "data/src/main/sqldelight/tachiyomi/view/historyView.sq": "2d6f895b0c867b880295ac031b06c3db9b7ec51c5083e22611761e4c4ac8ff50",
+      "data/src/main/sqldelight/tachiyomi/view/libraryView.sq": "20b118b25b3dd822f621a0659e73e64a15688ec52b07d21288b8011fad92e374",
+      "data/src/main/sqldelight/tachiyomi/view/updatesView.sq": "038b71ef6d62cc325bf602ceb31bc0d4a73191d2fa8f031d4bb3695a23affa92"
+    },
+    "revision": "79fc3a0a8aaa6cd2b6dc21c3f8ee53f008da654a"
+  }
+]

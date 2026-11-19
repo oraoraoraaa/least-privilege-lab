@@ -29,6 +29,7 @@ class Snapshot:
     queries: dict
     reads: dict
     inventory: dict
+    files: set
 
 
 def strip_comments(text):
@@ -41,10 +42,16 @@ def load_snapshot(files):
     inventory = Counter()
     for path, source in sorted(files.items()):
         family = Path(path).stem
-        sections = re.split(r"^\s*([A-Za-z_]\w*)\s*:\s*$",strip_comments(source),flags=re.M)
-        schema = re.sub(r"\b(INTEGER|TEXT|REAL|BLOB)\s+AS\s+[\w.]+",r"\1",sections[0],flags=re.I)
+        sections = re.split(r"^\s*([A-Za-z_]\w*)\s*(:|\{)\s*$",strip_comments(source),flags=re.M)
+        header = re.sub(r"^\s*import\s+[\w.]+;\s*$","",sections[0],flags=re.M)
+        schema = re.sub(r"\b(INTEGER|TEXT|REAL|BLOB)\s+AS\s+[\w.]+(?:<[\w.]+>)?",r"\1",header,flags=re.I)
         ddl.append(schema)
-        for name, statement in zip(sections[1::2],sections[2::2]):
+        for name, delimiter, statement in zip(sections[1::3],sections[2::3],sections[3::3]):
+            if delimiter == "{":
+                if not re.search(r"^\s*(INSERT|UPDATE|DELETE)\b",statement,re.M|re.I):
+                    raise ValueError(f"Unclassified statement group {path} {name}")
+                inventory["WRITE_GROUP"] += 1
+                continue
             sql = statement.strip()
             op = sql.split()[0].upper()
             inventory[op] += 1
@@ -65,7 +72,7 @@ def load_snapshot(files):
         ok, reads[q] = db.execute(query.sql,bindings=query.bindings)
         if not ok:
             raise ValueError(f"Reference denied for {q}")
-    return Snapshot(db, queries, reads, dict(inventory))
+    return Snapshot(db, queries, reads, dict(inventory),{Path(path).stem for path in files})
 
 
 def fit_catalog(old):
@@ -149,6 +156,22 @@ def transition(old,new):
                          "added_grants":{m:sorted(p-observed) for m,p in policies.items()}})
     return {"new_names":sorted(new.queries.keys()-old.queries.keys()),"retired_names":sorted(old.queries.keys()-new.queries.keys()),
             "native_decisions":native_count,"outcomes":outcomes}
+
+
+def introductions(old,new):
+    result = []
+    all_reads = set().union(*old.reads.values())
+    for q in sorted(new.queries.keys()-old.queries.keys()):
+        family = new.queries[q].family
+        candidates = [k for k,v in old.queries.items() if v.family == family]
+        resources = new.reads[q]
+        combined = set().union(*(old.reads[k] for k in candidates))
+        result.append({"query":q,"file_existed":family in old.files,"reads":sorted(resources),
+                       "covering_queries":[k for k in sorted(candidates) if resources <= old.reads[k]],
+                       "missing_from_file":sorted(resources-combined),
+                       "missing_from_app":sorted(resources-all_reads),
+                       "missing_from_schema":sorted(resources-old.db.universe)})
+    return result
 
 
 def aggregate(transitions):

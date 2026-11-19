@@ -1,0 +1,349 @@
+[
+  {
+    "date": "2023-07-07",
+    "expansions": {},
+    "new": "518484dc56c00ddc1f30782cac299ded8f6f718e",
+    "new_names": [],
+    "old": "2eaefa1ff0d0290320fcef43b09c5f031d1fbba3",
+    "retired_names": [],
+    "surviving": 84,
+    "text_changed": []
+  },
+  {
+    "date": "2023-08-05",
+    "expansions": {},
+    "new": "3fbf2b05ee277581b163e096aae98791011f6416",
+    "new_names": [],
+    "old": "518484dc56c00ddc1f30782cac299ded8f6f718e",
+    "retired_names": [],
+    "surviving": 84,
+    "text_changed": []
+  },
+  {
+    "date": "2023-09-09",
+    "expansions": {},
+    "new": "ff611ac9ecc091ed416dc9bc8b4d147680c4dfe1",
+    "new_names": [],
+    "old": "3fbf2b05ee277581b163e096aae98791011f6416",
+    "retired_names": [],
+    "surviving": 84,
+    "text_changed": [
+      "upnext_shows.upNextShows"
+    ]
+  },
+  {
+    "date": "2023-09-26",
+    "expansions": {},
+    "new": "a22dba40c8800644ae46da1e87ff934b1221d166",
+    "new_names": [
+      {
+        "covering_queries": [],
+        "file_existed": true,
+        "missing_from_app": [],
+        "missing_from_file": [
+          "episode_watch_entries.episode_id",
+          "episode_watch_entries.id",
+          "episode_watch_entries.pending_action",
+          "episode_watch_entries.trakt_id",
+          "episode_watch_entries.watched_at",
+          "episodes.first_aired",
+          "episodes.id",
+          "episodes.number",
+          "episodes.overview",
+          "episodes.season_id",
+          "episodes.title",
+          "episodes.tmdb_backdrop_path",
+          "episodes.tmdb_id",
+          "episodes.trakt_id",
+          "episodes.trakt_rating",
+          "episodes.trakt_rating_votes"
+        ],
+        "missing_from_schema": [],
+        "query": "seasons.seasonsWithEpisodesWithWatchesForShowId",
+        "reads": [
+          "episode_watch_entries.episode_id",
+          "episode_watch_entries.id",
+          "episode_watch_entries.pending_action",
+          "episode_watch_entries.trakt_id",
+          "episode_watch_entries.watched_at",
+          "episodes.first_aired",
+          "episodes.id",
+          "episodes.number",
+          "episodes.overview",
+          "episodes.season_id",
+          "episodes.title",
+          "episodes.tmdb_backdrop_path",
+          "episodes.tmdb_id",
+          "episodes.trakt_id",
+          "episodes.trakt_rating",
+          "episodes.trakt_rating_votes",
+          "seasons.ep_aired",
+          "seasons.ep_count",
+          "seasons.id",
+          "seasons.ignored",
+          "seasons.network",
+          "seasons.number",
+          "seasons.overview",
+          "seasons.show_id",
+          "seasons.title",
+          "seasons.tmdb_backdrop_path",
+          "seasons.tmdb_id",
+          "seasons.tmdb_poster_path",
+          "seasons.trakt_id",
+          "seasons.trakt_rating",
+          "seasons.trakt_votes"
+        ]
+      }
+    ],
+    "old": "ff611ac9ecc091ed416dc9bc8b4d147680c4dfe1",
+    "retired_names": [],
+    "surviving": 84,
+    "text_changed": []
+  },
+  {
+    "date": "2024-06-24",
+    "expansions": {},
+    "new": "ca540a88fc907ed8059c43a81bfd2c0d11b19246",
+    "new_names": [],
+    "old": "a22dba40c8800644ae46da1e87ff934b1221d166",
+    "retired_names": [],
+    "surviving": 85,
+    "text_changed": []
+  },
+  {
+    "date": "2024-07-06",
+    "expansions": {},
+    "new": "fb802a276814e9ee8d69609f3ec45206ff18f81b",
+    "new_names": [
+      {
+        "covering_queries": [],
+        "file_existed": true,
+        "missing_from_app": [],
+        "missing_from_file": [
+          "myshows_entries.show_id"
+        ],
+        "missing_from_schema": [],
+        "query": "episodes.upcomingEpisodes",
+        "reads": [
+          "episodes.first_aired",
+          "episodes.id",
+          "episodes.number",
+          "episodes.overview",
+          "episodes.season_id",
+          "episodes.title",
+          "episodes.tmdb_backdrop_path",
+          "episodes.tmdb_id",
+          "episodes.trakt_id",
+          "episodes.trakt_rating",
+          "episodes.trakt_rating_votes",
+          "myshows_entries.show_id",
+          "seasons.id",
+          "seasons.number",
+          "seasons.show_id",
+          "shows.@row",
+          "shows.id"
+        ]
+      }
+    ],
+    "old": "ca540a88fc907ed8059c43a81bfd2c0d11b19246",
+    "retired_names": [],
+    "surviving": 85,
+    "text_changed": []
+  },
+  {
+    "date": "2024-07-17",
+    "expansions": {},
+    "new": "1f04706828b8c33b6e0d134b12f6aebff8541180",
+    "new_names": [],
+    "old": "fb802a276814e9ee8d69609f3ec45206ff18f81b",
+    "retired_names": [],
+    "surviving": 86,
+    "text_changed": [
+      "library_shows.count",
+      "library_shows.entries"
+    ]
+  },
+  {
+    "date": "2024-09-02",
+    "expansions": {},
+    "new": "5eaa322de3b54b676bbddd6ae4723f06a82b9a26",
+    "new_names": [
+      {
+        "covering_queries": [],
+        "file_existed": false,
+        "missing_from_app": [
+          "anticipated_shows.@row"
+        ],
+        "missing_from_file": [
+          "anticipated_shows.@row"
+        ],
+        "missing_from_schema": [
+          "anticipated_shows.@row"
+        ],
+        "query": "anticipated_shows.count",
+        "reads": [
+          "anticipated_shows.@row"
+        ]
+      },
+      {
+        "covering_queries": [],
+        "file_existed": false,
+        "missing_from_app": [
+          "anticipated_shows.id",
+          "anticipated_shows.page",
+          "anticipated_shows.page_order",
+          "anticipated_shows.show_id"
+        ],
+        "missing_from_file": [
+          "anticipated_shows.id",
+          "anticipated_shows.page",
+          "anticipated_shows.page_order",
+          "anticipated_shows.show_id"
+        ],
+        "missing_from_schema": [
+          "anticipated_shows.id",
+          "anticipated_shows.page",
+          "anticipated_shows.page_order",
+          "anticipated_shows.show_id"
+        ],
+        "query": "anticipated_shows.entries",
+        "reads": [
+          "anticipated_shows.id",
+          "anticipated_shows.page",
+          "anticipated_shows.page_order",
+          "anticipated_shows.show_id"
+        ]
+      },
+      {
+        "covering_queries": [],
+        "file_existed": false,
+        "missing_from_app": [
+          "anticipated_shows.id",
+          "anticipated_shows.page",
+          "anticipated_shows.page_order",
+          "anticipated_shows.show_id"
+        ],
+        "missing_from_file": [
+          "anticipated_shows.id",
+          "anticipated_shows.page",
+          "anticipated_shows.page_order",
+          "anticipated_shows.show_id"
+        ],
+        "missing_from_schema": [
+          "anticipated_shows.id",
+          "anticipated_shows.page",
+          "anticipated_shows.page_order",
+          "anticipated_shows.show_id"
+        ],
+        "query": "anticipated_shows.entriesInPage",
+        "reads": [
+          "anticipated_shows.id",
+          "anticipated_shows.page",
+          "anticipated_shows.page_order",
+          "anticipated_shows.show_id"
+        ]
+      },
+      {
+        "covering_queries": [],
+        "file_existed": false,
+        "missing_from_app": [
+          "anticipated_shows.id",
+          "anticipated_shows.page",
+          "anticipated_shows.page_order",
+          "anticipated_shows.show_id"
+        ],
+        "missing_from_file": [
+          "anticipated_shows.id",
+          "anticipated_shows.page",
+          "anticipated_shows.page_order",
+          "anticipated_shows.show_id",
+          "shows.airs_day",
+          "shows.airs_time",
+          "shows.airs_tz",
+          "shows.certification",
+          "shows.country",
+          "shows.first_aired",
+          "shows.genres",
+          "shows.homepage",
+          "shows.id",
+          "shows.imdb_id",
+          "shows.network",
+          "shows.network_logo_path",
+          "shows.original_title",
+          "shows.overview",
+          "shows.runtime",
+          "shows.status",
+          "shows.title",
+          "shows.tmdb_id",
+          "shows.trakt_id",
+          "shows.trakt_rating",
+          "shows.trakt_votes"
+        ],
+        "missing_from_schema": [
+          "anticipated_shows.id",
+          "anticipated_shows.page",
+          "anticipated_shows.page_order",
+          "anticipated_shows.show_id"
+        ],
+        "query": "anticipated_shows.entriesWithShow",
+        "reads": [
+          "anticipated_shows.id",
+          "anticipated_shows.page",
+          "anticipated_shows.page_order",
+          "anticipated_shows.show_id",
+          "shows.airs_day",
+          "shows.airs_time",
+          "shows.airs_tz",
+          "shows.certification",
+          "shows.country",
+          "shows.first_aired",
+          "shows.genres",
+          "shows.homepage",
+          "shows.id",
+          "shows.imdb_id",
+          "shows.network",
+          "shows.network_logo_path",
+          "shows.original_title",
+          "shows.overview",
+          "shows.runtime",
+          "shows.status",
+          "shows.title",
+          "shows.tmdb_id",
+          "shows.trakt_id",
+          "shows.trakt_rating",
+          "shows.trakt_votes"
+        ]
+      },
+      {
+        "covering_queries": [],
+        "file_existed": false,
+        "missing_from_app": [
+          "anticipated_shows.page"
+        ],
+        "missing_from_file": [
+          "anticipated_shows.page"
+        ],
+        "missing_from_schema": [
+          "anticipated_shows.page"
+        ],
+        "query": "anticipated_shows.getLastPage",
+        "reads": [
+          "anticipated_shows.page"
+        ]
+      },
+      {
+        "covering_queries": [],
+        "file_existed": false,
+        "missing_from_app": [],
+        "missing_from_file": [],
+        "missing_from_schema": [],
+        "query": "anticipated_shows.lastInsertRowId",
+        "reads": []
+      }
+    ],
+    "old": "1f04706828b8c33b6e0d134b12f6aebff8541180",
+    "retired_names": [],
+    "surviving": 86,
+    "text_changed": []
+  }
+]
