@@ -1,0 +1,1916 @@
+{
+  "coverage": {
+    "JOB": {
+      "capped_families": 0,
+      "duplicate_footprints_within_families": 54,
+      "eligible_families": 31,
+      "eligible_queries": 109,
+      "families": 33,
+      "folds": 594,
+      "informative_families": 19,
+      "informative_folds": 191,
+      "queries": 113,
+      "universe": 129
+    },
+    "STATS": {
+      "capped_families": 0,
+      "duplicate_footprints_within_families": 4,
+      "eligible_families": 24,
+      "eligible_queries": 117,
+      "families": 45,
+      "folds": 1920,
+      "informative_families": 24,
+      "informative_folds": 1826,
+      "queries": 146,
+      "universe": 51
+    }
+  },
+  "panels": [
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 31,
+      "instrument": "fixed",
+      "level": "four",
+      "means": {
+        "observed": 0.0,
+        "placebo": 3.7204301075268815,
+        "sibling": 3.6569892473118277,
+        "table_freq": 3.7198924731182794,
+        "uniform": 3.989247311827957,
+        "union": 0.2129032258064516
+      },
+      "metric": "excess_kept",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "fixed",
+      "level": "four",
+      "means": {
+        "observed": 0.0,
+        "placebo": 0.7232517056530214,
+        "sibling": 0.8725633528265107,
+        "table_freq": 0.6983430799220273,
+        "uniform": 0.02631578947368421,
+        "union": 0.5470760233918128
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 31,
+      "instrument": "fixed",
+      "level": "four",
+      "means": {
+        "observed": 0.6790322580645162,
+        "placebo": 0.8846774193548387,
+        "sibling": 0.9360215053763441,
+        "table_freq": 0.878494623655914,
+        "uniform": 0.6897849462365592,
+        "union": 0.8301075268817205
+      },
+      "metric": "success",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "fixed",
+      "level": "four",
+      "means": {
+        "observed": 0.0,
+        "placebo": 3.0953399122807017,
+        "sibling": 2.8817251461988307,
+        "table_freq": 3.072514619883041,
+        "uniform": 3.973684210526316,
+        "union": 0.13771929824561405
+      },
+      "metric": "excess_kept",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "fixed",
+      "level": "four",
+      "means": {
+        "observed": 0.0,
+        "placebo": 0.7232517056530214,
+        "sibling": 0.8725633528265107,
+        "table_freq": 0.6983430799220273,
+        "uniform": 0.02631578947368421,
+        "union": 0.5470760233918128
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "family_means": {
+        "10": {
+          "observed": 0.0,
+          "placebo": 0.5,
+          "sibling": 0.5,
+          "table_freq": 0.0,
+          "uniform": 0.0,
+          "union": 0.5
+        },
+        "11": {
+          "observed": 0.0,
+          "placebo": 0.75,
+          "sibling": 0.75,
+          "table_freq": 0.5,
+          "uniform": 0.0,
+          "union": 0.5
+        },
+        "12": {
+          "observed": 0.0,
+          "placebo": 0.5,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.0,
+          "union": 1.0
+        },
+        "13": {
+          "observed": 0.0,
+          "placebo": 1.0,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.0,
+          "union": 0.5
+        },
+        "15": {
+          "observed": 0.0,
+          "placebo": 0.5555555555555556,
+          "sibling": 0.6666666666666666,
+          "table_freq": 0.6666666666666666,
+          "uniform": 0.0,
+          "union": 0.2222222222222222
+        },
+        "16": {
+          "observed": 0.0,
+          "placebo": 0.3333333333333333,
+          "sibling": 1.0,
+          "table_freq": 0.0,
+          "uniform": 0.0,
+          "union": 1.0
+        },
+        "17": {
+          "observed": 0.0,
+          "placebo": 0.546875,
+          "sibling": 0.875,
+          "table_freq": 0.5,
+          "uniform": 0.0,
+          "union": 0.5
+        },
+        "18": {
+          "observed": 0.0,
+          "placebo": 0.5,
+          "sibling": 0.5,
+          "table_freq": 0.5,
+          "uniform": 0.0,
+          "union": 0.0
+        },
+        "19": {
+          "observed": 0.0,
+          "placebo": 0.7,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.0,
+          "union": 0.6
+        },
+        "20": {
+          "observed": 0.0,
+          "placebo": 1.0,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.0,
+          "union": 0.5
+        },
+        "22": {
+          "observed": 0.0,
+          "placebo": 1.0,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.0,
+          "union": 1.0
+        },
+        "23": {
+          "observed": 0.0,
+          "placebo": 0.75,
+          "sibling": 1.0,
+          "table_freq": 0.5,
+          "uniform": 0.5,
+          "union": 0.5
+        },
+        "25": {
+          "observed": 0.0,
+          "placebo": 1.0,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.0,
+          "union": 0.0
+        },
+        "26": {
+          "observed": 0.0,
+          "placebo": 0.75,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.0,
+          "union": 0.5
+        },
+        "30": {
+          "observed": 0.0,
+          "placebo": 1.0,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.0,
+          "union": 1.0
+        },
+        "31": {
+          "observed": 0.0,
+          "placebo": 0.3333333333333333,
+          "sibling": 0.6666666666666666,
+          "table_freq": 0.3333333333333333,
+          "uniform": 0.0,
+          "union": 0.3333333333333333
+        },
+        "7": {
+          "observed": 0.0,
+          "placebo": 0.5,
+          "sibling": 0.5,
+          "table_freq": 0.5,
+          "uniform": 0.0,
+          "union": 0.5
+        },
+        "8": {
+          "observed": 0.0,
+          "placebo": 0.2222222222222222,
+          "sibling": 0.5555555555555556,
+          "table_freq": 0.1111111111111111,
+          "uniform": 0.0,
+          "union": 0.3333333333333333
+        },
+        "9": {
+          "observed": 0.0,
+          "placebo": 0.625,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.0,
+          "union": 0.5
+        }
+      },
+      "instrument": "fixed",
+      "level": "four",
+      "means": {
+        "observed": 0.0,
+        "placebo": 0.6613852339181286,
+        "sibling": 0.8428362573099415,
+        "table_freq": 0.6637426900584795,
+        "uniform": 0.02631578947368421,
+        "union": 0.5257309941520468
+      },
+      "metric": "success",
+      "paired_vs_placebo": {
+        "bootstrap95": [
+          0.10057794225146198,
+          0.27384548611111104
+        ],
+        "difference": 0.18145102339181288,
+        "leave_one_out": [
+          0.1544945987654321,
+          0.19153163580246912
+        ],
+        "negative": 0,
+        "positive": 10,
+        "ties": 9
+      },
+      "paired_vs_table": {
+        "bootstrap95": [
+          0.06725146198830409,
+          0.31067251461988304
+        ],
+        "difference": 0.17909356725146197,
+        "leave_one_out": [
+          0.13348765432098764,
+          0.18904320987654322
+        ],
+        "negative": 0,
+        "positive": 7,
+        "ties": 12
+      },
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "100",
+      "means": {
+        "placebo": 0.34915326510721245,
+        "sibling": 0.6801169590643275,
+        "table_freq": 0.38801169590643275,
+        "uniform": 0.009269473474109655
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 31,
+      "instrument": "matched",
+      "level": "100",
+      "means": {
+        "placebo": 0.7779569892473118,
+        "sibling": 0.8623655913978495,
+        "table_freq": 0.7623655913978494,
+        "uniform": 0.6813946363360814
+      },
+      "metric": "success",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "100",
+      "means": {
+        "placebo": 0.34915326510721245,
+        "sibling": 0.6801169590643275,
+        "table_freq": 0.38801169590643275,
+        "uniform": 0.009269473474109655
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "100",
+      "means": {
+        "placebo": 0.2974963450292398,
+        "sibling": 0.626608187134503,
+        "table_freq": 0.29269005847953217,
+        "uniform": 0.007190772914382607
+      },
+      "metric": "success",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "75",
+      "means": {
+        "placebo": 0.9523187762628694,
+        "sibling": 0.9785752259436462,
+        "table_freq": 0.9427199627857515,
+        "uniform": 0.25338159991931153
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 31,
+      "instrument": "matched",
+      "level": "75",
+      "means": {
+        "placebo": 0.9858173949444823,
+        "sibling": 0.9911322906484193,
+        "table_freq": 0.9842673712935807,
+        "uniform": 0.746878938585247
+      },
+      "metric": "success",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "75",
+      "means": {
+        "placebo": 0.9523187762628694,
+        "sibling": 0.9785752259436462,
+        "table_freq": 0.9427199627857515,
+        "uniform": 0.25338159991931153
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "75",
+      "means": {
+        "placebo": 0.9523187762628694,
+        "sibling": 0.9785752259436462,
+        "table_freq": 0.9427199627857515,
+        "uniform": 0.208382786512682
+      },
+      "metric": "success",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "90",
+      "means": {
+        "placebo": 0.8664381269713087,
+        "sibling": 0.9191753639814587,
+        "table_freq": 0.8364191312944719,
+        "uniform": 0.10477458751683445
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 31,
+      "instrument": "matched",
+      "level": "90",
+      "means": {
+        "placebo": 0.9555099806356077,
+        "sibling": 0.9667060627021014,
+        "table_freq": 0.9479454514966659,
+        "uniform": 0.7061577187468676
+      },
+      "metric": "success",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "90",
+      "means": {
+        "placebo": 0.8664381269713087,
+        "sibling": 0.9191753639814587,
+        "table_freq": 0.8364191312944719,
+        "uniform": 0.10477458751683445
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "90",
+      "means": {
+        "placebo": 0.8664381269713087,
+        "sibling": 0.9191753639814587,
+        "table_freq": 0.8364191312944719,
+        "uniform": 0.08287883717403356
+      },
+      "metric": "success",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "95",
+      "means": {
+        "placebo": 0.8114339668615984,
+        "sibling": 0.9042397660818714,
+        "table_freq": 0.7997076023391813,
+        "uniform": 0.055616840844656526
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 31,
+      "instrument": "matched",
+      "level": "95",
+      "means": {
+        "placebo": 0.9330645161290323,
+        "sibling": 0.9602150537634409,
+        "table_freq": 0.932258064516129,
+        "uniform": 0.6933319064420044
+      },
+      "metric": "success",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "95",
+      "means": {
+        "placebo": 0.8114339668615984,
+        "sibling": 0.9042397660818714,
+        "table_freq": 0.7997076023391813,
+        "uniform": 0.055616840844656526
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "family_means": {
+        "10": {
+          "placebo": 0.5,
+          "sibling": 0.5,
+          "table_freq": 0.5,
+          "uniform": 0.0540540540541
+        },
+        "11": {
+          "placebo": 0.75,
+          "sibling": 0.75,
+          "table_freq": 0.5,
+          "uniform": 0.0550458715596
+        },
+        "12": {
+          "placebo": 1.0,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.00337837837838
+        },
+        "13": {
+          "placebo": 1.0,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.0550458715596
+        },
+        "15": {
+          "placebo": 0.6666666666666666,
+          "sibling": 0.6666666666666666,
+          "table_freq": 0.6666666666666666,
+          "uniform": 0.03810702491123822
+        },
+        "16": {
+          "placebo": 0.3333333333333333,
+          "sibling": 1.0,
+          "table_freq": 0.0,
+          "uniform": 0.0530973451327
+        },
+        "17": {
+          "placebo": 0.546875,
+          "sibling": 0.875,
+          "table_freq": 0.5,
+          "uniform": 0.0521739130435
+        },
+        "18": {
+          "placebo": 1.0,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.028195488721805
+        },
+        "19": {
+          "placebo": 1.0,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.036043956043960004
+        },
+        "20": {
+          "placebo": 1.0,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.0560747663551
+        },
+        "22": {
+          "placebo": 1.0,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.0582524271845
+        },
+        "23": {
+          "placebo": 0.75,
+          "sibling": 1.0,
+          "table_freq": 0.75,
+          "uniform": 0.0588235294118
+        },
+        "25": {
+          "placebo": 1.0,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.0550458715596
+        },
+        "26": {
+          "placebo": 1.0,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.0588235294118
+        },
+        "30": {
+          "placebo": 1.0,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.0576923076923
+        },
+        "31": {
+          "placebo": 0.6666666666666666,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.020246734397674666
+        },
+        "7": {
+          "placebo": 0.5,
+          "sibling": 0.5,
+          "table_freq": 0.5,
+          "uniform": 0.0550458715596
+        },
+        "8": {
+          "placebo": 0.6666666666666666,
+          "sibling": 0.8888888888888888,
+          "table_freq": 0.7777777777777778,
+          "uniform": 0.02992510275929058
+        },
+        "9": {
+          "placebo": 1.0,
+          "sibling": 1.0,
+          "table_freq": 1.0,
+          "uniform": 0.00356778797146
+        }
+      },
+      "instrument": "matched",
+      "level": "95",
+      "means": {
+        "placebo": 0.809484649122807,
+        "sibling": 0.9042397660818714,
+        "table_freq": 0.7997076023391813,
+        "uniform": 0.04361262272147413
+      },
+      "metric": "success",
+      "paired_vs_placebo": {
+        "bootstrap95": [
+          0.024853801169590642,
+          0.1824744152046784
+        ],
+        "difference": 0.09475511695906433,
+        "leave_one_out": [
+          0.06298225308641975,
+          0.1000192901234568
+        ],
+        "negative": 0,
+        "positive": 5,
+        "ties": 14
+      },
+      "paired_vs_table": {
+        "bootstrap95": [
+          0.019736842105263157,
+          0.2236842105263158
+        ],
+        "difference": 0.10453216374269006,
+        "leave_one_out": [
+          0.05478395061728395,
+          0.11033950617283951
+        ],
+        "negative": 0,
+        "positive": 5,
+        "ties": 14
+      },
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "100",
+      "means": {
+        "placebo": 0.34915326510721245,
+        "sibling": 0.6801169590643275,
+        "table_freq": 0.38801169590643275,
+        "uniform": 0.02862232699742635
+      },
+      "metric": "novel_retention",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 31,
+      "instrument": "matched",
+      "level": "100",
+      "means": {
+        "placebo": 0.7779569892473118,
+        "sibling": 0.8623655913978495,
+        "table_freq": 0.7623655913978494,
+        "uniform": 0.6865151512919487
+      },
+      "metric": "success",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "100",
+      "means": {
+        "placebo": 0.34915326510721245,
+        "sibling": 0.6801169590643275,
+        "table_freq": 0.38801169590643275,
+        "uniform": 0.02862232699742635
+      },
+      "metric": "novel_retention",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "100",
+      "means": {
+        "placebo": 0.2974963450292398,
+        "sibling": 0.626608187134503,
+        "table_freq": 0.29269005847953217,
+        "uniform": 0.022586207892468412
+      },
+      "metric": "success",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "75",
+      "means": {
+        "placebo": 0.8586108170330041,
+        "sibling": 0.9112573099415205,
+        "table_freq": 0.8257309941520468,
+        "uniform": 0.26010212828057244
+      },
+      "metric": "novel_retention",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 31,
+      "instrument": "matched",
+      "level": "75",
+      "means": {
+        "placebo": 0.9522864911630208,
+        "sibling": 0.9634408602150538,
+        "table_freq": 0.9435483870967742,
+        "uniform": 0.7488289650061849
+      },
+      "metric": "success",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "75",
+      "means": {
+        "placebo": 0.8586108170330041,
+        "sibling": 0.9112573099415205,
+        "table_freq": 0.8257309941520468,
+        "uniform": 0.26010212828057244
+      },
+      "metric": "novel_retention",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "75",
+      "means": {
+        "placebo": 0.8586108170330041,
+        "sibling": 0.9112573099415205,
+        "table_freq": 0.8257309941520468,
+        "uniform": 0.21498208073138775
+      },
+      "metric": "success",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "90",
+      "means": {
+        "placebo": 0.7458881578947368,
+        "sibling": 0.8852339181286549,
+        "table_freq": 0.7178362573099415,
+        "uniform": 0.11015158746145526
+      },
+      "metric": "novel_retention",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 31,
+      "instrument": "matched",
+      "level": "90",
+      "means": {
+        "placebo": 0.9021505376344087,
+        "sibling": 0.9467741935483871,
+        "table_freq": 0.8946236559139785,
+        "uniform": 0.7079687002160095
+      },
+      "metric": "success",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "90",
+      "means": {
+        "placebo": 0.7458881578947368,
+        "sibling": 0.8852339181286549,
+        "table_freq": 0.7178362573099415,
+        "uniform": 0.11015158746145526
+      },
+      "metric": "novel_retention",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "90",
+      "means": {
+        "placebo": 0.7173793859649124,
+        "sibling": 0.8720760233918128,
+        "table_freq": 0.7046783625730995,
+        "uniform": 0.08794314446950079
+      },
+      "metric": "success",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "95",
+      "means": {
+        "placebo": 0.5836318226120858,
+        "sibling": 0.7970272904483431,
+        "table_freq": 0.5662768031189084,
+        "uniform": 0.061860665423881085
+      },
+      "metric": "novel_retention",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "all",
+      "corpus": "JOB",
+      "families": 31,
+      "instrument": "matched",
+      "level": "95",
+      "means": {
+        "placebo": 0.8384408602150538,
+        "sibling": 0.9094086021505376,
+        "table_freq": 0.8295698924731182,
+        "uniform": 0.6946043760424163
+      },
+      "metric": "success",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "95",
+      "means": {
+        "placebo": 0.5836318226120858,
+        "sibling": 0.7970272904483431,
+        "table_freq": 0.5662768031189084,
+        "uniform": 0.061860665423881085
+      },
+      "metric": "novel_retention",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "JOB",
+      "families": 19,
+      "instrument": "matched",
+      "level": "95",
+      "means": {
+        "placebo": 0.5317068713450293,
+        "sibling": 0.7792397660818713,
+        "table_freq": 0.5321637426900585,
+        "uniform": 0.047929280521903136
+      },
+      "metric": "success",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "fixed",
+      "level": "four",
+      "means": {
+        "observed": 0.0,
+        "placebo": 3.107043650793651,
+        "sibling": 2.7376488095238094,
+        "table_freq": 3.0933531746031746,
+        "uniform": 3.526736111111111,
+        "union": 2.093948412698413
+      },
+      "metric": "excess_kept",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "fixed",
+      "level": "four",
+      "means": {
+        "observed": 0.0,
+        "placebo": 0.30524152583560205,
+        "sibling": 0.4294369022246203,
+        "table_freq": 0.3188533209547158,
+        "uniform": 0.12168321461692123,
+        "union": 0.3941914781484568
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "fixed",
+      "level": "four",
+      "means": {
+        "observed": 0.05004960317460317,
+        "placebo": 0.1351438492063492,
+        "sibling": 0.1976190476190476,
+        "table_freq": 0.1523313492063492,
+        "uniform": 0.05679563492063492,
+        "union": 0.1390873015873016
+      },
+      "metric": "success",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "fixed",
+      "level": "four",
+      "means": {
+        "observed": 0.0,
+        "placebo": 3.0585646966053743,
+        "sibling": 2.664796562554645,
+        "table_freq": 3.0448422269025603,
+        "uniform": 3.516237873484958,
+        "union": 2.0367324624558933
+      },
+      "metric": "excess_kept",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "fixed",
+      "level": "four",
+      "means": {
+        "observed": 0.0,
+        "placebo": 0.30524152583560205,
+        "sibling": 0.4294369022246203,
+        "table_freq": 0.3188533209547158,
+        "uniform": 0.12168321461692123,
+        "union": 0.3941914781484568
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "family_means": {
+        "badges+comments+posthistory+postlinks+posts+users+votes": {
+          "observed": 0.0,
+          "placebo": 0.0,
+          "sibling": 0.0,
+          "table_freq": 0.0,
+          "uniform": 0.0,
+          "union": 0.0
+        },
+        "badges+comments+posthistory+postlinks+posts+votes": {
+          "observed": 0.0,
+          "placebo": 0.044642857142857144,
+          "sibling": 0.07142857142857142,
+          "table_freq": 0.0,
+          "uniform": 0.07142857142857142,
+          "union": 0.08928571428571429
+        },
+        "badges+comments+posthistory+posts+users": {
+          "observed": 0.0,
+          "placebo": 0.0,
+          "sibling": 0.0,
+          "table_freq": 0.0,
+          "uniform": 0.0,
+          "union": 0.0
+        },
+        "badges+comments+posthistory+posts+users+votes": {
+          "observed": 0.0,
+          "placebo": 0.0,
+          "sibling": 0.0380952380952381,
+          "table_freq": 0.0,
+          "uniform": 0.023809523809523808,
+          "union": 0.06666666666666667
+        },
+        "badges+comments+posthistory+users": {
+          "observed": 0.0,
+          "placebo": 0.09166666666666666,
+          "sibling": 0.19166666666666668,
+          "table_freq": 0.16666666666666666,
+          "uniform": 0.0,
+          "union": 0.13333333333333333
+        },
+        "badges+comments+postlinks+posts+users": {
+          "observed": 0.0,
+          "placebo": 0.0,
+          "sibling": 0.16666666666666666,
+          "table_freq": 0.0,
+          "uniform": 0.0,
+          "union": 0.0
+        },
+        "badges+comments+postlinks+posts+users+votes": {
+          "observed": 0.0,
+          "placebo": 0.017543859649122806,
+          "sibling": 0.05263157894736842,
+          "table_freq": 0.0,
+          "uniform": 0.0,
+          "union": 0.05263157894736842
+        },
+        "badges+comments+users": {
+          "observed": 0.0,
+          "placebo": 0.4,
+          "sibling": 0.8,
+          "table_freq": 0.5,
+          "uniform": 0.0,
+          "union": 0.4
+        },
+        "badges+comments+users+votes": {
+          "observed": 0.0,
+          "placebo": 0.25925925925925924,
+          "sibling": 0.2962962962962963,
+          "table_freq": 0.3333333333333333,
+          "uniform": 0.0,
+          "union": 0.18518518518518517
+        },
+        "badges+posthistory+posts+users": {
+          "observed": 0.0,
+          "placebo": 0.07317073170731707,
+          "sibling": 0.08292682926829269,
+          "table_freq": 0.07317073170731707,
+          "uniform": 0.04878048780487805,
+          "union": 0.09268292682926829
+        },
+        "badges+posthistory+users+votes": {
+          "observed": 0.0,
+          "placebo": 0.2,
+          "sibling": 0.55,
+          "table_freq": 0.4,
+          "uniform": 0.0,
+          "union": 0.3
+        },
+        "badges+posts+tags+users+votes": {
+          "observed": 0.0,
+          "placebo": 0.3333333333333333,
+          "sibling": 0.0,
+          "table_freq": 0.3333333333333333,
+          "uniform": 0.0,
+          "union": 0.0
+        },
+        "badges+posts+users+votes": {
+          "observed": 0.0,
+          "placebo": 0.03333333333333333,
+          "sibling": 0.05,
+          "table_freq": 0.1,
+          "uniform": 0.0,
+          "union": 0.016666666666666666
+        },
+        "comments+posthistory+postlinks+posts+users+votes": {
+          "observed": 0.0,
+          "placebo": 0.0,
+          "sibling": 0.0,
+          "table_freq": 0.0,
+          "uniform": 0.0,
+          "union": 0.0
+        },
+        "comments+posthistory+postlinks+posts+votes": {
+          "observed": 0.0,
+          "placebo": 0.03900709219858156,
+          "sibling": 0.14893617021276595,
+          "table_freq": 0.0,
+          "uniform": 0.0,
+          "union": 0.2198581560283688
+        },
+        "comments+posthistory+posts+users+votes": {
+          "observed": 0.0,
+          "placebo": 0.0,
+          "sibling": 0.0,
+          "table_freq": 0.0,
+          "uniform": 0.0,
+          "union": 0.0
+        },
+        "comments+posthistory+users": {
+          "observed": 0.0,
+          "placebo": 0.4,
+          "sibling": 1.0,
+          "table_freq": 0.2,
+          "uniform": 0.0,
+          "union": 0.2
+        },
+        "comments+posthistory+users+votes": {
+          "observed": 0.0,
+          "placebo": 0.0,
+          "sibling": 0.05263157894736842,
+          "table_freq": 0.05263157894736842,
+          "uniform": 0.0,
+          "union": 0.05263157894736842
+        },
+        "comments+posts+users": {
+          "observed": 0.0,
+          "placebo": 0.0,
+          "sibling": 0.0,
+          "table_freq": 0.0,
+          "uniform": 0.0,
+          "union": 0.0
+        },
+        "comments+posts+users+votes": {
+          "observed": 0.0,
+          "placebo": 0.004761904761904762,
+          "sibling": 0.014285714285714285,
+          "table_freq": 0.0,
+          "uniform": 0.023809523809523808,
+          "union": 0.02857142857142857
+        },
+        "comments+users+votes": {
+          "observed": 0.0,
+          "placebo": 0.045454545454545456,
+          "sibling": 0.2727272727272727,
+          "table_freq": 0.09090909090909091,
+          "uniform": 0.0,
+          "union": 0.2727272727272727
+        },
+        "posthistory+posts+users": {
+          "observed": 0.0,
+          "placebo": 0.016666666666666666,
+          "sibling": 0.06666666666666667,
+          "table_freq": 0.1,
+          "uniform": 0.0,
+          "union": 0.1
+        },
+        "posthistory+posts+users+votes": {
+          "observed": 0.0,
+          "placebo": 0.16666666666666666,
+          "sibling": 0.0,
+          "table_freq": 0.16666666666666666,
+          "uniform": 0.0,
+          "union": 0.0
+        },
+        "posts+users+votes": {
+          "observed": 0.0,
+          "placebo": 0.15,
+          "sibling": 0.2,
+          "table_freq": 0.2,
+          "uniform": 0.0,
+          "union": 0.2
+        }
+      },
+      "instrument": "fixed",
+      "level": "four",
+      "means": {
+        "observed": 0.0,
+        "placebo": 0.09481278820167728,
+        "sibling": 0.16895663542537034,
+        "table_freq": 0.1131963083984907,
+        "uniform": 0.006992837785520713,
+        "union": 0.1004266878411934
+      },
+      "metric": "success",
+      "paired_vs_placebo": {
+        "bootstrap95": [
+          0.008880223885100342,
+          0.14854165753017032
+        ],
+        "difference": 0.07414384722369306,
+        "leave_one_out": [
+          0.05128053623341885,
+          0.0918602463783464
+        ],
+        "negative": 2,
+        "positive": 17,
+        "ties": 5
+      },
+      "paired_vs_table": {
+        "bootstrap95": [
+          -0.01223545093971354,
+          0.13861285638461704
+        ],
+        "difference": 0.055760327026879664,
+        "leave_one_out": [
+          0.02340208037587443,
+          0.072677442694715
+        ],
+        "negative": 5,
+        "positive": 12,
+        "ties": 7
+      },
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "100",
+      "means": {
+        "placebo": 0.12278389787753617,
+        "sibling": 0.18841976701965424,
+        "table_freq": 0.08133742771430742,
+        "uniform": 0.02617623353176118
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "100",
+      "means": {
+        "placebo": 0.07467757936507936,
+        "sibling": 0.10312500000000001,
+        "table_freq": 0.05520833333333333,
+        "uniform": 0.05311700871292709
+      },
+      "metric": "success",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "100",
+      "means": {
+        "placebo": 0.12278389787753617,
+        "sibling": 0.18841976701965424,
+        "table_freq": 0.08133742771430742,
+        "uniform": 0.02617623353176118
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "100",
+      "means": {
+        "placebo": 0.025897984070215128,
+        "sibling": 0.06088347545978146,
+        "table_freq": 0.005621693121693121,
+        "uniform": 0.003353780965773267
+      },
+      "metric": "success",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "75",
+      "means": {
+        "placebo": 0.826820295703691,
+        "sibling": 0.911452572763757,
+        "table_freq": 0.8874009400559396,
+        "uniform": 0.2585237747453791
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "75",
+      "means": {
+        "placebo": 0.6666997354497353,
+        "sibling": 0.7899305555555555,
+        "table_freq": 0.7483134920634921,
+        "uniform": 0.10047522829206383
+      },
+      "metric": "success",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "75",
+      "means": {
+        "placebo": 0.826820295703691,
+        "sibling": 0.911452572763757,
+        "table_freq": 0.8874009400559396,
+        "uniform": 0.2585237747453791
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "75",
+      "means": {
+        "placebo": 0.6584853708862769,
+        "sibling": 0.7848633507256725,
+        "table_freq": 0.7417916656370211,
+        "uniform": 0.054731166925173956
+      },
+      "metric": "success",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "90",
+      "means": {
+        "placebo": 0.4071377225232979,
+        "sibling": 0.5467842131054674,
+        "table_freq": 0.4666751307693469,
+        "uniform": 0.11218354399221726
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "90",
+      "means": {
+        "placebo": 0.2296296296296302,
+        "sibling": 0.30527447089947213,
+        "table_freq": 0.28751653439153674,
+        "uniform": 0.06668861233830196
+      },
+      "metric": "success",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "90",
+      "means": {
+        "placebo": 0.4071377225232979,
+        "sibling": 0.5467842131054674,
+        "table_freq": 0.4666751307693469,
+        "uniform": 0.11218354399221726
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "90",
+      "means": {
+        "placebo": 0.19928535976413508,
+        "sibling": 0.2841889721147957,
+        "table_freq": 0.2618772849838346,
+        "uniform": 0.018204147843496925
+      },
+      "metric": "success",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "95",
+      "means": {
+        "placebo": 0.24291230382708925,
+        "sibling": 0.37334810927300593,
+        "table_freq": 0.2164702393374981,
+        "uniform": 0.06056155494367818
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "95",
+      "means": {
+        "placebo": 0.12066798941798884,
+        "sibling": 0.18034887566137559,
+        "table_freq": 0.1144345238095238,
+        "uniform": 0.05860006355999128
+      },
+      "metric": "success",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "95",
+      "means": {
+        "placebo": 0.24291230382708925,
+        "sibling": 0.37334810927300593,
+        "table_freq": 0.2164702393374981,
+        "uniform": 0.06056155494367818
+      },
+      "metric": "novel_retention",
+      "universe": "full"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "family_means": {
+        "badges+comments+posthistory+postlinks+posts+users+votes": {
+          "placebo": 0.0,
+          "sibling": 0.0,
+          "table_freq": 0.0,
+          "uniform": 0.0010691652622771164
+        },
+        "badges+comments+posthistory+postlinks+posts+votes": {
+          "placebo": 0.03571428571428571,
+          "sibling": 0.05357142857142857,
+          "table_freq": 0.0,
+          "uniform": 0.012998391834375551
+        },
+        "badges+comments+posthistory+posts+users": {
+          "placebo": 0.0,
+          "sibling": 0.0,
+          "table_freq": 0.0,
+          "uniform": 0.0005495027606706929
+        },
+        "badges+comments+posthistory+posts+users+votes": {
+          "placebo": 0.0,
+          "sibling": 0.02142857142857143,
+          "table_freq": 0.0,
+          "uniform": 0.003326593388443185
+        },
+        "badges+comments+posthistory+users": {
+          "placebo": 0.05,
+          "sibling": 0.13333333333333333,
+          "table_freq": 0.0,
+          "uniform": 0.012137807196171156
+        },
+        "badges+comments+postlinks+posts+users": {
+          "placebo": 0.0,
+          "sibling": 0.0,
+          "table_freq": 0.0,
+          "uniform": 0.002187621892369826
+        },
+        "badges+comments+postlinks+posts+users+votes": {
+          "placebo": 0.017543859649122806,
+          "sibling": 0.05263157894736842,
+          "table_freq": 0.0,
+          "uniform": 0.003752069425813224
+        },
+        "badges+comments+users": {
+          "placebo": 0.3,
+          "sibling": 0.8,
+          "table_freq": 0.6,
+          "uniform": 0.0173059498640977
+        },
+        "badges+comments+users+votes": {
+          "placebo": 0.14814814814814814,
+          "sibling": 0.2222222222222222,
+          "table_freq": 0.2777777777777778,
+          "uniform": 0.0215511621212171
+        },
+        "badges+posthistory+posts+users": {
+          "placebo": 0.03414634146341464,
+          "sibling": 0.06016260162601463,
+          "table_freq": 0.04878048780487805,
+          "uniform": 0.01105094189186272
+        },
+        "badges+posthistory+users+votes": {
+          "placebo": 0.05,
+          "sibling": 0.35,
+          "table_freq": 0.1,
+          "uniform": 0.015488716606996262
+        },
+        "badges+posts+tags+users+votes": {
+          "placebo": 0.3333333333333333,
+          "sibling": 0.0,
+          "table_freq": 0.0,
+          "uniform": 0.02101332996115034
+        },
+        "badges+posts+users+votes": {
+          "placebo": 0.04583333333333333,
+          "sibling": 0.058333333333333334,
+          "table_freq": 0.08333333333333333,
+          "uniform": 0.002938430170273295
+        },
+        "comments+posthistory+postlinks+posts+users+votes": {
+          "placebo": 0.0,
+          "sibling": 0.0,
+          "table_freq": 0.0,
+          "uniform": 5.743278873554597e-05
+        },
+        "comments+posthistory+postlinks+posts+votes": {
+          "placebo": 0.031914893617021274,
+          "sibling": 0.1595744680851064,
+          "table_freq": 0.0,
+          "uniform": 0.017723392334399343
+        },
+        "comments+posthistory+posts+users+votes": {
+          "placebo": 0.0,
+          "sibling": 0.0,
+          "table_freq": 0.0,
+          "uniform": 0.00011177100960377166
+        },
+        "comments+posthistory+users": {
+          "placebo": 0.4,
+          "sibling": 1.0,
+          "table_freq": 0.2,
+          "uniform": 0.031282593375621996
+        },
+        "comments+posthistory+users+votes": {
+          "placebo": 0.0,
+          "sibling": 0.05263157894736842,
+          "table_freq": 0.0,
+          "uniform": 0.006603807075491
+        },
+        "comments+posts+users": {
+          "placebo": 0.013888888888875002,
+          "sibling": 0.0,
+          "table_freq": 0.0,
+          "uniform": 0.0025307589137925127
+        },
+        "comments+posts+users+votes": {
+          "placebo": 0.016666666666666666,
+          "sibling": 0.0380952380952381,
+          "table_freq": 0.047619047619047616,
+          "uniform": 0.0004260433656215452
+        },
+        "comments+users+votes": {
+          "placebo": 0.045454545454545456,
+          "sibling": 0.2727272727272727,
+          "table_freq": 0.0,
+          "uniform": 0.03283626781650036
+        },
+        "posthistory+posts+users": {
+          "placebo": 0.03333333333333333,
+          "sibling": 0.125,
+          "table_freq": 0.2,
+          "uniform": 0.0047380795608273
+        },
+        "posthistory+posts+users+votes": {
+          "placebo": 0.16666666666666666,
+          "sibling": 0.0,
+          "table_freq": 0.0,
+          "uniform": 0.0012871684693029001
+        },
+        "posts+users+votes": {
+          "placebo": 0.15,
+          "sibling": 0.2,
+          "table_freq": 0.2,
+          "uniform": 0.002773128743066659
+        }
+      },
+      "instrument": "matched",
+      "level": "95",
+      "means": {
+        "placebo": 0.07802684567786443,
+        "sibling": 0.1499879844715524,
+        "table_freq": 0.0732296102722932,
+        "uniform": 0.009405838576195046
+      },
+      "metric": "success",
+      "paired_vs_placebo": {
+        "bootstrap95": [
+          0.005065984264210839,
+          0.14826698315390735
+        ],
+        "difference": 0.07196113879368797,
+        "leave_one_out": [
+          0.04900292743689179,
+          0.08958263758181934
+        ],
+        "negative": 3,
+        "positive": 16,
+        "ties": 5
+      },
+      "paired_vs_table": {
+        "bootstrap95": [
+          0.01851599531112052,
+          0.15771528901294324
+        ],
+        "difference": 0.0767583741992592,
+        "leave_one_out": [
+          0.04531308612096612,
+          0.08335656438183568
+        ],
+        "negative": 4,
+        "positive": 11,
+        "ties": 9
+      },
+      "universe": "full"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "100",
+      "means": {
+        "placebo": 0.12278389787753617,
+        "sibling": 0.18841976701965424,
+        "table_freq": 0.08133742771430742,
+        "uniform": 0.06062230871172867
+      },
+      "metric": "novel_retention",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "100",
+      "means": {
+        "placebo": 0.07467757936507936,
+        "sibling": 0.10312500000000001,
+        "table_freq": 0.05520833333333333,
+        "uniform": 0.05985933213546734
+      },
+      "metric": "success",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "100",
+      "means": {
+        "placebo": 0.12278389787753617,
+        "sibling": 0.18841976701965424,
+        "table_freq": 0.08133742771430742,
+        "uniform": 0.06062230871172867
+      },
+      "metric": "novel_retention",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "100",
+      "means": {
+        "placebo": 0.025897984070215128,
+        "sibling": 0.06088347545978146,
+        "table_freq": 0.005621693121693121,
+        "uniform": 0.010852867310926868
+      },
+      "metric": "success",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "75",
+      "means": {
+        "placebo": 0.3900864474738949,
+        "sibling": 0.5844449576636768,
+        "table_freq": 0.5085001452296382,
+        "uniform": 0.2725468407733024
+      },
+      "metric": "novel_retention",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "75",
+      "means": {
+        "placebo": 0.1822751322751317,
+        "sibling": 0.3018353174603164,
+        "table_freq": 0.24646164021163788,
+        "uniform": 0.10902650121240613
+      },
+      "metric": "success",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "75",
+      "means": {
+        "placebo": 0.3900864474738949,
+        "sibling": 0.5844449576636768,
+        "table_freq": 0.5085001452296382,
+        "uniform": 0.2725468407733024
+      },
+      "metric": "novel_retention",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "75",
+      "means": {
+        "placebo": 0.14503330892558738,
+        "sibling": 0.2777799304130159,
+        "table_freq": 0.21222324773769677,
+        "uniform": 0.06412027880971753
+      },
+      "metric": "success",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "90",
+      "means": {
+        "placebo": 0.22063282111050905,
+        "sibling": 0.3479923122783346,
+        "table_freq": 0.1822869025646837,
+        "uniform": 0.1302209314646071
+      },
+      "metric": "novel_retention",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "90",
+      "means": {
+        "placebo": 0.10434027777777777,
+        "sibling": 0.14664351851851845,
+        "table_freq": 0.08943452380952381,
+        "uniform": 0.07265244624394288
+      },
+      "metric": "success",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "90",
+      "means": {
+        "placebo": 0.22063282111050905,
+        "sibling": 0.3479923122783346,
+        "table_freq": 0.1822869025646837,
+        "uniform": 0.1302209314646071
+      },
+      "metric": "novel_retention",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "90",
+      "means": {
+        "placebo": 0.0589116504204582,
+        "sibling": 0.11010820045229208,
+        "table_freq": 0.04267405471673765,
+        "uniform": 0.02471770577202106
+      },
+      "metric": "success",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "95",
+      "means": {
+        "placebo": 0.14799342584970535,
+        "sibling": 0.21411540050068856,
+        "table_freq": 0.09331185995974874,
+        "uniform": 0.07462177090103235
+      },
+      "metric": "novel_retention",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "all",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "95",
+      "means": {
+        "placebo": 0.08313492063492063,
+        "sibling": 0.10766369047619047,
+        "table_freq": 0.05520833333333333,
+        "uniform": 0.06174119091282782
+      },
+      "metric": "success",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "95",
+      "means": {
+        "placebo": 0.14799342584970535,
+        "sibling": 0.21411540050068856,
+        "table_freq": 0.09331185995974874,
+        "uniform": 0.07462177090103235
+      },
+      "metric": "novel_retention",
+      "universe": "visible_tables"
+    },
+    {
+      "cohort": "informative",
+      "corpus": "STATS",
+      "families": 24,
+      "instrument": "matched",
+      "level": "95",
+      "means": {
+        "placebo": 0.03450338837083868,
+        "sibling": 0.06574764163763745,
+        "table_freq": 0.005621693121693121,
+        "uniform": 0.012846976268812253
+      },
+      "metric": "success",
+      "universe": "visible_tables"
+    }
+  ]
+}

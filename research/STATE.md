@@ -64,3 +64,7 @@ The `propose` command writes a candidate, per-rule rationale and whole-policy ch
 ## Pilot checkpoint
 
 Eight serialized proposals were independently reloaded and checked. The successful deferrals preserve a cold restore at a cost of one extra grant. The warm-cache case loses the restore despite complete workflow coverage. Both symbolic checks pass because the omitted cold path was absent from training and owner protection. Treat this as a counterexample to using a complete cycle as evidence that every legitimate path was exercised.
+
+## Independent SQL evaluation
+
+The protocol is frozen at `99f810c`. All 113 JOB and 146 STATS statements compiled and ran against the pinned SQLite authorizer. The archive contains individual statement footprints, fold identities, matched operating points and native enforcement outcomes. The paper must separate the scorer's matched-excess operating point from the label-blind budget used in deployment-style tests. Next, rerun these archives on Linux, audit related work and robustness, then build and visually review the manuscript.
