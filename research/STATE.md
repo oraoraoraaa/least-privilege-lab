@@ -9,6 +9,14 @@ Work on `research/classroom-replay`. Keep this long-lived branch on origin. Its 
 3. Run `sh research/reproduce.sh` from the root to verify the original and extension studies. It needs Git, Make, a Java 17-compatible JDK, uv and first-run network access. An optional absolute path to a local Restricter Git checkout reuses classroom source objects.
 4. Run `make paper` to regenerate the three vector figures, five table bodies and PDF with pdfLaTeX. The [paper directory](../paper/) contains the source, locked figure generator and build notes. Review or extend the research on this branch.
 
+### Verified manuscript and guidebook · 2026-11-20
+
+The revised manuscript is **Which Preflight Preserves Query Access?** The tagged unit in the migration study is an old query name at one upgrade. In 717 such comparisons, cached column coverage produced exactly the same queue as source rehearsal. In Mihon both flagged 49 expansions and 34 later retirements. Rehearsal supplied the new column names or preparation errors. The counterexample with an explicit column list and a wildcard explains why the empirical match has limits. The scope is two selected histories, 259 benchmark statements and a shipped lookup validated in two versions. A deployment study would need query invocation frequencies and human review outcomes.
+
+Fresh GitHub checkouts of **86c98e9a1b69526c6ccfd0f12bb611eea044e294** on macOS arm64 and Arch Linux x86-64 ran the complete reproduction script, rebuilt the manuscript, and checked both migration reviewer modes. Each matched all eight fixed-schema evidence files and nine extension files, including per-name coverage alerts. Each verified the 312 classroom decisions, eight registry proposals, 15,084 fixed-schema native policy executions and 8,586 application executions. In the worked example, both modes flagged the same ten of 42 old names. Both regenerated the three figures and five table bodies byte-for-byte.
+
+Both machines rebuilt the final guidebook at **de9549ec96631624154eca9173b2766f58b57b9a**. This commit changes only its LaTeX and PDF. Both TeX installations resolved references and reported no warnings or overflowing boxes. Their PDF byte streams differ. With the same Poppler renderer, all 11 manuscript pages and all 19 guidebook pages matched pixel-for-pixel at 95 dpi. Extracted text tokens matched for both documents. The committed manuscript SHA-256 is <code>9de0def03412408ad2d4adc1ec83f844348b82fcfc90505884679fc4a9d9fff9</code> and the guidebook SHA-256 is <code>b3d420b8bbab8b26882c89e71f05c90008369c07c8d8235bb7f84692c6cbe665</code>.
+
 ### Review the commits in order
 
 | Commit | Question answered |
