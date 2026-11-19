@@ -1,6 +1,10 @@
 # Least Privilege Lab
 
-This is the assistant-run research reference branch. Start with the [current checkpoint and resumption instructions](research/STATE.md), the [classroom replay](research/classroom/README.md), or the [checked policy refiner and registry pilot](research/registry/README.md).
+This research branch studies whether preflighting a related SQL query helps a least-privilege policy preserve access for a later query. It contains the manuscript, query-level evidence, an executable policy refiner and a reproducible comparison on two published workloads.
+
+**[Read the paper (PDF)](paper/paper.pdf)** · [LaTeX source](paper/paper.tex) · [Query evidence and reproduction](research/paths/README.md) · [Research history and handoff](research/STATE.md)
+
+At equal excess permissions, a sibling query improved whole-query success on both workloads. The primary JOB gain disappeared when the staged and hidden queries required different permissions. On STATS the gain persisted after removing duplicate permission sets, although most hidden queries still failed. The [classroom replay](research/classroom/README.md) and [controlled registry pilot](research/registry/README.md) explain why a successful training run can miss a required workflow.
 
 **面向最小权限原则的访问控制策略优化设计与实现**
 
@@ -8,9 +12,13 @@ Bachelor’s graduation project · Design and implementation of least-privilege 
 
 A Java reviewer for access grants and usage logs, and a research project on tightening policies while preserving rare workflows.
 
-The current CLI reads a grant snapshot and a decision log, then reports what happened to each permission. The proposed optimizer will use this evidence to recommend rule changes. A revision monitor will flag grants that reappear.
+The current CLI reads a grant snapshot and a decision log, then reports what happened to each permission. The branch also includes a checked policy-tightening prototype. The graduation roadmap describes a revision monitor as a separate project milestone.
 
 **New here?** Open the [research guidebook (PDF)](docs/guidebook/guidebook.pdf). Start with the model registry, run the demo, and make a small, testable contribution. The later chapters walk through the three research papers and the design of a comparative experiment. The [milestone plan](docs/ROADMAP.md) and [original Chinese project brief](docs/brief/课题附件.pdf) describe the graduation deliverables.
+
+## Reproduce the research
+
+Run `sh research/reproduce.sh` with Git, Make, uv and a JDK supporting Java 17. A first run downloads pinned inputs and Python packages. To rebuild the figures, tables and PDF, run `make paper` with pdfLaTeX installed. The [manuscript build notes](paper/README.md) map each result to its source.
 
 ## Try the review
 

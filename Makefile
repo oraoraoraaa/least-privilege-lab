@@ -23,3 +23,11 @@ guidebook:
 	$(PDFLATEX) $(GUIDE).tex
 	$(PDFLATEX) $(GUIDE).tex
 	cp build/guidebook/guidebook.pdf $(GUIDE).pdf
+
+.PHONY: paper
+paper:
+	uv run --locked --script paper/figures.py
+	mkdir -p build/paper
+	pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build/paper paper/paper.tex
+	pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build/paper paper/paper.tex
+	cp build/paper/paper.pdf paper/paper.pdf

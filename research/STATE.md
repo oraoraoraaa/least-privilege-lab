@@ -5,9 +5,9 @@ Work on `research/classroom-replay`. Keep this long-lived branch on origin. Its 
 ## Start here after an interruption
 
 1. Check out `research/classroom-replay` and run `git status -sb`. If starting fresh, clone with `git clone --branch research/classroom-replay https://github.com/oraoraoraaa/least-privilege-lab.git`.
-2. Run `sh research/reproduce.sh` from its root. It verifies the Java CLI, all 312 published-case decisions, the sampling distribution, the registry checks and all eight stored proposals. It needs Git, Make, a Java 17-compatible JDK and uv. A first run downloads pinned public inputs and Python packages. Pass an absolute path to a local Restricter checkout to reuse its Git objects.
-3. Read the [classroom results](classroom/README.md) and [registry results](registry/README.md). The work to date establishes baseline behavior and a checked prototype on the documented fragments.
-4. **Active study.** Implement the [frozen independent workload protocol](paths/PROTOCOL.md), archive its outputs, then complete the LaTeX paper and verify the replication package. No advisor decision is needed for this branch.
+2. Read the [paper](../paper/paper.pdf) and the [SQL evidence guide](paths/README.md). The independent study is complete. The central result distinguishes reuse of identical permission sets from transfer to different queries.
+3. Run `sh research/reproduce.sh` from the root to verify all three studies. It needs Git, Make, a Java 17-compatible JDK, uv and first-run network access. An optional absolute path to a local Restricter Git checkout reuses classroom source objects.
+4. Run `make paper` to regenerate the vector figures, three table bodies and PDF with pdfLaTeX. The [paper directory](../paper/) contains the source, locked figure generator and build notes. Review or extend the research on this branch.
 
 ### Review the commits in order
 
@@ -20,6 +20,11 @@ Work on `research/classroom-replay`. Keep this long-lived branch on origin. Its 
 | `5df57da` | Which registry cases and acceptance checks were specified before implementation? |
 | `81aa2c1` | What changes can the refiner make and how are they checked? |
 | `52607e7` | What were the eight held-out outcomes and how do both studies reproduce together? |
+| `99f810c` | Which SQL study design and scoring rules were frozen before trace collection? |
+| `cd1bd25` | What did the primary ranks and 15,084 native policy tests produce? |
+| `6b6c2b9`, `0e11cdb` | What changed after separating identical footprints and unrelated donors? |
+| `c0d069f` | How sensitive were the outcomes to a neighbor baseline and a stricter join-family definition? |
+| `cbadd99`, `305bd2b` | What happened to native policies after duplicate removal and to matched scores on exercised grants? |
 
 ### Independent checkout verification · 2026-11-20
 
@@ -67,4 +72,4 @@ Eight serialized proposals were independently reloaded and checked. The successf
 
 ## Independent SQL evaluation
 
-The protocol is frozen at `99f810c`. All 113 JOB and 146 STATS statements compiled and ran against the pinned SQLite authorizer. The archive contains individual statement footprints, fold identities, matched operating points and native enforcement outcomes. The paper must separate the scorer's matched-excess operating point from the label-blind budget used in deployment-style tests. Next, rerun these archives on Linux, audit related work and robustness, then build and visually review the manuscript.
+The protocol is frozen at `99f810c`. All 113 JOB and 146 STATS statements compiled and ran against the pinned SQLite authorizer. The archive contains individual statement footprints, fold identities, matched operating points and native enforcement outcomes. The paper must separate the scorer's matched-excess operating point from the label-blind budget used in deployment-style tests. The subsequent checks and manuscript are linked above.
