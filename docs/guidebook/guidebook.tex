@@ -66,7 +66,7 @@ Run the six-row example, change one event, and explain the result to someone who
 
 \textbf{First week.} Work through sections~\ref{sec:semantics}--\ref{sec:artifact} in short sessions. Keep the decision tables and the note you write about the external case. Bring those to the first meeting.
 
-\textbf{Building and evaluating.} Use sections~\ref{sec:tighten}--\ref{sec:handoff} as references when you implement a component or design an experiment. Each chapter ends with something you can check.
+\textbf{Building and evaluating.} Use sections~\ref{sec:tighten}--\ref{sec:migration} as references when you implement a component or design an experiment. Each chapter ends with something you can check.
 
 \unit{Getting started}{A request, a decision, and a reason}\label{sec:story}
 A model registry stores versions of a machine-learning model. The inference service loads the version marked stable to answer requests. A release job writes a candidate version. A recovery job reads an archived copy during a restore. Each job has an account so the registry can decide what that job may do.
@@ -105,6 +105,7 @@ On a Mac, \id{xcode-select --install} supplies the command-line tools for Git an
 \begin{code}
 git clone https://github.com/oraoraoraaa/least-privilege-lab.git
 cd least-privilege-lab
+git switch research/classroom-replay
 make demo
 make test
 \end{code}
@@ -406,6 +407,29 @@ May--Jun & Final thesis (at least 15,000 Chinese characters), the designated tra
 \end{tabularx}
 
 \checkpt{Bring one artifact you can run or audit and one decision your advisor can help settle. The first meeting can settle which policy fragment the project will support. The next can settle whether the external case is ready for comparison.}
+
+\unit{Release engineering lab}{Follow one new column into a shipped query}\label{sec:migration}
+In Mihon, a manga reader, one database row describes one manga. A row contains fields such as its identifier and title. Version 0.19.0 added a field called \id{notes}. Imagine that you maintain the read policy for a lookup by identifier. Will you need to change that policy if your teammate rebuilds the app without editing the lookup?
+
+\sub{Predict which fields each query will request}
+The first line below is the application's lookup, reformatted. The second is a narrower query you could write for a screen that displays only the title.
+\begin{code}
+SELECT * FROM mangas WHERE _id = :id;
+SELECT title FROM mangas WHERE _id = :id;
+\end{code}
+The asterisk asks for every field in the row. The second query requests \id{title} to display it and \id{\_id} to find the row. Adding a column leaves those two requirements intact. Write down which lookup should change before running the check.
+
+\sub{Rehearse the old queries on the planned schema}
+From the repository root on the research branch, run the command below. The \booklink{https://docs.astral.sh/uv/getting-started/installation/}{uv installation guide} covers setup. The first run downloads the Python dependency and pinned application sources. The reviewer builds empty databases and records each field SQLite asks to read.
+\begin{code}
+uv run --locked --script research/selection/review.py --example
+\end{code}
+Find \id{old\_named\_reads} in the output. It should be 42. The \id{alerts} object has ten entries, including \id{mangas.getMangaById}. Its \id{added\_reads} list contains \id{mangas.notes}. The lookup now requests notes even when no rows match. Decide whether the caller needs notes before changing its allowed fields.
+
+\sub{Check what actually shipped}
+SQLDelight turns the source query into code for the app. In these two releases it wrote the field names into the shipped lookup. Open the \booklink{https://github.com/oraoraoraaa/least-privilege-lab/blob/c70b90923f496adb91220125f007cc4c4b6871cc/research/selection/results/release-check.json}{release-package evidence} and compare the two projection lists. The new release explicitly names \id{mangas.notes}. The older release keeps its original list even when its compiled SQL runs on the newer schema.
+
+\checkpt{A teammate changes the title-only query to request an existing description field. The schema stays the same. Would rehearsing yesterday's query produce an alert? No. The new requirement appears in today's query. Prepare that version and compare its reads with the grants for the old one.}
 
 \unit{Desk reference}{Where to look when you get stuck}\label{sec:reference}
 \sub{If a word is slowing you down}

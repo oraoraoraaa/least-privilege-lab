@@ -2,7 +2,7 @@
 
 A reporting account has successfully run one query. A related query is available in staging. This experiment measures whether the staged query helps select the permissions a third query needs. The [paper](../../paper/paper.pdf) reports the results. The [original protocol](PROTOCOL.md) and [subsequent checks](AUDIT.md) record when each comparison was chosen.
 
-## Reproduce or inspect a result
+The [follow-on study](../selection/README.md) compares two candidate siblings, then tests policies across real application versions and inspects two published package literals.\n\n## Reproduce or inspect a result
 
 Run the SQL study from the repository root with Git, uv and network access for the first download.
 

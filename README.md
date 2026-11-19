@@ -1,10 +1,10 @@
 # Least Privilege Lab
 
-This research branch studies whether preflighting a related SQL query helps a least-privilege policy preserve access for a later query. It contains the manuscript, query-level evidence, an executable policy refiner and a reproducible comparison on two published workloads.
+This branch studies least-privilege database policies across query variants and application upgrades. It contains a Java grant reviewer, a checked policy refiner, a SQL migration reviewer, and the source and evidence for the research paper.
 
-**[Read the paper (PDF)](paper/paper.pdf)** · [LaTeX source](paper/paper.tex) · [Query evidence and reproduction](research/paths/README.md) · [Research history and handoff](research/STATE.md)
+**[Read the paper (PDF)](paper/paper.pdf)** · [LaTeX source](paper/paper.tex) · [Try the migration reviewer](research/selection/README.md) · [Research history and handoff](research/STATE.md)
 
-At equal excess permissions, a sibling query improved whole-query success on both workloads. The primary JOB gain disappeared when the staged and hidden queries required different permissions. On STATS the gain persisted after removing duplicate permission sets, although most hidden queries still failed. The [classroom replay](research/classroom/README.md) and [controlled registry pilot](research/registry/README.md) explain why a successful training run can miss a required workflow.
+The Mihon release binaries illustrate why a reviewer should inspect unchanged queries during a migration. Rebuilding an existing lookup made it request a newly introduced notes field. Across five release transitions, rehearsing the old query sources against planned schemas raised 83 alerts, compared with 108 from a schema diff. Both found all 49 expansions on surviving named queries. The [query benchmarks](research/paths/README.md) measure the different problem of predicting an unseen variant on a fixed schema. The [classroom replay](research/classroom/README.md) and [registry pilot](research/registry/README.md) provide smaller, hand-auditable cases.
 
 **面向最小权限原则的访问控制策略优化设计与实现**
 
@@ -14,7 +14,7 @@ A Java reviewer for access grants and usage logs, and a research project on tigh
 
 The current CLI reads a grant snapshot and a decision log, then reports what happened to each permission. The branch also includes a checked policy-tightening prototype. The graduation roadmap describes a revision monitor as a separate project milestone.
 
-**New here?** Open the [research guidebook (PDF)](docs/guidebook/guidebook.pdf). Start with the model registry, run the demo, and make a small, testable contribution. The later chapters walk through the three research papers and the design of a comparative experiment. The [milestone plan](docs/ROADMAP.md) and [original Chinese project brief](docs/brief/课题附件.pdf) describe the graduation deliverables.
+**New here?** Open the [research guidebook (PDF)](docs/guidebook/guidebook.pdf). Start with the model registry, run the demo, and make a small, testable contribution. The later chapters walk through the three research papers, the design of a comparative experiment and a hands-on replay of a database migration. The [milestone plan](docs/ROADMAP.md) and [original Chinese project brief](docs/brief/课题附件.pdf) describe the graduation deliverables.
 
 ## Reproduce the research
 

@@ -117,7 +117,41 @@ def tables():
     write_table("sensitivity",sensitivity)
 
 
+def selection_results():
+    folder = RESULTS.parents[1]/"selection/results"
+    panels = json.loads((folder/"selection.json").read_text())
+    app = json.loads((folder/"mihon.json").read_text())
+    fig, ax = plt.subplots(figsize=(7.0,2.35))
+    segments = [("random","Query succeeds","#18735f"),("selection_loss","Other choice succeeds","#5b85ab"),
+                ("both_fail","Both policies fail","#d49b4d"),("impossible","Budget too small","#b8bec4")]
+    left = [0.,0.]
+    for key, label, color in segments:
+        widths = [100*panels[c]["all_ids"]["means"][key] for c in ("JOB","STATS")]
+        ax.barh([1,0],widths,left=left,height=.44,color=color,label=label,edgecolor="white")
+        for i,(x,w) in enumerate(zip(left,widths)):
+            if w >= 5:
+                ax.text(x+w/2,1-i,f"{w:.1f}",ha="center",va="center",fontsize=8,
+                        color="white" if key in ("random","selection_loss") else "#232323")
+        left=[a+b for a,b in zip(left,widths)]
+    ax.set(xlim=(0,100),ylim=(-.45,1.45),yticks=[0,1],yticklabels=["STATS","JOB"],
+           xlabel="Share of informative comparisons, equal weight per family (%)")
+    ax.spines["left"].set_visible(False)
+    ax.tick_params(axis="y",length=0)
+    fig.legend(*ax.get_legend_handles_labels(),loc="lower center",ncol=4,frameon=False,fontsize=8)
+    fig.subplots_adjust(left=.09,right=.99,top=.97,bottom=.41)
+    save(fig,"selection-limits")
+    changes=[]
+    for t in app["transitions"]:
+        expanded=[r for r in t["outcomes"] if r["missing"]]
+        scores=[sum(r["scores"][m] for r in expanded) for m in ("schema_baseline","ddl_diff","rehearsal","literal")]
+        changes.append([t["new"].removeprefix("v"),len(t["outcomes"]),len(expanded),
+                        sum(r["old_digest"]==r["new_digest"] for r in expanded),*scores])
+    changes.append(["All",*[sum(r[i] for r in changes) for i in range(1,len(changes[0]))]])
+    write_table("releases",changes)
+
+
 if __name__ == "__main__":
     design()
     results()
     tables()
+    selection_results()
