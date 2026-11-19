@@ -14,3 +14,12 @@ demo: $(JAR)
 
 test: $(JAR)
 	sh tests/review.sh $(JAR)
+
+.PHONY: guidebook
+GUIDE := docs/guidebook/guidebook
+PDFLATEX := pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build/guidebook
+guidebook:
+	mkdir -p build/guidebook
+	$(PDFLATEX) $(GUIDE).tex
+	$(PDFLATEX) $(GUIDE).tex
+	cp build/guidebook/guidebook.pdf $(GUIDE).pdf

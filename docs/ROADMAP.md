@@ -2,13 +2,13 @@
 
 **First checkpoint · by 4 December 2026.** Take the registry example to the advisor. Agree on one policy fragment, identify the designated translation paper, request any departmental PolicyRefiner materials, and check the actual submission calendar. Leave the meeting with one external case to reproduce and a written definition of a legitimate request.
 
-The dates below are proposed working windows from November 2026 to June 2027. The brief specifies deliverables and length requirements. The department sets the deadlines. At each checkpoint, record the date, Git revision, command or figure demonstrated, and one decision for the next period.
+Use these proposed dates to plan the work and replace them with departmental deadlines when the calendar arrives. For a guided first contribution, use the [research guidebook](guidebook/guidebook.pdf). At each checkpoint, record the date, Git revision, command or figure demonstrated, and one decision for the next period.
 
 ## Product and research question
 
 The user is a service owner reviewing a policy revision. Give them the proposed rule change, the effective grants it removes, the evidence for keeping or reviewing a permission, and the grants a later revision reintroduces. The minimum useful release works on versioned files on a laptop. A single service, its operator and its recovery job make a good first deployment scenario.
 
-The paper question is narrower. **When entire workflows are absent from the log, can a tightener that defers changes for poorly observed workflows preserve more rare legitimate access at a comparable reduction in excess grants?** A scheduled recovery job motivates the question. A signed-off workflow inventory or schedule can tell us it exists even when its next run falls outside the observation window. Measuring the cost of retaining those permissions is part of the result.
+**When an entire workflow is missing from the log, does deferring its policy changes preserve more legitimate access at the same reduction in excess grants?** A recovery schedule gives the reviewer evidence that the job exists between runs. Measure both the restores that would still succeed and the excess grants that deferral would retain.
 
 ## Checkpoints
 
@@ -29,15 +29,15 @@ Draft the semantics and related-work sections during checkpoint 2, the design ch
 | --- | --- |
 | Policy and log adapters | Map native rules, entity snapshots and decisions into a versioned, finite request universe. Publish the supported syntax and reject unsupported conditions. Retain rule IDs so a result can point back to its source. |
 | Requirement inference | Aggregate grants by principal, resource, operation and time window. An owner-approved requirement can protect a rare action. Conflicting decisions, suspect activity and incomplete observation carry an explicit reason for review. |
-| Tightening and constraints | Generate a small set of readable local restrictions, such as replacing a broad resource match with a permitted attribute value. Keep the least-permissive admissible candidates under set inclusion. Check that the candidate grants are a subset of the original and that protected access survives. A timeout, unresolved assumption or insufficient evidence leaves the affected rule in place. |
+| Tightening and constraints | Generate a small set of readable local restrictions, such as replacing a broad resource match with a permitted attribute value. Retain the admissible candidates whose grant sets have no admissible strict subset. Check that the candidate grants are a subset of the original and that protected access survives. A timeout, unresolved assumption or insufficient evidence leaves the affected rule in place. |
 | Revision monitor | For each committed revision, compare effective grants with the preceding revision on the same entity snapshot. Intersect newly added grants with the complement of the frozen baseline. An alert is a request for review. Update baseline versions only with reviewed evidence. |
 
 **Scope if time gets tight.** Keep one policy fragment, one external case, one controlled generator, one solver-backed strengthening and the revision monitor. Use full recomputation per revision first. Defer incremental indexing and additional policy languages until the measured runtime justifies them. If observational logs are unavailable, report results as controlled case studies and describe the gap to production use.
 
 ## Reading and code reuse
 
-- **PolicyRefiner** gives a precise model of allowable local edits and evaluates on held-out requests. Reconstruct a small worked example before implementing its ideas. The brief lists source code and data. A public release was not verified, and the Restricter authors report difficulty obtaining earlier tools. Ask the advisor about local access at checkpoint 1. Label any independent implementation by its actual scope. [OOPSLA paper](https://doi.org/10.1145/3689738) · [Restricter evaluation, §7](https://link.springer.com/chapter/10.1007/978-3-032-22752-2_6)
+- **PolicyRefiner** gives a precise model of allowable local edits and evaluates on held-out requests. Reconstruct a small worked example before implementing its ideas. Ask the advisor for the code and data listed in the brief. The Restricter authors describe their access difficulties in §7. If the advisor has no copy, implement one edit family from the paper and identify it as a reconstruction. [OOPSLA paper](https://doi.org/10.1145/3689738) · [Restricter evaluation, §7](https://link.springer.com/chapter/10.1007/978-3-032-22752-2_6)
 - **Restricter** provides an executable comparison and a source of policies, entities and generated logs. Start with its classroom case. Trace one permit rule through the synthesis code and reuse the upstream case generator or evaluator for the supported slice. Record the input conversion, revision and environment. [TACAS paper](https://doi.org/10.1007/978-3-032-22752-2_6) · [Pinned upstream code and cases](https://github.com/REASONERSLab/Restricter/tree/35331c1259d1c04f4f453aab60e9f3f338d9d544)
 - **OPMonitor** motivates inferring a granting baseline and maintaining it as policies evolve. Compare the simplest revision-by-revision implementation with its monitoring model. Profile replay before deciding whether a tree index is worth implementing. [Computers & Security paper](https://doi.org/10.1016/j.cose.2025.104623)
 
-For a systems portfolio, keep an overlapping-rule example that defeated a local check, a profile that changed an implementation decision, and a figure you can regenerate from the tagged code. These give you concrete engineering decisions to discuss at a whiteboard.
+For a systems portfolio, keep a worked example of overlapping rules, a runtime profile with your resulting design decision, and a figure you can regenerate from tagged code. These give you concrete engineering decisions to discuss at a whiteboard.

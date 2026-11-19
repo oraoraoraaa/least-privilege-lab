@@ -1,0 +1,429 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,upquote}
+\usepackage[top=23mm,bottom=22mm,left=27mm,right=27mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,booktabs,xcolor,fancyhdr,fancyvrb,enumitem}
+\usepackage{hyperref}
+\definecolor{ink}{HTML}{203135}
+\definecolor{pine}{HTML}{075B58}
+\definecolor{rust}{HTML}{884420}
+\definecolor{rulegray}{HTML}{9EB2B0}
+\hypersetup{colorlinks=true,linkcolor=pine,urlcolor=pine,pdftitle={Least Privilege Lab: A contributor's guide},pdfauthor={Least Privilege Lab},bookmarksnumbered=true}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=15
+\pdfgentounicode=1
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5.4pt plus 0.5pt minus 0.5pt}
+\setlength{\tabcolsep}{4.5pt}
+\renewcommand{\arraystretch}{1.18}
+\setlist{leftmargin=1.5em,itemsep=2pt,topsep=3pt,parsep=0pt}
+\setcounter{tocdepth}{1}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\sffamily\color{pine}Least Privilege Lab}
+\fancyhead[R]{\small\sffamily\color{ink}Contributor's guide}
+\fancyfoot[R]{\small\sffamily\thepage}
+\renewcommand{\headrulewidth}{0.35pt}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\unit}[2]{\clearpage{\color{rust}\sffamily\small\bfseries #1\par}\vspace{-1mm}\section{#2}}
+\newcommand{\sub}[1]{\par\medskip{\large\sffamily\bfseries\color{pine}#1\par}\nobreak}
+\newcommand{\id}[1]{\texttt{#1}}
+\newcommand{\checkpt}[1]{\par\medskip\noindent{\sffamily\bfseries\color{rust}Check your work.}\enspace #1\par}
+\newcommand{\booklink}[2]{\href{#1}{\textsf{#2}}}
+\DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\small,frame=leftline,framerule=1pt,rulecolor=\color{rulegray},xleftmargin=1em,framesep=2.5mm}
+\begin{document}
+\color{ink}
+\begin{titlepage}\thispagestyle{empty}
+\vspace*{14mm}
+{\sffamily\bfseries\large\color{pine}Least Privilege Lab\par}
+\vspace{12mm}
+{\sffamily\bfseries\fontsize{39}{43}\selectfont Which permissions\\does a service need?\par}
+\vspace{5mm}
+{\sffamily\Large A contributor's guide to access-control research\par}
+\vspace{13mm}
+{\color{pine}\rule{38mm}{1.7pt}}\par
+\vspace{6mm}
+\begin{minipage}{0.88\textwidth}
+A model server reads a file every day. A recovery account reads the archive once a quarter. A week of logs shows the server at work and says nothing about the restore. Should the administrator remove the recovery account's grant?
+
+You can work through that decision with a pencil, test it with the Java reviewer, and turn it into a research question with a measurable cost on each side.
+\end{minipage}
+
+\vfill
+{\sffamily\bfseries\color{pine}Your first hour\par}
+Run the six-row example, change one event, and explain the result to someone who owns the service. Start on page~\pageref{sec:story}.
+\vspace{6mm}
+
+{\small November 2026 edition\quad\textbullet\quad
+\booklink{https://github.com/oraoraoraaa/least-privilege-lab}{Project repository}}
+\end{titlepage}
+\setcounter{page}{2}
+
+\tableofcontents
+\sub{Choose a place to start}
+\textbf{First afternoon.} Read sections~\ref{sec:story}--\ref{sec:code}. You need a terminal and a text editor. The setup page covers the tools. Stop when you can explain one report row and change its outcome on purpose.
+
+\textbf{First week.} Work through sections~\ref{sec:semantics}--\ref{sec:artifact} in short sessions. Keep the decision tables and the note you write about the external case. Bring those to the first meeting.
+
+\textbf{Building and evaluating.} Use sections~\ref{sec:tighten}--\ref{sec:handoff} as references when you implement a component or design an experiment. Each chapter ends with something you can check.
+
+\unit{Getting started}{A request, a decision, and a reason}\label{sec:story}
+A model registry stores versions of a machine-learning model. The inference service loads the version marked stable to answer requests. A release job writes a candidate version. A recovery job reads an archived copy during a restore. Each job has an account so the registry can decide what that job may do.
+
+A \textbf{principal} is the person or program asking for access. An \textbf{action} is the operation it wants to perform. A \textbf{resource} is the object of that operation. Put the three together and you get one concrete request, such as \id{(recovery, read, model:archive)}. A \textbf{policy} contains the rules that allow or deny requests. The principle of \textbf{least privilege} is to give each principal the permissions its work requires and remove excess access. A permission currently conferred by the rules is an \textbf{effective grant}.
+
+\sub{Three questions an administrator can answer}
+\begin{tabularx}{\linewidth}{@{}p{.25\linewidth}YY@{}}\toprule
+Question & Evidence & Example answer\\\midrule
+What can happen now? & A snapshot of effective grants & Recovery may read the archive.\\
+What happened? & A dated access event & The log has two successful reads of the stable model.\\
+What must keep working? & An independently approved requirement & The restore procedure requires recovery to read the archive.\\\bottomrule
+\end{tabularx}
+
+A historical \id{ALLOW} shows what the system decided at that time. A service owner can tell you which business operation justified it. An overbroad rule could have permitted the same request. Conversely, a job can be legitimate even if the observation window closed before it ran.
+
+\sub{What you are joining}
+The repository already joins the first two kinds of evidence. You can run that reviewer today. The thesis adds an inference step to estimate requirements, an optimizer to propose narrower rules, and a monitor to flag grants added in later revisions. The research question is how many excess grants a reviewer can remove while preserving infrequent legitimate work.
+
+\checkpt{A retired account still has a grant. What would justify removing it? An owner-confirmed retirement date, the inventory showing no successor workflow uses that identity, and a check of the proposed change against protected operations give the reviewer a reason. A quiet week alone leaves the retirement question open.}
+
+\unit{First session}{Run the reviewer on your laptop}\label{sec:setup}
+Open Terminal on macOS or a shell on Linux. A shell reads one command per line. The working directory is the folder those commands act on. Use \id{pwd} to see it and \id{ls} to list its files. If you already have the project open, enter the folder containing its \id{Makefile} and skip the clone.
+
+\sub{Get the three tools}
+Git downloads a copy of the repository. Make runs named commands from the Makefile. A Java Development Kit (JDK) supplies the compiler, \id{javac}, and the runtime, \id{java}. JDK 17 is a suitable starting version. Check the programs your shell finds.
+\begin{code}
+git --version
+make --version
+java -version
+javac -version
+\end{code}
+On a Mac, \id{xcode-select --install} supplies the command-line tools for Git and Make. Install a JDK for your processor and reopen Terminal. On Ubuntu, the packages \id{git}, \id{make}, and \id{openjdk-17-jdk} supply the three tools. The JDK installation walkthrough includes a first compile and run. \booklink{https://dev.java/learn/getting-started/}{Java getting started}.
+
+\sub{Run the example}
+\begin{code}
+git clone https://github.com/oraoraoraaa/least-privilege-lab.git
+cd least-privilege-lab
+make demo
+make test
+\end{code}
+The first target compiles the source, builds a JAR (a Java application archive), and prints a table. Look for the row beginning with \id{recovery}. The second command runs the checks. Its last line should read \id{Review checks passed.} The demo needs no account with a cloud provider.
+
+\sub{If the command stops}
+An error about a missing Make target usually means Make read a different folder. Check \id{pwd} and look for \id{examples/registry}. If the compiler rejects release 17, run \id{javac -version} and select a JDK that accepts \id{--release 17}. If a data error reports a filename and line number, open that row and compare its columns with the supplied example.
+
+\checkpt{You should have a passing test and a report with a header plus six data rows. The four grants in the snapshot are enough to produce six rows because the log also mentions two tuples outside it.}
+
+\unit{First session}{Predict a report, then change it}\label{sec:report}
+Open the \id{examples/registry} folder. Its \id{grants.tsv} and \id{events.tsv} files are plain text tables with one tab between columns. Cover \id{expected.tsv} while you count. In a report row, \id{granted\_now} comes from the snapshot. The two counters come from matching events across the whole file.
+
+\begin{tabularx}{\linewidth}{@{}l l c c c Y@{}}\toprule
+Principal & Action & Grant & Allows & Denies & How to read it\\\midrule
+inference & read & yes & 2 & 0 & Two successful stable-model reads.\\
+mirror & read & yes & 0 & 1 & Candidate read previously denied.\\
+recovery & read & yes & 0 & 0 & Archive grant with no events.\\
+release & delete & no & 0 & 1 & A denied stable-model deletion.\\
+release & write & yes & 1 & 1 & Candidate writes had both outcomes.\\
+retired-runner & read & no & 1 & 0 & A past allowed read of version zero.\\\bottomrule
+\end{tabularx}
+
+The mirror's historical denial and current grant can coexist. The snapshot describes current effective access, and the log spans earlier decisions. Investigate the policy revision and request context in effect when the denial occurred. The sample supplies neither, so the cause stays open.
+
+\sub{Record a single restore}
+Copy the log into the ignored build directory. The quoted format below tells \id{printf} to write real tabs. A trailing backslash continues a shell command onto the next line.
+\begin{code}
+make build
+case_dir=examples/registry
+cp "$case_dir/events.tsv" build/restore.tsv
+printf '%s\t%s\t%s\t%s\t%s\n' '2026-10-06T12:00:00Z' \
+  recovery read model:archive ALLOW >> build/restore.tsv
+java -jar build/least-privilege-lab.jar review \
+  "$case_dir/grants.tsv" build/restore.tsv
+\end{code}
+Predict the change before running the last command. Only the recovery row moves from \id{unobserved} to \id{observed-allow}. Its grant stays true, its allow count rises to one, and its deny count stays at zero. To repeat the exercise from the beginning, copy the original log again.
+
+\checkpt{Change the new decision to \id{DENY} in your scratch file and rerun the review. The row becomes \id{denied-history-only}. Explain why adding either event changes the evidence while leaving today's grant untouched.}
+
+\unit{First contribution}{Follow one row through the Java code}\label{sec:code}
+Start with the recovery row. Four small files under \id{src/main/java/leastprivilege/} explain its journey. Open them in this order and stop once you can point to the line that decides the label.
+
+\begin{enumerate}
+\item \textbf{Main.java.} The command-line entry point takes \id{review}, a grants path and an events path. It reads both files before printing. That order explains why a malformed final event produces an error and an empty report.
+\item \textbf{Inputs.java.} The parser checks the header, splits each row on tabs, and validates its fields. It parses the event timestamp and passes a permission and a decision to the reviewer. Window selection belongs to the caller in this version.
+\item \textbf{Permission.java.} A record groups the principal, action and resource into a key. Give recovery a second resource and you create a second key, even if the action stays \id{read}.
+\item \textbf{Review.java.} One map entry per key stores the current grant and two counts. The map sorts by principal, action and resource. In \id{finding()}, follow the path for a present grant with two zero counters.
+\end{enumerate}
+
+\sub{A first patch you can finish in an afternoon}
+Test what happens when a log has a valid header and zero events. Predict the number of output rows and their labels. From the repository root, run this miniature acceptance test.
+\begin{code}
+make build
+head -n 1 examples/registry/events.tsv > build/empty-log.tsv
+java -jar build/least-privilege-lab.jar review \
+  examples/registry/grants.tsv build/empty-log.tsv \
+  > build/empty-report.tsv
+awk -F '\t' 'NR > 1 {print $7}' build/empty-report.tsv | sort | uniq -c
+\end{code}
+Expect four occurrences of \id{unobserved}. To contribute the test, create a local branch with \id{git switch -c test/empty-log}. Add a case to \id{tests/review.sh} using its existing temporary directory and \id{review} helper. Assert the four tuples, their grant flags, counters and labels. Run \id{make test} and inspect \id{git diff}.
+
+\checkpt{A small reviewable change includes the new test, its expected result, and a sentence explaining the failure it would catch. Here it catches an implementation that builds the report only from events and silently drops all four current grants.}
+
+\unit{Foundations}{Turn a rule into a table of decisions}\label{sec:semantics}
+A role groups principals by job. In role-based access control (RBAC), assigning a permission to a role gives that permission to its members. Attribute-based access control (ABAC) lets a rule inspect facts about a principal, resource, action or environment. A model's release stage is a resource attribute. A rule can use both membership and stage. For the formal definition, read the opening of \booklink{https://doi.org/10.6028/NIST.SP.800-162}{NIST SP 800-162}.
+
+\sub{A six-request universe}
+Use a fresh paper example. Two accounts, \emph{serve} and \emph{recover}, have the Reader role. Three resources have distinct stages, \emph{stable}, \emph{archive}, and \emph{preview}. The only action is read. Two principals times one action times three resources gives six possible requests. We call that finite set the \textbf{universe} \(U\). The role memberships and stages form the \textbf{entity snapshot}.
+
+The original policy has two permit rules. Rule A lets any Reader read any model. Rule B lets recover read archive. A request succeeds if at least one rule matches. A request with zero matching rules is denied. Try adding a condition to rule A that the resource must have stage stable. Keep B intact. Number the requests so that you can reuse this table in later exercises.
+
+\begin{tabularx}{\linewidth}{@{}c l l Y Y@{}}\toprule
+ID & Principal & Resource & Original rules that match & After adding the condition\\\midrule
+0 & serve & stable & A & A\\
+1 & serve & archive & A & none\\
+2 & serve & preview & A & none\\
+3 & recover & stable & A & A\\
+4 & recover & archive & A and B & B\\
+5 & recover & preview & A & none\\\bottomrule
+\end{tabularx}
+
+The new grant set is \(\{0,3,4\}\). The old one was all six. Both policies contain two rules. Counting rules would miss a reduction of three effective grants. Request 4 illustrates \textbf{overlap}. A stopped matching it, while B still permits the restore.
+
+\checkpt{Make recover the sole Reader and recompute the new grant set. You should get \(\{3,4\}\). The same policy text now has different behavior. Store the entity snapshot alongside any policy you plan to compare.}
+
+\unit{Foundations}{Build a baseline from incomplete evidence}\label{sec:baseline}
+A \textbf{requirements baseline} records the accesses a reviewer currently expects a policy to allow. Start small. Use one time window, one entity snapshot and a named source for each expectation. An \textbf{owner-protected request} is an operation the responsible person has explicitly marked as required. A baseline can also contain inferred expectations. Store their origin so the next reviewer knows which questions to ask.
+
+\sub{Which week counts as evidence?}
+Suppose a backup team schedules its restore drill for the first Friday of each month. A log from the second week contains twelve ordinary reads and zero restores. The schedule explains why an entire workflow is missing. Now consider three observation windows.
+
+\begin{tabularx}{\linewidth}{@{}p{.27\linewidth}Y Y@{}}\toprule
+Window & What is known & Proposed handling\\\midrule
+A week between drills & Normal reads were logged. No drill was due. & Keep the recovery grant for review.\\
+A drill with a logging gap & A job record confirms it ran. Part of the authorization log is missing. & Mark the cycle incomplete and investigate the gap.\\
+A fully observed drill & Job start, completion, policy version and access events agree. & Record the exercised permissions and advance the complete-cycle count.\\\bottomrule
+\end{tabularx}
+
+\sub{What the proposed method would do}
+Map a rule's affected grants to known workflows. Count expected cycles with usable telemetry. A configurable threshold controls when a removal can be considered. Start the pilot at two complete cycles and select the study threshold on validation data. If a grant serves several workflows, require coverage for each one before considering removal. Owner-protected requests must survive every proposal. Ambiguous mappings and incomplete coverage generate review work. Measure that work along with the reduction in grants.
+
+A successful access can also be unusual. For instance, suppose a service account performs an operation the service owner cannot associate with a job. Keep the raw event and mark its business purpose unresolved. Promoting every success to a requirement would bake the current policy's mistakes into the baseline.
+
+\checkpt{Write two sentences about the quiet week. The observation is that the log contains zero restores. The administrative decision is to retain access pending a scheduled drill or owner review. Each sentence names a different kind of evidence.}
+
+\unit{Reading the research}{Read the three papers with a pencil}\label{sec:papers}
+Take one question into each paper. Read the problem statement, one running example, and the evaluation passage that defines success. Sketch the example in your own notation. Return to the algorithm when you encounter a step you cannot explain.
+
+\sub{PolicyRefiner \hfill {\small OOPSLA 2024}}
+\textbf{Which edits can the algorithm consider?} D'Antoni and colleagues organize local edits of an AWS IAM policy by the requests they allow. Start with the paper's running example and the definition of a least-permissive local modification. Draw a broad rule and two possible restrictions. Connect two candidates only if one's grant set contains the other. Circle the candidates that still permit the required log requests. Then find how the authors use held-out requests to evaluate a refinement. Save the diagram as your reading note. \booklink{https://doi.org/10.1145/3689738}{Automatically Reducing Privilege for Access Control Policies}.
+
+\sub{Restricter \hfill {\small TACAS 2026}}
+\textbf{How does a solver find a stronger condition?} Wu and colleagues tighten permit rules in Cedar. Start with one classroom rule. List the facts available about a principal and a resource. Imagine a small grammar that lets the synthesizer combine those facts into a condition. Find the example where the authors explain which observations constrain that choice. In the evaluation, distinguish the loose starting policy, the hidden intended policy and the log given to the algorithm. Those three objects do different jobs in your experiment too. \booklink{https://doi.org/10.1007/978-3-032-22752-2_6}{Automatically Tightening Access Control Policies with Restricter}.
+
+\sub{OPMonitor \hfill {\small Computers \& Security, 2025}}
+\textbf{What triggers a monitoring alert?} Wang and colleagues infer a granting baseline from access logs and use a locally abstract baseline tree to evaluate access efficiently. Follow the path from the initial mined baseline to its refinement and then to one monitoring decision. Write down which input changed, what information the tree retains, and what the authors time. The first lab monitor will compare file revisions against a frozen baseline. Reading the paper gives you a reason to measure recomputation cost before building a faster index. \booklink{https://doi.org/10.1016/j.cose.2025.104623}{OPMonitor}.
+
+\checkpt{Bring one sheet to the advisor with three rows. For each paper name its input, the object it changes or monitors, one success measure, and one assumption your registry example challenges. Bring a question about access to the PolicyRefiner artifact and the designated translation paper.}
+
+\unit{Reading the research}{Inspect an external case you can reproduce}\label{sec:artifact}
+A published artifact is the code and data behind a paper. The Restricter authors publish a classroom policy, its schema, entities and access log. Pinning a revision lets someone else inspect the same files later. This small exercise needs Git and Python 3. It reads the original JSON directly.
+
+\begin{code}
+mkdir -p build
+git clone https://github.com/REASONERSLab/Restricter.git \
+  build/restricter
+git -C build/restricter checkout --detach \
+  35331c1259d1c04f4f453aab60e9f3f338d9d544
+python3 - <<'PY'
+import json
+from collections import Counter
+from pathlib import Path
+
+root = Path("build/restricter")
+rows = json.loads((root / "gclass_logs.60.json").read_text())
+print("decisions:", dict(Counter(row["result"] for row in rows)))
+print("first action:", rows[0]["request"]["action"])
+PY
+\end{code}
+The pinned file yields 1,744 \id{ALLOW} decisions. The first action is \id{Action::"PostAssignment"}. The sample can exercise the allow path. Testing the deny path requires a separate case with denials. If you revisit this exercise, reuse the checkout and verify its revision with \id{git -C build/restricter rev-parse HEAD}.
+
+\sub{Follow the data back to a rule}
+Open \id{gclassroom\_policies.cedar}. The posting rule checks whether the principal belongs to the resource's course. The accompanying comment suggests a teacher restriction. Compare the comment with the actual condition. Open \id{restricter.py}, find \id{load\_log}, and trace the principal, action, resource, context and decision from the JSON object. The function preserves entity type and context. Dropping either during conversion can merge requests with different decisions.
+
+For your first adapter, choose a supported rule and a pair of expected decisions. Pin the policy, entities and request context. Compare your evaluator with the upstream evaluator on the same requests and save the first difference in full. The reference runtime and platform-specific wheel instructions live in the \booklink{https://github.com/REASONERSLab/Restricter/tree/35331c1259d1c04f4f453aab60e9f3f338d9d544}{pinned artifact}. The \booklink{https://docs.cedarpolicy.com/policies/syntax-policy.html}{Cedar syntax guide} explains scope and conditions.
+
+\checkpt{The external log provides no timestamps in the first request. Inspect the field names before attempting a chronological split. An unordered dataset supports a sampling experiment. The registry workload can supply timestamps for the temporal experiment.}
+
+\unit{Designing the optimizer}{Propose a smaller policy and check it}\label{sec:tighten}
+Use the six requests on page~\pageref{sec:semantics}. Write \(G(P)\) for the set of requests that policy \(P\) permits on the fixed universe. For a candidate policy \(Q\) and protected set \(K\), require
+\[
+        G(Q)\subseteq G(P) \qquad\text{and}\qquad K\subseteq G(Q).
+\]
+The first check says every grant in the proposal already existed. The second says every protected request remains granted. Also check that \(K\subseteq G(P)\) when you load a case. A requirement already broken in the original policy needs its own report.
+
+\sub{Choose among admissible changes}
+Suppose the reviewed evidence asks you to preserve the serve read and the restore, \(K=\{0,4\}\). The table's candidate grants \(\{0,3,4\}\) and passes both checks. Deleting every rule would remove six grants and fail the second check. If the edit language also lets you restrict A to the serve principal and stable stage, another candidate grants \(\{0,4\}\). Within these choices that is the tightest admissible policy. When two candidates keep different extra permissions, neither set may contain the other. Show the reviewer the difference.
+
+\sub{From enumeration to SMT}
+For six requests you can test each one. A solver lets you express the same question as constraints. SMT stands for \emph{satisfiability modulo theories}. An SMT solver decides whether a collection of conditions can be true together using operations such as Boolean logic and integer arithmetic. Ask it to find a protected request missing from the candidate. Paste this example into a new SMT-LIB session in the \booklink{https://microsoft.github.io/z3guide/docs/logic/propositional-logic/}{interactive Z3 guide}.
+\begin{code}
+(set-logic QF_LIA)
+(declare-const q Int)
+(assert (and (<= 0 q) (< q 6)))
+(assert (or (= q 0) (= q 4)))
+(assert (not (or (= q 0) (= q 3) (= q 4))))
+(check-sat)
+\end{code}
+The answer is \id{unsat}. Remove \id{(= q 4)} from the candidate in the last assertion. The answer becomes \id{sat}, with \(q=4\) as a witness. For the other property, ask whether any request is granted by \(Q\) and denied by \(P\). A timeout or \id{unknown} leaves the candidate awaiting review.
+
+\checkpt{Check enumeration and the solver against each other on this fixed universe. Preserve the universe and entity snapshot with the result. That is the exact scope of the guarantee.}
+
+\unit{Designing the monitor}{Tell a policy change from an alert}\label{sec:monitor}
+After a policy edit, a revision monitor identifies the effective permissions that appeared and flags the ones a service owner should review. Start with full recomputation on versioned files. It gives you a reference answer for any later performance optimization.
+
+\sub{Work an example across two revisions}
+Continue with request IDs from section~\ref{sec:semantics}. Suppose the old policy permits \(\{0,3,4\}\). A new policy permits \(\{0,1,2,3,4\}\). The reviewed expectation for this release is \(B=\{0,2,4\}\). The owner approved read access to the preview model (2) for a new serving workflow. The archive read (1) still has no corresponding requirement.
+\[
+  \underbrace{G_{\mathrm{new}}\setminus G_{\mathrm{old}}}_{\text{newly granted}}
+   = \{1,2\}, \qquad
+  \underbrace{(G_{\mathrm{new}}\setminus G_{\mathrm{old}})\setminus B}_{\text{alerts}}
+   = \{1\}.
+\]
+Grant 3 also lies outside the baseline. It already existed, so a report of \emph{all current discrepancies} would include it, while this revision's new-alert report contains only grant 1. A redundant second rule permitting request 0 adds no effective grant.
+
+\sub{What the person reviewing the change needs}
+For grant 1, show the principal, action, resource, old and new decisions, rules that now permit the request, and the version of the baseline consulted. Give the reviewer the choices of confirming an excess grant, documenting a newly intended workflow, or deferring for missing evidence. A confirmed requirement belongs in the next baseline version. Retain the old one so rerunning a historical review reproduces the old alert.
+
+\sub{Three fixtures for a first implementation}
+Use an unchanged policy pair, a pair with an approved expansion, and a pair with the two additions above. Expect zero, zero and one alert respectively. Evaluate each pair against identical entities. If a role membership changes at the same time as a policy, replay the policy change on fixed entities first, then replay the entity change separately to attribute the difference.
+
+\checkpt{Suppose the owner really intended the archive read but forgot to update the baseline. The calculation still produces one alert. An independent review now labels it a false positive. That distinction makes monitor precision measurable.}
+
+\unit{Research design}{Compare two kinds of missing history}\label{sec:design}
+The proposed experiment asks whether deferring a change when a workflow is poorly observed protects legitimate access at a comparable reduction in excess grants. The outcome depends on \emph{which} events are missing. Losing every restore event is different from losing the same number of events scattered across a busy service.
+
+\sub{Prepare a case with an answer you can score}
+Write an intended policy specifying which requests the owner wants to permit. Broaden it in controlled ways to create the starting policy. Generate jobs and timestamps independently of the method under test. Keep a small owner-protected list available to every changing method. Reserve the full intended policy and some legitimate rare requests for the scorer. Hand-label a few examples before running a larger case. Store the review-time evidence in one file and the independent scoring labels in another.
+
+\sub{Use the clock to separate decisions}
+Use the early period to propose changes, the middle period to select the complete-cycle threshold, and a later period to measure retention. Include at least one scheduled restore opportunity in the test period and report how many occurred. Build paired training logs from the same original history. In one, delete every event belonging to a selected workflow. In the other, drop the same number of individual events at random. Keep the original policy, test window, inventory and seed fixed across each pair. Use separate seeds for development and final evaluation.
+
+\sub{Give each comparison a job}
+\begin{tabularx}{\linewidth}{@{}p{.32\linewidth}Y@{}}\toprule
+Comparison & Question it answers\\\midrule
+Original policy & What access and excess grants existed at the start?\\
+Observed-only allowlist & What happens if a grant must appear in the log to survive, apart from owner protections?\\
+Local tightener, deferral off & What do the local rule edits achieve by themselves?\\
+Same tightener, deferral on & What does checking workflow coverage add, and how much review does it cost?\\
+Upstream Restricter & How does an external implementation compare on requests where the policy semantics agree?\\\bottomrule
+\end{tabularx}
+
+\checkpt{Removing only the deferral step is an \emph{ablation}. Both variants need the same rules, candidate edits, owner protections and tuning budget. If the new method receives a more complete list of intended permissions, the comparison mixes two changes.}
+
+\unit{Research design}{Calculate the numbers before plotting them}\label{sec:metrics}
+Use a teaching case with universe \(\{0,\ldots,5\}\), original grants \(U\), and intended grants \(\{0,4\}\). The scorer knows both legitimate requests. Here the training log and the owner-protected list cover only request 0. In the held-out period it occurs nine times and request 4 occurs once. All ten events are legitimate. The figures below follow from these assumptions and can be checked with a pencil.
+
+\begin{tabularx}{\linewidth}{@{}Y c c c c@{}}\toprule
+Policy & Grants kept & Excess removed & Events retained & Distinct retained\\\midrule
+Original & 6 & 0/4 & 10/10 & 2/2\\
+Observed only \(\{0\}\) & 1 & 4/4 & 9/10 & 1/2\\
+Candidate \(\{0,3,4\}\) & 3 & 3/4 & 10/10 & 2/2\\\bottomrule
+\end{tabularx}
+
+The original has four excess grants. The candidate removes IDs 1, 2 and 5, so it removes three of those four. The observed-only policy also removes ID 4, a legitimate permission. Its 90\% event retention hides the lost restore. Count distinct tuples and report restore retention separately (zero of one for observed-only).
+
+\sub{Read a trade-off plot}
+Put the fraction of original excess grants removed on the horizontal axis and rare legitimate retention on the vertical axis. Both axes increase toward the desirable outcome. Each point represents one method and setting. Compare methods at matched removal levels or publish the range in which their results overlap. In the small table, the two changing methods achieve different removal levels. You can describe their trade-off directly. To establish an advantage at equal removal, collect points that permit that comparison.
+
+\sub{Score alerts and measure cost}
+Label each newly excess grant independently for each revision. Suppose five new grants are truly excess and the monitor flags four, three of them correctly. There are three true positives, one false positive and two false negatives. Precision is \(3/4\) and recall is \(3/5\). Report raw counts beside rates. An empty denominator gets \id{N/A}. Count deferrals separately. Each one asks an owner to spend time reviewing a rule.
+
+For runtime, separate parsing, inference, solver time and revision review. Start with repeated runs on one fixed case. Record the machine, JDK, input sizes, warm-up policy, median, spread and timeout count. Then vary one scale dimension at a time.
+
+\checkpt{If serve makes 999 reads and recover makes one, observed-only reaches 99.9\% event retention and still loses the restore. The distinct-tuple and rare-workflow denominators reveal exactly what happened.}
+
+\unit{Doing the work}{Keep an experiment someone else can rerun}\label{sec:replicate}
+Imagine returning to a figure six weeks after drawing it. To recover it, you need the input, the program that produced the measurements, and the transformation from measurements to the figure. Keep all three routes visible in the experiment record.
+
+\sub{A first lab note}
+\begin{tabularx}{\linewidth}{@{}p{.24\linewidth}Y@{}}\toprule
+Field & Example for the first session\\\midrule
+Question & Which output rows change after recording one restore?\\
+Inputs & Repository registry grants and events, plus the single added event on page~\pageref{sec:report}.\\
+Provenance & Save the output of \id{git rev-parse HEAD}, \id{java -version} and the command. Record input hashes for external data.\\
+Prediction & Only the existing recovery row changes.\\
+Observed result & Fill in the actual before/after counts after you run it. Attach the report.\\
+Decision & Which additional fact would justify retaining the grant? Identify the person or file that supplies it.\\\bottomrule
+\end{tabularx}
+
+For a study run, add the case ID, train/validation/test boundaries, random seed, method, threshold, entity and policy revisions, runtime and timeout status. Keep a raw results row for every scheduled case, including failures. The figure script reads those rows. A failed run that vanishes from the table can make a slow method look fast.
+
+\sub{Collect an informative failure}
+When two evaluators disagree, save one complete request, both decisions, the rules and the entity snapshot. Shrink the example until removing another fact would change the disagreement. For example, eliminating an overlapping rule may also eliminate the mismatch. That observation helps you locate its source and gives you a test for the eventual repair.
+
+A baseline can be correct on every concrete request you tested and differ on a new entity type. Name the universe used for each check. Compare software performance only after aligning the policy semantics, input size and work each implementation performs. An upstream sample ending after one rule and a Java run covering an entire policy answer different timing questions.
+
+\checkpt{Give a classmate a clean checkout, one command and the expected output. Ask them to record the revision, operating system and first unexpected step. Fold that observation into the run instructions. Keep their independent rerun with the figure you plan to cite.}
+
+\unit{Writing the study}{Turn an experiment into a paper claim}\label{sec:paper}
+Write the question you want your experiment to answer before you run it. For this project, ask whether checking workflow coverage preserves more rare legitimate requests at the same fraction of excess grants removed. The answer depends on the workload, the competing methods, the two outcomes, and the data used to select thresholds.
+
+\sub{Practice on the six-request example}
+In the worked example, the candidate preserved the single held-out restore and removed three of four excess grants. The observed-only policy removed all four and blocked the restore. Point the reader to the two rows on page~\pageref{sec:metrics}. That statement tells a service owner the price of retaining recovery access in this case. Use the worked calculation to explain the design. Use measurements from independent cases for the results section.
+
+\sub{Let the data determine the next week of work}
+\begin{tabularx}{\linewidth}{@{}p{.34\linewidth}Y@{}}\toprule
+Observation in a future study & Decision for the next experiment\\\midrule
+Deferral retains more restores and removes fewer excess grants. & Sweep the threshold and compare the range of removal rates both methods reach.\\
+At matched removal, the two variants retain the same rare requests. & Check whether access to the workflow inventory or owner protections accounts for the original difference. Keep the matched result.\\
+Both variants lose the same rare job. & Inspect the timeline, grant-to-workflow mapping and completeness signal. Save the smallest case that explains the loss.\\
+A solver dominates total runtime. & Profile one fixed workload, identify where time goes, and measure the same case after one targeted change.\\\bottomrule
+\end{tabularx}
+
+\sub{Give the reader a route from claim to evidence}
+Draft the paper around one question. Introduce the recovery example, describe the policy fragment and coverage rule, specify inputs and comparison methods, then show the trade-off curve and one failure case. Pair each figure with its input revision and generation command. Discuss how the scheduled jobs relate to the operating environment where you want to use the tool. Generated jobs can establish behavior under known loss patterns. Measuring how often those patterns occur in practice requires deployment observations.
+
+\checkpt{Before asking the advisor about submission, show the matched comparison, the ablation and an independent rerun. If the clearest result is a recurring failure pattern, document when it occurs, its frequency across cases and one example another researcher can replay.}
+
+\unit{Joining the project}{Choose a contribution and finish it}\label{sec:handoff}
+Choose the smallest question you can answer independently this week. Record your input, prediction, result and decision as on page~\pageref{sec:replicate} to show someone exactly what you learned.
+
+\sub{Three starting contributions}
+\textbf{Test an empty log.} Follow section~\ref{sec:code}. Add the empty-log regression to the existing test script. Show that the test checks all four grant rows and that \id{make test} passes. A reviewer can evaluate this patch alongside its expected output in one sitting.
+
+\textbf{Write a policy fixture.} Turn the six-request table on page~\pageref{sec:semantics} into a fixture with original and candidate decisions. Identify the applicable rules for request 4. Have a second reader recompute the six rows before either of you writes the evaluator. This gives the adapter and constraint checker an independent reference.
+
+\textbf{Design one paired case.} Draw a timeline with ordinary jobs, one monthly restore, and a logging interruption. Construct two training samples of equal size, one with a missing workflow. Reserve a later restore for testing. Deliver the timestamps, seed or selection procedure, expected retention counts, and an explanation of what each method is allowed to see.
+
+\sub{Suggested cadence for the thesis}
+\begin{tabularx}{\linewidth}{@{}p{.23\linewidth}Y@{}}\toprule
+Working window & Bring this to a checkpoint\\\midrule
+By 4 Dec 2026 & A reading sheet, the external case, a proposed policy fragment, and the advisor's choice of translation and official dates.\\
+Dec--Jan & A replayable baseline, a decision comparison against the reference evaluator, and one discrepancy explained.\\
+Feb--Mar 2027 & A verified tightening and a revision monitor. Demonstrate a protected restore and a newly redundant grant. Draft the translation.\\
+Apr--early May & Paired experiments, a failure case, review cost and a reproducible trade-off plot. Discuss the paper claim with the advisor.\\
+May--Jun & Final thesis (at least 15,000 Chinese characters), the designated translation (2,000--3,000 Chinese characters), commented source, run instructions, tests, data and defense rehearsal.\\\bottomrule
+\end{tabularx}
+
+\checkpt{Bring one artifact you can run or audit and one decision your advisor can help settle. The first meeting can settle which policy fragment the project will support. The next can settle whether the external case is ready for comparison.}
+
+\unit{Desk reference}{Where to look when you get stuck}\label{sec:reference}
+\sub{If a word is slowing you down}
+\begin{tabularx}{\linewidth}{@{}p{.24\linewidth}Y@{}}\toprule
+Term & Meaning in this project\\\midrule
+Policy fragment & The subset of rule syntax and semantics the evaluator supports. State it explicitly before translating an external case.\\
+Replay & Evaluate requests again using a chosen policy and entity snapshot. The resulting decisions can be compared with a reference.\\
+Counterexample & A concrete request showing that a property fails, such as a protected restore that a candidate policy would deny.\\
+Synthesis & Search a specified space of candidate rule changes for one satisfying constraints. A grammar describes which expressions the search can produce.\\
+Coverage & Which events, workflows or complete cycles the available history represents. Name the unit whenever you report coverage.\\
+Held-out data & Cases reserved for evaluation, separate from those used to build the method and select its settings.\\
+Ground truth & The independent intended decisions or labels used by the scorer. For a constructed case, save the policy that defines them.\\\bottomrule
+\end{tabularx}
+
+\sub{Return to the source}
+\textbf{To answer a project question,} start in the \booklink{https://github.com/oraoraoraaa/least-privilege-lab}{repository}. Its README links to the original Chinese brief, milestone plan, runnable example and the experiment protocol. The protocol defines how the study will count grants, held-out access, alerts and cost.
+
+\textbf{To study a prerequisite,} read one concrete example from the \booklink{https://dev.java/learn/getting-started/}{Java tutorial}, the \booklink{https://docs.cedarpolicy.com/policies/syntax-policy.html}{Cedar language reference}, or the \booklink{https://microsoft.github.io/z3guide/docs/logic/propositional-logic/}{Z3 guide}. Apply it to a request in this book. To learn the research methods, use the paper links and reading prompts on page~\pageref{sec:papers}.
+
+\textbf{To update this book,} edit \id{docs/guidebook/guidebook.tex} and run \id{make guidebook} from the repository root using pdfLaTeX. Open the resulting PDF, check the changed page and exercise its example. A reader who can reproduce the example can help improve the next edition.
+\end{document}

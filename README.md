@@ -4,9 +4,11 @@
 
 Bachelor’s graduation project · Design and implementation of least-privilege access-control policy optimization
 
-An administrator preparing a policy change needs to know which permissions it removes, which workflows depend on them, and which grants reappear in a later revision. The goal is a local tool that answers those questions with a policy diff and evidence for each recommendation.
+A Java reviewer for access grants and usage logs, and a research project on tightening policies while preserving rare workflows.
 
-The starter compares a snapshot of effective grants with a historical decision log. It runs offline and writes a TSV report. Rule inference, automatic tightening and revision monitoring are the next stages. The [milestone plan](docs/ROADMAP.md) gives each stage a demonstration and a completion criterion. The [original project brief](docs/brief/课题附件.pdf) is included in Chinese.
+The current CLI reads a grant snapshot and a decision log, then reports what happened to each permission. The proposed optimizer will use this evidence to recommend rule changes. A revision monitor will flag grants that reappear.
+
+**New here?** Open the [research guidebook (PDF)](docs/guidebook/guidebook.pdf). Start with the model registry, run the demo, and make a small, testable contribution. The later chapters walk through the three research papers and the design of a comparative experiment. The [milestone plan](docs/ROADMAP.md) and [original Chinese project brief](docs/brief/课题附件.pdf) describe the graduation deliverables.
 
 ## Try the review
 
@@ -17,7 +19,7 @@ make demo
 make test
 ```
 
-The synthetic example follows service accounts in a model registry. The inference service read the stable model twice. The recovery service still has access to the archive, yet the log contains no restore. Before proposing removal, a reviewer would need evidence about the restore workflow. The mirror account recorded a denial for a permission that appears in the current grant snapshot. Policy version or request context could explain that discrepancy.
+The synthetic example follows service accounts in a model registry. The inference service read the stable model twice. The recovery service has access to the archive and no recorded restore. Its restore schedule would help a reviewer decide whether it still needs the grant. For the mirror account, compare the recorded denial with the policy version and request context in effect at the time.
 
 To review your own normalized inputs, build the JAR once. The report goes to standard output.
 
@@ -44,3 +46,7 @@ Supply the header even for an empty file. Identifiers are case-sensitive. Use ex
 | [Smoke test](tests/review.sh) | The CLI contract, duplicate grants and rejection of malformed evidence. |
 | [Milestones](docs/ROADMAP.md) | Advisor decisions, what to build, and what evidence closes each milestone. |
 | [Evaluation protocol](experiments/README.md) | Comparison methods, ground truth, metrics and a reproducible path to a paper. |
+
+### Rebuild the book
+
+Edit the [LaTeX source](docs/guidebook/guidebook.tex) and run `make guidebook` from the repository root. A TeX Live installation with pdfLaTeX and the packages listed in the source preamble can build the book. The target resolves the table of contents and cross-references, then writes `docs/guidebook/guidebook.pdf`. The Java build and tests run independently.
