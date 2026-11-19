@@ -12,7 +12,7 @@ From the repository root, run these commands with uv, Make and pdfLaTeX.
 make paper
 ~~~
 
-The target regenerates two vector figures and three LaTeX table bodies from the committed evidence, compiles twice for citations and cross-references, and writes [paper.pdf](paper.pdf). It uses Python 3.12 and the dependency lock for [figures.py](figures.py). The TeX preamble lists its packages, including Latin Modern, microtype, AMS, booktabs, graphics, geometry, xcolor and hyperref. The PDF and figure assets are included for reading without installing a toolchain.
+The target regenerates two vector figures and three LaTeX table bodies from the committed evidence, compiles until citations and cross-references settle, and writes [paper.pdf](paper.pdf). It uses Python 3.12 and the dependency lock for [figures.py](figures.py). The TeX preamble lists its packages, including Latin Modern, microtype, AMS, booktabs, graphics, geometry, xcolor and hyperref. The PDF and figure assets are included for reading without installing a toolchain.
 
 ## Trace an assertion
 

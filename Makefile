@@ -28,6 +28,9 @@ guidebook:
 paper:
 	uv run --locked --script paper/figures.py
 	mkdir -p build/paper
-	pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build/paper paper/paper.tex
-	pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build/paper paper/paper.tex
+	@set -e; for pass in 1 2 3 4 5; do \
+		pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build/paper paper/paper.tex; \
+		if ! grep -Eiq 'rerun to get|rerun LaTeX|undefined (references|citations)' build/paper/paper.log; then break; fi; \
+		if [ "$$pass" = 5 ]; then echo 'Paper references did not converge' >&2; exit 1; fi; \
+	done
 	cp build/paper/paper.pdf paper/paper.pdf
