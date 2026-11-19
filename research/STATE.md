@@ -1,13 +1,13 @@
 # Codex research branch
 
-Work on `research/classroom-replay`. Keep this long-lived branch on origin. Its starting point is `1d653242eb5ab29507982c216dbe68b5d8c310ba` on main. This is assistant-produced reference work.
+Work on `research/classroom-replay`. Keep this long-lived branch on origin. Its starting point is `1d653242eb5ab29507982c216dbe68b5d8c310ba` on main. Codex owns the research questions, methods, checks and manuscript on this branch. The user can supply resources when needed. The academic roadmap on main is separate.
 
 ## Start here after an interruption
 
 1. Check out `research/classroom-replay` and run `git status -sb`. If starting fresh, clone with `git clone --branch research/classroom-replay https://github.com/oraoraoraaa/least-privilege-lab.git`.
 2. Run `sh research/reproduce.sh` from its root. It verifies the Java CLI, all 312 published-case decisions, the sampling distribution, the registry checks and all eight stored proposals. It needs Git, Make, a Java 17-compatible JDK and uv. A first run downloads pinned public inputs and Python packages. Pass an absolute path to a local Restricter checkout to reuse its Git objects.
 3. Read the [classroom results](classroom/README.md) and [registry results](registry/README.md). The work to date establishes baseline behavior and a checked prototype on the documented fragments.
-4. **Next research decision.** Freeze a new protocol for a matched-removal comparison on independent workloads. Include jobs with both warm and cold execution paths, define path coverage using evidence available before the cutoff, and include an equally conservative comparison that has no path labels. Keep these pilot cases for regression. Pick the external case or generator and scoring rules before looking at its outcomes. The department's translation assignment and deadlines remain advisor decisions.
+4. **Active study.** Implement the [frozen independent workload protocol](paths/PROTOCOL.md), archive its outputs, then complete the LaTeX paper and verify the replication package. No advisor decision is needed for this branch.
 
 ### Review the commits in order
 
