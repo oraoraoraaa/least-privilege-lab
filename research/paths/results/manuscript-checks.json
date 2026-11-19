@@ -1,0 +1,127 @@
+{
+  "JOB": {
+    "exercised_universe": {
+      "families": 19,
+      "folds": 191,
+      "means": {
+        "sibling": 0.8399122807017544,
+        "table_freq": 0.6228070175438597
+      },
+      "paired": {
+        "bootstrap95": [
+          0.09649122807017543,
+          0.35964912280701755
+        ],
+        "difference": 0.21710526315789475,
+        "leave_one_out": [
+          0.1736111111111111,
+          0.22916666666666666
+        ],
+        "negative": 0,
+        "positive": 8,
+        "ties": 11
+      }
+    },
+    "hidden_differs_registered_fold_signs": {
+      "tie": 107
+    },
+    "missing_read_counts": {
+      "1": 159,
+      "2": 21,
+      "3": 7,
+      "4": 4
+    },
+    "native_distinct": {
+      "families": 5,
+      "folds": 33,
+      "means": {
+        "sibling": 0.6866666666666666,
+        "table_freq": 0.54
+      },
+      "paired": {
+        "bootstrap95": [
+          0.0,
+          0.30666666666666664
+        ],
+        "difference": 0.14666666666666667,
+        "leave_one_out": [
+          0.08333333333333333,
+          0.18333333333333332
+        ],
+        "negative": 0,
+        "positive": 2,
+        "ties": 3
+      }
+    },
+    "registered_allowance_range": [
+      5,
+      5
+    ]
+  },
+  "STATS": {
+    "exercised_universe": {
+      "families": 24,
+      "folds": 1826,
+      "means": {
+        "sibling": 0.11450928150967526,
+        "table_freq": 0.05001532455800748
+      },
+      "paired": {
+        "bootstrap95": [
+          0.020065871877658976,
+          0.11569301472363637
+        ],
+        "difference": 0.06449395695166778,
+        "leave_one_out": [
+          0.04990673768869681,
+          0.07273282464521855
+        ],
+        "negative": 3,
+        "positive": 11,
+        "ties": 10
+      }
+    },
+    "hidden_differs_registered_fold_signs": {
+      "gain": 106,
+      "loss": 37,
+      "tie": 1657
+    },
+    "missing_read_counts": {
+      "1": 224,
+      "2": 296,
+      "3": 336,
+      "4": 318,
+      "5": 272,
+      "6": 167,
+      "7": 124,
+      "8": 61,
+      "9": 28
+    },
+    "native_distinct": {
+      "families": 24,
+      "folds": 1671,
+      "means": {
+        "sibling": 0.15867292529680208,
+        "table_freq": 0.11180741950960178
+      },
+      "paired": {
+        "bootstrap95": [
+          -0.023884646512113618,
+          0.13481363726228937
+        ],
+        "difference": 0.04686550578720027,
+        "leave_one_out": [
+          0.014120527777948106,
+          0.06339589009678868
+        ],
+        "negative": 6,
+        "positive": 12,
+        "ties": 6
+      }
+    },
+    "registered_allowance_range": [
+      1,
+      2
+    ]
+  }
+}

@@ -14,6 +14,7 @@ uv run --locked --script "$study/study.py" --cache "$cache" --out "$run"
 uv run --python 3.12 python -B "$study/summarize.py" "$run" > "$run/summary.json"
 uv run --python 3.12 python -B "$study/audit.py" "$run/traces.json" > "$run/audit.json"
 uv run --python 3.12 --with 'apsw==3.53.1.0' python -B "$study/review_checks.py" "$run/traces.json" --cache "$cache" > "$run/review-checks.json"
+uv run --python 3.12 python -B "$study/manuscript_checks.py" "$run" > "$run/manuscript-checks.json"
 uv run --python 3.12 python - "$archive" "$run" <<'PY'
 import gzip
 from pathlib import Path
