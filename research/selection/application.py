@@ -1,4 +1,4 @@
-"""Forward-only replay of named read programs on the corresponding Tivi schemas."""
+"""Forward-only replay of named read programs on their corresponding application schemas."""
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from hashlib import sha256
@@ -37,15 +37,24 @@ def strip_comments(text):
                   lambda m: m[0] if m[0].startswith("'") else " ", text, flags=re.S)
 
 
+LABEL = re.compile(r"^\s*([A-Za-z_]\w*)\s*(:|\{)\s*$",re.M)
+
+
+def schema_sql(files):
+    ddl = []
+    for _, source in sorted(files.items()):
+        header = LABEL.split(strip_comments(source),maxsplit=1)[0]
+        header = re.sub(r"^\s*import\s+[\w.]+;\s*$","",header,flags=re.M)
+        ddl.append(re.sub(r"\b(INTEGER|TEXT|REAL|BLOB)\s+AS\s+[\w.]+(?:<[\w.]+>)?",r"\1",header,flags=re.I))
+    return "\n".join(ddl)
+
+
 def load_snapshot(files):
-    ddl, queries = [], {}
+    queries = {}
     inventory = Counter()
     for path, source in sorted(files.items()):
         family = Path(path).stem
-        sections = re.split(r"^\s*([A-Za-z_]\w*)\s*(:|\{)\s*$",strip_comments(source),flags=re.M)
-        header = re.sub(r"^\s*import\s+[\w.]+;\s*$","",sections[0],flags=re.M)
-        schema = re.sub(r"\b(INTEGER|TEXT|REAL|BLOB)\s+AS\s+[\w.]+(?:<[\w.]+>)?",r"\1",header,flags=re.I)
-        ddl.append(schema)
+        sections = LABEL.split(strip_comments(source))
         for name, delimiter, statement in zip(sections[1::3],sections[2::3],sections[3::3]):
             if delimiter == "{":
                 if not re.search(r"^\s*(INSERT|UPDATE|DELETE)\b",statement,re.M|re.I):
@@ -66,7 +75,7 @@ def load_snapshot(files):
             if key in queries:
                 raise ValueError(f"Duplicate query ID {key}")
             queries[key] = Query(family,sql,dict.fromkeys(params,1))
-    db = Instrument("\n".join(ddl),include_views=True)
+    db = Instrument(schema_sql(files),include_views=True)
     reads = {}
     for q,query in queries.items():
         ok, reads[q] = db.execute(query.sql,bindings=query.bindings)
@@ -95,18 +104,29 @@ def fit_catalog(old):
     return fitted
 
 
+def preview_query(db,query):
+    try:
+        _,reads = db.execute(query.sql,bindings=query.bindings)
+        return reads,None
+    except apsw.SQLError as exc:
+        return frozenset(),str(exc)
+
+
+def added_on_touched_relations(observed,old_schema,new_schema):
+    tables = {c.split(".")[0] for c in observed}
+    return {c for c in new_schema-old_schema if c.split(".")[0] in tables}
+
+
 def rehearse(old, db, fitted):
     """This step receives the next schema and old query text only."""
     prepared = {}
     for q,query in old.queries.items():
-        err = None
-        try:
-            _, preview = db.execute(query.sql,bindings=query.bindings)
-        except apsw.SQLError as exc:
-            preview, err = frozenset(), str(exc)
+        preview,err = preview_query(db,query)
         observed = old.reads[q] & db.universe
         orders = rankings(db.universe,observed,preview,fitted[q][0],q)
-        prepared[q] = (preview,err,deploy(orders["table_freq"],observed,4),
+        added = added_on_touched_relations(old.reads[q],old.db.universe,db.universe)
+        diff_rank = rankings(db.universe,observed,added,fitted[q][0],q)["sibling"]
+        prepared[q] = (preview,err,deploy(diff_rank,observed,4),deploy(orders["table_freq"],observed,4),
                        deploy(orders["sibling"],observed,4),observed|preview)
     return prepared
 
@@ -122,9 +142,9 @@ def transition(old,new):
         hidden = new.reads[q]
         observed = old.reads[q]
         _,candidates,base,catalog = fitted[q]
-        preview,err,schema_base,replay,literal = prepared[q]
+        preview,err,diff_policy,schema_base,replay,literal = prepared[q]
         policies = {"observed":observed, "baseline":base, "near":catalog[candidates[0]] if candidates else base,
-                    "schema_baseline":schema_base, "rehearsal":replay,"literal":literal}
+                    "ddl_diff":diff_policy,"schema_baseline":schema_base, "rehearsal":replay,"literal":literal}
         # Each candidate and each named policy goes through the authorizer.
         def enforce(policy):
             nonlocal native_count

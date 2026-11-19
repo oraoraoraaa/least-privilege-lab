@@ -13,7 +13,9 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0,str(HERE.parent/"paths"))
 
-from application import aggregate, introductions, load_snapshot, transition
+from review import migration_report
+from release_check import DIGESTS, verify
+from application import added_on_touched_relations, aggregate, introductions, load_snapshot, transition
 from selection import benchmark
 from sources import load_sources
 from study import write_tsv
@@ -37,7 +39,12 @@ def run(out,cache):
     write_tsv(out/"choices.tsv.gz",["corpus","cohort","family","observed","hidden","near","far",
                                     "unseen_reads","baseline_success","near_success","far_success"],comparisons)
     app_series(out,load_sources(cache/"tivi-sql"),"application","snapshots")
-    app_series(out,load_sources(cache/"mihon-sql","mihon-sources.json","mihonapp/mihon"),"mihon","mihon-snapshots")
+    mihon_sources = load_sources(cache/"mihon-sql","mihon-sources.json","mihonapp/mihon")
+    app_series(out,mihon_sources,"mihon","mihon-snapshots")
+    apk_apps = {m["cutoff"]:load_snapshot(files) for m,files in mihon_sources if m["cutoff"] in DIGESTS}
+    write_json(out/"release-check.json",verify(cache/"mihon-releases",apk_apps))
+    for app in apk_apps.values():
+        app.db.db.close()
     events = load_sources(cache/"tivi-sql","event-sources.json")
     previous = None
     history = []
@@ -70,6 +77,19 @@ def app_series(out, sources, name, snapshot_name):
             outcome = transition(previous,current)
             outcome.update(old=snapshots[-2]["cutoff"],new=manifest["cutoff"],
                            introductions=introductions(previous,current))
+            review = migration_report(previous,current.db)
+            held_out = {r["query"]:bool(r["missing"]) for r in outcome["outcomes"]}
+            diff_flags = {q for q,reads in previous.reads.items()
+                          if reads-current.db.universe or added_on_touched_relations(
+                              reads,previous.db.universe,current.db.universe)}
+            for record,alerts in ((review,set(review["alerts"])),(outcome.setdefault("ddl_review",{}),diff_flags)):
+                record["confusion"] = {k:0 for k in ("flag_expanded","flag_stable","quiet_expanded","quiet_stable")}
+                for q,expanded in held_out.items():
+                    flag = "flag" if q in alerts else "quiet"
+                    record["confusion"][flag+("_expanded" if expanded else "_stable")] += 1
+                record["flagged_retired"] = sorted(alerts-held_out.keys())
+            outcome["review"] = review
+            outcome["ddl_review"]["flagged_ids"] = sorted(diff_flags)
             transitions.append(outcome)
             previous.db.db.close()
         previous = current

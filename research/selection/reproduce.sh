@@ -5,6 +5,7 @@ root=$(CDPATH='' cd -- "$(dirname -- "$0")/../.." && pwd)
 cd "$root"
 scratch=$(mktemp -d)
 trap 'rm -rf "$scratch"' EXIT
+uv run --python 3.12 --with apsw==3.53.1.0 python -B research/selection/test_review.py
 uv run --locked --script research/selection/run.py --out "$scratch/results"
 uv run --python 3.12 python - research/selection/results "$scratch/results" <<'PY'
 import gzip

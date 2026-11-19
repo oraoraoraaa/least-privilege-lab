@@ -61,7 +61,8 @@ def benchmark(results, corpus, records, queries):
                     random = (n+f)/2
                     if best > feasible:
                         raise ValueError("Native policy exceeds the four-grant ceiling")
-                    metrics = dict(baseline=a["table_freq"],near=n,far=f,random=random,best=best,
+                    tie = similarity(vocabulary[o],vocabulary[near]) == similarity(vocabulary[o],vocabulary[far])
+                    metrics = dict(tie=float(tie),near_random_ties=random if tie else n,baseline=a["table_freq"],near=n,far=f,random=random,best=best,
                                    impossible=1-feasible,both_fail=feasible-best,selection_loss=best-random)
                     for metric, score in metrics.items():
                         values[metric].append(score)
