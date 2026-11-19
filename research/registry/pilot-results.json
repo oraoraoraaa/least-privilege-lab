@@ -1,0 +1,664 @@
+[
+  {
+    "case": "before-first-drill",
+    "cold_restore_allowed": false,
+    "cycles": 0,
+    "deferred_rules": 0,
+    "excess_removed": 4,
+    "excess_total": 4,
+    "legitimate_retained": 2,
+    "legitimate_total": 3,
+    "proposal": {
+      "accepted": true,
+      "candidate": {
+        "rules": [
+          {
+            "action": "read",
+            "id": "serving",
+            "principal": "serve",
+            "resources": [
+              "stable"
+            ]
+          },
+          {
+            "action": "read",
+            "id": "audit",
+            "principal": "auditor",
+            "resources": [
+              "manifest"
+            ]
+          }
+        ],
+        "snapshot": "registry-v1"
+      },
+      "candidate_grants": 2,
+      "checks": {
+        "lost_requirement": {
+          "count": 0,
+          "first_witness": null,
+          "smt": "unsat"
+        },
+        "new_grant": {
+          "count": 0,
+          "first_witness": null,
+          "smt": "unsat"
+        }
+      },
+      "cycle_threshold": 0,
+      "original_grants": 7,
+      "removed_grants": 5,
+      "requirements": 2,
+      "rule_decisions": [
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "candidate",
+            "retired"
+          ],
+          "rule": "serving"
+        },
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "archive",
+            "old-archive"
+          ],
+          "rule": "recovery"
+        },
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "scratch"
+          ],
+          "rule": "audit"
+        }
+      ]
+    }
+  },
+  {
+    "case": "before-first-drill",
+    "cold_restore_allowed": true,
+    "cycles": 1,
+    "deferred_rules": 1,
+    "excess_removed": 3,
+    "excess_total": 4,
+    "legitimate_retained": 3,
+    "legitimate_total": 3,
+    "proposal": {
+      "accepted": true,
+      "candidate": {
+        "rules": [
+          {
+            "action": "read",
+            "id": "serving",
+            "principal": "serve",
+            "resources": [
+              "stable"
+            ]
+          },
+          {
+            "action": "read",
+            "id": "recovery",
+            "principal": "recover",
+            "resources": [
+              "archive",
+              "old-archive"
+            ]
+          },
+          {
+            "action": "read",
+            "id": "audit",
+            "principal": "auditor",
+            "resources": [
+              "manifest"
+            ]
+          }
+        ],
+        "snapshot": "registry-v1"
+      },
+      "candidate_grants": 4,
+      "checks": {
+        "lost_requirement": {
+          "count": 0,
+          "first_witness": null,
+          "smt": "unsat"
+        },
+        "new_grant": {
+          "count": 0,
+          "first_witness": null,
+          "smt": "unsat"
+        }
+      },
+      "cycle_threshold": 1,
+      "original_grants": 7,
+      "removed_grants": 3,
+      "requirements": 2,
+      "rule_decisions": [
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "candidate",
+            "retired"
+          ],
+          "rule": "serving"
+        },
+        {
+          "insufficient_workflows": [
+            "restore-drill"
+          ],
+          "reason": "keep-incomplete-coverage",
+          "removed_resources": [],
+          "rule": "recovery"
+        },
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "scratch"
+          ],
+          "rule": "audit"
+        }
+      ]
+    }
+  },
+  {
+    "case": "recorded-restore",
+    "cold_restore_allowed": true,
+    "cycles": 0,
+    "deferred_rules": 0,
+    "excess_removed": 4,
+    "excess_total": 4,
+    "legitimate_retained": 3,
+    "legitimate_total": 3,
+    "proposal": {
+      "accepted": true,
+      "candidate": {
+        "rules": [
+          {
+            "action": "read",
+            "id": "serving",
+            "principal": "serve",
+            "resources": [
+              "stable"
+            ]
+          },
+          {
+            "action": "read",
+            "id": "recovery",
+            "principal": "recover",
+            "resources": [
+              "archive"
+            ]
+          },
+          {
+            "action": "read",
+            "id": "audit",
+            "principal": "auditor",
+            "resources": [
+              "manifest"
+            ]
+          }
+        ],
+        "snapshot": "registry-v1"
+      },
+      "candidate_grants": 3,
+      "checks": {
+        "lost_requirement": {
+          "count": 0,
+          "first_witness": null,
+          "smt": "unsat"
+        },
+        "new_grant": {
+          "count": 0,
+          "first_witness": null,
+          "smt": "unsat"
+        }
+      },
+      "cycle_threshold": 0,
+      "original_grants": 7,
+      "removed_grants": 4,
+      "requirements": 3,
+      "rule_decisions": [
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "candidate",
+            "retired"
+          ],
+          "rule": "serving"
+        },
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "old-archive"
+          ],
+          "rule": "recovery"
+        },
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "scratch"
+          ],
+          "rule": "audit"
+        }
+      ]
+    }
+  },
+  {
+    "case": "recorded-restore",
+    "cold_restore_allowed": true,
+    "cycles": 1,
+    "deferred_rules": 0,
+    "excess_removed": 4,
+    "excess_total": 4,
+    "legitimate_retained": 3,
+    "legitimate_total": 3,
+    "proposal": {
+      "accepted": true,
+      "candidate": {
+        "rules": [
+          {
+            "action": "read",
+            "id": "serving",
+            "principal": "serve",
+            "resources": [
+              "stable"
+            ]
+          },
+          {
+            "action": "read",
+            "id": "recovery",
+            "principal": "recover",
+            "resources": [
+              "archive"
+            ]
+          },
+          {
+            "action": "read",
+            "id": "audit",
+            "principal": "auditor",
+            "resources": [
+              "manifest"
+            ]
+          }
+        ],
+        "snapshot": "registry-v1"
+      },
+      "candidate_grants": 3,
+      "checks": {
+        "lost_requirement": {
+          "count": 0,
+          "first_witness": null,
+          "smt": "unsat"
+        },
+        "new_grant": {
+          "count": 0,
+          "first_witness": null,
+          "smt": "unsat"
+        }
+      },
+      "cycle_threshold": 1,
+      "original_grants": 7,
+      "removed_grants": 4,
+      "requirements": 3,
+      "rule_decisions": [
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "candidate",
+            "retired"
+          ],
+          "rule": "serving"
+        },
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "old-archive"
+          ],
+          "rule": "recovery"
+        },
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "scratch"
+          ],
+          "rule": "audit"
+        }
+      ]
+    }
+  },
+  {
+    "case": "logging-gap",
+    "cold_restore_allowed": false,
+    "cycles": 0,
+    "deferred_rules": 0,
+    "excess_removed": 4,
+    "excess_total": 4,
+    "legitimate_retained": 2,
+    "legitimate_total": 3,
+    "proposal": {
+      "accepted": true,
+      "candidate": {
+        "rules": [
+          {
+            "action": "read",
+            "id": "serving",
+            "principal": "serve",
+            "resources": [
+              "stable"
+            ]
+          },
+          {
+            "action": "read",
+            "id": "audit",
+            "principal": "auditor",
+            "resources": [
+              "manifest"
+            ]
+          }
+        ],
+        "snapshot": "registry-v1"
+      },
+      "candidate_grants": 2,
+      "checks": {
+        "lost_requirement": {
+          "count": 0,
+          "first_witness": null,
+          "smt": "unsat"
+        },
+        "new_grant": {
+          "count": 0,
+          "first_witness": null,
+          "smt": "unsat"
+        }
+      },
+      "cycle_threshold": 0,
+      "original_grants": 7,
+      "removed_grants": 5,
+      "requirements": 2,
+      "rule_decisions": [
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "candidate",
+            "retired"
+          ],
+          "rule": "serving"
+        },
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "archive",
+            "old-archive"
+          ],
+          "rule": "recovery"
+        },
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "scratch"
+          ],
+          "rule": "audit"
+        }
+      ]
+    }
+  },
+  {
+    "case": "logging-gap",
+    "cold_restore_allowed": true,
+    "cycles": 1,
+    "deferred_rules": 1,
+    "excess_removed": 3,
+    "excess_total": 4,
+    "legitimate_retained": 3,
+    "legitimate_total": 3,
+    "proposal": {
+      "accepted": true,
+      "candidate": {
+        "rules": [
+          {
+            "action": "read",
+            "id": "serving",
+            "principal": "serve",
+            "resources": [
+              "stable"
+            ]
+          },
+          {
+            "action": "read",
+            "id": "recovery",
+            "principal": "recover",
+            "resources": [
+              "archive",
+              "old-archive"
+            ]
+          },
+          {
+            "action": "read",
+            "id": "audit",
+            "principal": "auditor",
+            "resources": [
+              "manifest"
+            ]
+          }
+        ],
+        "snapshot": "registry-v1"
+      },
+      "candidate_grants": 4,
+      "checks": {
+        "lost_requirement": {
+          "count": 0,
+          "first_witness": null,
+          "smt": "unsat"
+        },
+        "new_grant": {
+          "count": 0,
+          "first_witness": null,
+          "smt": "unsat"
+        }
+      },
+      "cycle_threshold": 1,
+      "original_grants": 7,
+      "removed_grants": 3,
+      "requirements": 2,
+      "rule_decisions": [
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "candidate",
+            "retired"
+          ],
+          "rule": "serving"
+        },
+        {
+          "insufficient_workflows": [
+            "restore-drill"
+          ],
+          "reason": "keep-incomplete-coverage",
+          "removed_resources": [],
+          "rule": "recovery"
+        },
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "scratch"
+          ],
+          "rule": "audit"
+        }
+      ]
+    }
+  },
+  {
+    "case": "warm-cache",
+    "cold_restore_allowed": false,
+    "cycles": 0,
+    "deferred_rules": 0,
+    "excess_removed": 4,
+    "excess_total": 4,
+    "legitimate_retained": 2,
+    "legitimate_total": 3,
+    "proposal": {
+      "accepted": true,
+      "candidate": {
+        "rules": [
+          {
+            "action": "read",
+            "id": "serving",
+            "principal": "serve",
+            "resources": [
+              "stable"
+            ]
+          },
+          {
+            "action": "read",
+            "id": "audit",
+            "principal": "auditor",
+            "resources": [
+              "manifest"
+            ]
+          }
+        ],
+        "snapshot": "registry-v1"
+      },
+      "candidate_grants": 2,
+      "checks": {
+        "lost_requirement": {
+          "count": 0,
+          "first_witness": null,
+          "smt": "unsat"
+        },
+        "new_grant": {
+          "count": 0,
+          "first_witness": null,
+          "smt": "unsat"
+        }
+      },
+      "cycle_threshold": 0,
+      "original_grants": 7,
+      "removed_grants": 5,
+      "requirements": 2,
+      "rule_decisions": [
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "candidate",
+            "retired"
+          ],
+          "rule": "serving"
+        },
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "archive",
+            "old-archive"
+          ],
+          "rule": "recovery"
+        },
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "scratch"
+          ],
+          "rule": "audit"
+        }
+      ]
+    }
+  },
+  {
+    "case": "warm-cache",
+    "cold_restore_allowed": false,
+    "cycles": 1,
+    "deferred_rules": 0,
+    "excess_removed": 4,
+    "excess_total": 4,
+    "legitimate_retained": 2,
+    "legitimate_total": 3,
+    "proposal": {
+      "accepted": true,
+      "candidate": {
+        "rules": [
+          {
+            "action": "read",
+            "id": "serving",
+            "principal": "serve",
+            "resources": [
+              "stable"
+            ]
+          },
+          {
+            "action": "read",
+            "id": "audit",
+            "principal": "auditor",
+            "resources": [
+              "manifest"
+            ]
+          }
+        ],
+        "snapshot": "registry-v1"
+      },
+      "candidate_grants": 2,
+      "checks": {
+        "lost_requirement": {
+          "count": 0,
+          "first_witness": null,
+          "smt": "unsat"
+        },
+        "new_grant": {
+          "count": 0,
+          "first_witness": null,
+          "smt": "unsat"
+        }
+      },
+      "cycle_threshold": 1,
+      "original_grants": 7,
+      "removed_grants": 5,
+      "requirements": 2,
+      "rule_decisions": [
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "candidate",
+            "retired"
+          ],
+          "rule": "serving"
+        },
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "archive",
+            "old-archive"
+          ],
+          "rule": "recovery"
+        },
+        {
+          "insufficient_workflows": [],
+          "reason": "fit-requirements",
+          "removed_resources": [
+            "scratch"
+          ],
+          "rule": "audit"
+        }
+      ]
+    }
+  }
+]

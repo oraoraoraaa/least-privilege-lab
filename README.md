@@ -1,6 +1,6 @@
 # Least Privilege Lab
 
-This is the assistant-run research reference branch. Start with the [current checkpoint and resumption instructions](research/STATE.md) or the [classroom replay and measurements](research/classroom/README.md).
+This is the assistant-run research reference branch. Start with the [current checkpoint and resumption instructions](research/STATE.md), the [classroom replay](research/classroom/README.md), or the [checked policy refiner and registry pilot](research/registry/README.md).
 
 **面向最小权限原则的访问控制策略优化设计与实现**
 
