@@ -19,8 +19,18 @@ Work on `research/classroom-replay`. Keep this long-lived branch on origin. Its 
 | `511786e` | What does uniform deletion predict exactly, including duplicates? |
 | `5df57da` | Which registry cases and acceptance checks were specified before implementation? |
 | `81aa2c1` | What changes can the refiner make and how are they checked? |
+| `52607e7` | What were the eight held-out outcomes and how do both studies reproduce together? |
 
-The branch tip contains the registry pilot outputs, combined reproduction command and follow-up handoff. The notes below preserve the historical sequence of decisions.
+### Independent checkout verification · 2026-11-20
+
+Both machines cloned `research/classroom-replay` from GitHub at `52607e7df8421512cb329c4055a4bb006ca5827b` and ran `sh research/reproduce.sh` with the default upstream fetch. Each reproduced the classroom TSV and JSON archives byte-for-byte, passed the exact-count regression and six refiner regression tests, then reproduced all eight registry proposals and scores. Both checkouts were clean after the run.
+
+| Machine | Compiler | Runner | Outcome |
+| --- | --- | --- | --- |
+| macOS arm64 | javac 26.0.1 | uv 0.13.7 | All checks passed |
+| Arch Linux x86-64 | javac 27.0.1.1 | uv 0.13.9 | All checks passed |
+
+The notes below preserve the historical sequence of decisions.
 
 ## Checkpoint 0 · 2026-11-20
 
