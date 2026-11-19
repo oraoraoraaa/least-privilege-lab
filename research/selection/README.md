@@ -12,6 +12,8 @@ uv run --locked --script research/selection/review.py --example
 
 The command reads the v0.18.0 query sources and v0.19.0 schema definitions. It checks 42 old named reads and reports 10 alerts. For **mangas.getMangaById** the added read is **mangas.notes**. The developer's source still selects the complete row. SQLDelight can compile that projection to a list of column names. The release packages contain two different lists. The older list omits notes even on the new schema.
 
+For a second way to build the queue, append **--method coverage**. This rule flags a previously read field that disappears or a growing relation whose old columns were all read. On the example it flags the same ten names, identifying **mangas** as a growing relation. It uses the old footprints and the schema inventories without executing the old SQL against the planned schema. An explicitly enumerated projection can cover all old fields yet ignore a later addition. The executable pair in **test_review.py** shows this limit.
+
 For an application using the same named SQLDelight read conventions, point the reviewer at its old source directory and a file containing the planned SQLite DDL.
 
 ~~~sh
@@ -38,6 +40,7 @@ uv run --locked --script research/selection/run.py --out build/my-selection-run
 | [Tivi snapshots](results/snapshots.json) and [decisions](results/application.json) | Named reads, resource universes, prospective policies, old-catalog alerts, held-out outcomes and introductions across six quarterly transitions. |
 | [Tivi event history](results/tivi-history.json) | Every in-scope source-changing first-parent commit during the same window. A date can contain multiple commits. Revision identifies the exact event. |
 | [Mihon snapshots](results/mihon-snapshots.json) and [decisions](results/mihon.json) | Five adjacent release transitions. Each record includes the alternative policies, preparation errors, unused additions, DDL and rehearsal alerts, and flags on old names that subsequently retired. |
+| [Full-column review comparison](results/column-coverage.json) | Per-transition flagged, missed and retired names, with both directions of disagreement against rehearsal. The two flag lists match by identity across all 717 old-name comparisons. |
 | [Release literal check](results/release-check.json) | SHA-256 values for two official packages and their matched embedded SQL strings, unique match counts, projected columns and the old literal's reads on the new schema. |
 
 The old-catalog reviewer and retrospective scorer have different inputs. **review.py** needs only old SQL and planned DDL. **run.py** evaluates its alerts against new queries and reports name churn. For the five Mihon transitions, the 201 older name instances comprised 163 survivors and 38 retirements. Rehearsal raised 83 alerts, including 34 subsequently retired names. The DDL comparator raised 108. Both detected all 49 expansions on surviving names. The four-grant results in the paper compare enforceable policies and use the separate denominator of 49.

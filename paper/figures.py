@@ -149,6 +149,18 @@ def selection_results():
     changes.append(["All",*[sum(r[i] for r in changes) for i in range(1,len(changes[0]))]])
     write_table("releases",changes)
 
+    rows = []
+    def alert_row(label, counts):
+        rows.append([label, *counts, sum(counts)])
+    for key, label in (("ddl_review", "Table-level diff"), ("review", "Source rehearsal")):
+        reports = [t[key] for t in app["transitions"]]
+        counts = [sum(r["confusion"][c] for r in reports) for c in ("flag_expanded", "flag_stable")]
+        alert_row(label, [*counts, sum(len(r["flagged_retired"]) for r in reports)])
+    coverage = json.loads((folder/"column-coverage.json").read_text())["mihon"]
+    alert_row("Full-column coverage", [sum(len(r[c]) for r in coverage)
+                                       for c in ("flagged_expanded", "flagged_stable", "flagged_retired")])
+    write_table("alerts", rows)
+
 
 if __name__ == "__main__":
     design()

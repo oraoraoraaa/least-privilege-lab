@@ -7,7 +7,7 @@ Work on `research/classroom-replay`. Keep this long-lived branch on origin. Its 
 1. Check out `research/classroom-replay` and run `git status -sb`. If starting fresh, clone with `git clone --branch research/classroom-replay https://github.com/oraoraoraaa/least-privilege-lab.git`.
 2. Read the [paper](../paper/paper.pdf) and the [SQL evidence guide](paths/README.md). The revised paper also covers [selection and migration evidence](selection/README.md), including two application histories and one shipped-binary check.
 3. Run `sh research/reproduce.sh` from the root to verify the original and extension studies. It needs Git, Make, a Java 17-compatible JDK, uv and first-run network access. An optional absolute path to a local Restricter Git checkout reuses classroom source objects.
-4. Run `make paper` to regenerate the three vector figures, four table bodies and PDF with pdfLaTeX. The [paper directory](../paper/) contains the source, locked figure generator and build notes. Review or extend the research on this branch.
+4. Run `make paper` to regenerate the three vector figures, five table bodies and PDF with pdfLaTeX. The [paper directory](../paper/) contains the source, locked figure generator and build notes. Review or extend the research on this branch.
 
 ### Review the commits in order
 
@@ -35,6 +35,7 @@ Work on `research/classroom-replay`. Keep this long-lived branch on origin. Its 
 | 1624cd3 and 487d3a5 | Post-Tivi specification, event-level validation and Mihon release replay. |
 | fa96c1b, 3d3119a and 92c6a33 | Specifications for the shipped-literal witness, alert workload and DDL-only comparator. |
 | c70b909 | Executable reviewer, two hashed release packages verified by reference, final measurements and regressions. |
+| 3a24241 and fbbb427 | Coverage rule fixed after the shipped example, full comparison by query ID and executable counterexample. |
 
 Fresh macOS arm64 and Arch Linux x86-64 checkouts of c70b909 ran the complete reproduction script. Both matched eight original SQL archive files and all eight extension files, verified the earlier classroom and registry studies, and produced ten review alerts for the published Mihon example. The [extension guide](selection/README.md) explains how to trace each outcome to a query and version.
 

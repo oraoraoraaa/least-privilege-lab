@@ -99,7 +99,7 @@ make --version
 java -version
 javac -version
 \end{code}
-On a Mac, \id{xcode-select --install} supplies the command-line tools for Git and Make. Install a JDK for your processor and reopen Terminal. On Ubuntu, the packages \id{git}, \id{make}, and \id{openjdk-17-jdk} supply the three tools. The JDK installation walkthrough includes a first compile and run. \booklink{https://dev.java/learn/getting-started/}{Java getting started}.
+On a Mac, \verb|xcode-select --install| supplies the command-line tools for Git and Make. Install a JDK for your processor and reopen Terminal. On Ubuntu, the packages \id{git}, \id{make}, and \id{openjdk-17-jdk} supply the three tools. The JDK installation walkthrough includes a first compile and run. \booklink{https://dev.java/learn/getting-started/}{Java getting started}.
 
 \sub{Run the example}
 \begin{code}
@@ -112,7 +112,7 @@ make test
 The first target compiles the source, builds a JAR (a Java application archive), and prints a table. Look for the row beginning with \id{recovery}. The second command runs the checks. Its last line should read \id{Review checks passed.} The demo needs no account with a cloud provider.
 
 \sub{If the command stops}
-An error about a missing Make target usually means Make read a different folder. Check \id{pwd} and look for \id{examples/registry}. If the compiler rejects release 17, run \id{javac -version} and select a JDK that accepts \id{--release 17}. If a data error reports a filename and line number, open that row and compare its columns with the supplied example.
+An error about a missing Make target usually means Make read a different folder. Check \id{pwd} and look for \id{examples/registry}. If the compiler rejects release 17, run \id{javac -version} and select a JDK that accepts \verb|--release 17|. If a data error reports a filename and line number, open that row and compare its columns with the supplied example.
 
 \checkpt{You should have a passing test and a report with a header plus six data rows. The four grants in the snapshot are enough to produce six rows because the log also mentions two tuples outside it.}
 
@@ -424,7 +424,7 @@ From the repository root on the research branch, run the command below. The \boo
 \begin{code}
 uv run --locked --script research/selection/review.py --example
 \end{code}
-Find \id{old\_named\_reads} in the output. It should be 42. The \id{alerts} object has ten entries, including \id{mangas.getMangaById}. Its \id{added\_reads} list contains \id{mangas.notes}. The lookup now requests notes even when no rows match. Decide whether the caller needs notes before changing its allowed fields.
+Find \id{old\_named\_reads} in the output. It should be 42. The \id{alerts} object has ten entries, including \id{mangas.getMangaById}. Its \id{added\_reads} list contains \id{mangas.notes}. The lookup now requests notes even when no rows match. Run it again with \verb|--method coverage|. You get the same ten names. This version reports that the old lookup read every column of a growing table. Rehearsal identifies the added field. Decide whether the caller needs notes before changing its allowed fields.
 
 \sub{Check what actually shipped}
 SQLDelight turns the source query into code for the app. In these two releases it wrote the field names into the shipped lookup. Open the \booklink{https://github.com/oraoraoraaa/least-privilege-lab/blob/c70b90923f496adb91220125f007cc4c4b6871cc/research/selection/results/release-check.json}{release-package evidence} and compare the two projection lists. The new release explicitly names \id{mangas.notes}. The older release keeps its original list even when its compiled SQL runs on the newer schema.
