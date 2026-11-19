@@ -1,0 +1,10 @@
+# Source-compatibility record
+
+The protocol was pushed at a5ebb6b. The initial implementation, inventory and development gates were pushed at b1b95c4 before held-out scoring. That first run could score 15 adjacent Twine database transitions and 12 complete CatchUp transitions. Inspection of the coverage ledger revealed mechanical import errors. Preserve this timing when interpreting the revision.
+
+1. Twine's SQLDelight FTS5 declarations include Kotlin-facing type and constraint annotations. Native SQLite rejected them. The upstream compiler schema at commit d44be0ecf14894cbe85a8c767f8edc1245ab38fe, file core/data/src/commonMain/sqldelight/databases/32.db (SHA-256 baeb35b528bf9b74d29b7804c9a20abfef298bf91c48a9aafa20eb228dc92c9a), contains bare column names and preserves the tokenizer option for both feed_search and post_search. Apply that narrow conversion to typed FTS5 declarations. A reproducible witness checks the two actual compiled definitions. Keep unmodeled SQLite reads, including FTS hidden fields and rowid, as exclusions. An incomplete old or new catalog contributes no primary shared-account outcome.
+2. Gradle's type-safe project accessor projects.serviceDb identifies the same module as project(":service-db"). Resolve both spellings when composing a declared database's sources. Identify CatchUp's gemoji generator as a build-time tool; retain its ledger and exclude its transitions from application aggregates.
+
+3. One FeedFlow revision declares selectFeeds(sortOrder: String). Recognize the argument annotation at the label boundary and bind the named SQL parameters using the same one-value convention. This restores the false trailing-statement exclusion of its preceding count query and gives the typed query its own identifier. Preserve whitespace adjacent to anonymous bind markers.
+
+These changes affect the import and cohort accounting. The field predictors, budgets, ordering, scoring and data window stay as frozen. Any SQL-only change outside a physical .sq or .sqm input or its module declaration is outside this source frame.

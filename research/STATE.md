@@ -2,6 +2,12 @@
 
 Work on `research/classroom-replay`. Keep this long-lived branch on origin. Its starting point is `1d653242eb5ab29507982c216dbe68b5d8c310ba` on main. Codex owns the research questions, methods, checks and manuscript on this branch. The user can supply resources when needed. The academic roadmap on main is separate.
 
+## Current revision · Five held-out project histories
+
+Start with [the revised paper](../paper/paper.pdf), the [migration evidence guide](migrations/README.md) and the [protocol](migrations/PROTOCOL.md) published at a5ebb6b. The method and development gates were pushed at b1b95c4 before held-out native scoring. The [compatibility record](migrations/CORRECTIONS.md) documents subsequent import changes. The root reproduction script now includes the complete extension. Rebuild all manuscript tables and figures with `make paper`.
+
+The entries below describe previous revisions in chronological context.
+
 ## Start here after an interruption
 
 1. Check out `research/classroom-replay` and run `git status -sb`. If starting fresh, clone with `git clone --branch research/classroom-replay https://github.com/oraoraoraaa/least-privilege-lab.git`.

@@ -167,3 +167,5 @@ if __name__ == "__main__":
     results()
     tables()
     selection_results()
+    from migration_figures import build
+    build(write_table, save)

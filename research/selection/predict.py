@@ -1,4 +1,5 @@
 """Old-catalog predictors shared by the migration experiment and the CLI."""
+
 from collections import defaultdict
 from functools import lru_cache
 
@@ -27,7 +28,10 @@ def wildcard_relations(sql, views):
         if not isinstance(tree, exp.Query):
             raise UnresolvedProjection("unsupported query shape")
         for scope in traverse_scope(tree):
-            sources = {name.lower(): source for name, (_, source) in scope.selected_sources.items()}
+            sources = {
+                name.lower(): source
+                for name, (_, source) in scope.selected_sources.items()
+            }
             for source in sources.values():
                 if isinstance(source, exp.Table) and source.name.lower() in definitions:
                     name = source.name.lower()
@@ -35,7 +39,11 @@ def wildcard_relations(sql, views):
                         raise UnresolvedProjection("recursive view")
                     visit(definitions[name], ancestors | {name})
             for item in scope.expression.selects:
-                if not (isinstance(item, exp.Star) or isinstance(item, exp.Column) and item.is_star):
+                if not (
+                    isinstance(item, exp.Star)
+                    or isinstance(item, exp.Column)
+                    and item.is_star
+                ):
                     continue
                 qualifier = item.table.lower() if isinstance(item, exp.Column) else ""
                 if qualifier and qualifier not in sources:
@@ -45,9 +53,12 @@ def wildcard_relations(sql, views):
                     if isinstance(source, Scope):
                         # Its inner SELECT was visited in its own scope.
                         continue
-                    if not isinstance(source, exp.Table) or not isinstance(source.this, exp.Identifier):
+                    if not isinstance(source, exp.Table) or not isinstance(
+                        source.this, exp.Identifier
+                    ):
                         raise UnresolvedProjection("unresolved wildcard source")
                     relations.add(source.name.lower())
+
     visit(sql, set())
     return frozenset(relations)
 
@@ -85,7 +96,11 @@ def predicted_fields(old, planned, methods=("diff", "coverage", "source", "rehea
                 added = reads - observed
             else:
                 raise ValueError(method)
-            row[method] = {"added": sorted(added), "removed": removed, "error": error,
-                           "flag": bool(added or error or (removed and method != "rehearsal"))}
+            row[method] = {
+                "added": sorted(added),
+                "removed": removed,
+                "error": error,
+                "flag": bool(added or error or (removed and method != "rehearsal")),
+            }
         predictions[name] = row
     return predictions

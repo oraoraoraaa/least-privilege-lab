@@ -1,0 +1,4960 @@
+{
+  "complete_catalog_sensitivity": {
+    "counts": {
+      "changed_field_clusters": 10,
+      "complete": 77,
+      "edited_expanded": 11,
+      "expanded": 20,
+      "introductions": 21,
+      "native": 4234,
+      "retirements": 3,
+      "survivors": 1002,
+      "transitions": 77,
+      "unsupported_survivors": 0
+    },
+    "discordances": [
+      {
+        "database": "shared/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_item.comments_url"
+        ],
+        "new": "d58c99729f0678196d305f0ec063665cdd62acf8",
+        "query": "FeedItem.selectFeeds"
+      },
+      {
+        "database": "shared/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source.logo_url"
+        ],
+        "new": "19680ff6f0767a4407e1b91b1f6606088bb57fdb",
+        "query": "FeedItem.selectFeeds"
+      },
+      {
+        "database": "shared/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source.logo_url"
+        ],
+        "new": "19680ff6f0767a4407e1b91b1f6606088bb57fdb",
+        "query": "FeedSource.selectFeedUrls"
+      }
+    ],
+    "individual": {
+      "coverage/0": {
+        "admitted": 982,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "coverage/1": {
+        "admitted": 994,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "coverage/2": {
+        "admitted": 994,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "coverage/4": {
+        "admitted": 994,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "coverage/8": {
+        "admitted": 994,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "coverage/all": {
+        "admitted": 994,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "diff/0": {
+        "admitted": 982,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "diff/1": {
+        "admitted": 997,
+        "queries": 1002,
+        "unused_new": 8,
+        "unused_old": 2
+      },
+      "diff/2": {
+        "admitted": 997,
+        "queries": 1002,
+        "unused_new": 8,
+        "unused_old": 2
+      },
+      "diff/4": {
+        "admitted": 997,
+        "queries": 1002,
+        "unused_new": 8,
+        "unused_old": 2
+      },
+      "diff/8": {
+        "admitted": 997,
+        "queries": 1002,
+        "unused_new": 8,
+        "unused_old": 2
+      },
+      "diff/all": {
+        "admitted": 997,
+        "queries": 1002,
+        "unused_new": 8,
+        "unused_old": 2
+      },
+      "diff/padded4": {
+        "admitted": 998,
+        "queries": 1002,
+        "unused_new": 3967,
+        "unused_old": 2
+      },
+      "rehearsal/0": {
+        "admitted": 982,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "rehearsal/1": {
+        "admitted": 991,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "rehearsal/2": {
+        "admitted": 991,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "rehearsal/4": {
+        "admitted": 991,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "rehearsal/8": {
+        "admitted": 991,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "rehearsal/all": {
+        "admitted": 991,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "rehearsal/padded4": {
+        "admitted": 997,
+        "queries": 1002,
+        "unused_new": 3968,
+        "unused_old": 2
+      },
+      "retain": {
+        "admitted": 982,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "source/0": {
+        "admitted": 982,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "source/1": {
+        "admitted": 991,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "source/2": {
+        "admitted": 991,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "source/4": {
+        "admitted": 991,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "source/8": {
+        "admitted": 991,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      },
+      "source/all": {
+        "admitted": 991,
+        "queries": 1002,
+        "unused_new": 0,
+        "unused_old": 2
+      }
+    },
+    "mechanisms": {
+      "edited_existing_only": {
+        "coverage": 0,
+        "diff": 0,
+        "expanded": 5,
+        "rehearsal": 0,
+        "source": 0
+      },
+      "edited_new_resource": {
+        "coverage": 3,
+        "diff": 6,
+        "expanded": 6,
+        "rehearsal": 0,
+        "source": 0
+      },
+      "unchanged_new_resource": {
+        "coverage": 9,
+        "diff": 9,
+        "expanded": 9,
+        "rehearsal": 9,
+        "source": 9
+      }
+    },
+    "methods": {
+      "coverage": {
+        "diagnostics": 0,
+        "exact": 12,
+        "extra_instances": 0,
+        "flag_expanded": 12,
+        "flag_stable": 2,
+        "missed_expansions": 8,
+        "missing_instances": 15,
+        "queue": 14,
+        "required_instances": 27,
+        "retired_alerts": 0
+      },
+      "diff": {
+        "diagnostics": 0,
+        "exact": 15,
+        "extra_instances": 8,
+        "flag_expanded": 15,
+        "flag_stable": 8,
+        "missed_expansions": 5,
+        "missing_instances": 12,
+        "queue": 23,
+        "required_instances": 27,
+        "retired_alerts": 0
+      },
+      "rehearsal": {
+        "diagnostics": 2,
+        "exact": 9,
+        "extra_instances": 0,
+        "flag_expanded": 9,
+        "flag_stable": 2,
+        "missed_expansions": 11,
+        "missing_instances": 18,
+        "queue": 11,
+        "required_instances": 27,
+        "retired_alerts": 0
+      },
+      "source": {
+        "diagnostics": 0,
+        "exact": 9,
+        "extra_instances": 0,
+        "flag_expanded": 9,
+        "flag_stable": 2,
+        "missed_expansions": 11,
+        "missing_instances": 18,
+        "queue": 11,
+        "required_instances": 27,
+        "retired_alerts": 0
+      }
+    },
+    "paired": {
+      "both": 9,
+      "coverage_only": 3,
+      "neither": 8
+    },
+    "shared": {
+      "coverage/0": {
+        "admitted": 991,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 984,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "coverage/1": {
+        "admitted": 1003,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 996,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "coverage/2": {
+        "admitted": 1003,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 996,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "coverage/4": {
+        "admitted": 1003,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 996,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "coverage/8": {
+        "admitted": 1003,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 996,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "coverage/all": {
+        "admitted": 1003,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 996,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "diff/0": {
+        "admitted": 991,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 984,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "diff/1": {
+        "admitted": 1006,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 999,
+        "survivor_total": 1002,
+        "unused_new": 1,
+        "unused_old": 1
+      },
+      "diff/2": {
+        "admitted": 1006,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 999,
+        "survivor_total": 1002,
+        "unused_new": 1,
+        "unused_old": 1
+      },
+      "diff/4": {
+        "admitted": 1006,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 999,
+        "survivor_total": 1002,
+        "unused_new": 1,
+        "unused_old": 1
+      },
+      "diff/8": {
+        "admitted": 1006,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 999,
+        "survivor_total": 1002,
+        "unused_new": 1,
+        "unused_old": 1
+      },
+      "diff/all": {
+        "admitted": 1006,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 999,
+        "survivor_total": 1002,
+        "unused_new": 1,
+        "unused_old": 1
+      },
+      "diff/padded4": {
+        "admitted": 1010,
+        "introduced_admitted": 8,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 1002,
+        "survivor_total": 1002,
+        "unused_new": 222,
+        "unused_old": 1
+      },
+      "rehearsal/0": {
+        "admitted": 991,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 984,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "rehearsal/1": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "rehearsal/2": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "rehearsal/4": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "rehearsal/8": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "rehearsal/all": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "rehearsal/padded4": {
+        "admitted": 1007,
+        "introduced_admitted": 8,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 999,
+        "survivor_total": 1002,
+        "unused_new": 224,
+        "unused_old": 1
+      },
+      "retain": {
+        "admitted": 991,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 984,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "source/0": {
+        "admitted": 991,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 984,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "source/1": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "source/2": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "source/4": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "source/8": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "source/all": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      }
+    }
+  },
+  "development": {
+    "Mihon": {
+      "counts": {
+        "changed_field_clusters": 80,
+        "complete": 5,
+        "edited_expanded": 9,
+        "expanded": 49,
+        "introductions": 39,
+        "native": 1907,
+        "retirements": 38,
+        "survivors": 163,
+        "transitions": 5,
+        "unsupported_survivors": 0
+      },
+      "discordances": [
+        {
+          "database": "Mihon",
+          "exact": "rehearsal",
+          "missing": [
+            "chapters.url",
+            "excluded_scanlators.manga_id",
+            "excluded_scanlators.scanlator",
+            "updatesview.chapterurl",
+            "updatesview.excludedscanlator"
+          ],
+          "new": "v0.20.0",
+          "query": "updatesView.getRecentUpdates"
+        },
+        {
+          "database": "Mihon",
+          "exact": "rehearsal",
+          "missing": [
+            "chapters.url",
+            "excluded_scanlators.manga_id",
+            "excluded_scanlators.scanlator",
+            "updatesview.chapterurl",
+            "updatesview.excludedscanlator"
+          ],
+          "new": "v0.20.0",
+          "query": "updatesView.getUpdatesByReadStatus"
+        },
+        {
+          "database": "Mihon",
+          "exact": "coverage",
+          "missing": [
+            "history.id",
+            "history.manga_id",
+            "history.read_at",
+            "history.read_duration"
+          ],
+          "new": "v0.21.0",
+          "query": "history.getHistoryByMangaId"
+        },
+        {
+          "database": "Mihon",
+          "exact": "rehearsal",
+          "missing": [
+            "chapter.id",
+            "chapter.manga_id",
+            "chapter.remote_date_upload",
+            "chapter.remote_scanlator",
+            "chapter.state_date_fetch",
+            "chapter.user_bookmark",
+            "chapter.user_read",
+            "excluded_scanlator.manga_id",
+            "excluded_scanlator.scanlator",
+            "history.manga_id",
+            "history.read_at",
+            "libraryview.id",
+            "libraryview.remote_artist",
+            "libraryview.remote_author",
+            "libraryview.remote_cover",
+            "libraryview.remote_description",
+            "libraryview.remote_genre",
+            "libraryview.remote_memo",
+            "libraryview.remote_status",
+            "libraryview.remote_title",
+            "libraryview.remote_update_strategy",
+            "libraryview.remote_url",
+            "libraryview.source_id",
+            "libraryview.state_chapter_fetch_interval",
+            "libraryview.state_chapter_last_update",
+            "libraryview.state_chapter_next_update",
+            "libraryview.state_cover_last_modified",
+            "libraryview.state_initialized",
+            "libraryview.user_chapter_flags",
+            "libraryview.user_favorite_at",
+            "libraryview.user_notes",
+            "libraryview.user_reader_flags",
+            "manga.id",
+            "manga.remote_artist",
+            "manga.remote_author",
+            "manga.remote_cover",
+            "manga.remote_description",
+            "manga.remote_genre",
+            "manga.remote_memo",
+            "manga.remote_status",
+            "manga.remote_title",
+            "manga.remote_update_strategy",
+            "manga.remote_url",
+            "manga.source_id",
+            "manga.state_chapter_fetch_interval",
+            "manga.state_chapter_last_update",
+            "manga.state_chapter_next_update",
+            "manga.state_cover_last_modified",
+            "manga.state_initialized",
+            "manga.user_chapter_flags",
+            "manga.user_favorite_at",
+            "manga.user_notes",
+            "manga.user_reader_flags",
+            "manga_category.category_id",
+            "manga_category.manga_id"
+          ],
+          "new": "v0.21.0",
+          "query": "libraryView.library"
+        }
+      ],
+      "individual": {
+        "coverage/0": {
+          "admitted": 114,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "coverage/1": {
+          "admitted": 138,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "coverage/2": {
+          "admitted": 151,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "coverage/4": {
+          "admitted": 154,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "coverage/8": {
+          "admitted": 154,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "coverage/all": {
+          "admitted": 154,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "diff/0": {
+          "admitted": 114,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "diff/1": {
+          "admitted": 137,
+          "queries": 163,
+          "unused_new": 29,
+          "unused_old": 9
+        },
+        "diff/2": {
+          "admitted": 150,
+          "queries": 163,
+          "unused_new": 45,
+          "unused_old": 9
+        },
+        "diff/4": {
+          "admitted": 154,
+          "queries": 163,
+          "unused_new": 58,
+          "unused_old": 9
+        },
+        "diff/8": {
+          "admitted": 155,
+          "queries": 163,
+          "unused_new": 60,
+          "unused_old": 9
+        },
+        "diff/all": {
+          "admitted": 155,
+          "queries": 163,
+          "unused_new": 61,
+          "unused_old": 9
+        },
+        "diff/padded4": {
+          "admitted": 154,
+          "queries": 163,
+          "unused_new": 572,
+          "unused_old": 9
+        },
+        "rehearsal/0": {
+          "admitted": 114,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "rehearsal/1": {
+          "admitted": 138,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "rehearsal/2": {
+          "admitted": 151,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "rehearsal/4": {
+          "admitted": 153,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "rehearsal/8": {
+          "admitted": 155,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "rehearsal/all": {
+          "admitted": 156,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "rehearsal/padded4": {
+          "admitted": 153,
+          "queries": 163,
+          "unused_new": 568,
+          "unused_old": 9
+        },
+        "retain": {
+          "admitted": 114,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "source/0": {
+          "admitted": 114,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "source/1": {
+          "admitted": 138,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "source/2": {
+          "admitted": 151,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "source/4": {
+          "admitted": 153,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "source/8": {
+          "admitted": 153,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        },
+        "source/all": {
+          "admitted": 153,
+          "queries": 163,
+          "unused_new": 0,
+          "unused_old": 9
+        }
+      },
+      "mechanisms": {
+        "edited_new_resource": {
+          "coverage": 2,
+          "diff": 2,
+          "expanded": 9,
+          "rehearsal": 2,
+          "source": 1
+        },
+        "unchanged_new_resource": {
+          "coverage": 38,
+          "diff": 35,
+          "expanded": 40,
+          "rehearsal": 40,
+          "source": 38
+        }
+      },
+      "methods": {
+        "coverage": {
+          "diagnostics": 0,
+          "exact": 40,
+          "extra_instances": 0,
+          "flag_expanded": 49,
+          "flag_stable": 0,
+          "missed_expansions": 0,
+          "missing_instances": 87,
+          "queue": 83,
+          "required_instances": 185,
+          "retired_alerts": 34
+        },
+        "diff": {
+          "diagnostics": 0,
+          "exact": 37,
+          "extra_instances": 61,
+          "flag_expanded": 49,
+          "flag_stable": 25,
+          "missed_expansions": 0,
+          "missing_instances": 82,
+          "queue": 108,
+          "required_instances": 185,
+          "retired_alerts": 34
+        },
+        "rehearsal": {
+          "diagnostics": 37,
+          "exact": 42,
+          "extra_instances": 0,
+          "flag_expanded": 49,
+          "flag_stable": 0,
+          "missed_expansions": 0,
+          "missing_instances": 61,
+          "queue": 83,
+          "required_instances": 185,
+          "retired_alerts": 34
+        },
+        "source": {
+          "diagnostics": 0,
+          "exact": 39,
+          "extra_instances": 0,
+          "flag_expanded": 49,
+          "flag_stable": 0,
+          "missed_expansions": 0,
+          "missing_instances": 99,
+          "queue": 83,
+          "required_instances": 185,
+          "retired_alerts": 34
+        }
+      },
+      "paired": {
+        "both": 39,
+        "coverage_only": 1,
+        "neither": 6,
+        "rehearsal_only": 3
+      },
+      "shared": {
+        "coverage/0": {
+          "admitted": 115,
+          "introduced_admitted": 1,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 114,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/1": {
+          "admitted": 136,
+          "introduced_admitted": 1,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 135,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/2": {
+          "admitted": 150,
+          "introduced_admitted": 3,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 147,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/4": {
+          "admitted": 161,
+          "introduced_admitted": 4,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 157,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/8": {
+          "admitted": 163,
+          "introduced_admitted": 4,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 159,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/all": {
+          "admitted": 163,
+          "introduced_admitted": 4,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 159,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/0": {
+          "admitted": 115,
+          "introduced_admitted": 1,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 114,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/1": {
+          "admitted": 136,
+          "introduced_admitted": 1,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 135,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/2": {
+          "admitted": 150,
+          "introduced_admitted": 3,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 147,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/4": {
+          "admitted": 161,
+          "introduced_admitted": 4,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 157,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/8": {
+          "admitted": 163,
+          "introduced_admitted": 4,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 159,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/all": {
+          "admitted": 163,
+          "introduced_admitted": 4,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 159,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/padded4": {
+          "admitted": 161,
+          "introduced_admitted": 4,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 157,
+          "survivor_total": 163,
+          "unused_new": 4,
+          "unused_old": 0
+        },
+        "rehearsal/0": {
+          "admitted": 115,
+          "introduced_admitted": 1,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 114,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/1": {
+          "admitted": 136,
+          "introduced_admitted": 1,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 135,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/2": {
+          "admitted": 150,
+          "introduced_admitted": 3,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 147,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/4": {
+          "admitted": 159,
+          "introduced_admitted": 4,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 155,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/8": {
+          "admitted": 161,
+          "introduced_admitted": 4,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 157,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/all": {
+          "admitted": 176,
+          "introduced_admitted": 17,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 159,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/padded4": {
+          "admitted": 159,
+          "introduced_admitted": 4,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 155,
+          "survivor_total": 163,
+          "unused_new": 4,
+          "unused_old": 0
+        },
+        "retain": {
+          "admitted": 115,
+          "introduced_admitted": 1,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 114,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/0": {
+          "admitted": 115,
+          "introduced_admitted": 1,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 114,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/1": {
+          "admitted": 136,
+          "introduced_admitted": 1,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 135,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/2": {
+          "admitted": 150,
+          "introduced_admitted": 3,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 147,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/4": {
+          "admitted": 159,
+          "introduced_admitted": 4,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 155,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/8": {
+          "admitted": 161,
+          "introduced_admitted": 4,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 157,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/all": {
+          "admitted": 161,
+          "introduced_admitted": 4,
+          "introduced_total": 39,
+          "queries": 202,
+          "survivor_admitted": 157,
+          "survivor_total": 163,
+          "unused_new": 0,
+          "unused_old": 0
+        }
+      }
+    },
+    "Tivi": {
+      "counts": {
+        "changed_field_clusters": 0,
+        "complete": 6,
+        "introductions": 8,
+        "native": 2080,
+        "retirements": 0,
+        "survivors": 516,
+        "transitions": 6,
+        "unsupported_survivors": 0
+      },
+      "discordances": [],
+      "individual": {
+        "coverage/0": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "coverage/1": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "coverage/2": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "coverage/4": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "coverage/8": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "coverage/all": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "diff/0": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "diff/1": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "diff/2": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "diff/4": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "diff/8": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "diff/all": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "diff/padded4": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 2064,
+          "unused_old": 1
+        },
+        "rehearsal/0": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "rehearsal/1": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "rehearsal/2": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "rehearsal/4": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "rehearsal/8": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "rehearsal/all": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "rehearsal/padded4": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 2064,
+          "unused_old": 1
+        },
+        "retain": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "source/0": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "source/1": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "source/2": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "source/4": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "source/8": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "source/all": {
+          "admitted": 516,
+          "queries": 516,
+          "unused_new": 0,
+          "unused_old": 1
+        }
+      },
+      "mechanisms": {},
+      "methods": {
+        "coverage": {
+          "diagnostics": 0,
+          "extra_instances": 0,
+          "flag_stable": 0,
+          "missing_instances": 0,
+          "queue": 0,
+          "required_instances": 0,
+          "retired_alerts": 0
+        },
+        "diff": {
+          "diagnostics": 0,
+          "extra_instances": 0,
+          "flag_stable": 0,
+          "missing_instances": 0,
+          "queue": 0,
+          "required_instances": 0,
+          "retired_alerts": 0
+        },
+        "rehearsal": {
+          "diagnostics": 0,
+          "extra_instances": 0,
+          "flag_stable": 0,
+          "missing_instances": 0,
+          "queue": 0,
+          "required_instances": 0,
+          "retired_alerts": 0
+        },
+        "source": {
+          "diagnostics": 0,
+          "extra_instances": 0,
+          "flag_stable": 0,
+          "missing_instances": 0,
+          "queue": 0,
+          "required_instances": 0,
+          "retired_alerts": 0
+        }
+      },
+      "paired": {},
+      "shared": {
+        "coverage/0": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/1": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/2": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/4": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/8": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/all": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/0": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/1": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/2": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/4": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/8": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/all": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/padded4": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 24,
+          "unused_old": 0
+        },
+        "rehearsal/0": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/1": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/2": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/4": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/8": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/all": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/padded4": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 24,
+          "unused_old": 0
+        },
+        "retain": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/0": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/1": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/2": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/4": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/8": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/all": {
+          "admitted": 519,
+          "introduced_admitted": 3,
+          "introduced_total": 8,
+          "queries": 524,
+          "survivor_admitted": 516,
+          "survivor_total": 516,
+          "unused_new": 0,
+          "unused_old": 0
+        }
+      }
+    }
+  },
+  "held_out": {
+    "AChep/keyguard-app": {
+      "counts": {
+        "changed_field_clusters": 3,
+        "complete": 16,
+        "edited_expanded": 1,
+        "expanded": 7,
+        "introductions": 12,
+        "native": 3308,
+        "retirements": 0,
+        "survivors": 782,
+        "transitions": 16,
+        "unsupported_survivors": 0
+      },
+      "coverage": {
+        "build_tool_transitions": 0,
+        "database_states": 18,
+        "departing_catalog_names": 0,
+        "errors": {},
+        "first_catalog_names": 43
+      },
+      "discordances": [],
+      "individual": {
+        "coverage/0": {
+          "admitted": 775,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/1": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/2": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/4": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/8": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/all": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/0": {
+          "admitted": 775,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/1": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 1,
+          "unused_old": 0
+        },
+        "diff/2": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 1,
+          "unused_old": 0
+        },
+        "diff/4": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 1,
+          "unused_old": 0
+        },
+        "diff/8": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 1,
+          "unused_old": 0
+        },
+        "diff/all": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 1,
+          "unused_old": 0
+        },
+        "diff/padded4": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 3121,
+          "unused_old": 0
+        },
+        "rehearsal/0": {
+          "admitted": 775,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/1": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/2": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/4": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/8": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/all": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/padded4": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 3121,
+          "unused_old": 0
+        },
+        "retain": {
+          "admitted": 775,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/0": {
+          "admitted": 775,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/1": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/2": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/4": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/8": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/all": {
+          "admitted": 781,
+          "queries": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        }
+      },
+      "mechanisms": {
+        "edited_existing_only": {
+          "coverage": 0,
+          "diff": 0,
+          "expanded": 1,
+          "rehearsal": 0,
+          "source": 0
+        },
+        "unchanged_new_resource": {
+          "coverage": 6,
+          "diff": 6,
+          "expanded": 6,
+          "rehearsal": 6,
+          "source": 6
+        }
+      },
+      "methods": {
+        "coverage": {
+          "diagnostics": 0,
+          "exact": 6,
+          "extra_instances": 0,
+          "flag_expanded": 6,
+          "flag_stable": 0,
+          "missed_expansions": 1,
+          "missing_instances": 2,
+          "queue": 6,
+          "required_instances": 8,
+          "retired_alerts": 0
+        },
+        "diff": {
+          "diagnostics": 0,
+          "exact": 6,
+          "extra_instances": 1,
+          "flag_expanded": 6,
+          "flag_stable": 1,
+          "missed_expansions": 1,
+          "missing_instances": 2,
+          "queue": 7,
+          "required_instances": 8,
+          "retired_alerts": 0
+        },
+        "rehearsal": {
+          "diagnostics": 0,
+          "exact": 6,
+          "extra_instances": 0,
+          "flag_expanded": 6,
+          "flag_stable": 0,
+          "missed_expansions": 1,
+          "missing_instances": 2,
+          "queue": 6,
+          "required_instances": 8,
+          "retired_alerts": 0
+        },
+        "source": {
+          "diagnostics": 0,
+          "exact": 6,
+          "extra_instances": 0,
+          "flag_expanded": 6,
+          "flag_stable": 0,
+          "missed_expansions": 1,
+          "missing_instances": 2,
+          "queue": 6,
+          "required_instances": 8,
+          "retired_alerts": 0
+        }
+      },
+      "paired": {
+        "both": 6,
+        "neither": 1
+      },
+      "shared": {
+        "coverage/0": {
+          "admitted": 778,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 776,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/1": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/2": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/4": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/8": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/all": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/0": {
+          "admitted": 778,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 776,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/1": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/2": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/4": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/8": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/all": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/padded4": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 61,
+          "unused_old": 0
+        },
+        "rehearsal/0": {
+          "admitted": 778,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 776,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/1": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/2": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/4": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/8": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/all": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/padded4": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 61,
+          "unused_old": 0
+        },
+        "retain": {
+          "admitted": 778,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 776,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/0": {
+          "admitted": 778,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 776,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/1": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/2": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/4": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/8": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/all": {
+          "admitted": 784,
+          "introduced_admitted": 2,
+          "introduced_total": 12,
+          "queries": 794,
+          "survivor_admitted": 782,
+          "survivor_total": 782,
+          "unused_new": 0,
+          "unused_old": 0
+        }
+      }
+    },
+    "ZacSweers/CatchUp": {
+      "counts": {
+        "changed_field_clusters": 1,
+        "complete": 13,
+        "edited_expanded": 0,
+        "expanded": 1,
+        "introductions": 2,
+        "native": 232,
+        "retirements": 0,
+        "survivors": 57,
+        "transitions": 13,
+        "unsupported_survivors": 0
+      },
+      "coverage": {
+        "build_tool_transitions": 3,
+        "database_states": 22,
+        "departing_catalog_names": 0,
+        "errors": {},
+        "first_catalog_names": 17
+      },
+      "discordances": [],
+      "individual": {
+        "coverage/0": {
+          "admitted": 56,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/1": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/2": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/4": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/8": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/all": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/0": {
+          "admitted": 56,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/1": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 2,
+          "unused_old": 0
+        },
+        "diff/2": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 2,
+          "unused_old": 0
+        },
+        "diff/4": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 2,
+          "unused_old": 0
+        },
+        "diff/8": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 2,
+          "unused_old": 0
+        },
+        "diff/all": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 2,
+          "unused_old": 0
+        },
+        "diff/padded4": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 212,
+          "unused_old": 0
+        },
+        "rehearsal/0": {
+          "admitted": 56,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/1": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/2": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/4": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/8": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/all": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/padded4": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 212,
+          "unused_old": 0
+        },
+        "retain": {
+          "admitted": 56,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/0": {
+          "admitted": 56,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/1": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/2": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/4": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/8": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/all": {
+          "admitted": 57,
+          "queries": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        }
+      },
+      "mechanisms": {
+        "unchanged_new_resource": {
+          "coverage": 1,
+          "diff": 1,
+          "expanded": 1,
+          "rehearsal": 1,
+          "source": 1
+        }
+      },
+      "methods": {
+        "coverage": {
+          "diagnostics": 0,
+          "exact": 1,
+          "extra_instances": 0,
+          "flag_expanded": 1,
+          "flag_stable": 0,
+          "missed_expansions": 0,
+          "missing_instances": 0,
+          "queue": 1,
+          "required_instances": 1,
+          "retired_alerts": 0
+        },
+        "diff": {
+          "diagnostics": 0,
+          "exact": 1,
+          "extra_instances": 2,
+          "flag_expanded": 1,
+          "flag_stable": 2,
+          "missed_expansions": 0,
+          "missing_instances": 0,
+          "queue": 3,
+          "required_instances": 1,
+          "retired_alerts": 0
+        },
+        "rehearsal": {
+          "diagnostics": 0,
+          "exact": 1,
+          "extra_instances": 0,
+          "flag_expanded": 1,
+          "flag_stable": 0,
+          "missed_expansions": 0,
+          "missing_instances": 0,
+          "queue": 1,
+          "required_instances": 1,
+          "retired_alerts": 0
+        },
+        "source": {
+          "diagnostics": 0,
+          "exact": 1,
+          "extra_instances": 0,
+          "flag_expanded": 1,
+          "flag_stable": 0,
+          "missed_expansions": 0,
+          "missing_instances": 0,
+          "queue": 1,
+          "required_instances": 1,
+          "retired_alerts": 0
+        }
+      },
+      "paired": {
+        "both": 1
+      },
+      "shared": {
+        "coverage/0": {
+          "admitted": 58,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 56,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/1": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/2": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/4": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/8": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/all": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/0": {
+          "admitted": 58,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 56,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/1": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/2": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/4": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/8": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/all": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/padded4": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 29,
+          "unused_old": 0
+        },
+        "rehearsal/0": {
+          "admitted": 58,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 56,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/1": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/2": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/4": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/8": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/all": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/padded4": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 29,
+          "unused_old": 0
+        },
+        "retain": {
+          "admitted": 58,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 56,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/0": {
+          "admitted": 58,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 56,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/1": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/2": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/4": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/8": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/all": {
+          "admitted": 59,
+          "introduced_admitted": 2,
+          "introduced_total": 2,
+          "queries": 59,
+          "survivor_admitted": 57,
+          "survivor_total": 57,
+          "unused_new": 0,
+          "unused_old": 0
+        }
+      }
+    },
+    "msasikanth/twine": {
+      "counts": {
+        "changed_field_clusters": 30,
+        "complete": 15,
+        "edited_expanded": 71,
+        "expanded": 95,
+        "introductions": 52,
+        "native": 8761,
+        "retirements": 22,
+        "survivors": 1947,
+        "transitions": 118,
+        "unsupported_survivors": 403
+      },
+      "coverage": {
+        "build_tool_transitions": 0,
+        "database_states": 121,
+        "departing_catalog_names": 32,
+        "errors": {
+          "Unexpected authorizer operation 19": 79,
+          "Unmodeled resource blockedword.rowid": 35,
+          "Unmodeled resource feed_search.feed_search": 101,
+          "Unmodeled resource post_search.post_search": 198
+        },
+        "first_catalog_names": 35
+      },
+      "discordances": [
+        {
+          "database": "shared/ReaderDatabase",
+          "exact": "coverage",
+          "missing": [
+            "post.bookmarked"
+          ],
+          "new": "83a959d8a297457fba04dd9cce9473cca8b904f4",
+          "query": "Post.postWithMetadata"
+        },
+        {
+          "database": "shared/ReaderDatabase",
+          "exact": "coverage",
+          "missing": [
+            "post.commentslink"
+          ],
+          "new": "47b67378645c09c9e35d07ea3f17631956289818",
+          "query": "Post.featuredPosts"
+        },
+        {
+          "database": "shared/ReaderDatabase",
+          "exact": "coverage",
+          "missing": [
+            "post.commentslink"
+          ],
+          "new": "47b67378645c09c9e35d07ea3f17631956289818",
+          "query": "Post.posts"
+        },
+        {
+          "database": "shared/ReaderDatabase",
+          "exact": "coverage",
+          "missing": [
+            "post.read"
+          ],
+          "new": "78752d05f14e755d438b70da29b30671bef1112b",
+          "query": "Post.featuredPosts"
+        },
+        {
+          "database": "shared/ReaderDatabase",
+          "exact": "coverage",
+          "missing": [
+            "post.read"
+          ],
+          "new": "78752d05f14e755d438b70da29b30671bef1112b",
+          "query": "Post.posts"
+        },
+        {
+          "database": "shared/ReaderDatabase",
+          "exact": "coverage",
+          "missing": [
+            "feed.lastcleanupat"
+          ],
+          "new": "4fcabd58d72904552a2966ab47580e3dc2f8a762",
+          "query": "Feed.feedsPaginated"
+        },
+        {
+          "database": "shared/ReaderDatabase",
+          "exact": "coverage",
+          "missing": [
+            "feedgroup.pinnedat"
+          ],
+          "new": "8b6257445b57860740e5eead7dbcb705fd4de05d",
+          "query": "FeedGroup.groups"
+        },
+        {
+          "database": "shared/ReaderDatabase",
+          "exact": "coverage",
+          "missing": [
+            "feedgroup.pinnedposition"
+          ],
+          "new": "e526e48006b9ff5de3e69d47306826b5bf204dab",
+          "query": "FeedGroup.groups"
+        }
+      ],
+      "individual": {
+        "coverage/0": {
+          "admitted": 1852,
+          "queries": 1947,
+          "unused_new": 0,
+          "unused_old": 17
+        },
+        "coverage/1": {
+          "admitted": 1885,
+          "queries": 1947,
+          "unused_new": 8,
+          "unused_old": 17
+        },
+        "coverage/2": {
+          "admitted": 1888,
+          "queries": 1947,
+          "unused_new": 8,
+          "unused_old": 17
+        },
+        "coverage/4": {
+          "admitted": 1889,
+          "queries": 1947,
+          "unused_new": 9,
+          "unused_old": 17
+        },
+        "coverage/8": {
+          "admitted": 1889,
+          "queries": 1947,
+          "unused_new": 9,
+          "unused_old": 17
+        },
+        "coverage/all": {
+          "admitted": 1889,
+          "queries": 1947,
+          "unused_new": 9,
+          "unused_old": 17
+        },
+        "diff/0": {
+          "admitted": 1852,
+          "queries": 1947,
+          "unused_new": 0,
+          "unused_old": 17
+        },
+        "diff/1": {
+          "admitted": 1903,
+          "queries": 1947,
+          "unused_new": 98,
+          "unused_old": 17
+        },
+        "diff/2": {
+          "admitted": 1921,
+          "queries": 1947,
+          "unused_new": 118,
+          "unused_old": 17
+        },
+        "diff/4": {
+          "admitted": 1922,
+          "queries": 1947,
+          "unused_new": 129,
+          "unused_old": 17
+        },
+        "diff/8": {
+          "admitted": 1922,
+          "queries": 1947,
+          "unused_new": 129,
+          "unused_old": 17
+        },
+        "diff/all": {
+          "admitted": 1922,
+          "queries": 1947,
+          "unused_new": 129,
+          "unused_old": 17
+        },
+        "diff/padded4": {
+          "admitted": 1934,
+          "queries": 1947,
+          "unused_new": 7689,
+          "unused_old": 17
+        },
+        "rehearsal/0": {
+          "admitted": 1852,
+          "queries": 1947,
+          "unused_new": 0,
+          "unused_old": 17
+        },
+        "rehearsal/1": {
+          "admitted": 1877,
+          "queries": 1947,
+          "unused_new": 0,
+          "unused_old": 17
+        },
+        "rehearsal/2": {
+          "admitted": 1879,
+          "queries": 1947,
+          "unused_new": 0,
+          "unused_old": 17
+        },
+        "rehearsal/4": {
+          "admitted": 1880,
+          "queries": 1947,
+          "unused_new": 0,
+          "unused_old": 17
+        },
+        "rehearsal/8": {
+          "admitted": 1880,
+          "queries": 1947,
+          "unused_new": 0,
+          "unused_old": 17
+        },
+        "rehearsal/all": {
+          "admitted": 1880,
+          "queries": 1947,
+          "unused_new": 0,
+          "unused_old": 17
+        },
+        "rehearsal/padded4": {
+          "admitted": 1894,
+          "queries": 1947,
+          "unused_new": 7735,
+          "unused_old": 17
+        },
+        "retain": {
+          "admitted": 1852,
+          "queries": 1947,
+          "unused_new": 0,
+          "unused_old": 17
+        },
+        "source/0": {
+          "admitted": 1852,
+          "queries": 1947,
+          "unused_new": 0,
+          "unused_old": 17
+        },
+        "source/1": {
+          "admitted": 1877,
+          "queries": 1947,
+          "unused_new": 0,
+          "unused_old": 17
+        },
+        "source/2": {
+          "admitted": 1879,
+          "queries": 1947,
+          "unused_new": 0,
+          "unused_old": 17
+        },
+        "source/4": {
+          "admitted": 1880,
+          "queries": 1947,
+          "unused_new": 0,
+          "unused_old": 17
+        },
+        "source/8": {
+          "admitted": 1880,
+          "queries": 1947,
+          "unused_new": 0,
+          "unused_old": 17
+        },
+        "source/all": {
+          "admitted": 1880,
+          "queries": 1947,
+          "unused_new": 0,
+          "unused_old": 17
+        }
+      },
+      "mechanisms": {
+        "edited_existing_only": {
+          "coverage": 0,
+          "diff": 0,
+          "expanded": 19,
+          "rehearsal": 0,
+          "source": 0
+        },
+        "edited_new_resource": {
+          "coverage": 12,
+          "diff": 35,
+          "expanded": 52,
+          "rehearsal": 4,
+          "source": 4
+        },
+        "unchanged_new_resource": {
+          "coverage": 24,
+          "diff": 24,
+          "expanded": 24,
+          "rehearsal": 24,
+          "source": 24
+        }
+      },
+      "methods": {
+        "coverage": {
+          "diagnostics": 0,
+          "exact": 36,
+          "extra_instances": 9,
+          "flag_expanded": 58,
+          "flag_stable": 11,
+          "missed_expansions": 37,
+          "missing_instances": 72,
+          "queue": 73,
+          "required_instances": 115,
+          "retired_alerts": 4
+        },
+        "diff": {
+          "diagnostics": 0,
+          "exact": 59,
+          "extra_instances": 129,
+          "flag_expanded": 78,
+          "flag_stable": 89,
+          "missed_expansions": 17,
+          "missing_instances": 35,
+          "queue": 174,
+          "required_instances": 115,
+          "retired_alerts": 7
+        },
+        "rehearsal": {
+          "diagnostics": 26,
+          "exact": 28,
+          "extra_instances": 0,
+          "flag_expanded": 49,
+          "flag_stable": 2,
+          "missed_expansions": 46,
+          "missing_instances": 83,
+          "queue": 54,
+          "required_instances": 115,
+          "retired_alerts": 3
+        },
+        "source": {
+          "diagnostics": 0,
+          "exact": 28,
+          "extra_instances": 0,
+          "flag_expanded": 49,
+          "flag_stable": 4,
+          "missed_expansions": 46,
+          "missing_instances": 83,
+          "queue": 56,
+          "required_instances": 115,
+          "retired_alerts": 3
+        }
+      },
+      "paired": {
+        "both": 28,
+        "coverage_only": 8,
+        "neither": 59
+      },
+      "shared": {
+        "coverage/0": {
+          "admitted": 31,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 30,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/1": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/2": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/4": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/8": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "coverage/all": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/0": {
+          "admitted": 31,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 30,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/1": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/2": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/4": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/8": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/all": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "diff/padded4": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 30,
+          "unused_old": 0
+        },
+        "rehearsal/0": {
+          "admitted": 31,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 30,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/1": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/2": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/4": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/8": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/all": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "rehearsal/padded4": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 30,
+          "unused_old": 0
+        },
+        "retain": {
+          "admitted": 31,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 30,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/0": {
+          "admitted": 31,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 30,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/1": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/2": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/4": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/8": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        },
+        "source/all": {
+          "admitted": 33,
+          "introduced_admitted": 1,
+          "introduced_total": 1,
+          "queries": 33,
+          "survivor_admitted": 32,
+          "survivor_total": 32,
+          "unused_new": 0,
+          "unused_old": 0
+        }
+      }
+    },
+    "prof18/feed-flow": {
+      "counts": {
+        "changed_field_clusters": 18,
+        "complete": 33,
+        "edited_expanded": 47,
+        "expanded": 54,
+        "introductions": 33,
+        "native": 4341,
+        "retirements": 3,
+        "survivors": 946,
+        "transitions": 78,
+        "unsupported_survivors": 58
+      },
+      "coverage": {
+        "build_tool_transitions": 0,
+        "database_states": 82,
+        "departing_catalog_names": 4,
+        "errors": {
+          "Unmodeled resource blocked_word.rowid": 15,
+          "Unmodeled resource feed_search.feed_search": 45
+        },
+        "first_catalog_names": 9
+      },
+      "discordances": [
+        {
+          "database": "shared/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_item.comments_url"
+          ],
+          "new": "d58c99729f0678196d305f0ec063665cdd62acf8",
+          "query": "FeedItem.selectFeeds"
+        },
+        {
+          "database": "shared/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source.logo_url"
+          ],
+          "new": "19680ff6f0767a4407e1b91b1f6606088bb57fdb",
+          "query": "FeedItem.selectFeeds"
+        },
+        {
+          "database": "shared/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source.logo_url"
+          ],
+          "new": "19680ff6f0767a4407e1b91b1f6606088bb57fdb",
+          "query": "FeedSource.selectFeedUrls"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source_preferences.is_hidden"
+          ],
+          "new": "d680eb31da9ef250afab1cc8514c28e381af8051",
+          "query": "FeedItem.selectFeeds"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source_preferences.is_hidden"
+          ],
+          "new": "d680eb31da9ef250afab1cc8514c28e381af8051",
+          "query": "FeedSource.selectByCategory"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source_preferences.is_hidden"
+          ],
+          "new": "d680eb31da9ef250afab1cc8514c28e381af8051",
+          "query": "FeedSource.selectFeedUrls"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source_preferences.is_hidden",
+            "feed_source_unread_count.is_hidden"
+          ],
+          "new": "d680eb31da9ef250afab1cc8514c28e381af8051",
+          "query": "View.getFeedSourcesWithUnreadCount"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source_preferences.is_pinned"
+          ],
+          "new": "bd5e615989b56f897d428dcfbfba525ae11d7770",
+          "query": "FeedItem.selectFeeds"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source_preferences.is_pinned"
+          ],
+          "new": "bd5e615989b56f897d428dcfbfba525ae11d7770",
+          "query": "FeedSource.selectByCategory"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source_preferences.is_pinned"
+          ],
+          "new": "bd5e615989b56f897d428dcfbfba525ae11d7770",
+          "query": "FeedSource.selectFeedUrls"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source_preferences.is_pinned",
+            "feed_source_unread_count.is_pinned"
+          ],
+          "new": "bd5e615989b56f897d428dcfbfba525ae11d7770",
+          "query": "View.getFeedSourcesWithUnreadCount"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source_preferences.notifications_enabled"
+          ],
+          "new": "a6250b43f5ba74493fc2d95da537b9d3f8de42b1",
+          "query": "FeedSource.selectByCategory"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source_preferences.notifications_enabled"
+          ],
+          "new": "a6250b43f5ba74493fc2d95da537b9d3f8de42b1",
+          "query": "FeedSource.selectFeedUrls"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source_preferences.notifications_enabled",
+            "feed_source_unread_count.notifications_enabled"
+          ],
+          "new": "a6250b43f5ba74493fc2d95da537b9d3f8de42b1",
+          "query": "View.getFeedSourcesWithUnreadCount"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source.fetch_failed"
+          ],
+          "new": "f523a7b18e38351afced64c516b89b43133bd5ff",
+          "query": "FeedItem.selectFeeds"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source.fetch_failed"
+          ],
+          "new": "f523a7b18e38351afced64c516b89b43133bd5ff",
+          "query": "FeedSource.selectByCategory"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source.fetch_failed"
+          ],
+          "new": "f523a7b18e38351afced64c516b89b43133bd5ff",
+          "query": "FeedSource.selectFeedSourceById"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source.fetch_failed"
+          ],
+          "new": "f523a7b18e38351afced64c516b89b43133bd5ff",
+          "query": "FeedSource.selectFeedUrls"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source.fetch_failed",
+            "feed_source_unread_count.fetch_failed"
+          ],
+          "new": "f523a7b18e38351afced64c516b89b43133bd5ff",
+          "query": "View.getFeedSourcesWithUnreadCount"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source.website_url"
+          ],
+          "new": "bb6fdee3cd2f32c2152ef6bf0c817c33762a8650",
+          "query": "FeedSource.selectByCategory"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source.website_url"
+          ],
+          "new": "bb6fdee3cd2f32c2152ef6bf0c817c33762a8650",
+          "query": "FeedSource.selectFeedSourceById"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source.website_url"
+          ],
+          "new": "bb6fdee3cd2f32c2152ef6bf0c817c33762a8650",
+          "query": "FeedSource.selectFeedUrls"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "coverage",
+          "missing": [
+            "feed_source.website_url",
+            "feed_source_unread_count.feed_source_website_url"
+          ],
+          "new": "bb6fdee3cd2f32c2152ef6bf0c817c33762a8650",
+          "query": "View.getFeedSourcesWithUnreadCount"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "rehearsal",
+          "missing": [
+            "feed_item.is_blocked"
+          ],
+          "new": "0a45953705fbeaaaedeba92fd0fa33473a66d33e",
+          "query": "View.getCategoriesWithUnreadCount"
+        },
+        {
+          "database": "database/FeedFlowDB",
+          "exact": "rehearsal",
+          "missing": [
+            "feed_item.is_blocked"
+          ],
+          "new": "0a45953705fbeaaaedeba92fd0fa33473a66d33e",
+          "query": "View.getFeedSourcesWithUnreadCount"
+        }
+      ],
+      "individual": {
+        "coverage/0": {
+          "admitted": 892,
+          "queries": 946,
+          "unused_new": 0,
+          "unused_old": 3
+        },
+        "coverage/1": {
+          "admitted": 915,
+          "queries": 946,
+          "unused_new": 2,
+          "unused_old": 3
+        },
+        "coverage/2": {
+          "admitted": 920,
+          "queries": 946,
+          "unused_new": 2,
+          "unused_old": 3
+        },
+        "coverage/4": {
+          "admitted": 920,
+          "queries": 946,
+          "unused_new": 2,
+          "unused_old": 3
+        },
+        "coverage/8": {
+          "admitted": 920,
+          "queries": 946,
+          "unused_new": 2,
+          "unused_old": 3
+        },
+        "coverage/all": {
+          "admitted": 920,
+          "queries": 946,
+          "unused_new": 2,
+          "unused_old": 3
+        },
+        "diff/0": {
+          "admitted": 892,
+          "queries": 946,
+          "unused_new": 0,
+          "unused_old": 3
+        },
+        "diff/1": {
+          "admitted": 927,
+          "queries": 946,
+          "unused_new": 42,
+          "unused_old": 3
+        },
+        "diff/2": {
+          "admitted": 932,
+          "queries": 946,
+          "unused_new": 46,
+          "unused_old": 3
+        },
+        "diff/4": {
+          "admitted": 933,
+          "queries": 946,
+          "unused_new": 46,
+          "unused_old": 3
+        },
+        "diff/8": {
+          "admitted": 933,
+          "queries": 946,
+          "unused_new": 46,
+          "unused_old": 3
+        },
+        "diff/all": {
+          "admitted": 933,
+          "queries": 946,
+          "unused_new": 46,
+          "unused_old": 3
+        },
+        "diff/padded4": {
+          "admitted": 934,
+          "queries": 946,
+          "unused_new": 3732,
+          "unused_old": 3
+        },
+        "rehearsal/0": {
+          "admitted": 892,
+          "queries": 946,
+          "unused_new": 0,
+          "unused_old": 3
+        },
+        "rehearsal/1": {
+          "admitted": 899,
+          "queries": 946,
+          "unused_new": 0,
+          "unused_old": 3
+        },
+        "rehearsal/2": {
+          "admitted": 899,
+          "queries": 946,
+          "unused_new": 0,
+          "unused_old": 3
+        },
+        "rehearsal/4": {
+          "admitted": 899,
+          "queries": 946,
+          "unused_new": 0,
+          "unused_old": 3
+        },
+        "rehearsal/8": {
+          "admitted": 899,
+          "queries": 946,
+          "unused_new": 0,
+          "unused_old": 3
+        },
+        "rehearsal/all": {
+          "admitted": 899,
+          "queries": 946,
+          "unused_new": 0,
+          "unused_old": 3
+        },
+        "rehearsal/padded4": {
+          "admitted": 923,
+          "queries": 946,
+          "unused_new": 3744,
+          "unused_old": 3
+        },
+        "retain": {
+          "admitted": 892,
+          "queries": 946,
+          "unused_new": 0,
+          "unused_old": 3
+        },
+        "source/0": {
+          "admitted": 892,
+          "queries": 946,
+          "unused_new": 0,
+          "unused_old": 3
+        },
+        "source/1": {
+          "admitted": 897,
+          "queries": 946,
+          "unused_new": 0,
+          "unused_old": 3
+        },
+        "source/2": {
+          "admitted": 897,
+          "queries": 946,
+          "unused_new": 0,
+          "unused_old": 3
+        },
+        "source/4": {
+          "admitted": 897,
+          "queries": 946,
+          "unused_new": 0,
+          "unused_old": 3
+        },
+        "source/8": {
+          "admitted": 897,
+          "queries": 946,
+          "unused_new": 0,
+          "unused_old": 3
+        },
+        "source/all": {
+          "admitted": 897,
+          "queries": 946,
+          "unused_new": 0,
+          "unused_old": 3
+        }
+      },
+      "mechanisms": {
+        "edited_existing_only": {
+          "coverage": 0,
+          "diff": 0,
+          "expanded": 8,
+          "rehearsal": 0,
+          "source": 0
+        },
+        "edited_new_resource": {
+          "coverage": 23,
+          "diff": 33,
+          "expanded": 39,
+          "rehearsal": 0,
+          "source": 0
+        },
+        "unchanged_new_resource": {
+          "coverage": 5,
+          "diff": 7,
+          "expanded": 7,
+          "rehearsal": 7,
+          "source": 5
+        }
+      },
+      "methods": {
+        "coverage": {
+          "diagnostics": 0,
+          "exact": 28,
+          "extra_instances": 2,
+          "flag_expanded": 29,
+          "flag_stable": 4,
+          "missed_expansions": 25,
+          "missing_instances": 42,
+          "queue": 33,
+          "required_instances": 76,
+          "retired_alerts": 0
+        },
+        "diff": {
+          "diagnostics": 0,
+          "exact": 40,
+          "extra_instances": 46,
+          "flag_expanded": 41,
+          "flag_stable": 42,
+          "missed_expansions": 13,
+          "missing_instances": 29,
+          "queue": 83,
+          "required_instances": 76,
+          "retired_alerts": 0
+        },
+        "rehearsal": {
+          "diagnostics": 2,
+          "exact": 7,
+          "extra_instances": 0,
+          "flag_expanded": 12,
+          "flag_stable": 2,
+          "missed_expansions": 42,
+          "missing_instances": 64,
+          "queue": 14,
+          "required_instances": 76,
+          "retired_alerts": 0
+        },
+        "source": {
+          "diagnostics": 0,
+          "exact": 5,
+          "extra_instances": 0,
+          "flag_expanded": 5,
+          "flag_stable": 2,
+          "missed_expansions": 49,
+          "missing_instances": 71,
+          "queue": 7,
+          "required_instances": 76,
+          "retired_alerts": 0
+        }
+      },
+      "paired": {
+        "both": 5,
+        "coverage_only": 23,
+        "neither": 24,
+        "rehearsal_only": 2
+      },
+      "shared": {
+        "coverage/0": {
+          "admitted": 124,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 122,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "coverage/1": {
+          "admitted": 127,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 125,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "coverage/2": {
+          "admitted": 127,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 125,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "coverage/4": {
+          "admitted": 127,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 125,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "coverage/8": {
+          "admitted": 127,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 125,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "coverage/all": {
+          "admitted": 127,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 125,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "diff/0": {
+          "admitted": 124,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 122,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "diff/1": {
+          "admitted": 130,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 128,
+          "survivor_total": 131,
+          "unused_new": 1,
+          "unused_old": 1
+        },
+        "diff/2": {
+          "admitted": 130,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 128,
+          "survivor_total": 131,
+          "unused_new": 1,
+          "unused_old": 1
+        },
+        "diff/4": {
+          "admitted": 130,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 128,
+          "survivor_total": 131,
+          "unused_new": 1,
+          "unused_old": 1
+        },
+        "diff/8": {
+          "admitted": 130,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 128,
+          "survivor_total": 131,
+          "unused_new": 1,
+          "unused_old": 1
+        },
+        "diff/all": {
+          "admitted": 130,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 128,
+          "survivor_total": 131,
+          "unused_new": 1,
+          "unused_old": 1
+        },
+        "diff/padded4": {
+          "admitted": 134,
+          "introduced_admitted": 3,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 131,
+          "survivor_total": 131,
+          "unused_new": 102,
+          "unused_old": 1
+        },
+        "rehearsal/0": {
+          "admitted": 124,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 122,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "rehearsal/1": {
+          "admitted": 124,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 122,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "rehearsal/2": {
+          "admitted": 124,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 122,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "rehearsal/4": {
+          "admitted": 124,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 122,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "rehearsal/8": {
+          "admitted": 124,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 122,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "rehearsal/all": {
+          "admitted": 124,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 122,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "rehearsal/padded4": {
+          "admitted": 131,
+          "introduced_admitted": 3,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 128,
+          "survivor_total": 131,
+          "unused_new": 104,
+          "unused_old": 1
+        },
+        "retain": {
+          "admitted": 124,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 122,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "source/0": {
+          "admitted": 124,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 122,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "source/1": {
+          "admitted": 124,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 122,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "source/2": {
+          "admitted": 124,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 122,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "source/4": {
+          "admitted": 124,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 122,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "source/8": {
+          "admitted": 124,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 122,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        },
+        "source/all": {
+          "admitted": 124,
+          "introduced_admitted": 2,
+          "introduced_total": 6,
+          "queries": 137,
+          "survivor_admitted": 122,
+          "survivor_total": 131,
+          "unused_new": 0,
+          "unused_old": 1
+        }
+      }
+    },
+    "shabinder/SpotiFlyer": {
+      "counts": {},
+      "coverage": {
+        "build_tool_transitions": 0,
+        "database_states": 1,
+        "departing_catalog_names": 0,
+        "errors": {},
+        "first_catalog_names": 4
+      },
+      "discordances": [],
+      "individual": {},
+      "mechanisms": {},
+      "methods": {},
+      "paired": {},
+      "shared": {}
+    }
+  },
+  "pooled": {
+    "counts": {
+      "changed_field_clusters": 52,
+      "complete": 77,
+      "edited_expanded": 119,
+      "expanded": 157,
+      "introductions": 99,
+      "native": 16642,
+      "retirements": 25,
+      "survivors": 3732,
+      "transitions": 225,
+      "unsupported_survivors": 461
+    },
+    "discordances": [
+      {
+        "database": "shared/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_item.comments_url"
+        ],
+        "new": "d58c99729f0678196d305f0ec063665cdd62acf8",
+        "query": "FeedItem.selectFeeds"
+      },
+      {
+        "database": "shared/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source.logo_url"
+        ],
+        "new": "19680ff6f0767a4407e1b91b1f6606088bb57fdb",
+        "query": "FeedItem.selectFeeds"
+      },
+      {
+        "database": "shared/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source.logo_url"
+        ],
+        "new": "19680ff6f0767a4407e1b91b1f6606088bb57fdb",
+        "query": "FeedSource.selectFeedUrls"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source_preferences.is_hidden"
+        ],
+        "new": "d680eb31da9ef250afab1cc8514c28e381af8051",
+        "query": "FeedItem.selectFeeds"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source_preferences.is_hidden"
+        ],
+        "new": "d680eb31da9ef250afab1cc8514c28e381af8051",
+        "query": "FeedSource.selectByCategory"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source_preferences.is_hidden"
+        ],
+        "new": "d680eb31da9ef250afab1cc8514c28e381af8051",
+        "query": "FeedSource.selectFeedUrls"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source_preferences.is_hidden",
+          "feed_source_unread_count.is_hidden"
+        ],
+        "new": "d680eb31da9ef250afab1cc8514c28e381af8051",
+        "query": "View.getFeedSourcesWithUnreadCount"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source_preferences.is_pinned"
+        ],
+        "new": "bd5e615989b56f897d428dcfbfba525ae11d7770",
+        "query": "FeedItem.selectFeeds"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source_preferences.is_pinned"
+        ],
+        "new": "bd5e615989b56f897d428dcfbfba525ae11d7770",
+        "query": "FeedSource.selectByCategory"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source_preferences.is_pinned"
+        ],
+        "new": "bd5e615989b56f897d428dcfbfba525ae11d7770",
+        "query": "FeedSource.selectFeedUrls"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source_preferences.is_pinned",
+          "feed_source_unread_count.is_pinned"
+        ],
+        "new": "bd5e615989b56f897d428dcfbfba525ae11d7770",
+        "query": "View.getFeedSourcesWithUnreadCount"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source_preferences.notifications_enabled"
+        ],
+        "new": "a6250b43f5ba74493fc2d95da537b9d3f8de42b1",
+        "query": "FeedSource.selectByCategory"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source_preferences.notifications_enabled"
+        ],
+        "new": "a6250b43f5ba74493fc2d95da537b9d3f8de42b1",
+        "query": "FeedSource.selectFeedUrls"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source_preferences.notifications_enabled",
+          "feed_source_unread_count.notifications_enabled"
+        ],
+        "new": "a6250b43f5ba74493fc2d95da537b9d3f8de42b1",
+        "query": "View.getFeedSourcesWithUnreadCount"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source.fetch_failed"
+        ],
+        "new": "f523a7b18e38351afced64c516b89b43133bd5ff",
+        "query": "FeedItem.selectFeeds"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source.fetch_failed"
+        ],
+        "new": "f523a7b18e38351afced64c516b89b43133bd5ff",
+        "query": "FeedSource.selectByCategory"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source.fetch_failed"
+        ],
+        "new": "f523a7b18e38351afced64c516b89b43133bd5ff",
+        "query": "FeedSource.selectFeedSourceById"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source.fetch_failed"
+        ],
+        "new": "f523a7b18e38351afced64c516b89b43133bd5ff",
+        "query": "FeedSource.selectFeedUrls"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source.fetch_failed",
+          "feed_source_unread_count.fetch_failed"
+        ],
+        "new": "f523a7b18e38351afced64c516b89b43133bd5ff",
+        "query": "View.getFeedSourcesWithUnreadCount"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source.website_url"
+        ],
+        "new": "bb6fdee3cd2f32c2152ef6bf0c817c33762a8650",
+        "query": "FeedSource.selectByCategory"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source.website_url"
+        ],
+        "new": "bb6fdee3cd2f32c2152ef6bf0c817c33762a8650",
+        "query": "FeedSource.selectFeedSourceById"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source.website_url"
+        ],
+        "new": "bb6fdee3cd2f32c2152ef6bf0c817c33762a8650",
+        "query": "FeedSource.selectFeedUrls"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "coverage",
+        "missing": [
+          "feed_source.website_url",
+          "feed_source_unread_count.feed_source_website_url"
+        ],
+        "new": "bb6fdee3cd2f32c2152ef6bf0c817c33762a8650",
+        "query": "View.getFeedSourcesWithUnreadCount"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "rehearsal",
+        "missing": [
+          "feed_item.is_blocked"
+        ],
+        "new": "0a45953705fbeaaaedeba92fd0fa33473a66d33e",
+        "query": "View.getCategoriesWithUnreadCount"
+      },
+      {
+        "database": "database/FeedFlowDB",
+        "exact": "rehearsal",
+        "missing": [
+          "feed_item.is_blocked"
+        ],
+        "new": "0a45953705fbeaaaedeba92fd0fa33473a66d33e",
+        "query": "View.getFeedSourcesWithUnreadCount"
+      },
+      {
+        "database": "shared/ReaderDatabase",
+        "exact": "coverage",
+        "missing": [
+          "post.bookmarked"
+        ],
+        "new": "83a959d8a297457fba04dd9cce9473cca8b904f4",
+        "query": "Post.postWithMetadata"
+      },
+      {
+        "database": "shared/ReaderDatabase",
+        "exact": "coverage",
+        "missing": [
+          "post.commentslink"
+        ],
+        "new": "47b67378645c09c9e35d07ea3f17631956289818",
+        "query": "Post.featuredPosts"
+      },
+      {
+        "database": "shared/ReaderDatabase",
+        "exact": "coverage",
+        "missing": [
+          "post.commentslink"
+        ],
+        "new": "47b67378645c09c9e35d07ea3f17631956289818",
+        "query": "Post.posts"
+      },
+      {
+        "database": "shared/ReaderDatabase",
+        "exact": "coverage",
+        "missing": [
+          "post.read"
+        ],
+        "new": "78752d05f14e755d438b70da29b30671bef1112b",
+        "query": "Post.featuredPosts"
+      },
+      {
+        "database": "shared/ReaderDatabase",
+        "exact": "coverage",
+        "missing": [
+          "post.read"
+        ],
+        "new": "78752d05f14e755d438b70da29b30671bef1112b",
+        "query": "Post.posts"
+      },
+      {
+        "database": "shared/ReaderDatabase",
+        "exact": "coverage",
+        "missing": [
+          "feed.lastcleanupat"
+        ],
+        "new": "4fcabd58d72904552a2966ab47580e3dc2f8a762",
+        "query": "Feed.feedsPaginated"
+      },
+      {
+        "database": "shared/ReaderDatabase",
+        "exact": "coverage",
+        "missing": [
+          "feedgroup.pinnedat"
+        ],
+        "new": "8b6257445b57860740e5eead7dbcb705fd4de05d",
+        "query": "FeedGroup.groups"
+      },
+      {
+        "database": "shared/ReaderDatabase",
+        "exact": "coverage",
+        "missing": [
+          "feedgroup.pinnedposition"
+        ],
+        "new": "e526e48006b9ff5de3e69d47306826b5bf204dab",
+        "query": "FeedGroup.groups"
+      }
+    ],
+    "individual": {
+      "coverage/0": {
+        "admitted": 3575,
+        "queries": 3732,
+        "unused_new": 0,
+        "unused_old": 20
+      },
+      "coverage/1": {
+        "admitted": 3638,
+        "queries": 3732,
+        "unused_new": 10,
+        "unused_old": 20
+      },
+      "coverage/2": {
+        "admitted": 3646,
+        "queries": 3732,
+        "unused_new": 10,
+        "unused_old": 20
+      },
+      "coverage/4": {
+        "admitted": 3647,
+        "queries": 3732,
+        "unused_new": 11,
+        "unused_old": 20
+      },
+      "coverage/8": {
+        "admitted": 3647,
+        "queries": 3732,
+        "unused_new": 11,
+        "unused_old": 20
+      },
+      "coverage/all": {
+        "admitted": 3647,
+        "queries": 3732,
+        "unused_new": 11,
+        "unused_old": 20
+      },
+      "diff/0": {
+        "admitted": 3575,
+        "queries": 3732,
+        "unused_new": 0,
+        "unused_old": 20
+      },
+      "diff/1": {
+        "admitted": 3668,
+        "queries": 3732,
+        "unused_new": 143,
+        "unused_old": 20
+      },
+      "diff/2": {
+        "admitted": 3691,
+        "queries": 3732,
+        "unused_new": 167,
+        "unused_old": 20
+      },
+      "diff/4": {
+        "admitted": 3693,
+        "queries": 3732,
+        "unused_new": 178,
+        "unused_old": 20
+      },
+      "diff/8": {
+        "admitted": 3693,
+        "queries": 3732,
+        "unused_new": 178,
+        "unused_old": 20
+      },
+      "diff/all": {
+        "admitted": 3693,
+        "queries": 3732,
+        "unused_new": 178,
+        "unused_old": 20
+      },
+      "diff/padded4": {
+        "admitted": 3706,
+        "queries": 3732,
+        "unused_new": 14754,
+        "unused_old": 20
+      },
+      "rehearsal/0": {
+        "admitted": 3575,
+        "queries": 3732,
+        "unused_new": 0,
+        "unused_old": 20
+      },
+      "rehearsal/1": {
+        "admitted": 3614,
+        "queries": 3732,
+        "unused_new": 0,
+        "unused_old": 20
+      },
+      "rehearsal/2": {
+        "admitted": 3616,
+        "queries": 3732,
+        "unused_new": 0,
+        "unused_old": 20
+      },
+      "rehearsal/4": {
+        "admitted": 3617,
+        "queries": 3732,
+        "unused_new": 0,
+        "unused_old": 20
+      },
+      "rehearsal/8": {
+        "admitted": 3617,
+        "queries": 3732,
+        "unused_new": 0,
+        "unused_old": 20
+      },
+      "rehearsal/all": {
+        "admitted": 3617,
+        "queries": 3732,
+        "unused_new": 0,
+        "unused_old": 20
+      },
+      "rehearsal/padded4": {
+        "admitted": 3655,
+        "queries": 3732,
+        "unused_new": 14812,
+        "unused_old": 20
+      },
+      "retain": {
+        "admitted": 3575,
+        "queries": 3732,
+        "unused_new": 0,
+        "unused_old": 20
+      },
+      "source/0": {
+        "admitted": 3575,
+        "queries": 3732,
+        "unused_new": 0,
+        "unused_old": 20
+      },
+      "source/1": {
+        "admitted": 3612,
+        "queries": 3732,
+        "unused_new": 0,
+        "unused_old": 20
+      },
+      "source/2": {
+        "admitted": 3614,
+        "queries": 3732,
+        "unused_new": 0,
+        "unused_old": 20
+      },
+      "source/4": {
+        "admitted": 3615,
+        "queries": 3732,
+        "unused_new": 0,
+        "unused_old": 20
+      },
+      "source/8": {
+        "admitted": 3615,
+        "queries": 3732,
+        "unused_new": 0,
+        "unused_old": 20
+      },
+      "source/all": {
+        "admitted": 3615,
+        "queries": 3732,
+        "unused_new": 0,
+        "unused_old": 20
+      }
+    },
+    "mechanisms": {
+      "edited_existing_only": {
+        "coverage": 0,
+        "diff": 0,
+        "expanded": 28,
+        "rehearsal": 0,
+        "source": 0
+      },
+      "edited_new_resource": {
+        "coverage": 35,
+        "diff": 68,
+        "expanded": 91,
+        "rehearsal": 4,
+        "source": 4
+      },
+      "unchanged_new_resource": {
+        "coverage": 36,
+        "diff": 38,
+        "expanded": 38,
+        "rehearsal": 38,
+        "source": 36
+      }
+    },
+    "methods": {
+      "coverage": {
+        "diagnostics": 0,
+        "exact": 71,
+        "extra_instances": 11,
+        "flag_expanded": 94,
+        "flag_stable": 15,
+        "missed_expansions": 63,
+        "missing_instances": 116,
+        "queue": 113,
+        "required_instances": 200,
+        "retired_alerts": 4
+      },
+      "diff": {
+        "diagnostics": 0,
+        "exact": 106,
+        "extra_instances": 178,
+        "flag_expanded": 126,
+        "flag_stable": 134,
+        "missed_expansions": 31,
+        "missing_instances": 66,
+        "queue": 267,
+        "required_instances": 200,
+        "retired_alerts": 7
+      },
+      "rehearsal": {
+        "diagnostics": 28,
+        "exact": 42,
+        "extra_instances": 0,
+        "flag_expanded": 68,
+        "flag_stable": 4,
+        "missed_expansions": 89,
+        "missing_instances": 149,
+        "queue": 75,
+        "required_instances": 200,
+        "retired_alerts": 3
+      },
+      "source": {
+        "diagnostics": 0,
+        "exact": 40,
+        "extra_instances": 0,
+        "flag_expanded": 61,
+        "flag_stable": 6,
+        "missed_expansions": 96,
+        "missing_instances": 156,
+        "queue": 70,
+        "required_instances": 200,
+        "retired_alerts": 3
+      }
+    },
+    "paired": {
+      "both": 40,
+      "coverage_only": 31,
+      "neither": 84,
+      "rehearsal_only": 2
+    },
+    "shared": {
+      "coverage/0": {
+        "admitted": 991,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 984,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "coverage/1": {
+        "admitted": 1003,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 996,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "coverage/2": {
+        "admitted": 1003,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 996,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "coverage/4": {
+        "admitted": 1003,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 996,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "coverage/8": {
+        "admitted": 1003,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 996,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "coverage/all": {
+        "admitted": 1003,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 996,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "diff/0": {
+        "admitted": 991,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 984,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "diff/1": {
+        "admitted": 1006,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 999,
+        "survivor_total": 1002,
+        "unused_new": 1,
+        "unused_old": 1
+      },
+      "diff/2": {
+        "admitted": 1006,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 999,
+        "survivor_total": 1002,
+        "unused_new": 1,
+        "unused_old": 1
+      },
+      "diff/4": {
+        "admitted": 1006,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 999,
+        "survivor_total": 1002,
+        "unused_new": 1,
+        "unused_old": 1
+      },
+      "diff/8": {
+        "admitted": 1006,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 999,
+        "survivor_total": 1002,
+        "unused_new": 1,
+        "unused_old": 1
+      },
+      "diff/all": {
+        "admitted": 1006,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 999,
+        "survivor_total": 1002,
+        "unused_new": 1,
+        "unused_old": 1
+      },
+      "diff/padded4": {
+        "admitted": 1010,
+        "introduced_admitted": 8,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 1002,
+        "survivor_total": 1002,
+        "unused_new": 222,
+        "unused_old": 1
+      },
+      "rehearsal/0": {
+        "admitted": 991,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 984,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "rehearsal/1": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "rehearsal/2": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "rehearsal/4": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "rehearsal/8": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "rehearsal/all": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "rehearsal/padded4": {
+        "admitted": 1007,
+        "introduced_admitted": 8,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 999,
+        "survivor_total": 1002,
+        "unused_new": 224,
+        "unused_old": 1
+      },
+      "retain": {
+        "admitted": 991,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 984,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "source/0": {
+        "admitted": 991,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 984,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "source/1": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "source/2": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "source/4": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "source/8": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      },
+      "source/all": {
+        "admitted": 1000,
+        "introduced_admitted": 7,
+        "introduced_total": 21,
+        "queries": 1023,
+        "survivor_admitted": 993,
+        "survivor_total": 1002,
+        "unused_new": 0,
+        "unused_old": 1
+      }
+    }
+  },
+  "protocol": "a5ebb6bba5729c6250179d7b82b9bdcdda012d6f"
+}

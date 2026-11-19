@@ -14,6 +14,8 @@ The command reads the v0.18.0 query sources and v0.19.0 schema definitions. It c
 
 For a second way to build the queue, append **--method coverage**. This rule flags a previously read field that disappears or a growing relation whose old columns were all read. On the example it flags the same ten names, identifying **mangas** as a growing relation. It uses the old footprints and the schema inventories without executing the old SQL against the planned schema. An explicitly enumerated projection can cover all old fields yet ignore a later addition. The executable pair in **test_review.py** shows this limit.
 
+Use **--method source** for old projection-wildcard and view analysis, or **--method diff** for added resources on touched relations. Coverage, source and diff output predicted field names. Source abstentions identify unresolved projections. The [held-out study](../migrations/README.md) tests the four alert formats and enforces their predictions under individual and shared accounts.
+
 For an application using the same named SQLDelight read conventions, point the reviewer at its old source directory and a file containing the planned SQLite DDL.
 
 ~~~sh
