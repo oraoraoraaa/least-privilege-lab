@@ -1,6 +1,6 @@
 # /// script
 # requires-python = ">=3.12,<3.13"
-# dependencies = ["apsw==3.53.1.0"]
+# dependencies = ["apsw==3.53.1.0", "sqlglot==27.29.0"]
 # ///
 """List old named reads that need review under a planned SQLite schema."""
 import argparse
@@ -42,7 +42,7 @@ def main():
     schema = p.add_mutually_exclusive_group()
     schema.add_argument("--next-ddl",type=Path,help="Planned SQLite DDL file")
     schema.add_argument("--next-dir",type=Path,help="Planned SQLDelight definitions (schema sections only)")
-    p.add_argument("--method", choices=("rehearsal", "coverage"), default="rehearsal",
+    p.add_argument("--method", choices=("rehearsal", "coverage", "source", "diff"), default="rehearsal",
                    help="Prepare the old queries on the planned schema or compare column inventories")
     args=p.parse_args()
     if args.example:
@@ -61,8 +61,17 @@ def main():
     if args.method == "coverage":
         report = {"old_named_reads": len(old.queries),
                   "alerts": coverage_alerts(old.db.universe, planned.universe, old.reads)}
-    else:
+    elif args.method == "rehearsal":
         report = migration_report(old,planned)
+    else:
+        report = {"old_named_reads": len(old.queries), "alerts": {}}
+    if args.method != "rehearsal":
+        from predict import predicted_fields
+        for name, methods in predicted_fields(old, planned, (args.method,)).items():
+            row = methods[args.method]
+            if row["flag"]:
+                report["alerts"].setdefault(name, {}).update(
+                    added_reads=row["added"], removed_reads=row["removed"], diagnostic=row["error"])
     print(json.dumps(report,indent=2,sort_keys=True))
     old.db.db.close()
     planned.db.close()

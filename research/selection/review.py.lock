@@ -3,7 +3,10 @@ revision = 5
 requires-python = ">=3.12, <3.13"
 
 [manifest]
-requirements = [{ name = "apsw", specifier = "==3.53.1.0" }]
+requirements = [
+    { name = "apsw", specifier = "==3.53.1.0" },
+    { name = "sqlglot", specifier = "==27.29.0" },
+]
 
 [[package]]
 name = "apsw"
@@ -24,4 +27,13 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/50/9c/51e1b8b075d92660a7375ac7d2dda89a31f196e051cf4353f98b820e8603/apsw-3.53.1.0-cp312-cp312-win32.whl", hash = "sha256:e526dadd9544885c47dfd9179cae6c37aed81b303ab962afe085be840d6d0993", size = 2909476, upload-time = "2026-05-05T18:48:38.721Z" },
     { url = "https://files.pythonhosted.org/packages/57/3d/ee6bfbe2dac4b3d2735083e2e3f781d388ffa4445830eb180fda193169f5/apsw-3.53.1.0-cp312-cp312-win_amd64.whl", hash = "sha256:8a97dd446862cc28c4c2b611413cb9ea994dda8fb9d6e2d7a4239bfda09ce347", size = 3220782, upload-time = "2026-05-05T18:48:40.786Z" },
     { url = "https://files.pythonhosted.org/packages/2c/d1/c875f4a521d717f1effaaf36c9456a42a525d1f46e23ee4a74b60b200ba4/apsw-3.53.1.0-cp312-cp312-win_arm64.whl", hash = "sha256:56e1ad4847adc0f785dff374004c4cd9bfb095470f6ba60063758ab9df08fc43", size = 2875529, upload-time = "2026-05-05T18:48:42.393Z" },
+]
+
+[[package]]
+name = "sqlglot"
+version = "27.29.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d1/50/766692a83468adb1bde9e09ea524a01719912f6bc4fdb47ec18368320f6e/sqlglot-27.29.0.tar.gz", hash = "sha256:2270899694663acef94fa93497971837e6fadd712f4a98b32aee1e980bc82722", size = 5503507, upload-time = "2025-10-29T13:50:24.594Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9b/70/20c1912bc0bfebf516d59d618209443b136c58a7cff141afa7cf30969988/sqlglot-27.29.0-py3-none-any.whl", hash = "sha256:9a5ea8ac61826a7763de10cad45a35f0aa9bfcf7b96ee74afb2314de9089e1cb", size = 526060, upload-time = "2025-10-29T13:50:22.061Z" },
 ]

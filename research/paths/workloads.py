@@ -64,6 +64,8 @@ class Instrument:
         self.universe = {t.lower() + "." + c[1].lower() for t in tables
                          for c in self.db.execute("select * from pragma_table_info(?)", (t,))}
         self.universe.update(t.lower() + ".@row" for t in tables)
+        self.view_definitions = dict(self.db.execute(
+            "select lower(name), sql from sqlite_schema where type='view'")) if include_views else {}
         self.allowed = None
         self.trace = set()
         self.db.authorizer = self._authorize
