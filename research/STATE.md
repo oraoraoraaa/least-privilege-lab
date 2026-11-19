@@ -26,7 +26,13 @@ Work on `research/classroom-replay`. Keep this long-lived branch on origin. Its 
 | `c0d069f` | How sensitive were the outcomes to a neighbor baseline and a stricter join-family definition? |
 | `cbadd99`, `305bd2b` | What happened to native policies after duplicate removal and to matched scores on exercised grants? |
 
-### Independent checkout verification · 2026-11-20
+### Final manuscript verification · 2026-11-20
+
+Fresh GitHub checkouts of `8be128e2cabc496762963d2c4eb664b05facaf11` ran both `sh research/reproduce.sh` and `make paper` on macOS arm64 and Arch Linux x86-64. Each verified 312 decisions against Cedar, the exact subsampling distribution, eight registry proposals, 259 SQL statements and 15,084 native candidate executions. All eight SQL archive files agreed exactly after decompression where applicable. Both hosts regenerated the committed figure PDFs and LaTeX table bodies byte-for-byte. Both clean typesetting runs resolved references with no warnings or overflowing boxes.
+
+The macOS PDF reproduced the committed file byte-for-byte (SHA-256 `d6d5d96ebd90e997aff69d4462f0685ca8e10601484e29765ad6b827004506e9`). Arch produced a different PDF binary (SHA-256 `28f72f05d28a35df992317c730af57577261c65830ad43b2a155c031aa855bb7`). On one host, Poppler extracted identical text tokens from both and rendered all eight page pairs pixel-identically at 95 dpi. The branch contains the finished manuscript and reproducibility package. Formal submission and peer review are separate events.
+
+### Earlier checkout verification · 2026-11-20
 
 Both machines cloned `research/classroom-replay` from GitHub at `52607e7df8421512cb329c4055a4bb006ca5827b` and ran `sh research/reproduce.sh` with the default upstream fetch. Each reproduced the classroom TSV and JSON archives byte-for-byte, passed the exact-count regression and six refiner regression tests, then reproduced all eight registry proposals and scores. Both checkouts were clean after the run.
 
