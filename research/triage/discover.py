@@ -1,4 +1,5 @@
 """Rediscover the three prospective cohorts without reading query outcomes."""
+
 from concurrent.futures import ThreadPoolExecutor
 from hashlib import sha1, sha256
 from pathlib import Path
@@ -13,9 +14,17 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 CACHE = ROOT / "build/triage"
 PROJECTS = {
-    "ACINQ/phoenix": ("f3a227624c2ab262351a5261a5e4a1c6bdfc4887", "phoenix-shared", ["appdb", "channelsdb", "paymentsdb"]),
+    "ACINQ/phoenix": (
+        "f3a227624c2ab262351a5261a5e4a1c6bdfc4887",
+        "phoenix-shared",
+        ["appdb", "channelsdb", "paymentsdb"],
+    ),
     "saket/press": ("5f64350ec51402f3e6aeff145cbc35438780a03c", "shared", [""]),
-    "cashapp/zipline": ("9bc5139c4b86ecf65b7be12242745f69bee83128", "zipline-loader", [""]),
+    "cashapp/zipline": (
+        "9bc5139c4b86ecf65b7be12242745f69bee83128",
+        "zipline-loader",
+        [""],
+    ),
 }
 
 
@@ -51,23 +60,53 @@ def discover(project):
     repo = CACHE / (project.split("/")[1] + ".git")
     CACHE.mkdir(parents=True, exist_ok=True)
     if not repo.exists():
-        run(["git", "clone", "--bare", "--filter=blob:none", "--no-tags",
-             f"https://github.com/{project}.git", str(repo)], check=True)
+        run(
+            [
+                "git",
+                "clone",
+                "--bare",
+                "--filter=blob:none",
+                "--no-tags",
+                f"https://github.com/{project}.git",
+                str(repo),
+            ],
+            check=True,
+        )
 
     def git(*args):
-        return check_output(["git", "--git-dir", str(repo), *args]).decode().splitlines()
+        return (
+            check_output(["git", "--git-dir", str(repo), *args]).decode().splitlines()
+        )
 
     by_db, objects = {}, {}
     for name in names:
         prefix = module + "/src/commonMain/sqldelight/" + (name + "/" if name else "")
-        revisions = git("log", "--first-parent", "--diff-merges=first-parent", "--no-renames",
-                        "--reverse", "--no-patch", "--format=%H", head, "--", prefix)
+        revisions = git(
+            "log",
+            "--first-parent",
+            "--diff-merges=first-parent",
+            "--no-renames",
+            "--reverse",
+            "--no-patch",
+            "--format=%H",
+            head,
+            "--",
+            prefix,
+        )
         steps = []
         previous = {}
         for rev in revisions:
             files = {}
             config = {}
-            for entry in git("ls-tree", "-r", rev, "--", prefix, module+"/build.gradle", module+"/build.gradle.kts"):
+            for entry in git(
+                "ls-tree",
+                "-r",
+                rev,
+                "--",
+                prefix,
+                module + "/build.gradle",
+                module + "/build.gradle.kts",
+            ):
                 meta, path = entry.split("\t", 1)
                 oid = meta.split()[2]
                 if path.endswith((".sq", ".sqm")):
@@ -106,7 +145,7 @@ def discover(project):
                     digest = lookup[oid]
                     step[key][path] = digest
                     provenance.setdefault(digest, objects[oid])
-    print(project, {k:len(v) for k,v in by_db.items()}, flush=True)
+    print(project, {k: len(v) for k, v in by_db.items()}, flush=True)
     return project, dict(head=head, databases=by_db, inputs=provenance)
 
 

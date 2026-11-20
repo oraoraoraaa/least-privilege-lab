@@ -2,7 +2,11 @@
 
 Work on `research/classroom-replay`. Keep this long-lived branch on origin. Its starting point is `1d653242eb5ab29507982c216dbe68b5d8c310ba` on main. Codex owns the research questions, methods, checks and manuscript on this branch. The user can supply resources when needed. The academic roadmap on main is separate.
 
-## Current revision · Five held-out project histories
+## Current revision · Prospective test of selective rehearsal
+
+Read the [updated manuscript](../paper/paper.pdf) and the [replication evidence guide](triage/README.md). The [plan](triage/PLAN.md) was frozen at 8ac30a2 and the implementation published at d872bbc before scoring. The fresh histories refuted exact equivalence and a cold-cache speed advantage. The study recovers the two search-heavy catalogs, checks whole-upgrade outcomes, exercises generated SQL in two published releases and uses Phoenix’s documented Android export choice to separate internal access from recipient permission. The branch-wide reproduction includes all generations.
+
+## Previous revision · Five held-out project histories
 
 Start with [the revised paper](../paper/paper.pdf), the [migration evidence guide](migrations/README.md) and the [protocol](migrations/PROTOCOL.md) published at a5ebb6b. The method and development gates were pushed at b1b95c4 before held-out native scoring. The [compatibility record](migrations/CORRECTIONS.md) documents subsequent import changes. The root reproduction script now includes the complete extension. Rebuild all manuscript tables and figures with `make paper`.
 

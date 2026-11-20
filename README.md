@@ -4,7 +4,9 @@ This branch studies least-privilege database policies across query variants and 
 
 **[Read the paper (PDF)](paper/paper.pdf)** · [LaTeX source](paper/paper.tex) · [Try the migration reviewer](research/selection/README.md) · [Research history and handoff](research/STATE.md)
 
-The revised [five-project study](research/migrations/README.md) measures which new database reads a reviewer can predict before seeing the next query. In 157 held-out expansions a table diff named all and only the needed fields 106 times, full-column coverage 71 times, and old-query rehearsal 42 times. Rehearsal uniquely recovered a new filter dependency for two FeedFlow queries using changed views. On 77 complete database transitions, keeping old access admitted 991 of 1,023 statements. An uncapped table diff admitted 1,006 with one unused new grant. Padding the diff to four admitted 1,010 with 222 unused additions. The [protocol](research/migrations/PROTOCOL.md), [coverage ledger and decisions](research/migrations/results/) and [import corrections](research/migrations/CORRECTIONS.md) accompany the paper.
+The [selective rehearsal study](research/triage/README.md) tests a rule derived on five projects against three fresh histories. Across 425 old queries it matched full rehearsal’s predicted fields 421 times and missed all 18 native error messages. It took longer in cold-cache timings on both hosts. An extended model recovers all 148 previously incomplete search-heavy transitions. The study also executes shipped Zipline SQL and checks the permission boundary of Phoenix’s Android CSV export. See the [frozen plan](research/triage/PLAN.md) and [per-query evidence](research/triage/results/).
+
+The [original five-project study](research/migrations/README.md) supplies the discovery cohort for the selective rule. The original protocols, results and earlier experiments remain reproducible.
 
 **面向最小权限原则的访问控制策略优化设计与实现**
 

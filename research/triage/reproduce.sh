@@ -7,6 +7,7 @@ trap 'rm -rf "$scratch"' EXIT
 run_python() {
   uv run --python 3.12 --with apsw==3.53.1.0 --with sqlglot==27.29.0 python -B "$@"
 }
+run_python research/triage/test_rule.py
 uv run --locked --script research/triage/fresh.py "$scratch/fresh.json.gz"
 run_python research/triage/audit.py "$scratch"
 run_python research/triage/witnesses.py "$scratch/witnesses.json.gz"

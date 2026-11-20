@@ -27,6 +27,8 @@ Alternatively supply **--next-dir** with SQLDelight definitions. The reviewer us
 
 The loader supports the named SELECT and WITH programs, Kotlin type adapters and bound parameter shapes exercised by these applications. It skips named writes, binds values to one, and uses one element for collection parameters. A closed per-query permission set covers table and view reads reported by SQLite. A deployed application may use a different compiler, parameter shape or enforcement boundary. An edit confined to the next version's SQL can introduce a read while rehearsal stays quiet.
 
+The [selective method](../triage/README.md) runs the native preflight only on old names whose read footprint touched a changed or removed view. Run the same command with `--method selective`. The output lists the names rehearsed and unsupported old names. The other names use the projection-wildcard predictor.
+
 ## Reproduce and audit
 
 Run **sh research/selection/reproduce.sh** for the extension. It checks reviewer regressions, fetches digest-pinned source files and two x86-64 release packages, prepares all in-scope queries, and compares every evidence file. The published packages total about 54 MiB. Inputs stay in the ignored build directory. To retain a separate output directory, run the following.

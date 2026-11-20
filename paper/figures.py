@@ -169,3 +169,5 @@ if __name__ == "__main__":
     selection_results()
     from migration_figures import build
     build(write_table, save)
+    from triage_tables import build as triage_tables
+    triage_tables(write_table)
