@@ -1,6 +1,6 @@
 # Which SQL Migrations Need Rehearsal?
 
-[Read the manuscript](paper.pdf) or inspect its [LaTeX source](paper.tex). Run `sh research/reproduce.sh` followed by `make paper` at the repository root. The build uses the committed measurements, locked Python plotting environment and pdfLaTeX.
+[Read the manuscript](paper.pdf) or inspect its [LaTeX source](paper.tex), or [browse all paper versions](versions/README.md). Run `sh research/reproduce.sh` followed by `make paper` at the repository root. The build uses the committed measurements, locked Python plotting environment and pdfLaTeX.
 
 The [prospective replication](../research/triage/README.md) documents the frozen rule, fresh histories, search-aware resource model, release and Android disclosure checks. The [archived observations](../research/triage/results/) feed the new manuscript tables through `triage_tables.py`. Raw machine timings sit beside the deterministic evidence. The [original migration archive](../research/migrations/README.md) feeds the discovery table. The [five-project manuscript at c175c8c](https://github.com/oraoraoraaa/least-privilege-lab/blob/c175c8ce7b49d76d055f9baa28659630a8cbb00e/paper/paper.pdf) contains the earlier per-query and shared-policy tradeoff figure.
 

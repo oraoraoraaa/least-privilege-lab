@@ -2,7 +2,7 @@
 
 This branch studies least-privilege database policies across query variants and application upgrades. It contains a Java grant reviewer, a checked policy refiner, a SQL migration reviewer, and the source and evidence for the research paper.
 
-**[Read the paper (PDF)](paper/paper.pdf)** · [LaTeX source](paper/paper.tex) · [Try the migration reviewer](research/selection/README.md) · [Research history and handoff](research/STATE.md)
+**[Read the paper (PDF)](paper/paper.pdf)** · [LaTeX source](paper/paper.tex) · [Browse all paper versions](paper/versions/README.md) · [Try the migration reviewer](research/selection/README.md) · [Research history and handoff](research/STATE.md)
 
 The [selective rehearsal study](research/triage/README.md) tests a rule derived on five projects against three fresh histories. Across 425 old queries it matched full rehearsal’s predicted fields 421 times and missed all 18 native error messages. It took longer in cold-cache timings on both hosts. An extended model recovers all 148 previously incomplete search-heavy transitions. The study also executes shipped Zipline SQL and checks the permission boundary of Phoenix’s Android CSV export. See the [frozen plan](research/triage/PLAN.md) and [per-query evidence](research/triage/results/).
 

@@ -1,0 +1,122 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,booktabs,graphicx,xcolor}
+\usepackage[margin=24mm,top=21mm,bottom=22mm]{geometry}
+\usepackage[colorlinks=true,linkcolor=teal!55!black,citecolor=teal!55!black,urlcolor=teal!55!black]{hyperref}
+\hypersetup{pdftitle={Which SQL Migrations Need Rehearsal?}}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\raggedbottom
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{2pt}
+\setlength{\belowcaptionskip}{4pt}
+\emergencystretch=1em
+\graphicspath{{paper/figures/}}
+\input{paper/tables/migrationprojects.tex}
+\input{paper/tables/migrationfields.tex}
+\input{paper/tables/migrationaccounts.tex}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\archive}{\href{https://github.com/oraoraoraaa/least-privilege-lab/tree/research/classroom-replay/research/migrations}{migration archive}}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries Which SQL Migrations Need Rehearsal?\par}
+\vspace{4pt}
+{\large Predicting new column reads and enforcing a shared read policy\par}
+\vspace{6pt}
+{\small Empirical study \enspace$\cdot$\enspace November 2026}
+\end{center}
+
+\begin{abstract}
+Rebuilding an unchanged lookup in Mihon made it read a user's private notes. We ask what a reviewer could predict from the old program and the planned schema. We froze four predictors before testing five additional SQLDelight project histories. Across 225 database transitions, 157 supported surviving queries acquired reads. A broad table diff named the exact added set in 106 cases, cached full-column coverage in 71, and old-query rehearsal in 42. Rehearsal produced zero extra predicted fields on the supported survivors. Its two exclusive successes against coverage came from the same changed predicate in two FeedFlow views. In 77 transitions with complete catalogs, we enforced one read policy per database. Retaining old access admitted 991 of 1,023 next queries. Uncapped diff admitted 1,006 with one unused new grant. Padded diff admitted 1,010 with 222. The strongest field predictor, the smallest review queue and the policy preserving the most queries answer different operational questions.
+\end{abstract}
+
+\section{A lookup that changed after rebuilding}
+Across Mihon v0.18.0 and v0.19.0 the SQLDelight source for \code{getMangaById} selected a full row by ID. The next schema added \code{mangas.notes}. We identified one matching full projection in each official x86-64 Android package. Both shipped SQL strings list their columns explicitly. We ran both strings on the \emph{same} v0.19.0 schema populated with a known title and note. Under the old grant set, the old literal returned the title and SQLite denied the new literal. Adding only the notes grant let the new literal return the title and the exact fixture note. The old literal still omitted the note with that grant available. The archive records the package and literal digests, returned values and denial.
+
+The released repository method calls the generated lookup and maps its row into a manga object. The notes screen initializes its state from that object's notes field~\cite{mihon}. These sources connect the witness to a user-facing feature. We executed the database operation in a fixture. Device-level invocation frequency and decisions by a data owner remain unmeasured.
+
+A migration reviewer can diff schemas, inspect records of earlier reads, inspect old query text, or prepare old SQL on planned definitions. We evaluate two decisions separately. First, can the reviewer name the exact additional fields of the next query? Second, which next statements will run when the proposed grants are installed once for a shared account?
+
+\paragraph{A different limit on fixed schemas.} The earlier study in this artifact used 259 JOB and STATS benchmark queries to test staging a sibling on an unchanged schema. At the primary matched-excess operating point, removing cases with identical staged and hidden footprints erased the entire JOB advantage. The rankings tied on all 107 remaining informative folds. For STATS, even choosing the better of two staged policies in hindsight admitted only 20.8\% of the eligible informative comparisons under four additional grants. These results constrain a different prediction problem. The classroom replay and registry drill provide finite examples of how missing observations can hide a legitimate action.
+
+\paragraph{Relation to schema-impact analysis.} Static impact analysis recovers dependencies between application queries and database schema elements~\cite{maule}. Hecataeus follows changes through relations, views and queries~\cite{hecataeus}. Our comparison measures the exact new authorization requests of rebuilt queries and the decisions of installed policies. The source-star rule represents one inexpensive use of syntax. Full semantic analysis of planned view definitions could recover a dependency that our old-source rule misses. We have no comparative runtime or developer-time evidence to price that alternative.
+
+\newpage
+\section{How we tested predictions}
+\paragraph{Histories.} Tivi and Mihon were development cases. After those results and the initial field-coverage comparison were known, we published the \href{https://github.com/oraoraoraaa/least-privilege-lab/blob/a5ebb6bba5729c6250179d7b82b9bdcdda012d6f/research/migrations/PROTOCOL.md}{protocol} and froze the predictors before scoring five independently authored projects. We selected public applications with accessible SQLDelight source and history. For each pinned mainline we started from the last state before 2023, or its first available database, and followed production SQL or schema-input changes through December 2025. Query-only edits count. We used the module's database declaration and resolved source dependencies. We preserved a quiet project and excluded three transitions of a build-time generator from application results. A transition in this analysis belongs to one declared database. One source commit can affect several declarations. The histories include changes between shipped releases.
+
+\begin{table}[h]\centering\small
+\caption{Held-out histories. Complete counts transitions with every named read supported on both sides. Survivors are supported name pairs. The final four columns count exact field predictions among expansions. A dash denotes no expansions to score.}
+\begin{tabular}{@{}lrrrrrrrr@{}}\toprule
+ & DB steps & Complete & Survivors & Expand & Diff & Coverage & Stars & Rehearsal\\\midrule
+\migrationprojectsrows\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Inputs.} SQLite's authorizer collects distinct read requests at statement preparation, including projection, join, filter, view and underlying table resources~\cite{sqlite}. The finite inventory contains declared columns and a table-only read marker. The importer builds empty SQLite databases, removes SQLDelight type adapters and binds scalar or one-element collection parameters to one. The ledger records unsupported operations. We verified Twine's typed FTS5 declaration conversion against its checked-in compiled schema. Hidden FTS fields, implicit row identifiers and unsupported callbacks still exclude queries. The public correction record dates importer repairs after the first coverage audit.
+
+\paragraph{Four forecasts.} Table diff proposes added resources of any relation the old query touched. Coverage narrows additions to a growing relation on which the query previously read every declared field. Stars examines projection wildcards in old SQL and old views, resolves aliases and nested scopes, and distinguishes \code{COUNT(*)} from projecting a full row. Unresolved projections abstain. Rehearsal asks the native authorizer which extra fields old SQL requests on the planned schema. A prepare error places the query in the queue and predicts no fields. The other methods also flag disappearing old resources. The scorer alone sees the next query.
+
+\paragraph{Counting.} For a surviving name, the target is its new read set minus its old read set. Exact recovery requires equality, including the absence of extra predicted fields. We match by file stem and query name within a declaration. Across measurable transitions there were also 99 introductions, 25 retirements and 461 surviving comparisons with an unsupported endpoint. Database creation, departure and module moves are recorded separately. Repeated names and a shared schema edit make query-level binomial intervals inappropriate. The archive groups each newly read schema field by database transition and names every affected query.
+
+\newpage
+\section{Which fields did the forecasts recover?}
+The broad diff recovered 106 of 157 expansions exactly. It also named 178 extra query--field instances across all supported survivors. Coverage recovered 71 exactly with 11 extra instances. Rehearsal recovered 42 exactly and made no extra field predictions in this cohort. Zero extra fields coexisted with 149 missed field instances. A tool that rarely suggests a wrong field can still leave a reviewer substantially underinformed.
+
+\begin{table}[h]\centering\small
+\caption{Held-out predictions. There were 200 required added query--field instances across the 157 expansions. Field errors count missing and extra instances. Alerts are old names at a transition, classified by later status.}
+\begin{tabular}{@{}lrrrrrr@{}}\toprule
+ & Exact & Missing fields & Extra fields & Flag expanded & Flag stable & Flag retired\\\midrule
+\migrationfieldsrows\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Edits account for the reversal.} Forty expansions were exact for both coverage and rehearsal, 31 only for coverage, two only for rehearsal, and 84 for neither. Of 119 expansions with edited query text, 91 required a resource absent from the old schema. Diff was exact on 68 of these, coverage on 35 and rehearsal on four. All four methods missed the exact target on each of the other 28 edited expansions, which required only existing resources. For the 38 unchanged expansions, rehearsal was exact on all 38. The same program on the same schema repeats the reference measurement. Coverage was exact on 36. Restricting field scoring to complete catalogs leaves only 20 expansions. There, diff, coverage, stars and rehearsal were exact on 15, 12, nine and nine respectively.
+
+\paragraph{Two changes to FeedFlow.}
+The application added a comments URL to its feed items and edited the explicit projection in \code{selectFeeds} to include it. The old query had touched every old column of the relation across its projection and other clauses. Coverage named the new field. Rehearsing the old explicit list returned no additional read. The new code provides retrospective confirmation for a forecast that a reviewer could only have treated as a possibility~\cite{feededit}.
+
+A later change filtered blocked items out of the unread counts. Both view definitions added a predicate on \code{feed\_item.is\_blocked}. The queries reading those views kept their text. Old column coverage did not identify the new filter dependency. Rehearsal found it in both queries. These were the only two held-out expansions exact for rehearsal alone versus coverage, and both belong to the same commit and field~\cite{feedview}. The two RSS readers contributed 149 of the 157 expansions. Counting two views or two app names as independent mechanism replications would overstate the evidence.
+
+\paragraph{The development history gave a different ordering.}
+Mihon coverage and rehearsal were exact on 40/49 and 42/49 expansions, with 39 shared successes. For \code{getRecentUpdates} and \code{getUpdatesByReadStatus}, coverage found two of five fields in each. Rehearsal found five. For \code{libraryView.library}, it was 21 versus 55. For \code{history.getHistoryByMangaId}, coverage found all four while the old program failed to prepare. Tivi had zero expansions in 516 surviving-name comparisons. Its eight introduced names still mattered to an account expected to run the new catalog.
+
+\newpage
+\section{What changed under enforcement?}
+Each policy preserves surviving old grants. Evidence-only policies add predicted fields up to a cap of 0, 1, 2, 4, 8 or unlimited. A shared account pools old reads across its entire database and applies the cap once. Each field receives one vote per supporting old query with SHA-256 name order breaking ties. The padded alternatives fill four slots where available using evidence, touched relations, background frequency and the same deterministic tie break. We install the candidate as a connection authorizer, run the held-out SQL, and check the decision against set containment. Equivalent query--policy pairs reuse their native decision. Newly unused grants and inherited unused grants are counted separately against the next catalog.
+
+\begin{table}[h]\centering\small
+\caption{Shared policies on 77 complete held-out transitions. There are 1,002 surviving and 21 introduced statements. Evidence-only rows are uncapped. Unused new grants count each resource once per account and transition. All rows also inherit one unused grant.}
+\begin{tabular}{@{}lrrrr@{}}\toprule
+ & Survivors admitted & Introductions admitted & All admitted & Unused new\\\midrule
+\migrationaccountsrows\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]\centering
+\includegraphics[width=.94\linewidth]{migration-tradeoff.pdf}
+\caption{Availability against unused new grants. Lines join evidence-only caps. Identical outcomes overlap. Diamonds are the two padded policies. The horizontal scale is linear near zero and logarithmic above one. The individual panel covers 3,732 supported survivors. The shared panel covers 1,023 next statements on complete catalogs.}
+\end{figure}
+
+Retaining old access admitted 991 queries. Coverage admitted twelve more without adding any unused fields. Diff admitted another three at the cost of one unused grant. Padding the diff then admitted four more for 221 further unused grants. For all evidence-only methods on this shared cohort, a cap of one already gave the observed uncapped admission and unused-grant totals. This saturation is specific to the complete catalogs. It would be a poor budget guide for Mihon's 55-field expansion.
+
+\newpage
+\section{Interpretation and limits}
+\paragraph{The account boundary changes the price.} In development, the padded four-grant rehearsal policy added 2,520 unused permissions across 630 stable individual query comparisons. Literal rehearsal added none there. When grants were pooled across whole databases, padded rehearsal added 24 unused grants across six Tivi transitions and four across five Mihon transitions, including the changing queries. A proposed permission that is unused by one statement can be needed by another. Pooling also changes who can access that field. A database-wide read account is a modeled deployment choice enforced by SQLite in the experiment. An application's actual identities and data-owner requirements are separate empirical questions.
+
+\paragraph{Where the evidence thins.} The held-out account comparison covers 77 of 225 transitions. Only 15 of Twine's 118 and 33 of FeedFlow's 78 had complete catalogs. Unsupported search and row-identifier reads were concentrated in these applications. The fully measured transitions contain only 20 of the 157 scored expansions. We cannot infer the same cost curve for the 148 incomplete transitions. Their supported pairs remain informative about individual field predictions. Likewise, analysis of named reads cannot determine invocation frequency, human review time, or whether a technically required field was appropriate to expose. A retiree's alert can still be actionable. We report queue membership without assigning it a human time cost.
+
+\paragraph{Conclusion.} For these histories, a broad schema diff often anticipated a field that developers also added to an explicit query. It incurred the largest field overprediction. Rehearsing old SQL was particularly informative when unchanged callers inherited a new view predicate, and it could report a preparation error without knowing the replacement's needs. At a shared-account boundary the four extra admissions obtained by padding the diff have a measurable privilege cost. A team choosing between these methods can decide whether it needs a queue of plausible changes, an exact explanation of an old program's behavior, or a policy that admits a specified workload.
+
+\section*{Artifact and provenance}
+The \archive{} contains the frozen protocol, upstream revisions and digests, import corrections, per-name forecasts, shared policies, exclusions and native outcomes. Run \code{sh research/reproduce.sh} and \code{make paper} from the research branch. The \href{https://github.com/oraoraoraaa/least-privilege-lab/tree/4a0eeee2ca8e873ef8c86b7a3c4150513e19f4c5}{preceding manuscript and benchmarks} remain available. Codex designed, implemented and analyzed this revision at the repository owner's request.
+
+\begin{thebibliography}{9}\small\setlength{\itemsep}{2pt}
+\bibitem{mihon} Mihon contributors. \href{https://github.com/mihonapp/mihon/blob/e4de208cf75e273b425bf4b1fe4bd7bc3d9cc459/data/src/main/java/tachiyomi/data/manga/MangaRepositoryImpl.kt}{Manga repository} and \href{https://github.com/mihonapp/mihon/blob/e4de208cf75e273b425bf4b1fe4bd7bc3d9cc459/app/src/main/java/eu/kanade/tachiyomi/ui/manga/notes/MangaNotesScreen.kt}{notes screen}, release v0.19.0. Archived package evidence covers v0.18.0 and v0.19.0.
+\bibitem{sqlite} SQLite. \href{https://sqlite.org/c3ref/set_authorizer.html}{Compile-time authorization callbacks}. C interface reference.
+\bibitem{feededit} FeedFlow contributors. \href{https://github.com/prof18/feed-flow/commit/d58c99729f0678196d305f0ec063665cdd62acf8}{Add comments field}, 2023.
+\bibitem{feedview} FeedFlow contributors. \href{https://github.com/prof18/feed-flow/commit/0a45953705fbeaaaedeba92fd0fa33473a66d33e}{Add blocked words feature}, 2025.
+\bibitem{maule} A. Maule, W. Emmerich and D. Rosenblum. \href{https://doi.org/10.1145/1368088.1368150}{Impact analysis of database schema changes}. ICSE, 2008.
+\bibitem{hecataeus} G. Papastefanatos, P. Vassiliadis, A. Simitsis and Y. Vassiliou. \href{https://www.cse.uoi.gr/~pvassil/publications/2010_ICDE/ICDE_2010.pdf}{HECATAEUS: Regulating Schema Evolution}. ICDE, 2010.
+\end{thebibliography}
+\end{document}

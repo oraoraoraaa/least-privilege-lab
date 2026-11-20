@@ -1,0 +1,230 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,booktabs,graphicx,xcolor}
+\usepackage[margin=25mm,top=21mm,bottom=23mm]{geometry}
+\usepackage[colorlinks=true,linkcolor=teal!55!black,citecolor=teal!55!black,urlcolor=teal!55!black]{hyperref}
+\hypersetup{pdftitle={Which Preflight Preserves Query Access?},pdfsubject={Least-privilege policies across query variants and schema changes}}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\raggedbottom
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{2pt}
+\setlength{\textfloatsep}{13pt}
+\graphicspath{{paper/figures/}}
+\newcommand{\artifact}[2]{\href{https://github.com/oraoraoraaa/least-privilege-lab/#1}{#2}}
+\newcommand{\code}[1]{\texttt{#1}}
+\emergencystretch=1em
+\input{paper/tables/coverage.tex}
+\input{paper/tables/primary.tex}
+\input{paper/tables/sensitivity.tex}
+\input{paper/tables/releases.tex}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries Which Preflight Preserves Query Access?\par}
+\vspace{5pt}
+{\large Least-privilege policies across query variants and schema changes\par}
+\vspace{7pt}
+{\small Research manuscript \enspace$\cdot$\enspace November 2026}
+\end{center}
+
+\begin{abstract}
+A least-privilege reviewer can stage a related query or rehearse an existing query against a planned schema. We measure what each source of evidence reveals about the permissions a later query needs. On 259 benchmark SQL statements, staging a sibling improved whole-query success at equal excess privilege. Exact footprint repetition accounted for the full primary gain in JOB. On STATS, with four additional grants and two possible siblings, even hindsight could select a successful sibling policy in only 20.8\% of informative comparisons. We then replayed query histories from two applications. Tivi's old permissions covered all 516 surviving-name comparisons across six updates. In Mihon, 49 of 163 surviving query transitions required new reads, always involving a resource absent from the old schema. Forty of the 49 kept the same query text. Rehearsing the old source on the planned schema flagged all 49 expansions and spared 25 stable cases flagged by a schema diff. Both rules also flagged 34 subsequently retired names. Under a four-grant limit, the schema-diff policy admitted 40 of the 49 and the rehearsal policy admitted 39. Rehearsal's clearest benefit was narrowing the review queue. We release the read traces, verified release-package example and a runnable migration reviewer.
+\end{abstract}
+
+\section{Introduction}
+A lookup in the Mihon reader kept the same source text across two releases. The rebuilt query requested a new field containing the user's notes. A policy reviewer looking only at edits to the lookup would see no change. A reviewer looking at the whole table would see a new column, but would still need to identify the queries that read it. Preparing the old query on the planned schema can answer that question before a new build ships.
+
+Schema changes are only one reason a future query needs new privileges. A report can also follow a different path over the same schema. Testing a sibling report in staging may reveal relevant reads. Granting every plausible column improves availability at the cost of unnecessary access. Recovering five of six missing reads can still leave the whole job unable to run. We therefore measure whole-query completion and hold the permission budget fixed when comparing policies.
+
+We ask three questions. At equal excess privilege, how much does a sibling query add to the evidence in the observed query? When two candidate siblings are available, how much could choosing the better one improve a fixed policy? Across application versions, which changes can a reviewer anticipate using the old query catalog and the planned schema? We answer the first two with controlled assignments from two published SQL benchmarks. For the third we replay versioned programs from two open-source applications, record each authorization request using SQLite, and verify a source-level result against two released Android packages. The artifact includes a reviewer that reports which existing queries acquire new reads or fail to prepare.
+
+\section{What a successful run tells the reviewer}
+\paragraph{A missing action.}
+Restricter supplies a generated classroom snapshot, original and intended Cedar policies, and an access log~\cite{restricter}. We replayed every combination of 12 staff, two assignment actions and 13 assignments under empty context. A Java implementation of the loose course-membership rules agreed with the original Cedar engine on all 312 decisions. Deleting one membership in the Java input changed four decisions. The original policy allowed 60 tuples, of which the authors' intended policy allowed 26.
+
+Keeping only observed authorized tuples retained 16 of those 26 even with all 26 in-scope log rows. Retaining the 13 editing rows alone kept seven intended grants and removed all 13 posting grants. Under uniform selection of 13 rows, the exact mean over the $10{,}400{,}600$ possible subsets was 10.27 intended grants, including 5.54 posting grants. Repetitions in the log make rows and grants different units. An action-wide gap changes which requests survive a fixed observation budget.
+
+\paragraph{A completed drill.}
+In a controlled model-registry fixture, a service can restore from an archive or finish its drill from a warm cache. A tightening tool preserves owner-protected and observed requests. An optional rule defers tightening until a complete cycle of each associated workflow has been recorded. Across four schedules and two settings, finite enumeration and an independent Z3 encoding confirmed that all eight proposals preserved explicit requirements and granted nothing new. Before a first drill or after a logging gap, deferral preserved a later cold restore and one unnecessary old-archive grant. After a warm-cache drill, both settings denied the later cold restore. Verification proved exactly the supplied requirements. A recurring workflow can have another legitimate path that none of its observations exercised.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=.95\linewidth]{design.pdf}
+\caption{Information available in the fixed-schema benchmark. The upper row forms policies from visible evidence and a background catalog described in Section~\ref{sec:design}. The lower row uses the hidden query twice, once to compare rankings at equal excess and once to test the independently fixed policy.}
+\label{fig:design}
+\end{figure}
+
+\section{Design and measurement}\label{sec:design}
+\paragraph{Permission model.}
+One reporting principal initially holds the full read universe $U$ of its published schema. Each column is one resource. Each table also supplies a table-only resource for SQLite's empty-column read callback, such as a table read for a count that references no column~\cite{sqlite}. Grants cover read callbacks from projections, joins, filters and aggregates. SELECT and function callbacks are allowed uniformly. For a statement $q$, let $R(q)\subseteq U$ be the set of distinct resources requested under the full policy. Under candidate $P$, the predicted success is $\mathbf{1}\{R(q)\subseteq P\}$. This model measures access under one principal and a fixed schema. Row contents, functions outside the tested statements, writes and changes of identity require different models.
+
+\paragraph{Workloads and folds.}
+We used every published query in the Join Order Benchmark (JOB) on its movie schema~\cite{job} and all 146 statements in the STATS-CEB workload on its simplified question-and-answer schema~\cite{stats}. For JOB, filenames identify the query family. For STATS, the registered family key is the sorted set of relations in the FROM clause. This analyst-defined key supplies the experimental pairing. Family discovery in an unlabeled deployment would require a separate source of workflow information.
+
+A fold assigns three distinct statement IDs in the same family to the roles observed, staged and hidden. Write $O,D,H$ for their permission sets. Code can differ while the sets coincide. We enumerated all ordered assignments in families with at least three IDs. The protocol's cap of 512 assignments per family was never reached. There is no chronology in the split. The finite operational contract requires the observed and hidden jobs, so its permissions are $T=O\cup H$. Reads unique to the staged job count as excess for this contract. An operator who also promises to run the staged job would choose a larger contract.
+
+\begin{table}[htbp]\centering\small
+\caption{Coverage. Eligible families have at least three distinct statement IDs. Informative folds require at least one hidden read absent from the observed variant. All 259 statements executed under the initial policy.}
+\label{tab:coverage}
+\begin{tabular}{@{}lrrrrrr@{}}\toprule
+ & & & Eligible / all & Eligible & Informative & Informative / all\\
+Corpus & $|U|$ & SQL IDs & families & IDs & families & folds\\\midrule
+\coveragerows
+\bottomrule\end{tabular}
+\end{table}
+
+\paragraph{Instrumentation.}
+We initialized each empty schema in SQLite 3.53.1 through APSW 3.53.1.0. On STATS the loader removed the published cardinality prefix and literal timestamp casts for SQLite compatibility. Each statement was freshly prepared with caching disabled and run to completion. The native authorizer recorded each read. Empty tables suffice for the compile-time access requests of these statements. We use neither the returned counts nor a query's execution time. For enforcement we replayed the original normalized SQL, denying any read outside a candidate policy. We compared every resulting allow or denial with set containment. Unexpected operation types, unknown resources and disagreements stop the run.
+
+\paragraph{Comparators.}
+Every ranking retains $O$ and orders candidates in $U\setminus O$. \emph{Table/frequency} prioritizes columns from a table touched by $O$, then the number of query IDs in \emph{other} families that read each resource. All target-family IDs are excluded from that frequency, including the hidden ID. The \emph{sibling} ranking first prioritizes membership in $D$, then uses identical table and frequency keys. A \emph{within-table mask} substitutes a deterministic sample of columns for $D\setminus O$ with exactly the same number per table. Its seed uses only visible IDs and family. \emph{Uniform} ties all candidates. We also test literal policies $O$ and $O\cup D$. Singletons and pairs can supply background counts even when they cannot supply a target fold.
+
+\section{Evaluating two kinds of decision}
+\paragraph{Matched excess.}
+Let $E=|U\setminus T|$. At our primary operating point each ranking may retain exactly $B=\lfloor 0.05E\rfloor$ excess resources. The evaluator keeps the longest prefix with at most $B$ excess resources. A useful resource immediately following the last affordable excess resource still counts. Each complete ordering therefore keeps the same number of excess resources, although retained policy sizes can differ. Integer rounding makes realized removal at least 95\%. On informative folds this allows five excess grants in JOB and one or two in STATS. The evaluator needs $H$ to locate this cutoff. It measures the quality of the ordering at a common exposure, and its success rates have the benefit of hindsight.
+
+We integrate uniformly over tied orderings. Consider the first tier that cannot be taken in full. Let $g$ be its number of needed unseen reads, $b$ its number of excess reads, and $r<b$ the remaining excess allowance. The retained part ends just before the $(r+1)$st excess read. A particular needed read lies in one of the $b+1$ gaps around the excess reads, all equally likely, so the expected number retained from this tier is $g(r+1)/(b+1)$. When all outstanding needed reads lie in the tier, complete success requires all $g$ to occur among its first $g+r$ positions. Writing $C(n,k)$ for the number of ways to choose $k$ positions from $n$,
+\[
+ \Pr(\text{success at the boundary})=
+ \frac{C(g+r,g)}{C(g+b,g)}.
+\]
+Any needed read below the boundary forces failure. For example, a tied tier with two needed reads, three excess reads and one excess slot yields whole-query success $3/10$ and one needed read retained in expectation. Direct enumeration of small tied rankings checks both quantities, including cases with needed reads outside the candidate domain.
+
+\paragraph{Fixed policy.}
+The operational comparison fixes four additional grants before observing $H$. It breaks ties by the SHA-256 digest of the permission name, shared across methods. This budget was set in the protocol and held constant for both schemas. It measures one feasible policy choice and exposes the opportunity cost of promoting one column over another. For each fold we also evaluate $O$ and $O\cup D$. All six policies go through the native authorizer (Figure~\ref{fig:design}). Whole-query success requires every read. The secondary read-retention score is the fraction of $H\setminus O$ retained.
+
+\paragraph{Unit of analysis.}
+The primary cohort comprises folds with $H\setminus O\ne\varnothing$. Otherwise any candidate that preserves $O$ succeeds. We average fold scores within family, then give each informative family equal weight within its corpus. A large family contributes more ordered triples but has the same final weight as a small one. We report paired differences between methods and percentile intervals from 2,000 paired resamples of families (seed 20261120). These intervals describe sensitivity to the mix of benchmark families. Ordered triples reuse SQL statements and families share schema columns. The benchmarks have no probability-sampling design from which to infer a population of applications.
+
+\section{Results}
+\begin{table}[htbp]\centering\small
+\caption{Whole-query success (\%) on informative folds. Gain is sibling minus table/frequency, in percentage points, with the family-bootstrap interval. Matched scores average over boundary ties. Four-grant scores use native enforcement.}
+\label{tab:primary}
+\begin{tabular}{@{}llrrrrr@{}}\toprule
+Corpus & Decision & Table/freq. & Sibling & Mask & Gain & 95\% interval\\\midrule
+\primaryrows
+\bottomrule\end{tabular}
+\end{table}
+
+At matched excess, sibling evidence increased average success on both corpora (Table~\ref{tab:primary}). The paired JOB difference came from five improving families and 14 ties. STATS had 11 improving families, nine ties and four losses. The uniform ranking scored 4.4\% on JOB and 0.9\% on STATS. Including easy folds where $O$ already covers $H$ raised matched sibling success to 96.0\% and 18.0\%, respectively, with baselines of 93.2\% and 11.4\%. Selecting informative folds changes the question and sometimes the family denominator (Table~\ref{tab:coverage}).
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=.96\linewidth]{operating-points.pdf}
+\caption{Family-averaged success at the four registered excess-removal targets. Each marker is an evaluated point. Segments connect measurements of the same ranking. Both panels use the same axes.}
+\label{fig:points}
+\end{figure}
+
+The choice of exposure matters (Figure~\ref{fig:points}). On STATS, reducing target removal from 95\% to 75\% raised sibling success from 15.0\% to 78.5\%. At 95\%, sibling ranking retained 37.3\% of previously unseen reads on average, against 21.6\% for table/frequency. Whole statements succeeded much less often. Of the 1,826 informative STATS folds, 1,602 required at least two new reads. Only 32 of 191 informative JOB folds did. The number of required reads helps explain how recovering a substantial fraction of them can coexist with frequent denials.
+
+At the four-grant budget the native engine matched the containment prediction for all $6\times 2{,}514=15{,}084$ policies and folds. Sibling ranking kept an average of 2.88 unused additions on JOB and 2.66 on STATS, compared with 3.07 and 3.04 for table/frequency. STATS's fixed-budget gain was 5.6 points, with a family-bootstrap interval spanning zero. The literal union $O\cup D$ succeeded on 52.6\% of JOB and 10.0\% of STATS informative comparisons, at different grant budgets. The observed-only policy failed on every informative fold by construction.
+
+\section{What accounts for the difference?}
+The trace archive revealed 54 repeated within-family footprints beyond their first occurrence in JOB and four in STATS. Distinct SQL IDs therefore do not establish that the staged variant requires a different set of permissions from the hidden variant. We recorded a post-result audit before conducting the checks below. The primary comparison and operating points were fixed earlier.
+
+\begin{table}[htbp]\centering\small
+\caption{Post-result checks at 95\% targeted removal on informative folds. Rates are whole-query success percentages. Blind is the comparator without $D$. The five-neighbor rows change the baseline. The join-based rows also change the eligible cohort and background counts.}
+\label{tab:audit}
+\begin{tabular}{@{}llrrrrr@{}}\toprule
+Corpus & Cohort or comparison & Families & Folds & Blind & Sibling & Gain (pp)\\\midrule
+\sensitivityrows
+\bottomrule\end{tabular}
+\end{table}
+
+\paragraph{Exact reuse and transfer.}
+Removing folds where $H=D$ left 107 informative JOB assignments. The primary two rankings tied \emph{on every one}. We then collapsed each family's identical footprints to its first SQL ID before forming triples. Just five JOB families could still supply three distinct footprints, and both rankings scored 89.3\% there. On STATS, 24 families survived, and the sibling gain remained 6.5 points (Table~\ref{tab:audit}). The higher JOB absolute success after collapsing reflects a different family mix. Under the fixed four-grant policy on distinct footprints, JOB instead scored 68.7\% versus 54.0\% (five families). STATS scored 15.9\% versus 11.2\%, a gain of 4.7 points with interval $[-2.4,13.5]$. The JOB tie therefore applies specifically to the primary matched comparison.
+
+\paragraph{Would another source of column evidence do as well?}
+Across 32 additional reproducible within-table masks, primary success ranged from 76.2\% to 81.7\% on JOB and from 6.3\% to 11.0\% on STATS. Promoting the single most similar outside-family query to $O$ (Jaccard similarity of read sets, ties by query ID) gave 63.3\% and 8.3\%. These results separate specific evidence from the mere act of promoting columns. A second baseline ranked candidates by frequency among the five closest outside-family statements, including all ties at fifth place, then by the original keys. On STATS it raised blind success to 10.8\% and narrowed the sibling gain to 4.8 points. On distinct JOB footprints the alternative ranking gained 4.4 points from $D$ but reached only 57.6\%, below both primary rankings. Incremental value depends on the baseline even when absolute policy quality declines.
+
+\paragraph{Which families and which universe?}
+Requiring equal sets of joined column pairs in addition to equal tables split STATS into 58 groups. Ninety-two statements remained eligible. The paired gain shrank to 3.0 points across 21 informative families and 2.6 after footprint collapse. Both the prediction problem and its case mix change under this regrouping. A separate registered check restricted $U$ to tables touched by $O$ or $D$ and charged any hidden read beyond them as a miss. Sibling versus baseline then scored 77.9\% versus 53.2\% on JOB and 6.6\% versus 0.6\% on STATS. Shrinking the initial universe also shrinks its allowable count of excess grants. Using only permissions exercised by $O$, $D$, or other-family statements gave 84.0\% versus 62.3\% on JOB and 11.5\% versus 5.0\% on STATS.
+
+\paragraph{Two native decisions.}
+Under the four-grant policy, JOB variant \code{10c} was observed, \code{10a} staged, and \code{10b} held out. The missing read was \code{role\_type.role}. Both policies added the same three other columns. Sibling evidence used the fourth slot on the required read, while table/frequency spent it on \code{title.kind\_id}. The engine admitted the sibling policy's query. In STATS the direction reversed. After observing \code{q039} and staging \code{q038}, the hidden query \code{q116} needed \code{users.views}. The staged query promoted \code{badges.date} into that slot. Table/frequency admitted the hidden query and the sibling policy denied it. The archive identifies these triples and lists every proposed addition.
+
+\section{How much can choosing a sibling help?}
+The original comparison supplied a sibling. A reviewer with two alternatives must choose one before seeing the hidden query. We fixed this extension after the first study. Within each family with at least four IDs, we enumerate an observed query, an informative hidden query and an unordered pair of other candidates. Each candidate already has a native four-grant decision for that hidden query. We select by Jaccard similarity of the \emph{sets of words in the SQL source}. The tokenizer retains keywords and identifier-like tokens and discards string literals, comments and numbers. Ties use ascending candidate ID. This score needs neither the candidate's footprint nor the hidden program. We compare it to a uniform choice, evaluated by averaging the two decisions exactly. We retain the original equal weighting of families.
+
+For each pair there are three ways a randomly selected policy can fail. The hidden query can need more than four new grants, in which case even perfect information cannot make that budget sufficient. When four grants suffice in principle, both candidate policies can still fail. Finally, exactly one policy may succeed and the reviewer can pick the wrong one. Only the last component can be removed by choosing a better sibling from this pair while leaving the ranking and budget fixed.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=.94\linewidth]{selection-limits.pdf}
+\caption{Success and sources of failure when one of two candidate siblings is chosen uniformly. A row sums to 100\% before rounding. The second segment gives the improvement attainable by always choosing the better of the two fixed policies.}
+\label{fig:selection}
+\end{figure}
+
+The eligible JOB cohort comprised 143 assignments in nine families. The nearest text scored 83.0\%, uniform choice 87.2\%, and the better of the two policies in hindsight 96.3\%. The near-minus-uniform difference was $-4.2$ points (paired family interval $[-11.9,2.1]$). Only one family supplied four distinct footprints after collapse. The corresponding STATS cohort had 3,016 assignments in 19 families. The baseline scored 10.6\%, uniform choice 15.2\%, nearest text 17.8\%, and the better candidate 20.8\%. The near-minus-uniform difference was 2.6 points $[0.3,5.6]$. Randomizing exact similarity ties gave the same rounded nearest-text rate. After footprint collapse, nearest versus uniform scored 12.5\% versus 10.6\% across 17 STATS families.
+
+The largest source of STATS failure was a feasible budget paired with two unsuccessful policies (49.8 points). Another 29.4 points exceeded the budget. A perfect selector could recover only 5.6 points from uniform choice (Figure~\ref{fig:selection}). These quantities describe this pair of candidates and this ranking rule. A different source of evidence or a different rule for turning it into a policy could address cases where both candidates failed.
+
+\section{What changes across application versions?}\label{sec:versions}
+\paragraph{Forward replay.}
+Tivi, a TV tracker, and Mihon, a manga reader, declare named read programs in SQLDelight files~\cite{tivi,mihon}. We took Tivi's six quarter-end mainline snapshots from June 2023 through September 2024 and its November 2024 archival head. We selected Mihon after observing the Tivi result and fixed six consecutive minor releases, v0.16.0 through v0.21.0, before measuring it. Each adjacent pair supplies an older catalog and a later test. We match a surviving query by file stem and declared name. A surviving name counts once per transition. Names that appear or disappear are recorded separately, including changes of name that this matching rule cannot resolve. We report individual transitions because a single added column can affect many queries.
+
+We build each release's empty SQLite schema from its checked-in definitions, including views, remove Kotlin type annotations, bind scalar parameters to one and expand collection parameters to one element. We scope the replay to named read statements. All in-scope programs prepared on their own schema. The authorizer records view and underlying table reads as separate permission units. Our newer query is the source program for that version. The release-package check below examines a compiled lookup separately. The observation and all candidate siblings come from the older catalog. For each query we apply the benchmark policies using same-file candidates and other-file frequencies. A missing sibling falls back to table/frequency. When the reviewer also knows the planned schema, we test three four-grant rankings. The first applies table/frequency to the new universe. The second promotes newly declared resources on relations touched in the old footprint. The third promotes reads obtained by preparing the old source on the planned schema. All preserve the surviving old grants. We also take the literal union of surviving old and rehearsal reads and record its actual size. A rehearsal that fails to prepare supplies no additional reads.
+
+\paragraph{Stable programs and newly introduced names.}
+Tivi's observed-only policies admitted all 516 surviving-name comparisons, including three edited query texts. Twelve comparisons had no sibling in the old file. Rechecking all eight first-parent commits that changed the scoped SQL sources within the same window found zero intermediate expansions. Eight new names appeared. One of the eight was covered by the union of old queries from its own file, three by the application-wide old read set, and five required a resource absent from the old schema. The surviving-name success rate therefore answers only part of the release-review question.
+
+Mihon exhibited 49 expansions across 163 surviving-name comparisons, spanning 25 distinct names and five release transitions. Every expansion required at least one permission the older schema could not express. Even the best old sibling failed on all 49 under our closed, enumerated-grant model. Nine surviving comparisons lacked an old same-file candidate. The releases also introduced 39 names and retired 38. For 38 of those introductions, some required resource lay outside the old schema. The final release transition alone introduced 29 names and retired 31. These counts reflect exact identifiers and can include schema renames and code reorganizations. They measure source-level review opportunities, without assuming that users invoked each query equally often.
+
+\begin{table}[htbp]\centering\small
+\caption{Mihon release replay. Same SQL counts expansions with unchanged normalized query text. The rightmost four columns count successful policies \emph{among expansions}. Base, diff and replay each add four grants on the next schema. Union uses all rehearsal reads at variable cost.}
+\label{tab:releases}
+\begin{tabular}{@{}lrrrrrrr@{}}\toprule
+Next release & Survive & Expand & Same SQL & Base & Diff & Replay & Union\\\midrule
+\releasesrows
+\bottomrule\end{tabular}
+\end{table}
+
+\paragraph{Alerting and granting answer different questions.}
+A schema diff flags an old query if a read resource disappeared or a relation it touched gained a resource. Our rehearsal flags an old query if it fails to prepare or requests a read absent from its previous footprint. Both flagged every Mihon expansion. The diff also flagged 25 of the 114 stable survivors, while rehearsal flagged zero. Each flagged 34 names later retired. A reviewer facing the full catalog would receive 108 diff alerts or 83 rehearsal alerts across 201 old-name comparisons. Both issued zero Tivi alerts. These counts measure the size of a review queue. Time spent reviewing and business decisions about each grant were unobserved.
+
+The ordering reverses for a policy required to admit a complete query under four extra grants. The diff admitted 40/49 expansions and rehearsal 39/49 (Table~\ref{tab:releases}). Their unused additions totaled 116 and 112 respectively across those cases. The literal union admitted 42/49. Its 124 additions all appeared in the held-out reads, but one query consumed 55 additions by itself. Unit cost treats access to a personal note like access to any other field. A new read identified by rehearsal is a concrete question for the data owner.
+
+Forty expansions kept the same normalized source text. Preparing identical SQL with the same bindings, engine and schema repeats the reference measurement, so its uncapped union covered all 40 by construction. Among the nine expansions with edited SQL it covered only two. Five old statements failed to prepare on the new schema in the final transition. A reviewer can detect such failures before seeing the replacement SQL, but the error does not identify its future requirements. Conversely, an edit that adds a read on an unchanged schema can leave an old-query rehearsal quiet. The artifact includes an executable example of this blind spot.
+
+\paragraph{One source query, two shipped programs.}
+Mihon's \code{getMangaById} requests a full row by ID. Across v0.18.0 and v0.19.0 its SQLDelight source stayed the same. The new schema added \code{mangas.notes}. SQLDelight can expand a wildcard into explicit column names during code generation~\cite{sqldelight}. We inspected the published x86-64 Android package for each release, matched the direct ID lookup with its complete projection and found one distinct SQL literal in each. Both literals listed their columns explicitly. On their own schemas their native read sets matched our source-level traces. On the \emph{same new schema}, the old literal still omitted notes, while the new literal read it. This separates the effect of rebuilding the source from the behavior of an already shipped binary. The check validates this lookup and these packages. It measures preparation of extracted SQL, without executing the mobile applications.
+
+\section{Interpretation and related work}
+\paragraph{What the measurements establish.}
+The staged variant is most useful when it contains information about the hidden variant that is absent from both the observation and the background ranking. On JOB, separating exact reuse from transfer removes the entire primary gain. The de-duplicated STATS comparison supplies evidence for transfer across different read sets. Its absolute success of 13.8\% also quantifies the residual risk of using this ranker as a policy selector. Even hindsight about the allowable cutoff left most complete hidden queries uncovered at the specified exposure. An operator promising a critical report can preflight its known paths and protect their observed reads explicitly. The experiments give little basis for treating one passing sibling as certification for other variants.
+
+\paragraph{Policy mining and tightening.}
+Cotrini, Weghorn and Basin study learning attribute-based rules from sparse logs and the difficulty of treating unobserved requests as negative examples~\cite{rhapsody}. IAM-PolicyRefiner narrows existing AWS policies and evaluates exercise of held-out requests~\cite{iam}. Restricter synthesizes tighter Cedar rules subject to log and semantic constraints~\cite{restricter}. OPMonitor examines excess permissions that survive policy verification~\cite{monitor}. Our classroom case reuses public Restricter inputs to calibrate missing observations. The ensuing rankings compare finite read grants under a common exposure budget. Holding exposure constant lets us ask how much a separate preflight contributes to availability of an entire held-out job.
+
+\paragraph{Least privilege for database programs.}
+ShillDB gives programs constrained database capabilities and uses contracts to express permissible access~\cite{shilldb}. SQLite's authorizer supplies the native read-level enforcement point in this study~\cite{sqlite}. These mechanisms make the requirements of a known statement enforceable. Predicting resources for a different statement requires outside evidence. JOB and STATS were designed to evaluate optimizers and cardinality estimators~\cite{job,stats}. Their reusable query variants make the prediction test executable and also create the template repetition that our audit measures.
+
+\paragraph{Query selection and schema evolution.}
+QueRIE recommends SQL queries for interactive exploration using query fragments~\cite{querie}. Our selector asks whether similarity to an observed query identifies a better preflight under a fixed permission budget. Wu and Neamtiu measured schema evolution in four embedded database applications~\cite{wu}. Azahari, Oliveri and Balzarotti tracked 320 versions of 20 Android applications and studied extraction queries that broke or omitted data as schemas drifted~\cite{drift}. Those results motivated our direct comparison with a schema-difference rule. Here a query can still execute successfully under the full policy while the rebuilt application needs authority its predecessor lacked. The shipped lookup demonstrates this distinction at the level of a named field.
+
+\paragraph{Scope and next experiment.}
+Our contract contains two jobs, every grant has unit cost, and the initial policy covers the schema. A real service may need a staged job permanently, may assign more risk to one column than another, or may start from a much narrower policy. Expanding the intended contract would relabel some of the measured excess as required. Two public query workloads and a constructed recovery fixture provide executable cases. Production incidence requires representative service histories. The measured outcome is authorization of a statement on an empty schema. End-to-end availability would also require validating returned data, other application steps and their permissions.
+
+The mobile experiments add two source histories and one binary-level check. They measure named reads over a particular SQL dialect and permission model. Mobile clients often need a local database under one application identity. We apply counterfactual per-query policies to measure the authority each statement requires. The applications' deployed access-control settings remain unknown. Measuring operational benefit would require invocation frequencies, reviewer decisions about new fields, and outcomes after a proposed policy was deployed. A useful next study would record these at a migration boundary and compare review time for the two alert lists.
+
+\section{Conclusion}
+The source of a permission change determines which test can reveal it. In a fixed schema, a staged sibling helped when its read set overlapped a future query, but on STATS even the better of two candidate policies usually failed. In application histories, unchanged source could acquire new reads after a schema change. Rehearsing old source on the planned schema spared 25 stable Mihon cases from review while detecting every observed expansion. A simpler schema diff admitted one more complete query at the four-grant budget. The practical contribution is a way to identify the exact new reads a reviewer should examine before shipping a migration, with a record of the cases where rehearsal gives insufficient evidence.
+
+\clearpage
+\section*{Artifact and research provenance}
+The \artifact{tree/305bd2bbcc84a3e3fa690c72cd6253d148928f16/research/paths}{experiment archive} includes pinned source inputs by reference and digest, the \artifact{blob/305bd2bbcc84a3e3fa690c72cd6253d148928f16/research/paths/PROTOCOL.md}{pre-measurement protocol}, the \artifact{blob/305bd2bbcc84a3e3fa690c72cd6253d148928f16/research/paths/AUDIT.md}{post-result audit plan}, all statement footprints, fold identities, policy outcomes and aggregation code. The classroom and registry studies have separate inputs, protocols and checks. From the research branch, \code{sh research/reproduce.sh} regenerates all studies, including the \artifact{tree/c70b90923f496adb91220125f007cc4c4b6871cc/research/selection}{selection, migration and package checks}. The migration reviewer accepts old SQLDelight statements and planned DDL, and reports the specific new reads or preparation errors. Fresh checkouts on macOS arm64 and Arch Linux x86-64 reproduced the archived measurement contents. \code{make paper} rebuilds the figures, tables and PDF. Codex designed and executed this branch's experiments, analyzed the results and drafted this manuscript at the repository owner's request. No production credentials, customer records or human-subject data were collected for the experiments.
+
+\begin{thebibliography}{99}\small
+\bibitem{rhapsody} C. Cotrini, T. Weghorn, and D. Basin. Mining ABAC Rules from Sparse Logs. \emph{IEEE European Symposium on Security and Privacy}, 2018. \href{https://people.inf.ethz.ch/~basin/pubs/eurosnp18.pdf}{Author copy}.
+\bibitem{iam} L. D'Antoni, S. Ding, A. Goel, M. Ramesh, N. Rungta, and C. Sung. Automatically Reducing Privilege for Access Control Policies. \emph{Proceedings of the ACM on Programming Languages}, OOPSLA, 2024. \href{https://doi.org/10.1145/3689738}{doi:10.1145/3689738}.
+\bibitem{restricter} K. L. Wu, C. Jenkins, S. D. Stoller, and O. Chowdhury. Automatically Tightening Access Control Policies with Restricter. \emph{TACAS}, 2026. \href{https://doi.org/10.1007/978-3-032-22752-2_6}{Publisher record}.
+\bibitem{monitor} X. Wang, Y. Guo, Z. Sun, M. Yu, F. Li, and L. Fang. OPMonitor: Continuously monitoring residual over-granted permissions in verified access control policies. \emph{Computers \& Security}, 158, 104623, 2025. \href{https://doi.org/10.1016/j.cose.2025.104623}{Publisher record}.
+\bibitem{shilldb} E. Zigmond, S. Chong, C. Dimoulas, and S. Moore. Fine-Grained, Language-Based Access Control for Database-Backed Applications. \emph{The Art, Science, and Engineering of Programming}, 4(2), 2020. \href{https://people.seas.harvard.edu/~chong/abstracts/ZigmondCDM2020.html}{Author copy}.
+\bibitem{job} V. Leis, A. Gubichev, A. Mirchev, P. Boncz, A. Kemper, and T. Neumann. How Good Are Query Optimizers, Really? \emph{Proceedings of the VLDB Endowment}, 9(3), 2015. \href{https://www.vldb.org/pvldb/vol9/p204-leis.pdf}{Paper}.
+\bibitem{stats} Y. Han et al. Cardinality Estimation in DBMS: A Comprehensive Benchmark Evaluation. \emph{Proceedings of the VLDB Endowment}, 15(4), 752--765. \href{https://doi.org/10.14778/3503585.3503586}{doi:10.14778/3503585.3503586}, 2021.
+\bibitem{sqlite} SQLite. Compile-Time Authorization Callbacks. \emph{SQLite C Interface}. \href{https://www.sqlite.org/c3ref/set_authorizer.html}{API reference}.
+\bibitem{querie} J. Akbarnejad et al. SQL QueRIE Recommendations: A Query Fragment-Based Approach. \emph{PersDB}, 2010. \href{https://scholarworks.sjsu.edu/computer_eng_pub/30/}{Author record}.
+\bibitem{wu} S. Wu and I. Neamtiu. Schema Evolution Analysis for Embedded Databases. \emph{IEEE ICDE Workshops}, 2011. \href{https://www.cs.ucr.edu/~neamtiu/pubs/hotswup11wu.pdf}{Author copy}.
+\bibitem{drift} A. M. Azahari, A. Oliveri, and D. Balzarotti. Resilience of Forensic Evidence Acquisition under Database Schema Drift. \emph{Forensic Science International: Digital Investigation}, 56, 302059, 2026. \href{https://doi.org/10.1016/j.fsidi.2026.302059}{Publisher record}.
+\bibitem{tivi} C. Banes and contributors. Tivi. Archived application source, 2024. \href{https://github.com/chrisbanes/tivi/tree/a0c62c2c763c83e3a0ecf79b283224374bb06c4a}{Source history}.
+\bibitem{mihon} Mihon Open Source Project. Mihon. Application source and release packages. \href{https://github.com/mihonapp/mihon/releases/tag/v0.18.0}{v0.18.0 release} and \href{https://github.com/mihonapp/mihon/releases/tag/v0.19.0}{v0.19.0 release}.
+\bibitem{sqldelight} SQLDelight contributors. SQLDelight 2.0.2 changelog. \href{https://sqldelight.github.io/sqldelight/2.0.2/changelog/}{Compiler changes}.
+\end{thebibliography}
+\end{document}
