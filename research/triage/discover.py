@@ -61,7 +61,7 @@ def discover(project):
     for name in names:
         prefix = module + "/src/commonMain/sqldelight/" + (name + "/" if name else "")
         revisions = git("log", "--first-parent", "--diff-merges=first-parent", "--no-renames",
-                        "--reverse", "--format=%H", head, "--", prefix)
+                        "--reverse", "--no-patch", "--format=%H", head, "--", prefix)
         steps = []
         previous = {}
         for rev in revisions:

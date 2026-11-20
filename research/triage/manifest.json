@@ -1,0 +1,1588 @@
+{
+  "ACINQ/phoenix": {
+    "databases": {
+      "appdb": [
+        {
+          "config": {
+            "phoenix-shared/build.gradle.kts": "0011e25e256b6370371abaf7caf9f648ea187a42adc0e6060ff0886e89f4d271"
+          },
+          "files": {
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/CloudKitContacts.sq": "2a936803e8a38ef796a97ac3dbbcbf80d681e9ebb51192e73576f38cdecaaa24",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/Contacts.sq": "7bec7df9daaae5e584d41b27dca110ce36df61b654ea30523bf4989769b462d2",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/ExchangeRates.sq": "747718ce33a094fd25bc3dd27b51f91582e74579453ac601cc103d2126d1e404",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/KeyValueStore.sq": "5f471f4aff46ff1fc7f9d46f29baf49e76b6f6f49281241b16677f55ff220322",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/Notifications.sq": "4e1286cb6259da4c6200b44f42e7366e778cfe12a4c125508adec4f5047b3ecc",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/1.sqm": "bc9db6114c96e778a9b9b29c813940b77f465bfc388708f98a3521ebf888daac",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/2.sqm": "2744b058d707fc671aa08bf1dcb04401977ef389481c05b7cbb5bcb95976db5d",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/3.sqm": "685804327a43f85923536417f1c0bee2220e0fa0d28b9645fbed4c26e3866478",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/4.sqm": "89000ee2dbc34ea919a84fd36dbd5c795efc82f83168652617eda679971707b6",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/5.sqm": "6ed5988651c564ebc257b304a187df746a164e2a92de8e4623351c1cd9226bc2",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/6.sqm": "7c1dafe97226aba222062f373a90228ad8d01c66b6bb603706ddf2e968803985"
+          },
+          "revision": "414c7a6ed02183fdfb77649ca575f9376f6ab02a"
+        },
+        {
+          "config": {
+            "phoenix-shared/build.gradle.kts": "95665c4d4f3f4332117abf71f5fd7f5b9e91cfcfe21696babf64806f355b1ebb"
+          },
+          "files": {
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/ExchangeRates.sq": "747718ce33a094fd25bc3dd27b51f91582e74579453ac601cc103d2126d1e404",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/KeyValueStore.sq": "5f471f4aff46ff1fc7f9d46f29baf49e76b6f6f49281241b16677f55ff220322",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/Notifications.sq": "4e1286cb6259da4c6200b44f42e7366e778cfe12a4c125508adec4f5047b3ecc",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/1.sqm": "bc9db6114c96e778a9b9b29c813940b77f465bfc388708f98a3521ebf888daac",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/2.sqm": "2744b058d707fc671aa08bf1dcb04401977ef389481c05b7cbb5bcb95976db5d",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/3.sqm": "685804327a43f85923536417f1c0bee2220e0fa0d28b9645fbed4c26e3866478",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/4.sqm": "89000ee2dbc34ea919a84fd36dbd5c795efc82f83168652617eda679971707b6",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/5.sqm": "6ed5988651c564ebc257b304a187df746a164e2a92de8e4623351c1cd9226bc2",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/6.sqm": "7c1dafe97226aba222062f373a90228ad8d01c66b6bb603706ddf2e968803985",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/7.sqm": "b100a8ccdd6c821c08ef3369dd14d017acda15179f8ccb6f8df1f3b5430a42a9"
+          },
+          "revision": "5d95156d71e5f52dfac1b7f95f26521cb1f41bbc"
+        },
+        {
+          "config": {
+            "phoenix-shared/build.gradle.kts": "a5df1eda27431dfe41f7d1a53ba80243ce27e8a6894ba9a898ffb43ad96c2ba0"
+          },
+          "files": {
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/ExchangeRates.sq": "747718ce33a094fd25bc3dd27b51f91582e74579453ac601cc103d2126d1e404",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/KeyValueStore.sq": "5f471f4aff46ff1fc7f9d46f29baf49e76b6f6f49281241b16677f55ff220322",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/Notifications.sq": "a8788f6e1aeaff3371450b27feafefa2798d4bbf46294edd7d6b5648b4561bcb",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/1.sqm": "bc9db6114c96e778a9b9b29c813940b77f465bfc388708f98a3521ebf888daac",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/2.sqm": "2744b058d707fc671aa08bf1dcb04401977ef389481c05b7cbb5bcb95976db5d",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/3.sqm": "685804327a43f85923536417f1c0bee2220e0fa0d28b9645fbed4c26e3866478",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/4.sqm": "89000ee2dbc34ea919a84fd36dbd5c795efc82f83168652617eda679971707b6",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/5.sqm": "6ed5988651c564ebc257b304a187df746a164e2a92de8e4623351c1cd9226bc2",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/6.sqm": "7c1dafe97226aba222062f373a90228ad8d01c66b6bb603706ddf2e968803985",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/7.sqm": "b100a8ccdd6c821c08ef3369dd14d017acda15179f8ccb6f8df1f3b5430a42a9",
+            "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/8.sqm": "2ec5280cf7c7cbd5f503212670d61c15987b036ab7b49a4dbe4c44be13e338e7"
+          },
+          "revision": "a75e62e4583fd230a151b274fb26b0f99ed0f343"
+        }
+      ],
+      "channelsdb": [
+        {
+          "config": {
+            "phoenix-shared/build.gradle.kts": "0011e25e256b6370371abaf7caf9f648ea187a42adc0e6060ff0886e89f4d271"
+          },
+          "files": {
+            "phoenix-shared/src/commonMain/sqldelight/channelsdb/fr/acinq/phoenix/db/sqldelight/ChannelsDatabase.sq": "430df40a77b9a5361bbd110ed4f41244b3908f5af1f2e358762f008e37c7ba28"
+          },
+          "revision": "414c7a6ed02183fdfb77649ca575f9376f6ab02a"
+        },
+        {
+          "config": {
+            "phoenix-shared/build.gradle.kts": "33d3eb0aa1abf8a5573522bbb9a965685446a4bb550662616d533de83c42b0eb"
+          },
+          "files": {
+            "phoenix-shared/src/commonMain/sqldelight/channelsdb/fr/acinq/phoenix/db/sqldelight/ChannelsDatabase.sq": "c64b53aef7bef7b5e8a3237623c8713ce257271469916d364898692958327eac"
+          },
+          "revision": "0ba7dccbfbb02d305310058e4933d9984c660852"
+        }
+      ],
+      "paymentsdb": [
+        {
+          "config": {
+            "phoenix-shared/build.gradle.kts": "0011e25e256b6370371abaf7caf9f648ea187a42adc0e6060ff0886e89f4d271"
+          },
+          "files": {
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/CloudKitPayments.sq": "ff229645272d9ace1855bbe9fe036f19e667035608c422f71879a8988356205e",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/OnChainTransactions.sq": "8c4d42ee65522205c87d796bb116cc89dc00712e77676f9eb615233c1b12ee09",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/Payments.sq": "e8c52bfbfc4c10b41de225683abcd214aa7a9b16ba7fc6a0c179b1dc5b214a14",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/PaymentsIncoming.sq": "b185c9c5a294a535ee0156097ea29b9bee71f8c033adf0868b9d2c0e8f1e60fa",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/PaymentsMetadata.sq": "b25f3096192b08877ef8752c0d3059c0da92ef2a9b3a17dcf8270d297228db08",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/PaymentsOutgoing.sq": "133bb61db6efb49c1beda3c615865188b7945286283bff4b8e71b59a5319ef3c",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/1.sqm": "227ee7df244b2f5b28ffc4558ad93acd72a6f018d531fb2cc49311d57168e77f",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/10.sqm": "84d2fdebb99780a98612e432621f92c9f7b0da3fedff244b86005bd37afb00fe",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/11.sqm": "8ef658a4c2a1a59595b923aad0958eb40733603ae50c3aa09fe58183329bece4",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/2.sqm": "2aef9e5c96305ece972f0276a7cd7d113a7ee874525d64c33b61aa36a8a5a366",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/3.sqm": "e60c06d0602d61285eb5cfaf6ed98cbde687ca16c2d9491e458b156d3838b484",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/4.sqm": "2857e12bad753304502080ee17427a00b0454527d75698078e2ff1fbbdd0d73b",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/5.sqm": "31078b569ab8a321abbd3521ba216759f1d31e4dd2fd45357ea356fe3f67f15a",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/6.sqm": "0636969fb641e79e71a72964ff802b034d73713413b71bebe253dbea5ec89f4d",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/7.sqm": "669b4a241af604cb4e8f49c260d2aa399b6eddb9ab8e1fefb7d7246262f4bb60",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/8.sqm": "15e972e41e0e2b80367aa447801445838be18f019e17c33445f5d5308995d2b1",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/9.sqm": "ccfb8511a4909183553c2fc43ac55ffa6826a2e3bb824c3f3072083609dfd3fa"
+          },
+          "revision": "414c7a6ed02183fdfb77649ca575f9376f6ab02a"
+        },
+        {
+          "config": {
+            "phoenix-shared/build.gradle.kts": "95665c4d4f3f4332117abf71f5fd7f5b9e91cfcfe21696babf64806f355b1ebb"
+          },
+          "files": {
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/CloudKitPayments.sq": "ff229645272d9ace1855bbe9fe036f19e667035608c422f71879a8988356205e",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/OnChainTransactions.sq": "8c4d42ee65522205c87d796bb116cc89dc00712e77676f9eb615233c1b12ee09",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/Payments.sq": "a000164bbd5d83eea11909bef97eeaf7d240c872c25dc22de391606d3a8e98bd",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/PaymentsIncoming.sq": "b185c9c5a294a535ee0156097ea29b9bee71f8c033adf0868b9d2c0e8f1e60fa",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/PaymentsMetadata.sq": "b25f3096192b08877ef8752c0d3059c0da92ef2a9b3a17dcf8270d297228db08",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/PaymentsOutgoing.sq": "133bb61db6efb49c1beda3c615865188b7945286283bff4b8e71b59a5319ef3c",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/1.sqm": "227ee7df244b2f5b28ffc4558ad93acd72a6f018d531fb2cc49311d57168e77f",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/10.sqm": "84d2fdebb99780a98612e432621f92c9f7b0da3fedff244b86005bd37afb00fe",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/11.sqm": "8ef658a4c2a1a59595b923aad0958eb40733603ae50c3aa09fe58183329bece4",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/2.sqm": "2aef9e5c96305ece972f0276a7cd7d113a7ee874525d64c33b61aa36a8a5a366",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/3.sqm": "e60c06d0602d61285eb5cfaf6ed98cbde687ca16c2d9491e458b156d3838b484",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/4.sqm": "2857e12bad753304502080ee17427a00b0454527d75698078e2ff1fbbdd0d73b",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/5.sqm": "31078b569ab8a321abbd3521ba216759f1d31e4dd2fd45357ea356fe3f67f15a",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/6.sqm": "0636969fb641e79e71a72964ff802b034d73713413b71bebe253dbea5ec89f4d",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/7.sqm": "669b4a241af604cb4e8f49c260d2aa399b6eddb9ab8e1fefb7d7246262f4bb60",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/8.sqm": "15e972e41e0e2b80367aa447801445838be18f019e17c33445f5d5308995d2b1",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/9.sqm": "ccfb8511a4909183553c2fc43ac55ffa6826a2e3bb824c3f3072083609dfd3fa"
+          },
+          "revision": "e2ffbce0f8c98436108fb05fe3cce5fe6a34aa94"
+        },
+        {
+          "config": {
+            "phoenix-shared/build.gradle.kts": "95665c4d4f3f4332117abf71f5fd7f5b9e91cfcfe21696babf64806f355b1ebb"
+          },
+          "files": {
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/CloudKitContacts.sq": "aee475cc9fa4ecb57026f40b6307304caa45db36995b1ebef2e99aa2035d4c81",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/CloudKitPayments.sq": "ff229645272d9ace1855bbe9fe036f19e667035608c422f71879a8988356205e",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/Contacts.sq": "0a72c40b820d916947139b1f933e859a5732d5d818de282511d7da8a0a3ab9dc",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/OnChainTransactions.sq": "8c4d42ee65522205c87d796bb116cc89dc00712e77676f9eb615233c1b12ee09",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/Payments.sq": "a000164bbd5d83eea11909bef97eeaf7d240c872c25dc22de391606d3a8e98bd",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/PaymentsIncoming.sq": "b185c9c5a294a535ee0156097ea29b9bee71f8c033adf0868b9d2c0e8f1e60fa",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/PaymentsMetadata.sq": "6c3baa00d30e72e4bd519d483205279f834c3726c15f9abd386f0fb0251f7cb9",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/PaymentsOutgoing.sq": "133bb61db6efb49c1beda3c615865188b7945286283bff4b8e71b59a5319ef3c",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/1.sqm": "227ee7df244b2f5b28ffc4558ad93acd72a6f018d531fb2cc49311d57168e77f",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/10.sqm": "84d2fdebb99780a98612e432621f92c9f7b0da3fedff244b86005bd37afb00fe",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/11.sqm": "8ef658a4c2a1a59595b923aad0958eb40733603ae50c3aa09fe58183329bece4",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/12.sqm": "dcd218878729b23ae7f2b37dd6fca979814a0698604ff2ad0d821d3e7f936fe6",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/2.sqm": "2aef9e5c96305ece972f0276a7cd7d113a7ee874525d64c33b61aa36a8a5a366",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/3.sqm": "e60c06d0602d61285eb5cfaf6ed98cbde687ca16c2d9491e458b156d3838b484",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/4.sqm": "2857e12bad753304502080ee17427a00b0454527d75698078e2ff1fbbdd0d73b",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/5.sqm": "31078b569ab8a321abbd3521ba216759f1d31e4dd2fd45357ea356fe3f67f15a",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/6.sqm": "0636969fb641e79e71a72964ff802b034d73713413b71bebe253dbea5ec89f4d",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/7.sqm": "669b4a241af604cb4e8f49c260d2aa399b6eddb9ab8e1fefb7d7246262f4bb60",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/8.sqm": "15e972e41e0e2b80367aa447801445838be18f019e17c33445f5d5308995d2b1",
+            "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/9.sqm": "ccfb8511a4909183553c2fc43ac55ffa6826a2e3bb824c3f3072083609dfd3fa"
+          },
+          "revision": "5d95156d71e5f52dfac1b7f95f26521cb1f41bbc"
+        }
+      ]
+    },
+    "head": "f3a227624c2ab262351a5261a5e4a1c6bdfc4887",
+    "inputs": {
+      "0011e25e256b6370371abaf7caf9f648ea187a42adc0e6060ff0886e89f4d271": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/build.gradle.kts"
+      ],
+      "0636969fb641e79e71a72964ff802b034d73713413b71bebe253dbea5ec89f4d": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/6.sqm"
+      ],
+      "0a72c40b820d916947139b1f933e859a5732d5d818de282511d7da8a0a3ab9dc": [
+        "5d95156d71e5f52dfac1b7f95f26521cb1f41bbc",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/Contacts.sq"
+      ],
+      "133bb61db6efb49c1beda3c615865188b7945286283bff4b8e71b59a5319ef3c": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/PaymentsOutgoing.sq"
+      ],
+      "15e972e41e0e2b80367aa447801445838be18f019e17c33445f5d5308995d2b1": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/8.sqm"
+      ],
+      "227ee7df244b2f5b28ffc4558ad93acd72a6f018d531fb2cc49311d57168e77f": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/1.sqm"
+      ],
+      "2744b058d707fc671aa08bf1dcb04401977ef389481c05b7cbb5bcb95976db5d": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/2.sqm"
+      ],
+      "2857e12bad753304502080ee17427a00b0454527d75698078e2ff1fbbdd0d73b": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/4.sqm"
+      ],
+      "2a936803e8a38ef796a97ac3dbbcbf80d681e9ebb51192e73576f38cdecaaa24": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/CloudKitContacts.sq"
+      ],
+      "2aef9e5c96305ece972f0276a7cd7d113a7ee874525d64c33b61aa36a8a5a366": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/2.sqm"
+      ],
+      "2ec5280cf7c7cbd5f503212670d61c15987b036ab7b49a4dbe4c44be13e338e7": [
+        "a75e62e4583fd230a151b274fb26b0f99ed0f343",
+        "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/8.sqm"
+      ],
+      "31078b569ab8a321abbd3521ba216759f1d31e4dd2fd45357ea356fe3f67f15a": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/5.sqm"
+      ],
+      "33d3eb0aa1abf8a5573522bbb9a965685446a4bb550662616d533de83c42b0eb": [
+        "0ba7dccbfbb02d305310058e4933d9984c660852",
+        "phoenix-shared/build.gradle.kts"
+      ],
+      "430df40a77b9a5361bbd110ed4f41244b3908f5af1f2e358762f008e37c7ba28": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/channelsdb/fr/acinq/phoenix/db/sqldelight/ChannelsDatabase.sq"
+      ],
+      "4e1286cb6259da4c6200b44f42e7366e778cfe12a4c125508adec4f5047b3ecc": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/Notifications.sq"
+      ],
+      "5f471f4aff46ff1fc7f9d46f29baf49e76b6f6f49281241b16677f55ff220322": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/KeyValueStore.sq"
+      ],
+      "669b4a241af604cb4e8f49c260d2aa399b6eddb9ab8e1fefb7d7246262f4bb60": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/7.sqm"
+      ],
+      "685804327a43f85923536417f1c0bee2220e0fa0d28b9645fbed4c26e3866478": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/3.sqm"
+      ],
+      "6c3baa00d30e72e4bd519d483205279f834c3726c15f9abd386f0fb0251f7cb9": [
+        "5d95156d71e5f52dfac1b7f95f26521cb1f41bbc",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/PaymentsMetadata.sq"
+      ],
+      "6ed5988651c564ebc257b304a187df746a164e2a92de8e4623351c1cd9226bc2": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/5.sqm"
+      ],
+      "747718ce33a094fd25bc3dd27b51f91582e74579453ac601cc103d2126d1e404": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/ExchangeRates.sq"
+      ],
+      "7bec7df9daaae5e584d41b27dca110ce36df61b654ea30523bf4989769b462d2": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/Contacts.sq"
+      ],
+      "7c1dafe97226aba222062f373a90228ad8d01c66b6bb603706ddf2e968803985": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/6.sqm"
+      ],
+      "84d2fdebb99780a98612e432621f92c9f7b0da3fedff244b86005bd37afb00fe": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/10.sqm"
+      ],
+      "89000ee2dbc34ea919a84fd36dbd5c795efc82f83168652617eda679971707b6": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/4.sqm"
+      ],
+      "8c4d42ee65522205c87d796bb116cc89dc00712e77676f9eb615233c1b12ee09": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/OnChainTransactions.sq"
+      ],
+      "8ef658a4c2a1a59595b923aad0958eb40733603ae50c3aa09fe58183329bece4": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/11.sqm"
+      ],
+      "95665c4d4f3f4332117abf71f5fd7f5b9e91cfcfe21696babf64806f355b1ebb": [
+        "5d95156d71e5f52dfac1b7f95f26521cb1f41bbc",
+        "phoenix-shared/build.gradle.kts"
+      ],
+      "a000164bbd5d83eea11909bef97eeaf7d240c872c25dc22de391606d3a8e98bd": [
+        "e2ffbce0f8c98436108fb05fe3cce5fe6a34aa94",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/Payments.sq"
+      ],
+      "a5df1eda27431dfe41f7d1a53ba80243ce27e8a6894ba9a898ffb43ad96c2ba0": [
+        "a75e62e4583fd230a151b274fb26b0f99ed0f343",
+        "phoenix-shared/build.gradle.kts"
+      ],
+      "a8788f6e1aeaff3371450b27feafefa2798d4bbf46294edd7d6b5648b4561bcb": [
+        "a75e62e4583fd230a151b274fb26b0f99ed0f343",
+        "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/Notifications.sq"
+      ],
+      "aee475cc9fa4ecb57026f40b6307304caa45db36995b1ebef2e99aa2035d4c81": [
+        "5d95156d71e5f52dfac1b7f95f26521cb1f41bbc",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/CloudKitContacts.sq"
+      ],
+      "b100a8ccdd6c821c08ef3369dd14d017acda15179f8ccb6f8df1f3b5430a42a9": [
+        "5d95156d71e5f52dfac1b7f95f26521cb1f41bbc",
+        "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/7.sqm"
+      ],
+      "b185c9c5a294a535ee0156097ea29b9bee71f8c033adf0868b9d2c0e8f1e60fa": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/PaymentsIncoming.sq"
+      ],
+      "b25f3096192b08877ef8752c0d3059c0da92ef2a9b3a17dcf8270d297228db08": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/PaymentsMetadata.sq"
+      ],
+      "bc9db6114c96e778a9b9b29c813940b77f465bfc388708f98a3521ebf888daac": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/appdb/fr/acinq/phoenix/db/sqldelight/migrations/1.sqm"
+      ],
+      "c64b53aef7bef7b5e8a3237623c8713ce257271469916d364898692958327eac": [
+        "0ba7dccbfbb02d305310058e4933d9984c660852",
+        "phoenix-shared/src/commonMain/sqldelight/channelsdb/fr/acinq/phoenix/db/sqldelight/ChannelsDatabase.sq"
+      ],
+      "ccfb8511a4909183553c2fc43ac55ffa6826a2e3bb824c3f3072083609dfd3fa": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/9.sqm"
+      ],
+      "dcd218878729b23ae7f2b37dd6fca979814a0698604ff2ad0d821d3e7f936fe6": [
+        "5d95156d71e5f52dfac1b7f95f26521cb1f41bbc",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/12.sqm"
+      ],
+      "e60c06d0602d61285eb5cfaf6ed98cbde687ca16c2d9491e458b156d3838b484": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/migrations/3.sqm"
+      ],
+      "e8c52bfbfc4c10b41de225683abcd214aa7a9b16ba7fc6a0c179b1dc5b214a14": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/Payments.sq"
+      ],
+      "ff229645272d9ace1855bbe9fe036f19e667035608c422f71879a8988356205e": [
+        "414c7a6ed02183fdfb77649ca575f9376f6ab02a",
+        "phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/CloudKitPayments.sq"
+      ]
+    }
+  },
+  "cashapp/zipline": {
+    "databases": {
+      "zipline-loader": [
+        {
+          "config": {
+            "zipline-loader/build.gradle.kts": "7a8be94858ece3370b60a21c181202d13798579c478d81aed5968bffbf9a2b1c"
+          },
+          "files": {
+            "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/Cache.sq": "2cf1ef382d9cc63050d815ed4c6e95160d1a35b5dca39773b10cc57f190e3c7c"
+          },
+          "revision": "a1a9ab74539cc8e76a40c7536c7138f614dc365c"
+        },
+        {
+          "config": {
+            "zipline-loader/build.gradle.kts": "db4ab2a21be9b71c73ce352186e095a8a8f82e1c768d2d1b2e678239ed5cccf4"
+          },
+          "files": {
+            "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/Files.sq": "c5ef28b94aff86efe18476b039d171fa646e2ce5b4062c4871cdd4a95fd6be88",
+            "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/Pins.sq": "24aa4575351e06fa9ea50539375780141929d1cb7aebeae0efcce688044020bc"
+          },
+          "revision": "7a92b675ff53a1daa0bb3e8dcd474214fbe69ac9"
+        },
+        {
+          "config": {
+            "zipline-loader/build.gradle.kts": "9ea406ad316185c52339bec49f4a0974425b256cb7f36215fb64828dafd9a749"
+          },
+          "files": {
+            "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Files.sq": "9fff47239b4c8475a1fbac83b5b7eb6d670ce3ac5d64ae99c532b256923f1110",
+            "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Pins.sq": "24aa4575351e06fa9ea50539375780141929d1cb7aebeae0efcce688044020bc"
+          },
+          "revision": "a3d330a5e4f3c83fee13d079209e5850719db8eb"
+        },
+        {
+          "config": {
+            "zipline-loader/build.gradle.kts": "67b413df79c96f28b256aedec2897e68127a57a039e5dfb7b0d56ed551d4aac8"
+          },
+          "files": {
+            "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Files.sq": "3b1c5670149cc412207b0f1cbe73bfdfc2fba5d900dd7f86a4da623f8bd43c8d",
+            "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Pins.sq": "24aa4575351e06fa9ea50539375780141929d1cb7aebeae0efcce688044020bc"
+          },
+          "revision": "bc659407cfe303ed93429d6fe9aacbf4f255f20b"
+        },
+        {
+          "config": {
+            "zipline-loader/build.gradle.kts": "67b413df79c96f28b256aedec2897e68127a57a039e5dfb7b0d56ed551d4aac8"
+          },
+          "files": {
+            "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Files.sq": "63ca762f850f6532404e1362555d94ef932fcfeee86e324e01b06acbfdb9d215",
+            "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Pins.sq": "24aa4575351e06fa9ea50539375780141929d1cb7aebeae0efcce688044020bc"
+          },
+          "revision": "1d4f56e75fbf68d74b1daf9acd50875b62c5a984"
+        },
+        {
+          "config": {
+            "zipline-loader/build.gradle.kts": "67b413df79c96f28b256aedec2897e68127a57a039e5dfb7b0d56ed551d4aac8"
+          },
+          "files": {
+            "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Files.sq": "9ca0cf520b31ce5014f5337e7b72d43f40f55f5b0971f49f33c61e2e189d0b0f",
+            "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Pins.sq": "24aa4575351e06fa9ea50539375780141929d1cb7aebeae0efcce688044020bc"
+          },
+          "revision": "4983c2dc493fa301d5996b65b3c20de24e95af71"
+        },
+        {
+          "config": {
+            "zipline-loader/build.gradle.kts": "67b413df79c96f28b256aedec2897e68127a57a039e5dfb7b0d56ed551d4aac8"
+          },
+          "files": {
+            "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Files.sq": "9ca0cf520b31ce5014f5337e7b72d43f40f55f5b0971f49f33c61e2e189d0b0f",
+            "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Pins.sq": "c97cf778c1ef9c338b9cd7e3a07994c65871c2a257ac5026c47565e581cdea92"
+          },
+          "revision": "0b076222e7d939aac27919c56446aa8f7524c731"
+        }
+      ]
+    },
+    "head": "9bc5139c4b86ecf65b7be12242745f69bee83128",
+    "inputs": {
+      "24aa4575351e06fa9ea50539375780141929d1cb7aebeae0efcce688044020bc": [
+        "7a92b675ff53a1daa0bb3e8dcd474214fbe69ac9",
+        "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/Pins.sq"
+      ],
+      "2cf1ef382d9cc63050d815ed4c6e95160d1a35b5dca39773b10cc57f190e3c7c": [
+        "a1a9ab74539cc8e76a40c7536c7138f614dc365c",
+        "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/Cache.sq"
+      ],
+      "3b1c5670149cc412207b0f1cbe73bfdfc2fba5d900dd7f86a4da623f8bd43c8d": [
+        "bc659407cfe303ed93429d6fe9aacbf4f255f20b",
+        "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Files.sq"
+      ],
+      "63ca762f850f6532404e1362555d94ef932fcfeee86e324e01b06acbfdb9d215": [
+        "1d4f56e75fbf68d74b1daf9acd50875b62c5a984",
+        "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Files.sq"
+      ],
+      "67b413df79c96f28b256aedec2897e68127a57a039e5dfb7b0d56ed551d4aac8": [
+        "bc659407cfe303ed93429d6fe9aacbf4f255f20b",
+        "zipline-loader/build.gradle.kts"
+      ],
+      "7a8be94858ece3370b60a21c181202d13798579c478d81aed5968bffbf9a2b1c": [
+        "a1a9ab74539cc8e76a40c7536c7138f614dc365c",
+        "zipline-loader/build.gradle.kts"
+      ],
+      "9ca0cf520b31ce5014f5337e7b72d43f40f55f5b0971f49f33c61e2e189d0b0f": [
+        "4983c2dc493fa301d5996b65b3c20de24e95af71",
+        "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Files.sq"
+      ],
+      "9ea406ad316185c52339bec49f4a0974425b256cb7f36215fb64828dafd9a749": [
+        "a3d330a5e4f3c83fee13d079209e5850719db8eb",
+        "zipline-loader/build.gradle.kts"
+      ],
+      "9fff47239b4c8475a1fbac83b5b7eb6d670ce3ac5d64ae99c532b256923f1110": [
+        "a3d330a5e4f3c83fee13d079209e5850719db8eb",
+        "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Files.sq"
+      ],
+      "c5ef28b94aff86efe18476b039d171fa646e2ce5b4062c4871cdd4a95fd6be88": [
+        "7a92b675ff53a1daa0bb3e8dcd474214fbe69ac9",
+        "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/Files.sq"
+      ],
+      "c97cf778c1ef9c338b9cd7e3a07994c65871c2a257ac5026c47565e581cdea92": [
+        "0b076222e7d939aac27919c56446aa8f7524c731",
+        "zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Pins.sq"
+      ],
+      "db4ab2a21be9b71c73ce352186e095a8a8f82e1c768d2d1b2e678239ed5cccf4": [
+        "7a92b675ff53a1daa0bb3e8dcd474214fbe69ac9",
+        "zipline-loader/build.gradle.kts"
+      ]
+    }
+  },
+  "saket/press": {
+    "databases": {
+      "shared": [
+        {
+          "config": {
+            "shared/build.gradle": "f61f645a7c7c6552fbf0ba025360b8283820b27d84e95545c1a009ecdfe7a588"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/compose/data/Note.sq": "48caaf6224c37d8a10ff3335f85f76afda96f3fc790bb355eab3a6e459a63d0c"
+          },
+          "revision": "251d150915f1dd06942548eda1d6e93b4e31dd52"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "35e70586a82eb1d34d440f8abeddbe4eb6502fa99e4ea616cee54be85cd2b8e7"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/compose/data/shared/Note.sq": "2f730a8dc3bb85afb173708165d20139997793bcbf1bccb9c9d0cdf09441b1f2"
+          },
+          "revision": "c242592fb7e21f4fa60ba688a01633af66700400"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "c93377e31e8d6b58e1a419a4acc5c9ca14fdc22b59c584f12881355b8eab8136"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/compose/data/shared/Note.sq": "9e289c72a4c12045051d23f1e7b409288eb514c61571f14d57a9bdb648c49354"
+          },
+          "revision": "01f555a2089036704c95c36f4af0c6c91d8a8895"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "57c376a3d8b9061fa295e1ebc073a9e92868b21e27f18e2b41c9bcf6547e6205"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/compose/data/shared/Note.sq": "d623c03560411a412edabcbdd283d78855563d0187f0dea86afb52cd4a9dc116"
+          },
+          "revision": "5b26e564f18ea9d732b4e2ed7832231bf82ef634"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "57c376a3d8b9061fa295e1ebc073a9e92868b21e27f18e2b41c9bcf6547e6205"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/compose/data/shared/Note.sq": "be98600077fa81e87a3e77b2040fa849a33e1d1d32f74e523a9f26ea43a450a8"
+          },
+          "revision": "d05f6e2ea31a7ddc04b5114a372846756232016b"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "57c376a3d8b9061fa295e1ebc073a9e92868b21e27f18e2b41c9bcf6547e6205"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/compose/data/shared/Note.sq": "8a390ef0d3b4955e01faebeb925dd34accf991dacb9bd7cceb2a93c9e5417e66"
+          },
+          "revision": "8d56794c5ca02742f5ec72f60467b74b26037a3c"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "57c376a3d8b9061fa295e1ebc073a9e92868b21e27f18e2b41c9bcf6547e6205"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/compose/data/shared/Note.sq": "64541f523cde621c7d9d4a04251251601b3fbeb9b3cd16609148a8b10275a7e2"
+          },
+          "revision": "89b4e790783b6012ca17f4ce909392cca84fdc7b"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "d95df8057e2cfc5f6f0bd4554ea11a2551bf53582bb7f73f678688bc67947fca"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "64541f523cde621c7d9d4a04251251601b3fbeb9b3cd16609148a8b10275a7e2"
+          },
+          "revision": "7e9c55ce71a63314ed95e5811ab3461040fa09f6"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "cea22185270ab172ff4f238d92ba330a4618b3ebe91aef172934d15904828b26"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "eee46ad8930acc229477ef135a3a66232b5499e21b7d0dc446d30a320a48d152"
+          },
+          "revision": "c86ac6e5b22dc6510f8efca60737ce65e485d543"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "a92ee099564b2e67d06d0d759ece9558fb536e0b34b6f2fd8af861c809df53ae"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "537374726d5c8d51ce8beff13f058fdf5085f1f878ac8514c3e2a6630826c588"
+          },
+          "revision": "8e4fbf899cbb5a0d653026a19d2faceb4ceb9654"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "a92ee099564b2e67d06d0d759ece9558fb536e0b34b6f2fd8af861c809df53ae"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "33de48099d210bccd47f39ed16bef634625af84453ac1d87024880c613701f86"
+          },
+          "revision": "42e0d7f72fb895f808ac6964d109b701e1f7b967"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "a92ee099564b2e67d06d0d759ece9558fb536e0b34b6f2fd8af861c809df53ae"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "01511f6eb2d9fada5e8c16a4b020835617534715930e627b596030efe402dc89"
+          },
+          "revision": "08fd978c9fbca5361c39fe873335b7ffd00d8072"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "35325a28ed0b74c4d9cc64cb1df57e673b9bfb85ce7e9336b3feaf7dfa19d3f7"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "4ba15b28b5c455d60516068badbb1c4ce1133db09408c70d3ba1a832b03d12b6"
+          },
+          "revision": "8b94b51a19469a24dc9e4714d78335cad3924b4b"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "87b6ae7425d0c91bf2dd1207ed3a77f3e59fc7e6a3c0cb15e0a0c8a3a636905e"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "c56ee3af21c8a43e040c3eb3a290e55acc6f15c31d5f7e4c7c85b0876ab7282e"
+          },
+          "revision": "9af28191c66e0a76fb84a8a1bba6e3a17c7a6ff4"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "87b6ae7425d0c91bf2dd1207ed3a77f3e59fc7e6a3c0cb15e0a0c8a3a636905e"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "f0684cbf8a25691eff0149e7c65f9f13073a69f4fce10b7b847e6b3d0bf2b019"
+          },
+          "revision": "8d57e22a6c02563209eaf7b87c940c52821b2492"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "eb6a800d76f01f2682233f07dd60d04227de8e6798caa5b54e091f7b4d9564fd"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "95e01b5bed073313873a88ffd17c37546190914ed8c7f2e63c1a1c0ae44b64d3"
+          },
+          "revision": "9af7935645be6df4626334ad9ac98e93e947a53b"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "b28f475417dd55d607a862d38afb0edc196caeec42d5ab2f066419eac88a5411"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "808ea1eaafe10bb11420b1c3bd27fd7e3466bfea97dd554643b96c1bbbfac7ed"
+          },
+          "revision": "ddd04be105c030e7a370d9f3d3812d6cd8162070"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "978f3bdf9f8ef6b04ef6bccab03df2c5bd5ccbe1faaf2a94f322e1c3bb8578ae"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "f5add4c711627f179d33ed04ee5d15dcd95a76a2baf63058fcf7adf026d6583e"
+          },
+          "revision": "24838538512cb3a9fe96051ae87112b759e4a5d8"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "978f3bdf9f8ef6b04ef6bccab03df2c5bd5ccbe1faaf2a94f322e1c3bb8578ae"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "1ade200284e0af8e32212aea9d9eac1f09bcfb8eca77918d8bd6eedcb16907dc"
+          },
+          "revision": "97d3eb19120289488e26d0bb1bdb14cc362775c3"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "978f3bdf9f8ef6b04ef6bccab03df2c5bd5ccbe1faaf2a94f322e1c3bb8578ae"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "a96eaeddbd718b1ce5ea5a4f2e3135d90e4d9be2f87eb3726fa8a4d01eb203a0"
+          },
+          "revision": "3291e449746d464c4f345a1254e57506b0b43e3e"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "978f3bdf9f8ef6b04ef6bccab03df2c5bd5ccbe1faaf2a94f322e1c3bb8578ae"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "db68a371bb17bd279b41456e0a08ad55ade8adc4e859dccd6b6453556ca8df45"
+          },
+          "revision": "50de5e703d0543e87df6b2a718235e977c4912a3"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "978f3bdf9f8ef6b04ef6bccab03df2c5bd5ccbe1faaf2a94f322e1c3bb8578ae"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "db68a371bb17bd279b41456e0a08ad55ade8adc4e859dccd6b6453556ca8df45",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976"
+          },
+          "revision": "9428aa0f8bf44784823c7cc65fd2cb06b65c4baa"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "dd79bfba8ecd2834627cb892184eeb5fce4c32be688c2bae638aee5b831b04aa"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "06c354f96aeac90e4b030d9e74a1c2d0f1799cbe412d4a9d11aade53fe9fd0cb",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "af6eafa5ea5cb3843dffffc60bb21c89b64fe55abde49c5883cc83263386e58a"
+          },
+          "revision": "82bbfe1446649bc89d2d2ee6f6777200899456b2"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "dd79bfba8ecd2834627cb892184eeb5fce4c32be688c2bae638aee5b831b04aa"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "918721ad8f9147abe1dc92dda4e4a8abd25acf8d4469d8838caa7d57fdb81f23",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "af6eafa5ea5cb3843dffffc60bb21c89b64fe55abde49c5883cc83263386e58a"
+          },
+          "revision": "bb3ee9dfe455777f67d43b4bab9ee18eb382dfd9"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "dd79bfba8ecd2834627cb892184eeb5fce4c32be688c2bae638aee5b831b04aa"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "d88e002b40058958038f1a28ef6dd06c0b20a7188592a17c0f0734c246ea1eda",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "af6eafa5ea5cb3843dffffc60bb21c89b64fe55abde49c5883cc83263386e58a"
+          },
+          "revision": "18f3059b0fdb1e6fb3ed7500f6ee41999015312b"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "105c43715a734e2848ca14e08b3a0a9e7f43156f9fc7ae6085423906cba9e65e"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "91f064c704324996114be0943eceef8e031013b5b1dcfdae5f7dd71766c498ad",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "af6eafa5ea5cb3843dffffc60bb21c89b64fe55abde49c5883cc83263386e58a"
+          },
+          "revision": "b4bea50f67887372010530493ff670e931a647a7"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "105c43715a734e2848ca14e08b3a0a9e7f43156f9fc7ae6085423906cba9e65e"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "064557e1ae60e293e237151937151ad6891ecb9eba04b9c8d378cb9de9eda5bb",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "af6eafa5ea5cb3843dffffc60bb21c89b64fe55abde49c5883cc83263386e58a"
+          },
+          "revision": "b6d0e106ab16183abfa7e6c87fd63491d0a1bab5"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "4d7292920f9980f32d9d41fcf0bbd68657a250c730ade31ca2e2c2aaa480fd33"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "6a24d7d20b50ab39cd7ce6d503bf7f693d3ff44f56139af4c7fd4bae83ce682e",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "af6eafa5ea5cb3843dffffc60bb21c89b64fe55abde49c5883cc83263386e58a"
+          },
+          "revision": "b3bd920bef1c4ae7664c7711dcd7573b34a0f59d"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "4d7292920f9980f32d9d41fcf0bbd68657a250c730ade31ca2e2c2aaa480fd33"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "79291fcd4fed6888598abea4a42a2ad1b24c689bd2b2a59499a4c14cbbf50240",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21"
+          },
+          "revision": "e17311640f1b12a126d26b8980d4b051beab25f8"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "d8acb1c68af73799397cea04df5b1a525fa34b98de63e70cab0f8bdc23528359"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "595272f42980de1b111843edc7a8cded7233b73fec2ec4ed6593aaca5be7cfd1",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21"
+          },
+          "revision": "a92610b47cc797837bf61d33d6c112c999556953"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "ed6a03b93374ba17629f5bf91bc896e4e9b7ba742ccafcc0d68ddf0476918f89"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "11b8995fe417de2925f226e8e73fe889e23ea4a637d814833ba78853e3f8c8d2",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21"
+          },
+          "revision": "fb91eecf496494727473b0307ee27468b87fd15a"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "ed6a03b93374ba17629f5bf91bc896e4e9b7ba742ccafcc0d68ddf0476918f89"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "b2ae6234f15b50f58a1ed3f264dbf9f8e8439a09340d05748952946d39803ef4",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21"
+          },
+          "revision": "982f145545ceec6d5de3f3e20ce9913475e3d57c"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "ed6a03b93374ba17629f5bf91bc896e4e9b7ba742ccafcc0d68ddf0476918f89"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "4c4440bbe81dc8c2158ee8c21822117106e9ea42616e5cedd2234fb4b650727d",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21"
+          },
+          "revision": "663c57117f525e35848abec614d309d2bde59418"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "a441e3c60f9dcc3ab7f205867061083440a159fe3c85da54c83730e1a2c2239d"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "ee23f6a1978fb14f49d9b5d9bb17112fbc8c97633600cca796b3382203767a44",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21"
+          },
+          "revision": "6e763f748025d7c8a7d409bc75096a02c40e7f0d"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "a441e3c60f9dcc3ab7f205867061083440a159fe3c85da54c83730e1a2c2239d"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "f5f1723765368d9a95304e0a46e29e9bb3e4a1e137a6227ce706f4e206615275",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "ee23f6a1978fb14f49d9b5d9bb17112fbc8c97633600cca796b3382203767a44",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47"
+          },
+          "revision": "9440d80d47041ef855b0221279909efd832a2508"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "a441e3c60f9dcc3ab7f205867061083440a159fe3c85da54c83730e1a2c2239d"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "9c2050be09898febe72b567d4bd706d0911d1c555577e2e4450de4564c73f7f1",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "ee23f6a1978fb14f49d9b5d9bb17112fbc8c97633600cca796b3382203767a44",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47"
+          },
+          "revision": "acb5365481a82c982369b98b051d17ff3e6d2dd7"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "a441e3c60f9dcc3ab7f205867061083440a159fe3c85da54c83730e1a2c2239d"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "d904d1371815ed78cc53ab3e775a28a27a124c95108316421ea4146004014d23",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "ee23f6a1978fb14f49d9b5d9bb17112fbc8c97633600cca796b3382203767a44",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47"
+          },
+          "revision": "e776f862ac29c70ab930740b73f69dc4fb7541e6"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "a441e3c60f9dcc3ab7f205867061083440a159fe3c85da54c83730e1a2c2239d"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "5f23662e07576907fe9c82b1f1b1110b1281eccddcecd4d936a9860a04366071",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "ee23f6a1978fb14f49d9b5d9bb17112fbc8c97633600cca796b3382203767a44",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47"
+          },
+          "revision": "3dde48c44e36b8a22b9ad093dcc97823be45b4a5"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "a441e3c60f9dcc3ab7f205867061083440a159fe3c85da54c83730e1a2c2239d"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "5f23662e07576907fe9c82b1f1b1110b1281eccddcecd4d936a9860a04366071",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "ee23f6a1978fb14f49d9b5d9bb17112fbc8c97633600cca796b3382203767a44",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "849c072df2f6324ae0cabd80066f612f69342909bf0ad3d525b25498adeaf104"
+          },
+          "revision": "94fa80dabf6a6e5bf64c9bf07bee5f5d51cb8b53"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "a441e3c60f9dcc3ab7f205867061083440a159fe3c85da54c83730e1a2c2239d"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "5f23662e07576907fe9c82b1f1b1110b1281eccddcecd4d936a9860a04366071",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "ee23f6a1978fb14f49d9b5d9bb17112fbc8c97633600cca796b3382203767a44",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366"
+          },
+          "revision": "8d9af85c21051c90bfc6338d734af5ee9b26f1e6"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "a441e3c60f9dcc3ab7f205867061083440a159fe3c85da54c83730e1a2c2239d"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "4afec925a96ec2f3072579cf3335318856bfa761f1abea90ba9f496f40cf1cbc",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "ee23f6a1978fb14f49d9b5d9bb17112fbc8c97633600cca796b3382203767a44",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366",
+            "shared/src/commonMain/sqldelight/migrations/5.sqm": "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03"
+          },
+          "revision": "04e54ec9f8eb143f3256be5d9e4a45025dbffc2d"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "46d5ec521a332570ba8312a7f5e159df9976358a726980a73054e201c2f7b0ab"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq": "b4a86ffa42e555204e69b4c9ce282a1ae87e0638c223678f5ba3a014d59e6c72",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "4afec925a96ec2f3072579cf3335318856bfa761f1abea90ba9f496f40cf1cbc",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "c09710dc44afcb9a5126f298ba2650533e99f58e607bb591ac7a95717c99c952",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366",
+            "shared/src/commonMain/sqldelight/migrations/5.sqm": "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03",
+            "shared/src/commonMain/sqldelight/migrations/6.sqm": "187ca8e206967516f2c4b3c4063a47c749fc02ecd1204a0250b6c4f675dae1aa"
+          },
+          "revision": "a3b05997f0fa7f6f4d9bf8e321929ba0afb74d24"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "46d5ec521a332570ba8312a7f5e159df9976358a726980a73054e201c2f7b0ab"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq": "4c695c06b0f982d233d11130f76619e3aaf477a773b390792c2e3be64d494e10",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "4afec925a96ec2f3072579cf3335318856bfa761f1abea90ba9f496f40cf1cbc",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "c09710dc44afcb9a5126f298ba2650533e99f58e607bb591ac7a95717c99c952",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366",
+            "shared/src/commonMain/sqldelight/migrations/5.sqm": "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03",
+            "shared/src/commonMain/sqldelight/migrations/6.sqm": "187ca8e206967516f2c4b3c4063a47c749fc02ecd1204a0250b6c4f675dae1aa"
+          },
+          "revision": "3d0fa334dd9ede6f26f4c68bc0d3865a592daa43"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "46d5ec521a332570ba8312a7f5e159df9976358a726980a73054e201c2f7b0ab"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq": "aa99fecb8526f421f2258aa3c83db26b885cd9573c4b7e7492123558151b64c6",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "4afec925a96ec2f3072579cf3335318856bfa761f1abea90ba9f496f40cf1cbc",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "acde3473c065ec8011b0b1f43c62df272b88911dd78ad60c07215d95a6f6e055",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366",
+            "shared/src/commonMain/sqldelight/migrations/5.sqm": "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03",
+            "shared/src/commonMain/sqldelight/migrations/6.sqm": "187ca8e206967516f2c4b3c4063a47c749fc02ecd1204a0250b6c4f675dae1aa"
+          },
+          "revision": "ad55299a6ae3135315339f3f17b692b287c5c1a9"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "46d5ec521a332570ba8312a7f5e159df9976358a726980a73054e201c2f7b0ab"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq": "be721f1c410d206aeb68a2bdc2f58803ea17f6b7a1adc6b1f8360f1ecbc221af",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "4afec925a96ec2f3072579cf3335318856bfa761f1abea90ba9f496f40cf1cbc",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "acde3473c065ec8011b0b1f43c62df272b88911dd78ad60c07215d95a6f6e055",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366",
+            "shared/src/commonMain/sqldelight/migrations/5.sqm": "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03",
+            "shared/src/commonMain/sqldelight/migrations/6.sqm": "187ca8e206967516f2c4b3c4063a47c749fc02ecd1204a0250b6c4f675dae1aa",
+            "shared/src/commonMain/sqldelight/migrations/7.sqm": "9d9eb150fc08ab1dd04e249b4a5ddb90079526e2de692b30645521247c258959"
+          },
+          "revision": "27af6aed2fc4f34c937903a11c441c5417b98216"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "46d5ec521a332570ba8312a7f5e159df9976358a726980a73054e201c2f7b0ab"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq": "6e55ec3fb9fa150bf7f125cdac6543f900705197d1471b2a160b6f3be763ff6b",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "4afec925a96ec2f3072579cf3335318856bfa761f1abea90ba9f496f40cf1cbc",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "a553e98420b84b2b0fe0b1f845d88f26ce3887b307c9aa8dd31ccdabd82d41a6",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366",
+            "shared/src/commonMain/sqldelight/migrations/5.sqm": "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03",
+            "shared/src/commonMain/sqldelight/migrations/6.sqm": "187ca8e206967516f2c4b3c4063a47c749fc02ecd1204a0250b6c4f675dae1aa",
+            "shared/src/commonMain/sqldelight/migrations/7.sqm": "9d9eb150fc08ab1dd04e249b4a5ddb90079526e2de692b30645521247c258959",
+            "shared/src/commonMain/sqldelight/migrations/8.sqm": "f42d75274f34707158a4e6f3e4f87fbc43b3ededcec54dc2a4a94f52f019c2f4"
+          },
+          "revision": "178115a28cf48cec63c06825b59095ded66826d4"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "46d5ec521a332570ba8312a7f5e159df9976358a726980a73054e201c2f7b0ab"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq": "8f2e7f8d555d2f48892aa0bb3adaf4536ddf53c0f24c0dccbf8f9c5700b10cb0",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "4afec925a96ec2f3072579cf3335318856bfa761f1abea90ba9f496f40cf1cbc",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "ea1fae6cb5de94e3830dec8e65afc207be6dfd2dd9699fb74aa0d1f4d037007c",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/10.sqm": "d67d705ad51703fdf1e5258553b0b93e069a586fb49dbc2ece4bbb564224ef04",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366",
+            "shared/src/commonMain/sqldelight/migrations/5.sqm": "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03",
+            "shared/src/commonMain/sqldelight/migrations/6.sqm": "187ca8e206967516f2c4b3c4063a47c749fc02ecd1204a0250b6c4f675dae1aa",
+            "shared/src/commonMain/sqldelight/migrations/7.sqm": "9d9eb150fc08ab1dd04e249b4a5ddb90079526e2de692b30645521247c258959",
+            "shared/src/commonMain/sqldelight/migrations/8.sqm": "f42d75274f34707158a4e6f3e4f87fbc43b3ededcec54dc2a4a94f52f019c2f4",
+            "shared/src/commonMain/sqldelight/migrations/9.sqm": "9372111ab585da3925fe103654e33557b08dcb7e6408bb30969b23d92ac8aeda"
+          },
+          "revision": "fef72643e8a39fc3b36aca366f7346712cf22334"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "46d5ec521a332570ba8312a7f5e159df9976358a726980a73054e201c2f7b0ab"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq": "1465ba1ba20c7d920d657b157f5297396d199ce03ff39c95450d523eab08d208",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "4afec925a96ec2f3072579cf3335318856bfa761f1abea90ba9f496f40cf1cbc",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "ea1fae6cb5de94e3830dec8e65afc207be6dfd2dd9699fb74aa0d1f4d037007c",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/10.sqm": "d67d705ad51703fdf1e5258553b0b93e069a586fb49dbc2ece4bbb564224ef04",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366",
+            "shared/src/commonMain/sqldelight/migrations/5.sqm": "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03",
+            "shared/src/commonMain/sqldelight/migrations/6.sqm": "187ca8e206967516f2c4b3c4063a47c749fc02ecd1204a0250b6c4f675dae1aa",
+            "shared/src/commonMain/sqldelight/migrations/7.sqm": "9d9eb150fc08ab1dd04e249b4a5ddb90079526e2de692b30645521247c258959",
+            "shared/src/commonMain/sqldelight/migrations/8.sqm": "f42d75274f34707158a4e6f3e4f87fbc43b3ededcec54dc2a4a94f52f019c2f4",
+            "shared/src/commonMain/sqldelight/migrations/9.sqm": "9372111ab585da3925fe103654e33557b08dcb7e6408bb30969b23d92ac8aeda"
+          },
+          "revision": "50acce5ecbbcdc560cc93b74ced8dd9e528d6eb5"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "46d5ec521a332570ba8312a7f5e159df9976358a726980a73054e201c2f7b0ab"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq": "a72f3156115c121d9915bf578747435aefffb357bdd0f0516f98ebfb9594a637",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "4afec925a96ec2f3072579cf3335318856bfa761f1abea90ba9f496f40cf1cbc",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "ea1fae6cb5de94e3830dec8e65afc207be6dfd2dd9699fb74aa0d1f4d037007c",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/10.sqm": "d67d705ad51703fdf1e5258553b0b93e069a586fb49dbc2ece4bbb564224ef04",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366",
+            "shared/src/commonMain/sqldelight/migrations/5.sqm": "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03",
+            "shared/src/commonMain/sqldelight/migrations/6.sqm": "187ca8e206967516f2c4b3c4063a47c749fc02ecd1204a0250b6c4f675dae1aa",
+            "shared/src/commonMain/sqldelight/migrations/7.sqm": "9d9eb150fc08ab1dd04e249b4a5ddb90079526e2de692b30645521247c258959",
+            "shared/src/commonMain/sqldelight/migrations/8.sqm": "f42d75274f34707158a4e6f3e4f87fbc43b3ededcec54dc2a4a94f52f019c2f4",
+            "shared/src/commonMain/sqldelight/migrations/9.sqm": "9372111ab585da3925fe103654e33557b08dcb7e6408bb30969b23d92ac8aeda"
+          },
+          "revision": "8e74e1f2df03c89acf47f7daae3dabf9e520df04"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "46d5ec521a332570ba8312a7f5e159df9976358a726980a73054e201c2f7b0ab"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq": "e9f2b236f72f921023aa8d336f00d254ec09c782f91c9d07fdc17b0c001f9d01",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "4afec925a96ec2f3072579cf3335318856bfa761f1abea90ba9f496f40cf1cbc",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "ea1fae6cb5de94e3830dec8e65afc207be6dfd2dd9699fb74aa0d1f4d037007c",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/10.sqm": "d67d705ad51703fdf1e5258553b0b93e069a586fb49dbc2ece4bbb564224ef04",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366",
+            "shared/src/commonMain/sqldelight/migrations/5.sqm": "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03",
+            "shared/src/commonMain/sqldelight/migrations/6.sqm": "187ca8e206967516f2c4b3c4063a47c749fc02ecd1204a0250b6c4f675dae1aa",
+            "shared/src/commonMain/sqldelight/migrations/7.sqm": "9d9eb150fc08ab1dd04e249b4a5ddb90079526e2de692b30645521247c258959",
+            "shared/src/commonMain/sqldelight/migrations/8.sqm": "f42d75274f34707158a4e6f3e4f87fbc43b3ededcec54dc2a4a94f52f019c2f4",
+            "shared/src/commonMain/sqldelight/migrations/9.sqm": "9372111ab585da3925fe103654e33557b08dcb7e6408bb30969b23d92ac8aeda"
+          },
+          "revision": "e296019a9445059487000b7ce066109f0c173feb"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "46d5ec521a332570ba8312a7f5e159df9976358a726980a73054e201c2f7b0ab"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq": "b9fc60dc2cdc29b938eeeefb8639dfe824da3e1dbfc473947cdaea81b781e4af",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "4afec925a96ec2f3072579cf3335318856bfa761f1abea90ba9f496f40cf1cbc",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "60fe54803005c2261dd27457b373c3002a46fb32e44ddad806ad4a21de037de3",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/10.sqm": "d67d705ad51703fdf1e5258553b0b93e069a586fb49dbc2ece4bbb564224ef04",
+            "shared/src/commonMain/sqldelight/migrations/11.sqm": "64e9b49256bfceb898bfc2575ebf38b4499e1284b5a274cbfff3a254b701c08c",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366",
+            "shared/src/commonMain/sqldelight/migrations/5.sqm": "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03",
+            "shared/src/commonMain/sqldelight/migrations/6.sqm": "187ca8e206967516f2c4b3c4063a47c749fc02ecd1204a0250b6c4f675dae1aa",
+            "shared/src/commonMain/sqldelight/migrations/7.sqm": "9d9eb150fc08ab1dd04e249b4a5ddb90079526e2de692b30645521247c258959",
+            "shared/src/commonMain/sqldelight/migrations/8.sqm": "f42d75274f34707158a4e6f3e4f87fbc43b3ededcec54dc2a4a94f52f019c2f4",
+            "shared/src/commonMain/sqldelight/migrations/9.sqm": "9372111ab585da3925fe103654e33557b08dcb7e6408bb30969b23d92ac8aeda"
+          },
+          "revision": "fa0e714798f8863d2b962b74f498f7c6b500fb10"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "46d5ec521a332570ba8312a7f5e159df9976358a726980a73054e201c2f7b0ab"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq": "3e5677f2057c26dfa30a1843704da8272653d5974f60ea111101fb2cba069a45",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "4afec925a96ec2f3072579cf3335318856bfa761f1abea90ba9f496f40cf1cbc",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "60fe54803005c2261dd27457b373c3002a46fb32e44ddad806ad4a21de037de3",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/10.sqm": "d67d705ad51703fdf1e5258553b0b93e069a586fb49dbc2ece4bbb564224ef04",
+            "shared/src/commonMain/sqldelight/migrations/11.sqm": "64e9b49256bfceb898bfc2575ebf38b4499e1284b5a274cbfff3a254b701c08c",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366",
+            "shared/src/commonMain/sqldelight/migrations/5.sqm": "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03",
+            "shared/src/commonMain/sqldelight/migrations/6.sqm": "187ca8e206967516f2c4b3c4063a47c749fc02ecd1204a0250b6c4f675dae1aa",
+            "shared/src/commonMain/sqldelight/migrations/7.sqm": "9d9eb150fc08ab1dd04e249b4a5ddb90079526e2de692b30645521247c258959",
+            "shared/src/commonMain/sqldelight/migrations/8.sqm": "f42d75274f34707158a4e6f3e4f87fbc43b3ededcec54dc2a4a94f52f019c2f4",
+            "shared/src/commonMain/sqldelight/migrations/9.sqm": "9372111ab585da3925fe103654e33557b08dcb7e6408bb30969b23d92ac8aeda"
+          },
+          "revision": "394b3cac31b0695ae230cde9d20d3d56b1862a06"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "681deb3228d8567fe294628fc8cfc3ad601d2be1f626ee473aa222793a3edf8e"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq": "3e5677f2057c26dfa30a1843704da8272653d5974f60ea111101fb2cba069a45",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "46cdf58ee265bc5cffb3f9dfcff1d1e88acaf8aca1f716eeff2b4c5af6360d51",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "15ec470a43aaad089da92fcc5ed54c0640ff1bbe92b4d7d9a8f7d49944f27cbc",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/10.sqm": "d67d705ad51703fdf1e5258553b0b93e069a586fb49dbc2ece4bbb564224ef04",
+            "shared/src/commonMain/sqldelight/migrations/11.sqm": "64e9b49256bfceb898bfc2575ebf38b4499e1284b5a274cbfff3a254b701c08c",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366",
+            "shared/src/commonMain/sqldelight/migrations/5.sqm": "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03",
+            "shared/src/commonMain/sqldelight/migrations/6.sqm": "187ca8e206967516f2c4b3c4063a47c749fc02ecd1204a0250b6c4f675dae1aa",
+            "shared/src/commonMain/sqldelight/migrations/7.sqm": "9d9eb150fc08ab1dd04e249b4a5ddb90079526e2de692b30645521247c258959",
+            "shared/src/commonMain/sqldelight/migrations/8.sqm": "f42d75274f34707158a4e6f3e4f87fbc43b3ededcec54dc2a4a94f52f019c2f4",
+            "shared/src/commonMain/sqldelight/migrations/9.sqm": "9372111ab585da3925fe103654e33557b08dcb7e6408bb30969b23d92ac8aeda"
+          },
+          "revision": "5582820f47bc90e38e59d521a34773c01a568961"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "f075c27ec0520e4bedf8b3d85f5f63462505889d9cc8e18492c4b27b657e7776"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq": "3e5677f2057c26dfa30a1843704da8272653d5974f60ea111101fb2cba069a45",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "46cdf58ee265bc5cffb3f9dfcff1d1e88acaf8aca1f716eeff2b4c5af6360d51",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "c0a034849cca19f27d05a21cbd7ce066780fc6f7daf423b7c5b85a46961eb12e",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/10.sqm": "d67d705ad51703fdf1e5258553b0b93e069a586fb49dbc2ece4bbb564224ef04",
+            "shared/src/commonMain/sqldelight/migrations/11.sqm": "64e9b49256bfceb898bfc2575ebf38b4499e1284b5a274cbfff3a254b701c08c",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366",
+            "shared/src/commonMain/sqldelight/migrations/5.sqm": "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03",
+            "shared/src/commonMain/sqldelight/migrations/6.sqm": "187ca8e206967516f2c4b3c4063a47c749fc02ecd1204a0250b6c4f675dae1aa",
+            "shared/src/commonMain/sqldelight/migrations/7.sqm": "9d9eb150fc08ab1dd04e249b4a5ddb90079526e2de692b30645521247c258959",
+            "shared/src/commonMain/sqldelight/migrations/8.sqm": "f42d75274f34707158a4e6f3e4f87fbc43b3ededcec54dc2a4a94f52f019c2f4",
+            "shared/src/commonMain/sqldelight/migrations/9.sqm": "9372111ab585da3925fe103654e33557b08dcb7e6408bb30969b23d92ac8aeda"
+          },
+          "revision": "2d29cfd7813c6c98f86914d9341b9a64a396484f"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "a38728371bb8ea05836f41de80bbca3d0d302cb336cbfadfb8c4ef143ea437c0"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq": "f93ea970cc2987fffb7c1b53fecefe69bd23bcb5f06dbd6c61a679cf2043dcdc",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "46cdf58ee265bc5cffb3f9dfcff1d1e88acaf8aca1f716eeff2b4c5af6360d51",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "55dabd504ed6046527617ba3893e57212d292911087d89757ae58db2d969cf03",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/10.sqm": "d67d705ad51703fdf1e5258553b0b93e069a586fb49dbc2ece4bbb564224ef04",
+            "shared/src/commonMain/sqldelight/migrations/11.sqm": "64e9b49256bfceb898bfc2575ebf38b4499e1284b5a274cbfff3a254b701c08c",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366",
+            "shared/src/commonMain/sqldelight/migrations/5.sqm": "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03",
+            "shared/src/commonMain/sqldelight/migrations/6.sqm": "187ca8e206967516f2c4b3c4063a47c749fc02ecd1204a0250b6c4f675dae1aa",
+            "shared/src/commonMain/sqldelight/migrations/7.sqm": "9d9eb150fc08ab1dd04e249b4a5ddb90079526e2de692b30645521247c258959",
+            "shared/src/commonMain/sqldelight/migrations/8.sqm": "f42d75274f34707158a4e6f3e4f87fbc43b3ededcec54dc2a4a94f52f019c2f4",
+            "shared/src/commonMain/sqldelight/migrations/9.sqm": "9372111ab585da3925fe103654e33557b08dcb7e6408bb30969b23d92ac8aeda"
+          },
+          "revision": "a38daf81a668c0eb4879d00607ca5df71daa47a7"
+        },
+        {
+          "config": {
+            "shared/build.gradle": "32fb9be9aae101761d7e9a6430dbacc821582fe4a9273be677626f92fb51d288"
+          },
+          "files": {
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq": "be5f36645571a4b982480fc18e68160abfee16cd5fed34610688b65ccb0eac67",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq": "46cdf58ee265bc5cffb3f9dfcff1d1e88acaf8aca1f716eeff2b4c5af6360d51",
+            "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq": "55dabd504ed6046527617ba3893e57212d292911087d89757ae58db2d969cf03",
+            "shared/src/commonMain/sqldelight/migrations/1.sqm": "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976",
+            "shared/src/commonMain/sqldelight/migrations/10.sqm": "d67d705ad51703fdf1e5258553b0b93e069a586fb49dbc2ece4bbb564224ef04",
+            "shared/src/commonMain/sqldelight/migrations/11.sqm": "64e9b49256bfceb898bfc2575ebf38b4499e1284b5a274cbfff3a254b701c08c",
+            "shared/src/commonMain/sqldelight/migrations/2.sqm": "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21",
+            "shared/src/commonMain/sqldelight/migrations/3.sqm": "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47",
+            "shared/src/commonMain/sqldelight/migrations/4.sqm": "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366",
+            "shared/src/commonMain/sqldelight/migrations/5.sqm": "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03",
+            "shared/src/commonMain/sqldelight/migrations/6.sqm": "187ca8e206967516f2c4b3c4063a47c749fc02ecd1204a0250b6c4f675dae1aa",
+            "shared/src/commonMain/sqldelight/migrations/7.sqm": "9d9eb150fc08ab1dd04e249b4a5ddb90079526e2de692b30645521247c258959",
+            "shared/src/commonMain/sqldelight/migrations/8.sqm": "f42d75274f34707158a4e6f3e4f87fbc43b3ededcec54dc2a4a94f52f019c2f4",
+            "shared/src/commonMain/sqldelight/migrations/9.sqm": "9372111ab585da3925fe103654e33557b08dcb7e6408bb30969b23d92ac8aeda"
+          },
+          "revision": "383c11adbe7966e6726ace2aa6597f6f483a48b1"
+        }
+      ]
+    },
+    "head": "5f64350ec51402f3e6aeff145cbc35438780a03c",
+    "inputs": {
+      "01511f6eb2d9fada5e8c16a4b020835617534715930e627b596030efe402dc89": [
+        "08fd978c9fbca5361c39fe873335b7ffd00d8072",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "064557e1ae60e293e237151937151ad6891ecb9eba04b9c8d378cb9de9eda5bb": [
+        "b6d0e106ab16183abfa7e6c87fd63491d0a1bab5",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "06c354f96aeac90e4b030d9e74a1c2d0f1799cbe412d4a9d11aade53fe9fd0cb": [
+        "82bbfe1446649bc89d2d2ee6f6777200899456b2",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "105c43715a734e2848ca14e08b3a0a9e7f43156f9fc7ae6085423906cba9e65e": [
+        "b4bea50f67887372010530493ff670e931a647a7",
+        "shared/build.gradle"
+      ],
+      "11b8995fe417de2925f226e8e73fe889e23ea4a637d814833ba78853e3f8c8d2": [
+        "fb91eecf496494727473b0307ee27468b87fd15a",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "1465ba1ba20c7d920d657b157f5297396d199ce03ff39c95450d523eab08d208": [
+        "50acce5ecbbcdc560cc93b74ced8dd9e528d6eb5",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq"
+      ],
+      "15ec470a43aaad089da92fcc5ed54c0640ff1bbe92b4d7d9a8f7d49944f27cbc": [
+        "5582820f47bc90e38e59d521a34773c01a568961",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "187ca8e206967516f2c4b3c4063a47c749fc02ecd1204a0250b6c4f675dae1aa": [
+        "a3b05997f0fa7f6f4d9bf8e321929ba0afb74d24",
+        "shared/src/commonMain/sqldelight/migrations/6.sqm"
+      ],
+      "1ade200284e0af8e32212aea9d9eac1f09bcfb8eca77918d8bd6eedcb16907dc": [
+        "97d3eb19120289488e26d0bb1bdb14cc362775c3",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "2ad04ea92b777e3f37010eb311eec0492c6fc3be52d3713d45fbfd31bdba8e03": [
+        "04e54ec9f8eb143f3256be5d9e4a45025dbffc2d",
+        "shared/src/commonMain/sqldelight/migrations/5.sqm"
+      ],
+      "2e372d6aaf15b8ce2b89b748bd6838c5afe09760de9e25e310c41dddbc81aa47": [
+        "9440d80d47041ef855b0221279909efd832a2508",
+        "shared/src/commonMain/sqldelight/migrations/3.sqm"
+      ],
+      "2f730a8dc3bb85afb173708165d20139997793bcbf1bccb9c9d0cdf09441b1f2": [
+        "c242592fb7e21f4fa60ba688a01633af66700400",
+        "shared/src/commonMain/sqldelight/me/saket/compose/data/shared/Note.sq"
+      ],
+      "32fb9be9aae101761d7e9a6430dbacc821582fe4a9273be677626f92fb51d288": [
+        "383c11adbe7966e6726ace2aa6597f6f483a48b1",
+        "shared/build.gradle"
+      ],
+      "33de48099d210bccd47f39ed16bef634625af84453ac1d87024880c613701f86": [
+        "42e0d7f72fb895f808ac6964d109b701e1f7b967",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "35325a28ed0b74c4d9cc64cb1df57e673b9bfb85ce7e9336b3feaf7dfa19d3f7": [
+        "8b94b51a19469a24dc9e4714d78335cad3924b4b",
+        "shared/build.gradle"
+      ],
+      "35e70586a82eb1d34d440f8abeddbe4eb6502fa99e4ea616cee54be85cd2b8e7": [
+        "c242592fb7e21f4fa60ba688a01633af66700400",
+        "shared/build.gradle"
+      ],
+      "3a73cfb591a45ea70fd435a2dbe83edd41cb7f67a36768345e6d901af2a9ac21": [
+        "e17311640f1b12a126d26b8980d4b051beab25f8",
+        "shared/src/commonMain/sqldelight/migrations/2.sqm"
+      ],
+      "3e5677f2057c26dfa30a1843704da8272653d5974f60ea111101fb2cba069a45": [
+        "394b3cac31b0695ae230cde9d20d3d56b1862a06",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq"
+      ],
+      "46cdf58ee265bc5cffb3f9dfcff1d1e88acaf8aca1f716eeff2b4c5af6360d51": [
+        "5582820f47bc90e38e59d521a34773c01a568961",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq"
+      ],
+      "46d5ec521a332570ba8312a7f5e159df9976358a726980a73054e201c2f7b0ab": [
+        "a3b05997f0fa7f6f4d9bf8e321929ba0afb74d24",
+        "shared/build.gradle"
+      ],
+      "48caaf6224c37d8a10ff3335f85f76afda96f3fc790bb355eab3a6e459a63d0c": [
+        "251d150915f1dd06942548eda1d6e93b4e31dd52",
+        "shared/src/commonMain/sqldelight/me/saket/compose/data/Note.sq"
+      ],
+      "4afec925a96ec2f3072579cf3335318856bfa761f1abea90ba9f496f40cf1cbc": [
+        "04e54ec9f8eb143f3256be5d9e4a45025dbffc2d",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq"
+      ],
+      "4ba15b28b5c455d60516068badbb1c4ce1133db09408c70d3ba1a832b03d12b6": [
+        "8b94b51a19469a24dc9e4714d78335cad3924b4b",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "4bb9f792ae720b3b59dc20de56c54e2ea9086d913c5c3c8ade1bce3744063976": [
+        "9af28191c66e0a76fb84a8a1bba6e3a17c7a6ff4",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/1.sqm"
+      ],
+      "4c4440bbe81dc8c2158ee8c21822117106e9ea42616e5cedd2234fb4b650727d": [
+        "663c57117f525e35848abec614d309d2bde59418",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "4c695c06b0f982d233d11130f76619e3aaf477a773b390792c2e3be64d494e10": [
+        "3d0fa334dd9ede6f26f4c68bc0d3865a592daa43",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq"
+      ],
+      "4d7292920f9980f32d9d41fcf0bbd68657a250c730ade31ca2e2c2aaa480fd33": [
+        "b3bd920bef1c4ae7664c7711dcd7573b34a0f59d",
+        "shared/build.gradle"
+      ],
+      "537374726d5c8d51ce8beff13f058fdf5085f1f878ac8514c3e2a6630826c588": [
+        "8e4fbf899cbb5a0d653026a19d2faceb4ceb9654",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "5377d7558234d39808c61d6a9407e54d292819e64851948068d5fd0afa18e366": [
+        "8d9af85c21051c90bfc6338d734af5ee9b26f1e6",
+        "shared/src/commonMain/sqldelight/migrations/4.sqm"
+      ],
+      "55dabd504ed6046527617ba3893e57212d292911087d89757ae58db2d969cf03": [
+        "a38daf81a668c0eb4879d00607ca5df71daa47a7",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "57c376a3d8b9061fa295e1ebc073a9e92868b21e27f18e2b41c9bcf6547e6205": [
+        "5b26e564f18ea9d732b4e2ed7832231bf82ef634",
+        "shared/build.gradle"
+      ],
+      "595272f42980de1b111843edc7a8cded7233b73fec2ec4ed6593aaca5be7cfd1": [
+        "a92610b47cc797837bf61d33d6c112c999556953",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "5f23662e07576907fe9c82b1f1b1110b1281eccddcecd4d936a9860a04366071": [
+        "3dde48c44e36b8a22b9ad093dcc97823be45b4a5",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq"
+      ],
+      "60fe54803005c2261dd27457b373c3002a46fb32e44ddad806ad4a21de037de3": [
+        "fa0e714798f8863d2b962b74f498f7c6b500fb10",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "64541f523cde621c7d9d4a04251251601b3fbeb9b3cd16609148a8b10275a7e2": [
+        "89b4e790783b6012ca17f4ce909392cca84fdc7b",
+        "shared/src/commonMain/sqldelight/me/saket/compose/data/shared/Note.sq"
+      ],
+      "64e9b49256bfceb898bfc2575ebf38b4499e1284b5a274cbfff3a254b701c08c": [
+        "fa0e714798f8863d2b962b74f498f7c6b500fb10",
+        "shared/src/commonMain/sqldelight/migrations/11.sqm"
+      ],
+      "681deb3228d8567fe294628fc8cfc3ad601d2be1f626ee473aa222793a3edf8e": [
+        "5582820f47bc90e38e59d521a34773c01a568961",
+        "shared/build.gradle"
+      ],
+      "6a24d7d20b50ab39cd7ce6d503bf7f693d3ff44f56139af4c7fd4bae83ce682e": [
+        "b3bd920bef1c4ae7664c7711dcd7573b34a0f59d",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "6e55ec3fb9fa150bf7f125cdac6543f900705197d1471b2a160b6f3be763ff6b": [
+        "178115a28cf48cec63c06825b59095ded66826d4",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq"
+      ],
+      "79291fcd4fed6888598abea4a42a2ad1b24c689bd2b2a59499a4c14cbbf50240": [
+        "e17311640f1b12a126d26b8980d4b051beab25f8",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "808ea1eaafe10bb11420b1c3bd27fd7e3466bfea97dd554643b96c1bbbfac7ed": [
+        "ddd04be105c030e7a370d9f3d3812d6cd8162070",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "849c072df2f6324ae0cabd80066f612f69342909bf0ad3d525b25498adeaf104": [
+        "94fa80dabf6a6e5bf64c9bf07bee5f5d51cb8b53",
+        "shared/src/commonMain/sqldelight/migrations/4.sqm"
+      ],
+      "87b6ae7425d0c91bf2dd1207ed3a77f3e59fc7e6a3c0cb15e0a0c8a3a636905e": [
+        "9af28191c66e0a76fb84a8a1bba6e3a17c7a6ff4",
+        "shared/build.gradle"
+      ],
+      "8a390ef0d3b4955e01faebeb925dd34accf991dacb9bd7cceb2a93c9e5417e66": [
+        "8d56794c5ca02742f5ec72f60467b74b26037a3c",
+        "shared/src/commonMain/sqldelight/me/saket/compose/data/shared/Note.sq"
+      ],
+      "8f2e7f8d555d2f48892aa0bb3adaf4536ddf53c0f24c0dccbf8f9c5700b10cb0": [
+        "fef72643e8a39fc3b36aca366f7346712cf22334",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq"
+      ],
+      "918721ad8f9147abe1dc92dda4e4a8abd25acf8d4469d8838caa7d57fdb81f23": [
+        "bb3ee9dfe455777f67d43b4bab9ee18eb382dfd9",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "91f064c704324996114be0943eceef8e031013b5b1dcfdae5f7dd71766c498ad": [
+        "b4bea50f67887372010530493ff670e931a647a7",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "9372111ab585da3925fe103654e33557b08dcb7e6408bb30969b23d92ac8aeda": [
+        "fef72643e8a39fc3b36aca366f7346712cf22334",
+        "shared/src/commonMain/sqldelight/migrations/9.sqm"
+      ],
+      "95e01b5bed073313873a88ffd17c37546190914ed8c7f2e63c1a1c0ae44b64d3": [
+        "9af7935645be6df4626334ad9ac98e93e947a53b",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "978f3bdf9f8ef6b04ef6bccab03df2c5bd5ccbe1faaf2a94f322e1c3bb8578ae": [
+        "24838538512cb3a9fe96051ae87112b759e4a5d8",
+        "shared/build.gradle"
+      ],
+      "9c2050be09898febe72b567d4bd706d0911d1c555577e2e4450de4564c73f7f1": [
+        "acb5365481a82c982369b98b051d17ff3e6d2dd7",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq"
+      ],
+      "9d9eb150fc08ab1dd04e249b4a5ddb90079526e2de692b30645521247c258959": [
+        "27af6aed2fc4f34c937903a11c441c5417b98216",
+        "shared/src/commonMain/sqldelight/migrations/7.sqm"
+      ],
+      "9e289c72a4c12045051d23f1e7b409288eb514c61571f14d57a9bdb648c49354": [
+        "01f555a2089036704c95c36f4af0c6c91d8a8895",
+        "shared/src/commonMain/sqldelight/me/saket/compose/data/shared/Note.sq"
+      ],
+      "a38728371bb8ea05836f41de80bbca3d0d302cb336cbfadfb8c4ef143ea437c0": [
+        "a38daf81a668c0eb4879d00607ca5df71daa47a7",
+        "shared/build.gradle"
+      ],
+      "a441e3c60f9dcc3ab7f205867061083440a159fe3c85da54c83730e1a2c2239d": [
+        "6e763f748025d7c8a7d409bc75096a02c40e7f0d",
+        "shared/build.gradle"
+      ],
+      "a553e98420b84b2b0fe0b1f845d88f26ce3887b307c9aa8dd31ccdabd82d41a6": [
+        "178115a28cf48cec63c06825b59095ded66826d4",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "a72f3156115c121d9915bf578747435aefffb357bdd0f0516f98ebfb9594a637": [
+        "8e74e1f2df03c89acf47f7daae3dabf9e520df04",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq"
+      ],
+      "a92ee099564b2e67d06d0d759ece9558fb536e0b34b6f2fd8af861c809df53ae": [
+        "8e4fbf899cbb5a0d653026a19d2faceb4ceb9654",
+        "shared/build.gradle"
+      ],
+      "a96eaeddbd718b1ce5ea5a4f2e3135d90e4d9be2f87eb3726fa8a4d01eb203a0": [
+        "3291e449746d464c4f345a1254e57506b0b43e3e",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "aa99fecb8526f421f2258aa3c83db26b885cd9573c4b7e7492123558151b64c6": [
+        "ad55299a6ae3135315339f3f17b692b287c5c1a9",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq"
+      ],
+      "acde3473c065ec8011b0b1f43c62df272b88911dd78ad60c07215d95a6f6e055": [
+        "ad55299a6ae3135315339f3f17b692b287c5c1a9",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "af6eafa5ea5cb3843dffffc60bb21c89b64fe55abde49c5883cc83263386e58a": [
+        "82bbfe1446649bc89d2d2ee6f6777200899456b2",
+        "shared/src/commonMain/sqldelight/migrations/2.sqm"
+      ],
+      "b28f475417dd55d607a862d38afb0edc196caeec42d5ab2f066419eac88a5411": [
+        "ddd04be105c030e7a370d9f3d3812d6cd8162070",
+        "shared/build.gradle"
+      ],
+      "b2ae6234f15b50f58a1ed3f264dbf9f8e8439a09340d05748952946d39803ef4": [
+        "982f145545ceec6d5de3f3e20ce9913475e3d57c",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "b4a86ffa42e555204e69b4c9ce282a1ae87e0638c223678f5ba3a014d59e6c72": [
+        "a3b05997f0fa7f6f4d9bf8e321929ba0afb74d24",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq"
+      ],
+      "b9fc60dc2cdc29b938eeeefb8639dfe824da3e1dbfc473947cdaea81b781e4af": [
+        "fa0e714798f8863d2b962b74f498f7c6b500fb10",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq"
+      ],
+      "be5f36645571a4b982480fc18e68160abfee16cd5fed34610688b65ccb0eac67": [
+        "383c11adbe7966e6726ace2aa6597f6f483a48b1",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq"
+      ],
+      "be721f1c410d206aeb68a2bdc2f58803ea17f6b7a1adc6b1f8360f1ecbc221af": [
+        "27af6aed2fc4f34c937903a11c441c5417b98216",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq"
+      ],
+      "be98600077fa81e87a3e77b2040fa849a33e1d1d32f74e523a9f26ea43a450a8": [
+        "d05f6e2ea31a7ddc04b5114a372846756232016b",
+        "shared/src/commonMain/sqldelight/me/saket/compose/data/shared/Note.sq"
+      ],
+      "c09710dc44afcb9a5126f298ba2650533e99f58e607bb591ac7a95717c99c952": [
+        "a3b05997f0fa7f6f4d9bf8e321929ba0afb74d24",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "c0a034849cca19f27d05a21cbd7ce066780fc6f7daf423b7c5b85a46961eb12e": [
+        "2d29cfd7813c6c98f86914d9341b9a64a396484f",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "c56ee3af21c8a43e040c3eb3a290e55acc6f15c31d5f7e4c7c85b0876ab7282e": [
+        "9af28191c66e0a76fb84a8a1bba6e3a17c7a6ff4",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "c93377e31e8d6b58e1a419a4acc5c9ca14fdc22b59c584f12881355b8eab8136": [
+        "01f555a2089036704c95c36f4af0c6c91d8a8895",
+        "shared/build.gradle"
+      ],
+      "cea22185270ab172ff4f238d92ba330a4618b3ebe91aef172934d15904828b26": [
+        "c86ac6e5b22dc6510f8efca60737ce65e485d543",
+        "shared/build.gradle"
+      ],
+      "d623c03560411a412edabcbdd283d78855563d0187f0dea86afb52cd4a9dc116": [
+        "5b26e564f18ea9d732b4e2ed7832231bf82ef634",
+        "shared/src/commonMain/sqldelight/me/saket/compose/data/shared/Note.sq"
+      ],
+      "d67d705ad51703fdf1e5258553b0b93e069a586fb49dbc2ece4bbb564224ef04": [
+        "fef72643e8a39fc3b36aca366f7346712cf22334",
+        "shared/src/commonMain/sqldelight/migrations/10.sqm"
+      ],
+      "d88e002b40058958038f1a28ef6dd06c0b20a7188592a17c0f0734c246ea1eda": [
+        "18f3059b0fdb1e6fb3ed7500f6ee41999015312b",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "d8acb1c68af73799397cea04df5b1a525fa34b98de63e70cab0f8bdc23528359": [
+        "a92610b47cc797837bf61d33d6c112c999556953",
+        "shared/build.gradle"
+      ],
+      "d904d1371815ed78cc53ab3e775a28a27a124c95108316421ea4146004014d23": [
+        "e776f862ac29c70ab930740b73f69dc4fb7541e6",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq"
+      ],
+      "d95df8057e2cfc5f6f0bd4554ea11a2551bf53582bb7f73f678688bc67947fca": [
+        "7e9c55ce71a63314ed95e5811ab3461040fa09f6",
+        "shared/build.gradle"
+      ],
+      "db68a371bb17bd279b41456e0a08ad55ade8adc4e859dccd6b6453556ca8df45": [
+        "50de5e703d0543e87df6b2a718235e977c4912a3",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "dd79bfba8ecd2834627cb892184eeb5fce4c32be688c2bae638aee5b831b04aa": [
+        "82bbfe1446649bc89d2d2ee6f6777200899456b2",
+        "shared/build.gradle"
+      ],
+      "e9f2b236f72f921023aa8d336f00d254ec09c782f91c9d07fdc17b0c001f9d01": [
+        "e296019a9445059487000b7ce066109f0c173feb",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq"
+      ],
+      "ea1fae6cb5de94e3830dec8e65afc207be6dfd2dd9699fb74aa0d1f4d037007c": [
+        "fef72643e8a39fc3b36aca366f7346712cf22334",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "eb6a800d76f01f2682233f07dd60d04227de8e6798caa5b54e091f7b4d9564fd": [
+        "9af7935645be6df4626334ad9ac98e93e947a53b",
+        "shared/build.gradle"
+      ],
+      "ed6a03b93374ba17629f5bf91bc896e4e9b7ba742ccafcc0d68ddf0476918f89": [
+        "fb91eecf496494727473b0307ee27468b87fd15a",
+        "shared/build.gradle"
+      ],
+      "ee23f6a1978fb14f49d9b5d9bb17112fbc8c97633600cca796b3382203767a44": [
+        "6e763f748025d7c8a7d409bc75096a02c40e7f0d",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "eee46ad8930acc229477ef135a3a66232b5499e21b7d0dc446d30a320a48d152": [
+        "c86ac6e5b22dc6510f8efca60737ce65e485d543",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "f0684cbf8a25691eff0149e7c65f9f13073a69f4fce10b7b847e6b3d0bf2b019": [
+        "8d57e22a6c02563209eaf7b87c940c52821b2492",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "f075c27ec0520e4bedf8b3d85f5f63462505889d9cc8e18492c4b27b657e7776": [
+        "2d29cfd7813c6c98f86914d9341b9a64a396484f",
+        "shared/build.gradle"
+      ],
+      "f42d75274f34707158a4e6f3e4f87fbc43b3ededcec54dc2a4a94f52f019c2f4": [
+        "178115a28cf48cec63c06825b59095ded66826d4",
+        "shared/src/commonMain/sqldelight/migrations/8.sqm"
+      ],
+      "f5add4c711627f179d33ed04ee5d15dcd95a76a2baf63058fcf7adf026d6583e": [
+        "24838538512cb3a9fe96051ae87112b759e4a5d8",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Note.sq"
+      ],
+      "f5f1723765368d9a95304e0a46e29e9bb3e4a1e137a6227ce706f4e206615275": [
+        "9440d80d47041ef855b0221279909efd832a2508",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/FolderSyncConfig.sq"
+      ],
+      "f61f645a7c7c6552fbf0ba025360b8283820b27d84e95545c1a009ecdfe7a588": [
+        "251d150915f1dd06942548eda1d6e93b4e31dd52",
+        "shared/build.gradle"
+      ],
+      "f93ea970cc2987fffb7c1b53fecefe69bd23bcb5f06dbd6c61a679cf2043dcdc": [
+        "a38daf81a668c0eb4879d00607ca5df71daa47a7",
+        "shared/src/commonMain/sqldelight/me/saket/press/data/shared/Folder.sq"
+      ]
+    }
+  }
+}
