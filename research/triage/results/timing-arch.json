@@ -1,0 +1,1334 @@
+{
+  "machine": "x86_64",
+  "platform": "Linux-7.3.4-arch1-2-x86_64-with-glibc2.44",
+  "projects": {
+    "ACINQ/phoenix": [
+      {
+        "database": "appdb",
+        "nanoseconds": {
+          "rehearsal": [
+            173347,
+            128230,
+            162661,
+            125855,
+            167411
+          ],
+          "selective": [
+            8192420,
+            3887244,
+            3706773,
+            3846875,
+            3741204
+          ]
+        },
+        "new": "5d95156d71e5f52dfac1b7f95f26521cb1f41bbc"
+      },
+      {
+        "database": "appdb",
+        "nanoseconds": {
+          "rehearsal": [
+            68864,
+            97359,
+            67677,
+            93798,
+            68864
+          ],
+          "selective": [
+            1320285,
+            1291790,
+            1275167,
+            1219364,
+            1353530
+          ]
+        },
+        "new": "a75e62e4583fd230a151b274fb26b0f99ed0f343"
+      },
+      {
+        "database": "channelsdb",
+        "nanoseconds": {
+          "rehearsal": [
+            47492,
+            27308,
+            45118,
+            26121,
+            46305
+          ],
+          "selective": [
+            505793,
+            549723,
+            527165,
+            518853,
+            631647
+          ]
+        },
+        "new": "0ba7dccbfbb02d305310058e4933d9984c660852"
+      },
+      {
+        "database": "paymentsdb",
+        "nanoseconds": {
+          "rehearsal": [
+            680327,
+            822804,
+            710010,
+            822803,
+            725445
+          ],
+          "selective": [
+            13072251,
+            12723183,
+            12909591,
+            12754054,
+            13124494
+          ]
+        },
+        "new": "e2ffbce0f8c98436108fb05fe3cce5fe6a34aa94"
+      },
+      {
+        "database": "paymentsdb",
+        "nanoseconds": {
+          "rehearsal": [
+            780061,
+            685077,
+            839426,
+            725444,
+            783623
+          ],
+          "selective": [
+            12030983,
+            12014361,
+            11699724,
+            12294566,
+            16738656
+          ]
+        },
+        "new": "5d95156d71e5f52dfac1b7f95f26521cb1f41bbc"
+      }
+    ],
+    "cashapp/zipline": [
+      {
+        "database": "zipline-loader",
+        "nanoseconds": {
+          "rehearsal": [
+            78363,
+            52241,
+            72425,
+            51054,
+            72426
+          ],
+          "selective": [
+            867921,
+            783623,
+            750378,
+            776499,
+            715946
+          ]
+        },
+        "new": "7a92b675ff53a1daa0bb3e8dcd474214fbe69ac9"
+      },
+      {
+        "database": "zipline-loader",
+        "nanoseconds": {
+          "rehearsal": [
+            130604,
+            175721,
+            131791,
+            175722,
+            151976
+          ],
+          "selective": [
+            3147551,
+            3066815,
+            3210479,
+            3025258,
+            3402822
+          ]
+        },
+        "new": "a3d330a5e4f3c83fee13d079209e5850719db8eb"
+      },
+      {
+        "database": "zipline-loader",
+        "nanoseconds": {
+          "rehearsal": [
+            178096,
+            128230,
+            176909,
+            128229,
+            176909
+          ],
+          "selective": [
+            3075125,
+            3120243,
+            3081062,
+            3214041,
+            3075125
+          ]
+        },
+        "new": "bc659407cfe303ed93429d6fe9aacbf4f255f20b"
+      },
+      {
+        "database": "zipline-loader",
+        "nanoseconds": {
+          "rehearsal": [
+            137728,
+            195905,
+            136540,
+            182845,
+            135353
+          ],
+          "selective": [
+            3255596,
+            3098872,
+            3209292,
+            3107183,
+            3383826
+          ]
+        },
+        "new": "1d4f56e75fbf68d74b1daf9acd50875b62c5a984"
+      },
+      {
+        "database": "zipline-loader",
+        "nanoseconds": {
+          "rehearsal": [
+            184032,
+            137728,
+            181658,
+            136541,
+            197093
+          ],
+          "selective": [
+            3164174,
+            3295965,
+            3158237,
+            3319711,
+            3149925
+          ]
+        },
+        "new": "4983c2dc493fa301d5996b65b3c20de24e95af71"
+      },
+      {
+        "database": "zipline-loader",
+        "nanoseconds": {
+          "rehearsal": [
+            137728,
+            181658,
+            154350,
+            185220,
+            136540
+          ],
+          "selective": [
+            3318524,
+            3126180,
+            3190295,
+            3181984,
+            3464563
+          ]
+        },
+        "new": "0b076222e7d939aac27919c56446aa8f7524c731"
+      }
+    ],
+    "saket/press": [
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            22559,
+            14247,
+            18997,
+            13061,
+            17809
+          ],
+          "selective": [
+            179283,
+            175722,
+            167410,
+            166223,
+            168598
+          ]
+        },
+        "new": "c242592fb7e21f4fa60ba688a01633af66700400"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            13061,
+            20185,
+            13061,
+            16622,
+            11873
+          ],
+          "selective": [
+            184032,
+            163849,
+            163849,
+            157912,
+            154350
+          ]
+        },
+        "new": "01f555a2089036704c95c36f4af0c6c91d8a8895"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            21371,
+            14248,
+            18997,
+            13060,
+            18997
+          ],
+          "selective": [
+            180471,
+            176908,
+            160287,
+            175721,
+            148413
+          ]
+        },
+        "new": "5b26e564f18ea9d732b4e2ed7832231bf82ef634"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            15435,
+            18997,
+            13060,
+            17810,
+            13060
+          ],
+          "selective": [
+            175721,
+            159099,
+            157911,
+            148413,
+            172159
+          ]
+        },
+        "new": "d05f6e2ea31a7ddc04b5114a372846756232016b"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            21372,
+            14247,
+            21371,
+            13060,
+            16623
+          ],
+          "selective": [
+            180470,
+            191156,
+            156725,
+            162661,
+            149600
+          ]
+        },
+        "new": "8d56794c5ca02742f5ec72f60467b74b26037a3c"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            23747,
+            39181,
+            23746,
+            42743,
+            23746
+          ],
+          "selective": [
+            428618,
+            400123,
+            524789,
+            383500,
+            410808
+          ]
+        },
+        "new": "89b4e790783b6012ca17f4ce909392cca84fdc7b"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            41556,
+            74800,
+            46305,
+            24934,
+            43931
+          ],
+          "selective": [
+            398935,
+            535475,
+            438116,
+            433367,
+            518853
+          ]
+        },
+        "new": "7e9c55ce71a63314ed95e5811ab3461040fa09f6"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            24934,
+            43931,
+            24933,
+            42743,
+            24934
+          ],
+          "selective": [
+            426243,
+            384688,
+            414370,
+            392999,
+            394186
+          ]
+        },
+        "new": "c86ac6e5b22dc6510f8efca60737ce65e485d543"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            43930,
+            24933,
+            40369,
+            23746,
+            37994
+          ],
+          "selective": [
+            366878,
+            385874,
+            337196,
+            346694,
+            341944
+          ]
+        },
+        "new": "8e4fbf899cbb5a0d653026a19d2faceb4ceb9654"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            23746,
+            40368,
+            22559,
+            35619,
+            22559
+          ],
+          "selective": [
+            370440,
+            363316,
+            455926,
+            357379,
+            355005
+          ]
+        },
+        "new": "42e0d7f72fb895f808ac6964d109b701e1f7b967"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            41556,
+            22559,
+            36807,
+            22559,
+            37994
+          ],
+          "selective": [
+            374001,
+            368066,
+            339569,
+            378751,
+            321760
+          ]
+        },
+        "new": "08fd978c9fbca5361c39fe873335b7ffd00d8072"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            37994,
+            53429,
+            37994,
+            53429,
+            37994
+          ],
+          "selective": [
+            609088,
+            543786,
+            584155,
+            574657,
+            683889
+          ]
+        },
+        "new": "8b94b51a19469a24dc9e4714d78335cad3924b4b"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            62927,
+            41556,
+            56991,
+            40368,
+            59366
+          ],
+          "selective": [
+            598403,
+            618587,
+            573469,
+            591279,
+            674390
+          ]
+        },
+        "new": "9af28191c66e0a76fb84a8a1bba6e3a17c7a6ff4"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            41555,
+            58178,
+            47492,
+            60553,
+            41556
+          ],
+          "selective": [
+            681514,
+            609089,
+            765814,
+            649457,
+            668454
+          ]
+        },
+        "new": "8d57e22a6c02563209eaf7b87c940c52821b2492"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            46305,
+            27308,
+            46305,
+            26121,
+            41556
+          ],
+          "selective": [
+            414370,
+            426243,
+            573469,
+            426244,
+            364503
+          ]
+        },
+        "new": "9af7935645be6df4626334ad9ac98e93e947a53b"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            27308,
+            41555,
+            36807,
+            40369,
+            24934
+          ],
+          "selective": [
+            411995,
+            385875,
+            403685,
+            369252,
+            499857
+          ]
+        },
+        "new": "ddd04be105c030e7a370d9f3d3812d6cd8162070"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            46305,
+            26121,
+            41556,
+            26121,
+            42743
+          ],
+          "selective": [
+            403684,
+            420307,
+            387062,
+            416745,
+            374002
+          ]
+        },
+        "new": "24838538512cb3a9fe96051ae87112b759e4a5d8"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            27308,
+            45118,
+            26121,
+            41556,
+            23746
+          ],
+          "selective": [
+            518853,
+            377564,
+            415557,
+            364503,
+            396560
+          ]
+        },
+        "new": "97d3eb19120289488e26d0bb1bdb14cc362775c3"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            56991,
+            37994,
+            54616,
+            36806,
+            52241
+          ],
+          "selective": [
+            542599,
+            650645,
+            522415,
+            533101,
+            503418
+          ]
+        },
+        "new": "3291e449746d464c4f345a1254e57506b0b43e3e"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            37993,
+            54616,
+            37993,
+            53428,
+            37994
+          ],
+          "selective": [
+            543787,
+            631647,
+            553285,
+            504606,
+            530726
+          ]
+        },
+        "new": "50de5e703d0543e87df6b2a718235e977c4912a3"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            58178,
+            40368,
+            54616,
+            37993,
+            53429
+          ],
+          "selective": [
+            560409,
+            648270,
+            528352,
+            530726,
+            502231
+          ]
+        },
+        "new": "9428aa0f8bf44784823c7cc65fd2cb06b65c4baa"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            40369,
+            59365,
+            41556,
+            58178,
+            48680
+          ],
+          "selective": [
+            582967,
+            619774,
+            574656,
+            511730,
+            537850
+          ]
+        },
+        "new": "82bbfe1446649bc89d2d2ee6f6777200899456b2"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            71239,
+            40368,
+            56990,
+            41556,
+            54617
+          ],
+          "selective": [
+            628085,
+            552098,
+            521228,
+            531913,
+            503418
+          ]
+        },
+        "new": "bb3ee9dfe455777f67d43b4bab9ee18eb382dfd9"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            46305,
+            64114,
+            43931,
+            66489,
+            49867
+          ],
+          "selective": [
+            740880,
+            702886,
+            707635,
+            664892,
+            797870
+          ]
+        },
+        "new": "18f3059b0fdb1e6fb3ed7500f6ee41999015312b"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            74800,
+            47492,
+            70051,
+            51054,
+            70051
+          ],
+          "selective": [
+            739693,
+            738505,
+            672016,
+            802620,
+            675578
+          ]
+        },
+        "new": "b4bea50f67887372010530493ff670e931a647a7"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            46305,
+            72426,
+            51055,
+            79550,
+            47493
+          ],
+          "selective": [
+            825178,
+            714759,
+            727820,
+            663704,
+            698137
+          ]
+        },
+        "new": "b6d0e106ab16183abfa7e6c87fd63491d0a1bab5"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            75988,
+            52242,
+            73613,
+            46305,
+            68864
+          ],
+          "selective": [
+            711197,
+            748003,
+            680327,
+            691013,
+            771750
+          ]
+        },
+        "new": "b3bd920bef1c4ae7664c7711dcd7573b34a0f59d"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            46305,
+            70051,
+            51054,
+            67677,
+            49867
+          ],
+          "selective": [
+            715946,
+            788372,
+            738505,
+            676765,
+            731381
+          ]
+        },
+        "new": "e17311640f1b12a126d26b8980d4b051beab25f8"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            85486,
+            61740,
+            80737,
+            60553,
+            81924
+          ],
+          "selective": [
+            896417,
+            915414,
+            870296,
+            993776,
+            861985
+          ]
+        },
+        "new": "a92610b47cc797837bf61d33d6c112c999556953"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            60553,
+            84299,
+            62927,
+            90236,
+            59365
+          ],
+          "selective": [
+            1019896,
+            869109,
+            890481,
+            812118,
+            987839
+          ]
+        },
+        "new": "fb91eecf496494727473b0307ee27468b87fd15a"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            96172,
+            71238,
+            102109,
+            70051,
+            94985
+          ],
+          "selective": [
+            1074513,
+            1197993,
+            1062640,
+            1110132,
+            1155250
+          ]
+        },
+        "new": "982f145545ceec6d5de3f3e20ce9913475e3d57c"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            60553,
+            83111,
+            60553,
+            79550,
+            59366
+          ],
+          "selective": [
+            945096,
+            978341,
+            941534,
+            877420,
+            903540
+          ]
+        },
+        "new": "663c57117f525e35848abec614d309d2bde59418"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            89048,
+            61740,
+            83111,
+            61740,
+            86673
+          ],
+          "selective": [
+            942721,
+            975966,
+            878608,
+            1062640,
+            907103
+          ]
+        },
+        "new": "6e763f748025d7c8a7d409bc75096a02c40e7f0d"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            77175,
+            100921,
+            64115,
+            86673,
+            61740
+          ],
+          "selective": [
+            960532,
+            892855,
+            948658,
+            981903,
+            934411
+          ]
+        },
+        "new": "9440d80d47041ef855b0221279909efd832a2508"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            94985,
+            65302,
+            94984,
+            68863,
+            93797
+          ],
+          "selective": [
+            1161186,
+            1106570,
+            1051954,
+            1074513,
+            1142190
+          ]
+        },
+        "new": "acb5365481a82c982369b98b051d17ff3e6d2dd7"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            67677,
+            96171,
+            70051,
+            92610,
+            66489
+          ],
+          "selective": [
+            1205117,
+            1040081,
+            1070951,
+            1110132,
+            1084012
+          ]
+        },
+        "new": "e776f862ac29c70ab930740b73f69dc4fb7541e6"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            108045,
+            75987,
+            104483,
+            74801,
+            123480
+          ],
+          "selective": [
+            1245485,
+            1228863,
+            1127941,
+            1326222,
+            1130317
+          ]
+        },
+        "new": "3dde48c44e36b8a22b9ad093dcc97823be45b4a5"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            67677,
+            93797,
+            70051,
+            92610,
+            80737
+          ],
+          "selective": [
+            1068577,
+            1005650,
+            1019897,
+            1076888,
+            1035332
+          ]
+        },
+        "new": "94fa80dabf6a6e5bf64c9bf07bee5f5d51cb8b53"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            97359,
+            66489,
+            92610,
+            67676,
+            94984
+          ],
+          "selective": [
+            1149314,
+            1078075,
+            996151,
+            1016335,
+            1124379
+          ]
+        },
+        "new": "8d9af85c21051c90bfc6338d734af5ee9b26f1e6"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            70051,
+            96171,
+            70051,
+            103296,
+            68864
+          ],
+          "selective": [
+            1231238,
+            991401,
+            1046017,
+            958157,
+            1149313
+          ]
+        },
+        "new": "04e54ec9f8eb143f3256be5d9e4a45025dbffc2d"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            106858,
+            75988,
+            97359,
+            68864,
+            98547
+          ],
+          "selective": [
+            1053142,
+            1205116,
+            1011586,
+            1055516,
+            996151
+          ]
+        },
+        "new": "a3b05997f0fa7f6f4d9bf8e321929ba0afb74d24"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            79550,
+            108045,
+            92610,
+            103296,
+            75988
+          ],
+          "selective": [
+            1194431,
+            1241923,
+            1208678,
+            1106570,
+            1272793
+          ]
+        },
+        "new": "3d0fa334dd9ede6f26f4c68bc0d3865a592daa43"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            117544,
+            86673,
+            128229,
+            85486,
+            125855
+          ],
+          "selective": [
+            1435454,
+            1351156,
+            1234800,
+            1459200,
+            1260920
+          ]
+        },
+        "new": "ad55299a6ae3135315339f3f17b692b287c5c1a9"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            89048,
+            117543,
+            86674,
+            117544,
+            87861
+          ],
+          "selective": [
+            1458013,
+            1474636,
+            1439016,
+            1414083,
+            1433079
+          ]
+        },
+        "new": "27af6aed2fc4f34c937903a11c441c5417b98216"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            123480,
+            90235,
+            118731,
+            103296,
+            117543
+          ],
+          "selective": [
+            1534001,
+            1455638,
+            1534001,
+            1436641,
+            1317911
+          ]
+        },
+        "new": "178115a28cf48cec63c06825b59095ded66826d4"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            92610,
+            119918,
+            89048,
+            119918,
+            89048
+          ],
+          "selective": [
+            1563683,
+            1348781,
+            1444953,
+            1448515,
+            1446140
+          ]
+        },
+        "new": "fef72643e8a39fc3b36aca366f7346712cf22334"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            102108,
+            73613,
+            102109,
+            73613,
+            100921
+          ],
+          "selective": [
+            1169498,
+            1321473,
+            1143377,
+            1213428,
+            1249047
+          ]
+        },
+        "new": "50acce5ecbbcdc560cc93b74ced8dd9e528d6eb5"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            74800,
+            102108,
+            91423,
+            99733,
+            73613
+          ],
+          "selective": [
+            1355905,
+            1169497,
+            1216990,
+            1227676,
+            1195618
+          ]
+        },
+        "new": "8e74e1f2df03c89acf47f7daae3dabf9e520df04"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            122293,
+            87861,
+            116357,
+            85486,
+            116356
+          ],
+          "selective": [
+            1465137,
+            1499569,
+            1554185,
+            1486509,
+            1561309
+          ]
+        },
+        "new": "e296019a9445059487000b7ce066109f0c173feb"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            89048,
+            132978,
+            90235,
+            122293,
+            89048
+          ],
+          "selective": [
+            1567245,
+            1581494,
+            1541125,
+            1586243,
+            1517378
+          ]
+        },
+        "new": "fa0e714798f8863d2b962b74f498f7c6b500fb10"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            180470,
+            140102,
+            175721,
+            130603,
+            181658
+          ],
+          "selective": [
+            2470786,
+            2753365,
+            2534901,
+            2727244,
+            2492158
+          ]
+        },
+        "new": "394b3cac31b0695ae230cde9d20d3d56b1862a06"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            141289,
+            181658,
+            153163,
+            186407,
+            140103
+          ],
+          "selective": [
+            2841226,
+            2635822,
+            2721308,
+            2777111,
+            2844788
+          ]
+        },
+        "new": "5582820f47bc90e38e59d521a34773c01a568961"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            189969,
+            143664,
+            188782,
+            142477,
+            203030
+          ],
+          "selective": [
+            2767613,
+            2737930,
+            2697562,
+            2836477,
+            2647695
+          ]
+        },
+        "new": "2d29cfd7813c6c98f86914d9341b9a64a396484f"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            189969,
+            241024,
+            187595,
+            239836,
+            206591
+          ],
+          "selective": [
+            4193569,
+            3924050,
+            4089086,
+            4129455,
+            4128267
+          ]
+        },
+        "new": "a38daf81a668c0eb4879d00607ca5df71daa47a7"
+      },
+      {
+        "database": "shared",
+        "nanoseconds": {
+          "rehearsal": [
+            159099,
+            141290,
+            159099,
+            132978,
+            156725
+          ],
+          "selective": [
+            2134778,
+            2385300,
+            2236886,
+            2238074,
+            2219077
+          ]
+        },
+        "new": "383c11adbe7966e6726ace2aa6597f6f483a48b1"
+      }
+    ]
+  },
+  "python": "3.12.13",
+  "sqlite": "3.53.1"
+}

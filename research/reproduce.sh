@@ -10,3 +10,4 @@ uv run --python 3.12 python -B research/registry/run_pilot.py \
 sh research/paths/reproduce.sh
 sh research/selection/reproduce.sh
 sh research/migrations/reproduce.sh
+sh research/triage/reproduce.sh

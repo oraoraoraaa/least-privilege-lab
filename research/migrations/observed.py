@@ -111,7 +111,7 @@ def sections(files, *, ddl_only=False):
     return "\n".join(sorted(ddl, key=priority)), queries, errors
 
 
-def schema_only(files, spec):
+def schema_only(files, spec, instrument=Instrument):
     if spec["unsupported"]:
         raise ValueError(spec["unsupported"])
     if spec["migration_schema"]:
@@ -120,7 +120,7 @@ def schema_only(files, spec):
         raise ValueError("no declarative .sq files")
     # Parse only for DDL and statement boundaries. Predictor receives just this database.
     ddl, _, _ = sections(files, ddl_only=True)
-    return Instrument(ddl, include_views=True)
+    return instrument(ddl, include_views=True)
 
 
 def snapshot(files, db):
@@ -139,7 +139,7 @@ def snapshot(files, db):
     return Snapshot(db, resolved, reads, {}, set()), errors
 
 
-def evaluate_project(project, manifest, blobs):
+def evaluate_project(project, manifest, blobs, instrument=Instrument):
     states, ledger, transitions = {}, [], []
     for event in manifest["events"]:
         revision = event["revision"]
@@ -164,7 +164,7 @@ def evaluate_project(project, manifest, blobs):
             problems = {}
             current = None
             try:
-                planned = schema_only(files, spec)
+                planned = schema_only(files, spec, instrument)
             except EXPECTED as exc:
                 problems["<schema>"] = str(exc)
             else:
@@ -186,6 +186,8 @@ def evaluate_project(project, manifest, blobs):
             ledger.append(state)
             if prev and prev["snap"] and current:
                 r = assess(prev["snap"], current, fitted)
+                if hasattr(planned, "resource_kinds"):
+                    r["resource_kinds"] = planned.resource_kinds
                 r["introduced"] = sorted(names - prev["names"])
                 r["retired"] = sorted(prev["names"] - names)
                 r["unscored_survivors"] = sorted(

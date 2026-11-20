@@ -74,15 +74,19 @@ def main():
         report = migration_report(old,planned)
     else:
         report = {"old_named_reads": len(old.queries), "alerts": {}}
+    selected_names = []
     if args.method != "rehearsal":
         from predict import predicted_fields
         for name, methods in predicted_fields(old, planned, (args.method,)).items():
             row = methods[args.method]
+            if row.get("route") == "rehearsal":
+                selected_names.append(name)
             if row["flag"]:
                 report["alerts"].setdefault(name, {}).update(
                     added_reads=row["added"], removed_reads=row["removed"], diagnostic=row["error"])
     if args.method == "selective":
         report["excluded_old_names"] = excluded
+        report["rehearsed_old_names"] = selected_names
     print(json.dumps(report,indent=2,sort_keys=True))
     old.db.db.close()
     planned.db.close()

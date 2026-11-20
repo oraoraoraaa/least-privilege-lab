@@ -1,0 +1,114 @@
+{
+  "1.1.0-Files.sq": {
+    "sha256": "9ca0cf520b31ce5014f5337e7b72d43f40f55f5b0971f49f33c61e2e189d0b0f",
+    "url": "https://raw.githubusercontent.com/cashapp/zipline/c0ab8b238ae08edbe2c65f921b65b63af7bcf48e/zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Files.sq"
+  },
+  "1.1.0-Pins.sq": {
+    "sha256": "c97cf778c1ef9c338b9cd7e3a07994c65871c2a257ac5026c47565e581cdea92",
+    "url": "https://raw.githubusercontent.com/cashapp/zipline/c0ab8b238ae08edbe2c65f921b65b63af7bcf48e/zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Pins.sq"
+  },
+  "1.2.0-Files.sq": {
+    "sha256": "9ca0cf520b31ce5014f5337e7b72d43f40f55f5b0971f49f33c61e2e189d0b0f",
+    "url": "https://raw.githubusercontent.com/cashapp/zipline/bb3f863ec2bee876b0016137fbfe4cebe94a9ec2/zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Files.sq"
+  },
+  "1.2.0-Pins.sq": {
+    "sha256": "c97cf778c1ef9c338b9cd7e3a07994c65871c2a257ac5026c47565e581cdea92",
+    "url": "https://raw.githubusercontent.com/cashapp/zipline/bb3f863ec2bee876b0016137fbfe4cebe94a9ec2/zipline-loader/src/commonMain/sqldelight/app/cash/zipline/loader/internal/cache/Pins.sq"
+  },
+  "CsvWriterTests.kt": {
+    "sha256": "54e7d3a02b9046380c2c046e6f5af6491992251a0b7a8908a9bef65d9458b54e",
+    "url": "https://raw.githubusercontent.com/ACINQ/phoenix/3d6da2b5b17c297fe8b177304df6f4adff86763e/phoenix-shared/src/commonTest/kotlin/fr/acinq/phoenix/utils/CsvWriterTests.kt"
+  },
+  "PaymentsExportView.kt": {
+    "sha256": "37996f4911bb31a567e370041b8820c3d2d05105252c4a5375c64bf96f2fd182",
+    "url": "https://raw.githubusercontent.com/ACINQ/phoenix/3d6da2b5b17c297fe8b177304df6f4adff86763e/phoenix-android/src/main/kotlin/fr/acinq/phoenix/android/payments/history/PaymentsExportView.kt"
+  },
+  "PaymentsExportViewModel.kt": {
+    "sha256": "572b77646a4aeb6b7e77d8ad3c4b3e1caa36c1200633ca9ad0b0c13629d75192",
+    "url": "https://raw.githubusercontent.com/ACINQ/phoenix/3d6da2b5b17c297fe8b177304df6f4adff86763e/phoenix-android/src/main/kotlin/fr/acinq/phoenix/android/payments/history/PaymentsExportViewModel.kt"
+  },
+  "SqlitePaymentsDb.kt": {
+    "sha256": "a3c76cfa72b4eed1421a9237a9241422e799729e2a97dff12eb97c0bf1457d1b",
+    "url": "https://raw.githubusercontent.com/ACINQ/phoenix/3d6da2b5b17c297fe8b177304df6f4adff86763e/phoenix-shared/src/commonMain/kotlin/fr.acinq.phoenix/db/SqlitePaymentsDb.kt"
+  },
+  "WalletPaymentCsvWriter.kt": {
+    "sha256": "113baeba027aaa6bad462d49becdb4eef76ad9636e07d487e29e2f52274187a3",
+    "url": "https://raw.githubusercontent.com/ACINQ/phoenix/3d6da2b5b17c297fe8b177304df6f4adff86763e/phoenix-shared/src/commonMain/kotlin/fr.acinq.phoenix/csv/WalletPaymentCsvWriter.kt"
+  },
+  "annotations.jar": {
+    "sha256": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478",
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/annotations/13.0/annotations-13.0.jar"
+  },
+  "kotlin-compiler-embeddable.jar": {
+    "sha256": "c54a00718c8c0e3ee858bf42771c7f401c5e3c1738861e18e9536371042fa1b3",
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.1.20/kotlin-compiler-embeddable-2.1.20.jar"
+  },
+  "kotlin-daemon-embeddable.jar": {
+    "sha256": "d9e83df1d847a201ba3c016a786ced091be9503997d09f6a9cf1796ee489f374",
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.1.20/kotlin-daemon-embeddable-2.1.20.jar"
+  },
+  "kotlin-reflect.jar": {
+    "sha256": "3277ac102ae17aad10a55abec75ff5696c8d109790396434b496e75087854203",
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar"
+  },
+  "kotlin-script-runtime.jar": {
+    "sha256": "ae4397fbb3aa2a1ada09290e753bba99a4114548977c3115526b9958f4cb1a04",
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-script-runtime/2.1.20/kotlin-script-runtime-2.1.20.jar"
+  },
+  "kotlin-stdlib.jar": {
+    "sha256": "1bcc74e8ce84e2c25eaafde10f1248349cce3062b6e36978cbeec610db1e930a",
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.1.20/kotlin-stdlib-2.1.20.jar"
+  },
+  "kotlinx-coroutines-core-jvm.jar": {
+    "sha256": "9860906a1937490bf5f3b06d2f0e10ef451e65b95b269f22daf68a3d1f5065c5",
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar"
+  },
+  "phoenix-CloudKitContacts.sq": {
+    "sha256": "aee475cc9fa4ecb57026f40b6307304caa45db36995b1ebef2e99aa2035d4c81",
+    "url": "https://raw.githubusercontent.com/ACINQ/phoenix/3d6da2b5b17c297fe8b177304df6f4adff86763e/phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/CloudKitContacts.sq"
+  },
+  "phoenix-CloudKitPayments.sq": {
+    "sha256": "ff229645272d9ace1855bbe9fe036f19e667035608c422f71879a8988356205e",
+    "url": "https://raw.githubusercontent.com/ACINQ/phoenix/3d6da2b5b17c297fe8b177304df6f4adff86763e/phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/CloudKitPayments.sq"
+  },
+  "phoenix-Contacts.sq": {
+    "sha256": "0a72c40b820d916947139b1f933e859a5732d5d818de282511d7da8a0a3ab9dc",
+    "url": "https://raw.githubusercontent.com/ACINQ/phoenix/3d6da2b5b17c297fe8b177304df6f4adff86763e/phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/Contacts.sq"
+  },
+  "phoenix-OnChainTransactions.sq": {
+    "sha256": "8c4d42ee65522205c87d796bb116cc89dc00712e77676f9eb615233c1b12ee09",
+    "url": "https://raw.githubusercontent.com/ACINQ/phoenix/3d6da2b5b17c297fe8b177304df6f4adff86763e/phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/OnChainTransactions.sq"
+  },
+  "phoenix-Payments.sq": {
+    "sha256": "a000164bbd5d83eea11909bef97eeaf7d240c872c25dc22de391606d3a8e98bd",
+    "url": "https://raw.githubusercontent.com/ACINQ/phoenix/3d6da2b5b17c297fe8b177304df6f4adff86763e/phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/Payments.sq"
+  },
+  "phoenix-PaymentsIncoming.sq": {
+    "sha256": "b185c9c5a294a535ee0156097ea29b9bee71f8c033adf0868b9d2c0e8f1e60fa",
+    "url": "https://raw.githubusercontent.com/ACINQ/phoenix/3d6da2b5b17c297fe8b177304df6f4adff86763e/phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/PaymentsIncoming.sq"
+  },
+  "phoenix-PaymentsMetadata.sq": {
+    "sha256": "6c3baa00d30e72e4bd519d483205279f834c3726c15f9abd386f0fb0251f7cb9",
+    "url": "https://raw.githubusercontent.com/ACINQ/phoenix/3d6da2b5b17c297fe8b177304df6f4adff86763e/phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/PaymentsMetadata.sq"
+  },
+  "phoenix-PaymentsOutgoing.sq": {
+    "sha256": "133bb61db6efb49c1beda3c615865188b7945286283bff4b8e71b59a5319ef3c",
+    "url": "https://raw.githubusercontent.com/ACINQ/phoenix/3d6da2b5b17c297fe8b177304df6f4adff86763e/phoenix-shared/src/commonMain/sqldelight/paymentsdb/fr/acinq/phoenix/db/sqldelight/PaymentsOutgoing.sq"
+  },
+  "runtime-jvm.jar": {
+    "sha256": "61e14863903705c1f2a6996c268d5b3c866013b141372461b564980030437456",
+    "url": "https://repo.maven.apache.org/maven2/com/squareup/sqldelight/runtime-jvm/1.5.5/runtime-jvm-1.5.5.jar"
+  },
+  "trove4j.jar": {
+    "sha256": "c5fd725bffab51846bf3c77db1383c60aaaebfe1b7fe2f00d23fe1b7df0a439d",
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.jar"
+  },
+  "zipline-1.1.0.jar": {
+    "sha256": "bc76b538dc0f8d5fdd5e83c903ccd6ba0738e8082b9a4ebd45716be67099e433",
+    "url": "https://repo.maven.apache.org/maven2/app/cash/zipline/zipline-loader-jvm/1.1.0/zipline-loader-jvm-1.1.0.jar"
+  },
+  "zipline-1.2.0.jar": {
+    "sha256": "0dda6b366ccf30de1e0ea9edc8ec915071f7462140a8cb82d3e55f50b993c20a",
+    "url": "https://repo.maven.apache.org/maven2/app/cash/zipline/zipline-loader-jvm/1.2.0/zipline-loader-jvm-1.2.0.jar"
+  }
+}

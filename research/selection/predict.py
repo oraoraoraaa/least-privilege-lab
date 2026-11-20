@@ -65,7 +65,8 @@ def wildcard_relations(sql, views):
 
 
 def predicted_fields(old, planned, methods=("diff", "coverage", "source", "rehearsal")):
-    before, after = old.db.universe, planned.universe
+    before = getattr(old.db, "declared", old.db.universe)
+    after = getattr(planned, "declared", planned.universe)
     additions = defaultdict(set)
     for field in after - before:
         relation, col = field.rsplit(".", 1)
@@ -78,7 +79,7 @@ def predicted_fields(old, planned, methods=("diff", "coverage", "source", "rehea
     views = tuple(sorted(old.db.view_definitions.items()))
     for name, query in sorted(old.queries.items()):
         observed = old.reads[name]
-        removed = sorted(observed - after)
+        removed = sorted(observed - planned.universe)
         row = {}
         for requested in methods:
             method = requested
