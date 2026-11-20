@@ -6,6 +6,9 @@ Work on `research/classroom-replay`. Keep this long-lived branch on origin. Its 
 
 Read the [updated manuscript](../paper/paper.pdf) and the [replication evidence guide](triage/README.md). The [plan](triage/PLAN.md) was frozen at 8ac30a2 and the implementation published at d872bbc before scoring. The fresh histories refuted exact equivalence and a cold-cache speed advantage. The study recovers the two search-heavy catalogs, checks whole-upgrade outcomes, exercises generated SQL in two published releases and uses Phoenix’s documented Android export choice to separate internal access from recipient permission. The branch-wide reproduction includes all generations.
 
+
+At revision 54d63dd9048408b710e188b9afc885f05a41e91e, macOS arm64 and an independent Arch Linux x86-64 checkout both ran the complete root reproduction command and rebuilt the paper. Both regenerated every deterministic triage archive, including native FTS policy outcomes and the JVM/Kotlin witnesses, and matched all manuscript tables and figures. Arch also independently rediscovered the fresh source manifest from the three upstream Git histories. Raw timing samples are archived per host. The five PDF pages from the two TeX builds rendered pixel-identically at 100 dpi on one Poppler installation, with matching extracted text tokens. The macOS build reproduced the committed PDF byte-for-byte.
+
 ## Previous revision · Five held-out project histories
 
 Start with [the revised paper](../paper/paper.pdf), the [migration evidence guide](migrations/README.md) and the [protocol](migrations/PROTOCOL.md) published at a5ebb6b. The method and development gates were pushed at b1b95c4 before held-out native scoring. The [compatibility record](migrations/CORRECTIONS.md) documents subsequent import changes. The root reproduction script now includes the complete extension. Rebuild all manuscript tables and figures with `make paper`.
