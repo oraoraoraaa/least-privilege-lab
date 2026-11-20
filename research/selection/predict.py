@@ -3,6 +3,7 @@
 from collections import defaultdict
 from functools import lru_cache
 
+import apsw
 from sqlglot import exp, parse_one
 from sqlglot.errors import SqlglotError
 from sqlglot.optimizer.scope import Scope, traverse_scope
@@ -70,14 +71,20 @@ def predicted_fields(old, planned, methods=("diff", "coverage", "source", "rehea
         relation, col = field.rsplit(".", 1)
         if col != "@row":
             additions[relation].add(field)
-    covered = coverage_alerts(before, after, old.reads)
+    covered = coverage_alerts(before, after, old.reads) if "coverage" in methods else {}
+    changed_views = {name for name, ddl in old.db.view_definitions.items()
+                     if planned.view_definitions.get(name) != ddl} if "selective" in methods else set()
     predictions = {}
     views = tuple(sorted(old.db.view_definitions.items()))
     for name, query in sorted(old.queries.items()):
         observed = old.reads[name]
         removed = sorted(observed - after)
         row = {}
-        for method in methods:
+        for requested in methods:
+            method = requested
+            if requested == "selective":
+                touches_change = any(f.rsplit(".", 1)[0] in changed_views for f in observed)
+                method = "rehearsal" if touches_change else "source"
             error = None
             if method == "diff":
                 added = added_on_touched_relations(observed, before, after)
@@ -92,15 +99,20 @@ def predicted_fields(old, planned, methods=("diff", "coverage", "source", "rehea
                     error = "abstain: " + str(exc).splitlines()[0]
                     added = set()
             elif method == "rehearsal":
-                reads, error = preview_query(planned, query)
+                try:
+                    reads, error = preview_query(planned, query)
+                except (ValueError, apsw.Error) as exc:
+                    reads, error = set(), "unsupported callback or execution: " + str(exc)
                 added = reads - observed
             else:
                 raise ValueError(method)
-            row[method] = {
+            row[requested] = {
                 "added": sorted(added),
                 "removed": removed,
                 "error": error,
                 "flag": bool(added or error or (removed and method != "rehearsal")),
             }
+            if requested == "selective":
+                row[requested]["route"] = method
         predictions[name] = row
     return predictions

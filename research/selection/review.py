@@ -42,7 +42,7 @@ def main():
     schema = p.add_mutually_exclusive_group()
     schema.add_argument("--next-ddl",type=Path,help="Planned SQLite DDL file")
     schema.add_argument("--next-dir",type=Path,help="Planned SQLDelight definitions (schema sections only)")
-    p.add_argument("--method", choices=("rehearsal", "coverage", "source", "diff"), default="rehearsal",
+    p.add_argument("--method", choices=("rehearsal", "coverage", "source", "diff", "selective"), default="rehearsal",
                    help="Prepare the old queries on the planned schema or compare column inventories")
     args=p.parse_args()
     if args.example:
@@ -56,7 +56,16 @@ def main():
             p.error("provide --old-dir and either --next-dir or --next-ddl, or use --example")
         files=local_files(args.old_dir)
         ddl=args.next_ddl.read_text() if args.next_ddl else schema_sql(local_files(args.next_dir))
-    old=load_snapshot(files)
+    if args.method == "selective" and not args.example:
+        sys.path.insert(0, str(HERE.parent / "migrations"))
+        from observed import sections, snapshot
+        original_ddl, _, _ = sections(files, ddl_only=True)
+        old, excluded = snapshot(files, Instrument(original_ddl, include_views=True))
+        if args.next_dir:
+            ddl, _, _ = sections(local_files(args.next_dir), ddl_only=True)
+    else:
+        old = load_snapshot(files)
+        excluded = {}
     planned=Instrument(ddl,include_views=True)
     if args.method == "coverage":
         report = {"old_named_reads": len(old.queries),
@@ -72,6 +81,8 @@ def main():
             if row["flag"]:
                 report["alerts"].setdefault(name, {}).update(
                     added_reads=row["added"], removed_reads=row["removed"], diagnostic=row["error"])
+    if args.method == "selective":
+        report["excluded_old_names"] = excluded
     print(json.dumps(report,indent=2,sort_keys=True))
     old.db.db.close()
     planned.db.close()
